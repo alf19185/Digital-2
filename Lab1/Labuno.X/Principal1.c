@@ -22,8 +22,8 @@
 #define  _XTAL_FREQ 8000000
 
 unsigned char BANDERA=1;
-unsigned char FLAG1 = 0;
-unsigned char FLAG2 = 0;
+unsigned char BANDERAJ1 = 0;
+unsigned char BANDERAJ2 = 0;
 unsigned char INICIAR = 0;
 
 //******************************************************************************
@@ -55,22 +55,22 @@ void main(void) {
        
         
         if (PORTAbits.RA1 == 1 && INICIAR== 1){      //Antirebote para avanzar en la carrera
-            FLAG1 = 1;
+            BANDERAJ1= 1;
         }
         else{
-            if (FLAG1 == 1){
-                FLAG1 = 0;
+            if (BANDERAJ1 == 1){
+                BANDERAJ1= 0;
                 if (PORTC == 0){
-                    //LA DA EL VALOR INICIAL AL PUERTO PARA LA CARRERA
-                    PORTC = 1; 
+                    
+                    PORTC = 1;                      //Es necesario inicar el puerto 
                 }
                 else if (PORTC == 0b01000000) {
-                    //OPCION CUANDO UN JUGADOR GANA:
-                    PORTC = PORTC<<1;
-                    //BIT PARA INDICAR QUIEN GANA
-                    PORTAbits.RA3 = 1;
-                    //REINICIA LA VARIABLE DE INICIO PARA LA CARRERA
-                    INICIAR= 0;
+                    
+                    PORTC = PORTC<<1;               //Shift para movimiento en el puerto dentro de carrera
+                    
+                    PORTAbits.RA3 = 1;              //Cuando gana
+                    
+                    INICIAR= 0;                     //Se debe resetear el variable de inicio
                 }
                 else{
                     PORTC = PORTC<<1;
@@ -78,14 +78,14 @@ void main(void) {
             }
         }
         
-        // JUGADOR 2
+        // Para el otro corredor tambien es necesario doble condicion de inicio 
         
         if (PORTAbits.RA2 == 1 && INICIAR== 1){
-            FLAG2 = 1;
+            BANDERAJ2 = 1;
         }
         else{
-            if (FLAG2 == 1){
-                FLAG2 = 0;
+            if (BANDERAJ2 == 1){
+                BANDERAJ2 = 0;
                 if (PORTD == 0){
                     PORTD = 1;
                 }

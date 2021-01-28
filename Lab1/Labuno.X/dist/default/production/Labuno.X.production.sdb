@@ -11,7 +11,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"40 D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
+"40 D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
 [v _main main `(v  1 e 1 0 ]
 "110
 [v _Setup Setup `(v  1 e 1 0 ]
@@ -51,12 +51,12 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"24 D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
+"24 D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
 [v _BANDERA BANDERA `uc  1 e 1 0 ]
 "25
-[v _FLAG1 FLAG1 `uc  1 e 1 0 ]
+[v _BANDERAJ1 BANDERAJ1 `uc  1 e 1 0 ]
 "26
-[v _FLAG2 FLAG2 `uc  1 e 1 0 ]
+[v _BANDERAJ2 BANDERAJ2 `uc  1 e 1 0 ]
 "27
 [v _INICIAR INICIAR `uc  1 e 1 0 ]
 "40

@@ -11,6 +11,9 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+end_init CODE 0 0 0 3 2
+config CONFIG 4 2007 2007 2 2
 $dist/default/production\Labuno.X.production.o
 cinit CODE 0 7F3 7F3 D 2
 text1 CODE 0 73C 73C 13 2
@@ -20,9 +23,6 @@ maintext CODE 0 77E 77E 75 2
 cstackCOMMON COMMON 1 70 70 5 1
 dataCOMMON COMMON 1 78 78 1 1
 bssCOMMON COMMON 1 75 75 3 1
-config CONFIG 4 2007 2007 2 2
-$C:\Users\Gaby\AppData\Local\Temp\sfns.o
-end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -70,77 +70,77 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Labuno.X.production.o
-7F3 cinit CODE >461:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7F3 cinit CODE >464:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7F3 cinit CODE >490:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7F8 cinit CODE >491:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7F9 cinit CODE >495:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7FA cinit CODE >496:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7FB cinit CODE >497:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7FC cinit CODE >503:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7FC cinit CODE >505:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-7FD cinit CODE >506:C:\Users\Gaby\AppData\Local\Temp\sfns.s
-74F text2 CODE >129:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-74F text2 CODE >131:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-752 text2 CODE >132:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-753 text2 CODE >133:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-754 text2 CODE >134:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-755 text2 CODE >136:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-757 text2 CODE >138:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-759 text2 CODE >139:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-762 text2 CODE >140:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-768 text2 CODE >141:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-77B text2 CODE >142:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-77D text2 CODE >143:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-73C text1 CODE >110:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-73C text1 CODE >111:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-73F text1 CODE >112:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-740 text1 CODE >113:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-741 text1 CODE >114:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-742 text1 CODE >115:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-743 text1 CODE >116:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-747 text1 CODE >117:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-748 text1 CODE >118:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-749 text1 CODE >119:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-74A text1 CODE >120:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-74D text1 CODE >121:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-74E text1 CODE >123:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-77E maintext CODE >40:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-77E maintext CODE >42:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-783 maintext CODE >46:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-789 maintext CODE >47:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-78A maintext CODE >48:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-78B maintext CODE >50:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-790 maintext CODE >51:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-792 maintext CODE >52:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-797 maintext CODE >57:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7A2 maintext CODE >58:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7A4 maintext CODE >59:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7A5 maintext CODE >61:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7AA maintext CODE >62:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7AB maintext CODE >63:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7B0 maintext CODE >65:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7B2 maintext CODE >66:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7B3 maintext CODE >67:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7B9 maintext CODE >69:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7BD maintext CODE >71:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7BE maintext CODE >73:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7BF maintext CODE >74:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7C0 maintext CODE >76:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7C4 maintext CODE >83:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7CD maintext CODE >84:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7CF maintext CODE >85:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7D0 maintext CODE >87:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7D5 maintext CODE >88:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7D6 maintext CODE >89:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7DB maintext CODE >90:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7DD maintext CODE >91:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7DE maintext CODE >92:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7E4 maintext CODE >93:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7E8 maintext CODE >94:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7E9 maintext CODE >95:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7EA maintext CODE >96:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
-7EB maintext CODE >98:D:\2021\Digital2\Digital2\Labuno.X\Principal1.c
+7F3 cinit CODE >461:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7F3 cinit CODE >464:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7F3 cinit CODE >490:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7F8 cinit CODE >491:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7F9 cinit CODE >495:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7FA cinit CODE >496:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7FB cinit CODE >497:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7FC cinit CODE >503:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7FC cinit CODE >505:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7FD cinit CODE >506:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+74F text2 CODE >129:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+74F text2 CODE >131:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+752 text2 CODE >132:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+753 text2 CODE >133:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+754 text2 CODE >134:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+755 text2 CODE >136:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+757 text2 CODE >138:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+759 text2 CODE >139:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+762 text2 CODE >140:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+768 text2 CODE >141:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+77B text2 CODE >142:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+77D text2 CODE >143:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+73C text1 CODE >110:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+73C text1 CODE >111:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+73F text1 CODE >112:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+740 text1 CODE >113:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+741 text1 CODE >114:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+742 text1 CODE >115:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+743 text1 CODE >116:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+747 text1 CODE >117:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+748 text1 CODE >118:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+749 text1 CODE >119:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+74A text1 CODE >120:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+74D text1 CODE >121:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+74E text1 CODE >123:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+77E maintext CODE >40:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+77E maintext CODE >42:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+783 maintext CODE >46:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+789 maintext CODE >47:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+78A maintext CODE >48:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+78B maintext CODE >50:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+790 maintext CODE >51:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+792 maintext CODE >52:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+797 maintext CODE >57:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7A2 maintext CODE >58:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7A4 maintext CODE >59:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7A5 maintext CODE >61:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7AA maintext CODE >62:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7AB maintext CODE >63:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7B0 maintext CODE >65:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7B2 maintext CODE >66:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7B3 maintext CODE >67:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7B9 maintext CODE >69:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7BD maintext CODE >71:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7BE maintext CODE >73:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7BF maintext CODE >74:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7C0 maintext CODE >76:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7C4 maintext CODE >83:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7CD maintext CODE >84:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7CF maintext CODE >85:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7D0 maintext CODE >87:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7D5 maintext CODE >88:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7D6 maintext CODE >89:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7DB maintext CODE >90:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7DD maintext CODE >91:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7DE maintext CODE >92:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7E4 maintext CODE >93:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7E8 maintext CODE >94:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7E9 maintext CODE >95:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7EA maintext CODE >96:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
+7EB maintext CODE >98:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -162,21 +162,21 @@ __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _Race E9E 0 CODE 0 text2 dist/default/production\Labuno.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sfns.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 _main EFC 0 CODE 0 maintext dist/default/production\Labuno.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Labuno.X.production.o
-start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sfns.o
+start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 __size_of_Race 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfns.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -185,12 +185,12 @@ __pidataCOMMON E76 0 CODE 0 idataCOMMON dist/default/production\Labuno.X.product
 _ANSELH 189 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sfns.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sfns.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 __size_of_Setup 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 start_initialization FE6 0 CODE 0 cinit dist/default/production\Labuno.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sfns.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -230,7 +230,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sfns.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s9o8.o
 _BANDERA 78 0 COMMON 1 dataCOMMON dist/default/production\Labuno.X.production.o
 __pmaintext EFC 0 CODE 0 maintext dist/default/production\Labuno.X.production.o
 __Lcommon 0 0 ABS 0 common -
@@ -253,6 +253,8 @@ __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 Race@i 72 0 COMMON 1 cstackCOMMON dist/default/production\Labuno.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
+_BANDERAJ1 77 0 COMMON 1 bssCOMMON dist/default/production\Labuno.X.production.o
+_BANDERAJ2 76 0 COMMON 1 bssCOMMON dist/default/production\Labuno.X.production.o
 _INICIAR 75 0 COMMON 1 bssCOMMON dist/default/production\Labuno.X.production.o
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Labuno.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
@@ -263,8 +265,6 @@ __end_of_Race EFC 0 CODE 0 text2 dist/default/production\Labuno.X.production.o
 __end_of_main FE6 0 CODE 0 maintext dist/default/production\Labuno.X.production.o
 __end_of_Setup E9E 0 CODE 0 text1 dist/default/production\Labuno.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Labuno.X.production.o
-_FLAG1 77 0 COMMON 1 bssCOMMON dist/default/production\Labuno.X.production.o
-_FLAG2 76 0 COMMON 1 bssCOMMON dist/default/production\Labuno.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Labuno.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Labuno.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Labuno.X.production.o

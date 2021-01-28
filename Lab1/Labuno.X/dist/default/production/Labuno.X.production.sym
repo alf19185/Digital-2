@@ -9,8 +9,6 @@ _main 77E 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 0 0 CODE 0
-_FLAG1 77 0 COMMON 1
-_FLAG2 76 0 COMMON 1
 _TRISA 85 0 ABS 0
 _TRISC 87 0 ABS 0
 _PORTA 5 0 ABS 0
@@ -53,8 +51,10 @@ __Lcode 0 0 ABS 0
 __Hinit 0 0 CODE 0
 __Linit 0 0 CODE 0
 __end_of_main 7F3 0 CODE 0
+_BANDERAJ1 77 0 COMMON 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
+_BANDERAJ2 76 0 COMMON 1
 end_of_initialization 7FC 0 CODE 0
 ___stacklo 0 0 ABS 0
 _PORTAbits 5 0 ABS 0
@@ -134,7 +134,7 @@ text1 E78 E9D CODE E78 0
 idataCOMMON E76 E77 CODE E76 0
 %locals
 dist/default/production\Labuno.X.production.o
-C:\Users\Gaby\AppData\Local\Temp\sfns.s
+C:\Users\Gaby\AppData\Local\Temp\s9o8.s
 461 7F3 0 CODE 0
 464 7F3 0 CODE 0
 490 7F3 0 CODE 0

@@ -295,10 +295,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Principal1.c: 6: unsigned char BANDERA=1;
 [p x WDTE  =  OFF        ]
 "7
-[; ;Principal1.c: 7: unsigned char FLAG1 = 0;
+[; ;Principal1.c: 7: unsigned char BANDERAJ1 = 0;
 [p x PWRTE  =  OFF       ]
 "8
-[; ;Principal1.c: 8: unsigned char FLAG2 = 0;
+[; ;Principal1.c: 8: unsigned char BANDERAJ2 = 0;
 [p x MCLRE  =  OFF       ]
 "9
 [; ;Principal1.c: 9: unsigned char INICIAR = 0;
@@ -332,14 +332,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "25
 [; ;Principal1.c: 25: 
-[v _FLAG1 `uc ~T0 @X0 1 e ]
-[i _FLAG1
+[v _BANDERAJ1 `uc ~T0 @X0 1 e ]
+[i _BANDERAJ1
 -> -> 0 `i `uc
 ]
 "26
 [; ;Principal1.c: 26:     while(1){
-[v _FLAG2 `uc ~T0 @X0 1 e ]
-[i _FLAG2
+[v _BANDERAJ2 `uc ~T0 @X0 1 e ]
+[i _BANDERAJ2
 -> -> 0 `i `uc
 ]
 "27
@@ -350,7 +350,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "40
-[; ;Principal1.c: 40:             FLAG1 = 1;
+[; ;Principal1.c: 40:             BANDERAJ1= 1;
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
@@ -359,7 +359,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Principal1.c: 42:         else{
 [e ( _Setup ..  ]
 "44
-[; ;Principal1.c: 44:                 FLAG1 = 0;
+[; ;Principal1.c: 44:                 BANDERAJ1= 0;
 [e :U 140 ]
 {
 "46
@@ -401,7 +401,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "58
 [; ;Principal1.c: 58:                     PORTC = PORTC<<1;
-[e = _FLAG1 -> -> 1 `i `uc ]
+[e = _BANDERAJ1 -> -> 1 `i `uc ]
 "59
 [; ;Principal1.c: 59:                 }
 }
@@ -412,11 +412,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "61
 [; ;Principal1.c: 61:         }
-[e $ ! == -> _FLAG1 `i -> 1 `i 147  ]
+[e $ ! == -> _BANDERAJ1 `i -> 1 `i 147  ]
 {
 "62
 [; ;Principal1.c: 62: 
-[e = _FLAG1 -> -> 0 `i `uc ]
+[e = _BANDERAJ1 -> -> 0 `i `uc ]
 "63
 [; ;Principal1.c: 63: 
 [e $ ! == -> _PORTC `i -> 0 `i 148  ]
@@ -425,7 +425,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Principal1.c: 65:         if (PORTAbits.RA2 == 1 && INICIAR== 1){
 [e = _PORTC -> -> 1 `i `uc ]
 "66
-[; ;Principal1.c: 66:             FLAG2 = 1;
+[; ;Principal1.c: 66:             BANDERAJ2 = 1;
 }
 [e $U 149  ]
 "67
@@ -434,7 +434,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _PORTC `i -> 64 `i 150  ]
 {
 "69
-[; ;Principal1.c: 69:             if (FLAG2 == 1){
+[; ;Principal1.c: 69:             if (BANDERAJ2 == 1){
 [e = _PORTC -> << -> _PORTC `i -> 1 `i `uc ]
 "71
 [; ;Principal1.c: 71:                 if (PORTD == 0){
@@ -472,7 +472,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "84
 [; ;Principal1.c: 84: 
-[e = _FLAG2 -> -> 1 `i `uc ]
+[e = _BANDERAJ2 -> -> 1 `i `uc ]
 "85
 [; ;Principal1.c: 85:     }
 }
@@ -483,11 +483,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "87
 [; ;Principal1.c: 87: 
-[e $ ! == -> _FLAG2 `i -> 1 `i 154  ]
+[e $ ! == -> _BANDERAJ2 `i -> 1 `i 154  ]
 {
 "88
 [; ;Principal1.c: 88: 
-[e = _FLAG2 -> -> 0 `i `uc ]
+[e = _BANDERAJ2 -> -> 0 `i `uc ]
 "89
 [; ;Principal1.c: 89: 
 [e $ ! == -> _PORTD `i -> 0 `i 155  ]

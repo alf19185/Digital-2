@@ -2654,8 +2654,8 @@ extern __bank0 __bit __timeout;
 
 
 unsigned char BANDERA=1;
-unsigned char FLAG1 = 0;
-unsigned char FLAG2 = 0;
+unsigned char BANDERAJ1 = 0;
+unsigned char BANDERAJ2 = 0;
 unsigned char INICIAR = 0;
 
 
@@ -2687,11 +2687,11 @@ void main(void) {
 
 
         if (PORTAbits.RA1 == 1 && INICIAR== 1){
-            FLAG1 = 1;
+            BANDERAJ1= 1;
         }
         else{
-            if (FLAG1 == 1){
-                FLAG1 = 0;
+            if (BANDERAJ1 == 1){
+                BANDERAJ1= 0;
                 if (PORTC == 0){
 
                     PORTC = 1;
@@ -2713,11 +2713,11 @@ void main(void) {
 
 
         if (PORTAbits.RA2 == 1 && INICIAR== 1){
-            FLAG2 = 1;
+            BANDERAJ2 = 1;
         }
         else{
-            if (FLAG2 == 1){
-                FLAG2 = 0;
+            if (BANDERAJ2 == 1){
+                BANDERAJ2 = 0;
                 if (PORTD == 0){
                     PORTD = 1;
                 }

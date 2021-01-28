@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Tue Jan 26 13:15:31 2021
+                                                                                               Thu Jan 28 15:03:48 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -261,9 +261,9 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    247  0075                     __pbssCOMMON:
    248  0075                     _INICIAR:
    249  0075                     	ds	1
-   250  0076                     _FLAG2:
+   250  0076                     _BANDERAJ2:
    251  0076                     	ds	1
-   252  0077                     _FLAG1:
+   252  0077                     _BANDERAJ1:
    253  0077                     	ds	1
    254                           
    255                           	psect	dataCOMMON
@@ -402,15 +402,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    388  07A2                     l715:
    389                           
    390                           ;Principal1.c: 58:                     PORTC = PORTC<<1;
-   391  07A2  01F7               	clrf	_FLAG1
-   392  07A3  0AF7               	incf	_FLAG1,f
+   391  07A2  01F7               	clrf	_BANDERAJ1
+   392  07A3  0AF7               	incf	_BANDERAJ1,f
    393                           
    394                           ;Principal1.c: 59:                 }
    395  07A4  2FC4               	goto	l735
    396  07A5                     l717:
    397                           
    398                           ;Principal1.c: 61:         }
-   399  07A5  0377               	decf	_FLAG1,w
+   399  07A5  0377               	decf	_BANDERAJ1,w
    400  07A6  1D03               	btfss	3,2
    401  07A7  2FA9               	goto	u61
    402  07A8  2FAA               	goto	u60
@@ -420,7 +420,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    406  07AA                     l719:
    407                           
    408                           ;Principal1.c: 62: 
-   409  07AA  01F7               	clrf	_FLAG1
+   409  07AA  01F7               	clrf	_BANDERAJ1
    410  07AB                     l721:
    411                           
    412                           ;Principal1.c: 63: 
@@ -437,7 +437,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    423  07B0  3001               	movlw	1
    424  07B1  0087               	movwf	7	;volatile
    425                           
-   426                           ;Principal1.c: 66:             FLAG2 = 1;
+   426                           ;Principal1.c: 66:             BANDERAJ2 = 1;
    427  07B2  2FC4               	goto	l735
    428  07B3                     l725:
    429  07B3  3040               	movlw	64
@@ -450,7 +450,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    436  07B9                     u80:
    437  07B9                     l727:
    438                           
-   439                           ;Principal1.c: 69:             if (FLAG2 == 1){
+   439                           ;Principal1.c: 69:             if (BANDERAJ2 == 1){
    440  07B9  0807               	movf	7,w	;volatile
    441  07BA  00F4               	movwf	??_main
    442  07BB  0774               	addwf	??_main,w
@@ -493,15 +493,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    479  07CD                     l739:
    480                           
    481                           ;Principal1.c: 84: 
-   482  07CD  01F6               	clrf	_FLAG2
-   483  07CE  0AF6               	incf	_FLAG2,f
+   482  07CD  01F6               	clrf	_BANDERAJ2
+   483  07CE  0AF6               	incf	_BANDERAJ2,f
    484                           
    485                           ;Principal1.c: 85:     }
    486  07CF  2F83               	goto	l701
    487  07D0                     l741:
    488                           
    489                           ;Principal1.c: 87: 
-   490  07D0  0376               	decf	_FLAG2,w
+   490  07D0  0376               	decf	_BANDERAJ2,w
    491  07D1  1D03               	btfss	3,2
    492  07D2  2FD4               	goto	u111
    493  07D3  2FD5               	goto	u110
@@ -511,7 +511,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    497  07D5                     l743:
    498                           
    499                           ;Principal1.c: 88: 
-   500  07D5  01F6               	clrf	_FLAG2
+   500  07D5  01F6               	clrf	_BANDERAJ2
    501  07D6                     l745:
    502                           
    503                           ;Principal1.c: 89: 
@@ -889,7 +889,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Tue Jan 26 13:15:31 2021
+Symbol Table                                                                                   Thu Jan 28 15:03:48 2021
 
                      l70 077B                       l71 077D                       l66 074E  
                      u10 077B                       u11 077A                       u20 0789  
@@ -918,17 +918,17 @@ Symbol Table                                                                    
                     u120 07DB                      u121 07DA                      u130 07E4  
                     u131 07E3                      u147 075D                     _Race 074F  
                    _main 077E                     btemp 007E                     start 0000  
-                  ?_Race 0070                    ?_main 0070                    _FLAG1 0077  
-                  _FLAG2 0076                    _ANSEL 0188                    _PORTA 0005  
-                  _PORTB 0006                    _PORTC 0007                    _PORTD 0008  
-                  _PORTE 0009                    _TRISA 0085                    _TRISC 0087  
-                  _TRISD 0088                    _TRISE 0089                    Race@i 0072  
-                  _Setup 073C                    status 0003                    wtemp0 007E  
-        __initialization 07F3             __end_of_Race 077E             __end_of_main 07F3  
-                 ??_Race 0070                   ??_main 0074                   ?_Setup 0070  
-                 _ANSELH 0189             __pdataCOMMON 0078  __end_of__initialization 07FC  
-         __pcstackCOMMON 0070            __end_of_Setup 074F                  ??_Setup 0070  
-             __pmaintext 077E                  _BANDERA 0078                  _INICIAR 0075  
+                  ?_Race 0070                    ?_main 0070                    _ANSEL 0188  
+                  _PORTA 0005                    _PORTB 0006                    _PORTC 0007  
+                  _PORTD 0008                    _PORTE 0009                    _TRISA 0085  
+                  _TRISC 0087                    _TRISD 0088                    _TRISE 0089  
+                  Race@i 0072                    _Setup 073C                    status 0003  
+                  wtemp0 007E          __initialization 07F3             __end_of_Race 077E  
+           __end_of_main 07F3                   ??_Race 0070                   ??_main 0074  
+                 ?_Setup 0070                   _ANSELH 0189             __pdataCOMMON 0078  
+__end_of__initialization 07FC           __pcstackCOMMON 0070            __end_of_Setup 074F  
+                ??_Setup 0070               __pmaintext 077E                  _BANDERA 0078  
+                _INICIAR 0075                _BANDERAJ1 0077                _BANDERAJ2 0076  
                 __ptext1 073C                  __ptext2 074F     end_of_initialization 07FC  
               _PORTAbits 0005            __pidataCOMMON 073B      start_initialization 07F3  
             __pbssCOMMON 0075                ___latbits 0002           __size_of_Setup 0013  
