@@ -2653,7 +2653,7 @@ void ADCinit();
 
 
 
-void ADConfig(uint8_t oscFreq,uint8_t canal, unsigned char justificado){
+void ADConfig(uint8_t oscFreq, uint8_t canal, unsigned char justificado){
     switch(oscFreq){
         case 1:
             ADCON0bits.ADCS = 0b00;
@@ -2722,9 +2722,8 @@ void ADConfig(uint8_t oscFreq,uint8_t canal, unsigned char justificado){
             ADCON0bits.CHS = 7;
             break;
 
-
-
     }
+
     ADCON0bits.ADON = 1;
     PIR1bits.ADIF = 0;
     PIE1bits.ADIE = 1;

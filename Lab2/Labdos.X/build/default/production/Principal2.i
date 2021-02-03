@@ -2685,8 +2685,6 @@ void ADCinit();
 
 
 
-
-
 void config_PUERTOS(void);
 void press_Subir(void);
 void press_Bajar(void);
@@ -2697,6 +2695,8 @@ uint8_t banderaTMR0 = 0;
 uint8_t banderaADC = 0;
 uint8_t valorDisplay_Dec;
 uint8_t valorDisplay_Uni;
+
+
 
 
 void __attribute__((picinterrupt(("")))) ISR(void){
@@ -2724,18 +2724,20 @@ void __attribute__((picinterrupt(("")))) ISR(void){
 
 
 void main(void) {
+
     config_PUERTOS();
-    config2Display(8000);
+    config2Display(4000);
     ADConfig(8, 5, 'H');
     INTCONbits.GIE = 1;
+
     while(1){
         if (banderaADC == 1){
             valorDisplay_Uni = 9;
             uint8_t lectura = AnalogRead_8('H');
-            if(lectura > PORTA){
+            if(lectura == PORTA){
                 PORTEbits.RE1 = 1;
             }
-            else if (lectura <= PORTA){
+            else if (lectura != PORTA){
                 PORTEbits.RE1 = 0;
             }
             valorDisplay_Uni = lectura & 0x0F;
@@ -2765,6 +2767,7 @@ void config_PUERTOS(void){
     ANSELH = 0;
     WPUB = 0b00000101;
     OPTION_REGbits.nRBPU = 0;
+
 
 
     IOCB = 0b00000101;;

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Labdos.X.production.sym \
   --cmf=dist/default/production\Labdos.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Gaby\AppData\Local\Temp\sghg.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Gaby\AppData\Local\Temp\saa8.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Labdos.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Gaby\AppData\Local\Temp\sghg.o \
+  -pfunctab=ENTRY -k C:\Users\Gaby\AppData\Local\Temp\saa8.o \
   dist/default/production\Labdos.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Gaby\AppData\Local\Temp\sghg.o
+C:\Users\Gaby\AppData\Local\Temp\saa8.o
                 end_init                              E        E        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -400,7 +400,7 @@ Total ram usage:        3 bytes
 
  *************** function _press_Subir *****************
  Defined at:
-		line 116 in file "Principal2.c"
+		line 119 in file "Principal2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -430,7 +430,7 @@ Total ram usage:        2 bytes
 
  *************** function _press_Bajar *****************
  Defined at:
-		line 135 in file "Principal2.c"
+		line 138 in file "Principal2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -460,7 +460,7 @@ Total ram usage:        2 bytes
 
  *************** function _config_PUERTOS *****************
  Defined at:
-		line 94 in file "Principal2.c"
+		line 96 in file "Principal2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -490,7 +490,7 @@ Total ram usage:        0 bytes
 
  *************** function _config2Display *****************
  Defined at:
-		line 6 in file "DISPLAY7.c"
+		line 7 in file "DISPLAY7.c"
  Parameters:    Size  Location     Type
   FreqOsc         2    0[BANK0 ] unsigned int 
  Auto vars:     Size  Location     Type
@@ -520,7 +520,7 @@ Total ram usage:        3 bytes
 
  *************** function _AnalogRead_8 *****************
  Defined at:
-		line 90 in file "ADC.c"
+		line 89 in file "ADC.c"
  Parameters:    Size  Location     Type
   just            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -583,7 +583,7 @@ Total ram usage:        5 bytes
 
  *************** function _ADCinit *****************
  Defined at:
-		line 105 in file "ADC.c"
+		line 104 in file "ADC.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

@@ -27,8 +27,6 @@
 #define _XTAL_FREQ 4000000
 
 
-
-
 void config_PUERTOS(void);
 void press_Subir(void);
 void press_Bajar(void);
@@ -41,6 +39,8 @@ uint8_t valorDisplay_Dec;
 uint8_t valorDisplay_Uni;
 
 
+//Para las Interrupciones de ADC y Multiplexación de displays
+
 void __interrupt() ISR(void){
     
     if (PIR1bits.ADIF && PIE1bits.ADIE){
@@ -48,7 +48,7 @@ void __interrupt() ISR(void){
         banderaADC = 1;
     }
     
-    if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){   //atencion IOCB
+    if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){  
         INTCONbits.RBIF = 0;
         if (banderaBoton == 0){
             banderaBoton = 1;
@@ -66,18 +66,20 @@ void __interrupt() ISR(void){
 
 
 void main(void) { 
+    
     config_PUERTOS();
-    config2Display(8000);
+    config2Display(4000);
     ADConfig(8, 5, 'H');
     INTCONbits.GIE = 1;
+    
     while(1){
         if (banderaADC == 1){
             valorDisplay_Uni = 9;
             uint8_t lectura = AnalogRead_8('H');
-            if(lectura > PORTA){
+            if(lectura == PORTA){
                 PORTEbits.RE1 = 1;
             }
-            else if (lectura <= PORTA){
+            else if (lectura != PORTA){
                 PORTEbits.RE1 = 0;
             }
             valorDisplay_Uni = lectura & 0x0F;
@@ -109,7 +111,8 @@ void config_PUERTOS(void){
     OPTION_REGbits.nRBPU = 0;
     
     //Interrupciones
-    IOCB = 0b00000101;;  //RB0 y RB2 tiene interrupcion
+    
+    IOCB = 0b00000101;;         //Para toggle 
     INTCONbits.RBIE = 1;
     return;
 }

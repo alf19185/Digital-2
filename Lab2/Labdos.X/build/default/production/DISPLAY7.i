@@ -2648,7 +2648,9 @@ void cambioDisplay(uint8_t valDec, uint8_t valUni, uint8_t bandera);
 
 
 uint8_t valorTMR0 = 131;
+
 void config2Display(uint16_t FreqOsc){
+
     TRISD = 0;
     PORTD = 0;
     TRISCbits.TRISC2 = 0;
@@ -2692,19 +2694,20 @@ void config2Display(uint16_t FreqOsc){
             OSCCONbits.IRCF = 0b110;
     }
 
-
     OPTION_REGbits.T0CS = 0;
     OPTION_REGbits.T0SE = 0;
     OPTION_REGbits.PSA = 0;
     TMR0 = valorTMR0;
     INTCONbits.T0IF = 0;
     INTCONbits.T0IE = 1;
-
-
 }
+
 
 void cambioDisplay(uint8_t valUni, uint8_t valDec, uint8_t bandera){
     TMR0 = valorTMR0;
+
+
+
     switch (bandera){
         case 0:
             PORTCbits.RC0 = 0;
