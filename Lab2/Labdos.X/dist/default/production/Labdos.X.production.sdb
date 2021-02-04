@@ -25,11 +25,11 @@
 [v _ISR ISR `II(v  1 e 1 0 ]
 "68
 [v _main main `(v  1 e 1 0 ]
-"98
+"103
 [v _config_PUERTOS config_PUERTOS `(v  1 e 1 0 ]
-"123
+"128
 [v _press_Subir press_Subir `(v  1 e 1 0 ]
-"146
+"151
 [v _press_Bajar press_Bajar `(v  1 e 1 0 ]
 "21 D:\2021\Digital2\Digital2\Lab2\Labdos.X/DISPLAY7.h
 [v _numerosDisplay numerosDisplay `[16]i  1 e 32 0 ]
@@ -53,7 +53,7 @@
 [v _PORTBbits PORTBbits `VES194  1 e 1 @6 ]
 "291
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S494 . 1 `uc 1 RC0 1 0 :1:0 
+[s S496 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -63,8 +63,8 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "308
-[u S503 . 1 `S494 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES503  1 e 1 @7 ]
+[u S505 . 1 `S496 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES505  1 e 1 @7 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "415
@@ -107,13 +107,13 @@
 [v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
 "1239
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S274 . 1 `uc 1 ADON 1 0 :1:0 
+[s S276 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1277
-[s S279 . 1 `uc 1 . 1 0 :1:0 
+[s S281 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -122,14 +122,14 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S288 . 1 `uc 1 . 1 0 :1:0 
+[s S290 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S291 . 1 `uc 1 . 1 0 :1:0 
+[s S293 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S294 . 1 `S274 1 . 1 0 `S279 1 . 1 0 `S288 1 . 1 0 `S291 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES294  1 e 1 @31 ]
+[u S296 . 1 `S276 1 . 1 0 `S281 1 . 1 0 `S290 1 . 1 0 `S293 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES296  1 e 1 @31 ]
 [s S158 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
@@ -146,7 +146,7 @@
 [v _OPTION_REGbits OPTION_REGbits `VES169  1 e 1 @129 ]
 "1417
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
-[s S335 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S337 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -156,13 +156,13 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1434
-[u S344 . 1 `S335 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES344  1 e 1 @133 ]
+[u S346 . 1 `S337 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES346  1 e 1 @133 ]
 "1479
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1541
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S473 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S475 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -172,20 +172,20 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1558
-[u S482 . 1 `S473 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES482  1 e 1 @135 ]
+[u S484 . 1 `S475 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES484  1 e 1 @135 ]
 "1603
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1665
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S377 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S379 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1678
-[u S382 . 1 `S377 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES382  1 e 1 @137 ]
+[u S384 . 1 `S379 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES384  1 e 1 @137 ]
 [s S41 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
@@ -197,38 +197,38 @@
 "1719
 [u S49 . 1 `S41 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES49  1 e 1 @140 ]
-[s S515 . 1 `uc 1 SCS 1 0 :1:0 
+[s S517 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1883
-[s S521 . 1 `uc 1 . 1 0 :4:0 
+[s S523 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S526 . 1 `S515 1 . 1 0 `S521 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES526  1 e 1 @143 ]
+[u S528 . 1 `S517 1 . 1 0 `S523 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES528  1 e 1 @143 ]
 "2347
 [v _WPUB WPUB `VEuc  1 e 1 @149 ]
 "2417
 [v _IOCB IOCB `VEuc  1 e 1 @150 ]
 "2971
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-[s S320 . 1 `uc 1 . 1 0 :4:0 
+[s S322 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2992
-[u S326 . 1 `S320 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES326  1 e 1 @159 ]
+[u S328 . 1 `S322 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES328  1 e 1 @159 ]
 "3388
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S356 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S358 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -238,8 +238,8 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3405
-[u S365 . 1 `S356 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES365  1 e 1 @392 ]
+[u S367 . 1 `S358 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES367  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "5 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
@@ -261,24 +261,24 @@
 "68
 [v _main main `(v  1 e 1 0 ]
 {
-"79
-[v main@lectura lectura `uc  1 a 1 7 ]
-"96
+"80
+[v main@lectura lectura `uc  1 a 1 9 ]
+"101
 } 0
-"123
+"128
 [v _press_Subir press_Subir `(v  1 e 1 0 ]
 {
-"142
+"147
 } 0
-"146
+"151
 [v _press_Bajar press_Bajar `(v  1 e 1 0 ]
 {
-"164
+"169
 } 0
-"98
+"103
 [v _config_PUERTOS config_PUERTOS `(v  1 e 1 0 ]
 {
-"120
+"125
 } 0
 "8 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
 [v _config2Display config2Display `(v  1 e 1 0 ]

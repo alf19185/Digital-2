@@ -2694,7 +2694,7 @@ uint8_t banderaDO = 0;
 uint8_t banderaTMR0 = 0;
 uint8_t banderaADC = 0;
 uint8_t valorDisplay_Dec;
-uint8_t valorDisplay_Uni;
+uint8_t valorDisplay_Uni=0;
 
 
 
@@ -2732,9 +2732,16 @@ void main(void) {
 
 
     while(1){
+
         if (banderaADC == 1){
-            valorDisplay_Uni = 9;
+
             uint8_t lectura = AnalogRead_8('H');
+
+
+            valorDisplay_Uni = lectura && 0x0F;
+            valorDisplay_Dec = (lectura && 0xF0) >> 4;
+            banderaADC = 0;
+
             if(lectura == PORTA){
                 PORTEbits.RE1 = 1;
             }
@@ -2742,9 +2749,7 @@ void main(void) {
                 PORTEbits.RE1 = 0;
             }
 
-            valorDisplay_Uni = lectura & 0x0F;
-            valorDisplay_Dec = (lectura & 0xF0) >> 4;
-            banderaADC = 0;
+
             ADCinit();
         }
         press_Subir();
