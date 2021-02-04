@@ -44,20 +44,20 @@ uint8_t valorDisplay_Uni;
 void __interrupt() ISR(void){
     
     if (PIR1bits.ADIF && PIE1bits.ADIE){
-        PIE1bits.ADIE = 0;
+        PIE1bits.ADIE = 0;                      //Bandera de ADC 
         banderaADC = 1;
     }
     
     if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){  
         INTCONbits.RBIF = 0;
-        if (banderaBoton == 0){
+        if (banderaBoton == 0){                 //Bandera boton
             banderaBoton = 1;
             INTCONbits.RBIE = 0;
         }
     }
     
     if (INTCONbits.T0IF == 1 && INTCONbits.T0IE == 1){
-        banderaTMR0 = ~banderaTMR0;
+        banderaTMR0 = ~banderaTMR0;             //Bandera displays
         cambioDisplay(valorDisplay_Uni, valorDisplay_Dec, banderaTMR0);
         INTCONbits.T0IF = 0;
     }
@@ -68,20 +68,22 @@ void __interrupt() ISR(void){
 void main(void) { 
     
     config_PUERTOS();
-    config2Display(4000);
-    ADConfig(8, 5, 'H');
+    config2Display(4000);   
+    ADConfig(8, 5, 'H');  //Configuracion con FOSC/32, canal 5 y ADRESH 
     INTCONbits.GIE = 1;
     
+    //Encender y apagar la alarma cuando exista match
     while(1){
         if (banderaADC == 1){
             valorDisplay_Uni = 9;
             uint8_t lectura = AnalogRead_8('H');
             if(lectura == PORTA){
-                PORTEbits.RE1 = 1;
+                PORTEbits.RE1 = 1;                      
             }
             else if (lectura != PORTA){
                 PORTEbits.RE1 = 0;
             }
+            
             valorDisplay_Uni = lectura & 0x0F;
             valorDisplay_Dec = (lectura & 0xF0) >> 4;
             banderaADC = 0;
@@ -116,7 +118,10 @@ void config_PUERTOS(void){
     INTCONbits.RBIE = 1;
     return;
 }
+
+//Boton con antirebote para subir valor en el puerto 
 void press_Subir(void){
+    
     if (banderaBoton == 1){
         if (banderaUP == 0){
             if (PORTBbits.RB0 == 0){
@@ -135,6 +140,9 @@ void press_Subir(void){
         }
     }    
 }
+
+
+//Boton con antirebote para bajar valor en el puerto 
 void press_Bajar(void){
     if (banderaBoton == 1){
         if (banderaDO == 0){

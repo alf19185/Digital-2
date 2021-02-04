@@ -309,27 +309,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3547
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3547: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"20 ./DISPLAY7.h
-[; ;./DISPLAY7.h: 20: uint8_t numerosDisplay[16] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
-[v _numerosDisplay `uc ~T0 @X0 -> 16 `i e ]
+"21 ./DISPLAY7.h
+[; ;./DISPLAY7.h: 21:  int numerosDisplay[16] = { 0x88, 0xEB, 0x4C, 0x49, 0x2B, 0x19, 0x18, 0xCB, 0x8,0xB, 0x2, 0x30, 0x94, 0x60, 0x14, 0x16 };
+[v _numerosDisplay `i ~T0 @X0 -> 16 `i e ]
 [i _numerosDisplay
 :U ..
--> -> 63 `i `uc
--> -> 6 `i `uc
--> -> 91 `i `uc
--> -> 79 `i `uc
--> -> 102 `i `uc
--> -> 109 `i `uc
--> -> 125 `i `uc
--> -> 7 `i `uc
--> -> 127 `i `uc
--> -> 111 `i `uc
--> -> 119 `i `uc
--> -> 124 `i `uc
--> -> 57 `i `uc
--> -> 94 `i `uc
--> -> 121 `i `uc
--> -> 113 `i `uc
+-> 136 `i
+-> 235 `i
+-> 76 `i
+-> 73 `i
+-> 43 `i
+-> 25 `i
+-> 24 `i
+-> 203 `i
+-> 8 `i
+-> 11 `i
+-> 2 `i
+-> 48 `i
+-> 148 `i
+-> 96 `i
+-> 20 `i
+-> 22 `i
 ..
 ]
 "5 DISPLAY7.c
@@ -338,127 +338,127 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _valorTMR0
 -> -> 131 `i `uc
 ]
-"7
-[; ;DISPLAY7.c: 7: void config2Display(uint16_t FreqOsc){
+"8
+[; ;DISPLAY7.c: 8: void config2Display(uint16_t FreqOsc){
 [v _config2Display `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _config2Display ]
 [v _FreqOsc `ui ~T0 @X0 1 r1 ]
 [f ]
-"9
-[; ;DISPLAY7.c: 9:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
 "10
-[; ;DISPLAY7.c: 10:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 10:      TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "11
-[; ;DISPLAY7.c: 11:     TRISCbits.TRISC2 = 0;
-[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 11:      PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
 "12
-[; ;DISPLAY7.c: 12:     TRISCbits.TRISC0 = 0;
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 12:      TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
 "13
-[; ;DISPLAY7.c: 13:     PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 13:      TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
 "14
-[; ;DISPLAY7.c: 14:     PORTCbits.RC0 =0;
+[; ;DISPLAY7.c: 14:      PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"15
+[; ;DISPLAY7.c: 15:      PORTCbits.RC0 =0;
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"18
-[; ;DISPLAY7.c: 18:     switch (FreqOsc){
+"19
+[; ;DISPLAY7.c: 19:     switch (FreqOsc){
 [e $U 140  ]
 {
-"20
-[; ;DISPLAY7.c: 20:         case 31:
-[e :U 141 ]
 "21
-[; ;DISPLAY7.c: 21:             OSCCONbits.IRCF = 0b000;
-[e = . . _OSCCONbits 0 4 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 21:         case 31:
+[e :U 141 ]
 "22
-[; ;DISPLAY7.c: 22:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 22:             OSCCONbits.IRCF = 0b000;
+[e = . . _OSCCONbits 0 4 -> -> 0 `i `uc ]
 "23
-[; ;DISPLAY7.c: 23:         case 125:
-[e :U 142 ]
+[; ;DISPLAY7.c: 23:             break;
+[e $U 139  ]
 "24
-[; ;DISPLAY7.c: 24:             OSCCONbits.IRCF = 0b001;
-[e = . . _OSCCONbits 0 4 -> -> 1 `i `uc ]
+[; ;DISPLAY7.c: 24:         case 125:
+[e :U 142 ]
 "25
-[; ;DISPLAY7.c: 25:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 25:             OSCCONbits.IRCF = 0b001;
+[e = . . _OSCCONbits 0 4 -> -> 1 `i `uc ]
 "26
-[; ;DISPLAY7.c: 26:         case 250:
-[e :U 143 ]
+[; ;DISPLAY7.c: 26:             break;
+[e $U 139  ]
 "27
-[; ;DISPLAY7.c: 27:             OSCCONbits.IRCF = 0b010;
-[e = . . _OSCCONbits 0 4 -> -> 2 `i `uc ]
+[; ;DISPLAY7.c: 27:         case 250:
+[e :U 143 ]
 "28
-[; ;DISPLAY7.c: 28:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 28:             OSCCONbits.IRCF = 0b010;
+[e = . . _OSCCONbits 0 4 -> -> 2 `i `uc ]
 "29
-[; ;DISPLAY7.c: 29:         case 500:
-[e :U 144 ]
+[; ;DISPLAY7.c: 29:             break;
+[e $U 139  ]
 "30
-[; ;DISPLAY7.c: 30:             OSCCONbits.IRCF = 0b011;
-[e = . . _OSCCONbits 0 4 -> -> 3 `i `uc ]
+[; ;DISPLAY7.c: 30:         case 500:
+[e :U 144 ]
 "31
-[; ;DISPLAY7.c: 31:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 31:             OSCCONbits.IRCF = 0b011;
+[e = . . _OSCCONbits 0 4 -> -> 3 `i `uc ]
 "32
-[; ;DISPLAY7.c: 32:         case 1000:
-[e :U 145 ]
+[; ;DISPLAY7.c: 32:             break;
+[e $U 139  ]
 "33
-[; ;DISPLAY7.c: 33:             OSCCONbits.IRCF = 0b100;
-[e = . . _OSCCONbits 0 4 -> -> 4 `i `uc ]
+[; ;DISPLAY7.c: 33:         case 1000:
+[e :U 145 ]
 "34
-[; ;DISPLAY7.c: 34:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 34:             OSCCONbits.IRCF = 0b100;
+[e = . . _OSCCONbits 0 4 -> -> 4 `i `uc ]
 "35
-[; ;DISPLAY7.c: 35:         case 2000:
-[e :U 146 ]
+[; ;DISPLAY7.c: 35:             break;
+[e $U 139  ]
 "36
-[; ;DISPLAY7.c: 36:             OSCCONbits.IRCF = 0b101;
-[e = . . _OSCCONbits 0 4 -> -> 5 `i `uc ]
+[; ;DISPLAY7.c: 36:         case 2000:
+[e :U 146 ]
 "37
-[; ;DISPLAY7.c: 37:             break;
-[e $U 139  ]
+[; ;DISPLAY7.c: 37:             OSCCONbits.IRCF = 0b101;
+[e = . . _OSCCONbits 0 4 -> -> 5 `i `uc ]
 "38
-[; ;DISPLAY7.c: 38:         case 4000:
-[e :U 147 ]
+[; ;DISPLAY7.c: 38:             break;
+[e $U 139  ]
 "39
-[; ;DISPLAY7.c: 39:             OSCCONbits.IRCF = 0b110;
-[e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+[; ;DISPLAY7.c: 39:         case 4000:
+[e :U 147 ]
 "40
-[; ;DISPLAY7.c: 40:             OPTION_REGbits.PS = 0b110;
-[e = . . _OPTION_REGbits 0 0 -> -> 6 `i `uc ]
-"41
-[; ;DISPLAY7.c: 41:             valorTMR0 = 177;
-[e = _valorTMR0 -> -> 177 `i `uc ]
-"42
-[; ;DISPLAY7.c: 42:             break;
-[e $U 139  ]
-"43
-[; ;DISPLAY7.c: 43:         case 8000:
-[e :U 148 ]
-"44
-[; ;DISPLAY7.c: 44:             OSCCONbits.IRCF = 0b111;
-[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
-"45
-[; ;DISPLAY7.c: 45:             OPTION_REGbits.PS = 0b110;
-[e = . . _OPTION_REGbits 0 0 -> -> 6 `i `uc ]
-"46
-[; ;DISPLAY7.c: 46:             valorTMR0 = 98;
-[e = _valorTMR0 -> -> 98 `i `uc ]
-"47
-[; ;DISPLAY7.c: 47:             break;
-[e $U 139  ]
-"48
-[; ;DISPLAY7.c: 48:         default:
-[e :U 149 ]
-"49
-[; ;DISPLAY7.c: 49:             OSCCONbits.IRCF = 0b110;
+[; ;DISPLAY7.c: 40:             OSCCONbits.IRCF = 0b110;
 [e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+"41
+[; ;DISPLAY7.c: 41:             OPTION_REGbits.PS = 0b110;
+[e = . . _OPTION_REGbits 0 0 -> -> 6 `i `uc ]
+"42
+[; ;DISPLAY7.c: 42:             valorTMR0 = 177;
+[e = _valorTMR0 -> -> 177 `i `uc ]
+"43
+[; ;DISPLAY7.c: 43:             break;
+[e $U 139  ]
+"44
+[; ;DISPLAY7.c: 44:         case 8000:
+[e :U 148 ]
+"45
+[; ;DISPLAY7.c: 45:             OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+"46
+[; ;DISPLAY7.c: 46:             OPTION_REGbits.PS = 0b110;
+[e = . . _OPTION_REGbits 0 0 -> -> 6 `i `uc ]
+"47
+[; ;DISPLAY7.c: 47:             valorTMR0 = 98;
+[e = _valorTMR0 -> -> 98 `i `uc ]
+"48
+[; ;DISPLAY7.c: 48:             break;
+[e $U 139  ]
+"49
+[; ;DISPLAY7.c: 49:         default:
+[e :U 149 ]
 "50
-[; ;DISPLAY7.c: 50:     }
+[; ;DISPLAY7.c: 50:             OSCCONbits.IRCF = 0b110;
+[e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+"51
+[; ;DISPLAY7.c: 51:     }
 }
 [e $U 139  ]
 [e :U 140 ]
@@ -472,30 +472,30 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 8000 `i `ui 148
  149 ]
 [e :U 139 ]
-"52
-[; ;DISPLAY7.c: 52:     OPTION_REGbits.T0CS = 0;
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
 "53
-[; ;DISPLAY7.c: 53:     OPTION_REGbits.T0SE = 0;
-[e = . . _OPTION_REGbits 0 2 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 53:     OPTION_REGbits.T0CS = 0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
 "54
-[; ;DISPLAY7.c: 54:     OPTION_REGbits.PSA = 0;
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 54:     OPTION_REGbits.T0SE = 0;
+[e = . . _OPTION_REGbits 0 2 -> -> 0 `i `uc ]
 "55
-[; ;DISPLAY7.c: 55:     TMR0 = valorTMR0;
-[e = _TMR0 _valorTMR0 ]
+[; ;DISPLAY7.c: 55:     OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
 "56
-[; ;DISPLAY7.c: 56:     INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 56:     TMR0 = valorTMR0;
+[e = _TMR0 _valorTMR0 ]
 "57
-[; ;DISPLAY7.c: 57:     INTCONbits.T0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;DISPLAY7.c: 57:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "58
-[; ;DISPLAY7.c: 58: }
+[; ;DISPLAY7.c: 58:     INTCONbits.T0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"59
+[; ;DISPLAY7.c: 59: }
 [e :UE 138 ]
 }
-"61
-[; ;DISPLAY7.c: 61: void cambioDisplay(uint8_t valUni, uint8_t valDec, uint8_t bandera){
+"62
+[; ;DISPLAY7.c: 62: void cambioDisplay(uint8_t valUni, uint8_t valDec, uint8_t bandera){
 [v _cambioDisplay `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _cambioDisplay ]
@@ -503,51 +503,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _valDec `uc ~T0 @X0 1 r2 ]
 [v _bandera `uc ~T0 @X0 1 r3 ]
 [f ]
-"62
-[; ;DISPLAY7.c: 62:     TMR0 = valorTMR0;
+"63
+[; ;DISPLAY7.c: 63:     TMR0 = valorTMR0;
 [e = _TMR0 _valorTMR0 ]
-"66
-[; ;DISPLAY7.c: 66:     switch (bandera){
+"67
+[; ;DISPLAY7.c: 67:     switch (bandera){
 [e $U 152  ]
 {
-"67
-[; ;DISPLAY7.c: 67:         case 0:
-[e :U 153 ]
 "68
-[; ;DISPLAY7.c: 68:             PORTCbits.RC0 = 0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;DISPLAY7.c: 68:         case 0:
+[e :U 153 ]
 "69
-[; ;DISPLAY7.c: 69:             PORTD = numerosDisplay[valUni];
-[e = _PORTD *U + &U _numerosDisplay * -> _valUni `ux -> -> # *U &U _numerosDisplay `ui `ux ]
+[; ;DISPLAY7.c: 69:             PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "70
-[; ;DISPLAY7.c: 70:             PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;DISPLAY7.c: 70:             PORTD = numerosDisplay[valUni];
+[e = _PORTD -> *U + &U _numerosDisplay * -> _valUni `ux -> -> # *U &U _numerosDisplay `ui `ux `uc ]
 "71
-[; ;DISPLAY7.c: 71:             break;
-[e $U 151  ]
+[; ;DISPLAY7.c: 71:             PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
 "72
-[; ;DISPLAY7.c: 72:         case 255:
-[e :U 154 ]
-"73
-[; ;DISPLAY7.c: 73:             PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"74
-[; ;DISPLAY7.c: 74:             PORTD = numerosDisplay[valDec];
-[e = _PORTD *U + &U _numerosDisplay * -> _valDec `ux -> -> # *U &U _numerosDisplay `ui `ux ]
-"75
-[; ;DISPLAY7.c: 75:             PORTCbits.RC0 = 1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"76
-[; ;DISPLAY7.c: 76:             break;
+[; ;DISPLAY7.c: 72:             break;
 [e $U 151  ]
+"73
+[; ;DISPLAY7.c: 73:         case 255:
+[e :U 154 ]
+"74
+[; ;DISPLAY7.c: 74:             PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"75
+[; ;DISPLAY7.c: 75:             PORTD = numerosDisplay[valDec];
+[e = _PORTD -> *U + &U _numerosDisplay * -> _valDec `ux -> -> # *U &U _numerosDisplay `ui `ux `uc ]
+"76
+[; ;DISPLAY7.c: 76:             PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "77
-[; ;DISPLAY7.c: 77:         default:
-[e :U 155 ]
+[; ;DISPLAY7.c: 77:             break;
+[e $U 151  ]
 "78
-[; ;DISPLAY7.c: 78:             PORTD = PORTD;
-[e = _PORTD _PORTD ]
+[; ;DISPLAY7.c: 78:         default:
+[e :U 155 ]
 "79
-[; ;DISPLAY7.c: 79:     }
+[; ;DISPLAY7.c: 79:             PORTD = PORTD;
+[e = _PORTD _PORTD ]
+"80
+[; ;DISPLAY7.c: 80:     }
 }
 [e $U 151  ]
 [e :U 152 ]
@@ -555,7 +555,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 255 `i 154
  155 ]
 [e :U 151 ]
-"80
-[; ;DISPLAY7.c: 80: }
+"81
+[; ;DISPLAY7.c: 81: }
 [e :UE 150 ]
 }

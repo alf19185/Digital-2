@@ -9,7 +9,7 @@
 #include <xc.h> 
 #include <stdint.h>
 
-// se debe cambiar esto de acuerdo a lo que se tenga
+// Puerto D para display y C0 y C2 para multiplexar
 #define TRport        TRISD             
 #define PUERTOdisplay PORTD
 #define Tr1           PORTCbits.RC2
@@ -17,7 +17,8 @@
 #define TRpin1        TRISCbits.TRISC2
 #define TRpin2        TRISCbits.TRISC0
 
-uint8_t numerosDisplay[16] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
+//Ánodo 
+ int numerosDisplay[16] = { 0x88, 0xEB, 0x4C, 0x49, 0x2B, 0x19, 0x18, 0xCB, 0x8,0xB, 0x2, 0x30, 0x94, 0x60, 0x14, 0x16 }; 
 
 void config2Display(uint16_t FreqOsc);
 

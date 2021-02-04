@@ -1,4 +1,4 @@
-# 1 "Principal2.c"
+# 1 "Principal3.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,27 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Principal2.c" 2
+# 1 "Principal3.c" 2
 
 
 
 
 
 
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
@@ -2651,172 +2637,148 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 22 "Principal2.c" 2
+# 9 "Principal3.c" 2
+# 24 "Principal3.c"
+# 1 "./lcd.h" 1
+# 22 "./lcd.h"
+void Lcd8_Port(char a)
+{
+ if(a & 1)
+  RC0 = 1;
+ else
+  RC0 = 0;
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 23 "Principal2.c" 2
+ if(a & 2)
+  RC1 = 1;
+ else
+  RC1 = 0;
 
+ if(a & 4)
+  RC2 = 1;
+ else
+  RC2 = 0;
 
-# 1 "./DISPLAY7.h" 1
-# 10 "./DISPLAY7.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 10 "./DISPLAY7.h" 2
-# 21 "./DISPLAY7.h"
- int numerosDisplay[16] = { 0x88, 0xEB, 0x4C, 0x49, 0x2B, 0x19, 0x18, 0xCB, 0x8,0xB, 0x2, 0x30, 0x94, 0x60, 0x14, 0x16 };
+ if(a & 8)
+  RC3 = 1;
+ else
+  RC3 = 0;
 
-void config2Display(uint16_t FreqOsc);
+ if(a & 16)
+  RC4 = 1;
+ else
+  RC4 = 0;
 
-void cambioDisplay(uint8_t valDec, uint8_t valUni, uint8_t bandera);
-# 25 "Principal2.c" 2
+ if(a & 32)
+  RC5 = 1;
+ else
+  RC5 = 0;
 
-# 1 "./ADC.h" 1
-# 14 "./ADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./ADC.h" 2
+ if(a & 64)
+  RC6 = 1;
+ else
+  RC6 = 0;
 
-
-void ADConfig(uint8_t oscFreq,uint8_t canal, unsigned char justificado);
-
-uint8_t AnalogRead_8(unsigned char just);
-
-void ADCinit();
-# 26 "Principal2.c" 2
-
-
-
-
-void config_PUERTOS(void);
-void press_Subir(void);
-void press_Bajar(void);
-uint8_t banderaBoton = 0;
-uint8_t banderaUP = 0;
-uint8_t banderaDO = 0;
-uint8_t banderaTMR0 = 0;
-uint8_t banderaADC = 0;
-uint8_t valorDisplay_Dec;
-uint8_t valorDisplay_Uni;
-
-
-
-
-void __attribute__((picinterrupt(("")))) ISR(void){
-
-    if (PIR1bits.ADIF && PIE1bits.ADIE){
-        PIE1bits.ADIE = 0;
-        banderaADC = 1;
-    }
-
-    if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){
-        INTCONbits.RBIF = 0;
-        if (banderaBoton == 0){
-            banderaBoton = 1;
-            INTCONbits.RBIE = 0;
-        }
-    }
-
-    if (INTCONbits.T0IF == 1 && INTCONbits.T0IE == 1){
-        banderaTMR0 = ~banderaTMR0;
-        cambioDisplay(valorDisplay_Uni, valorDisplay_Dec, banderaTMR0);
-        INTCONbits.T0IF = 0;
-    }
-      return;
-    }
-
-
-void main(void) {
-
-    config_PUERTOS();
-    config2Display(4000);
-    ADConfig(8, 5, 'H');
-    INTCONbits.GIE = 1;
-
-
-    while(1){
-        if (banderaADC == 1){
-            valorDisplay_Uni = 9;
-            uint8_t lectura = AnalogRead_8('H');
-            if(lectura == PORTA){
-                PORTEbits.RE1 = 1;
-            }
-            else if (lectura != PORTA){
-                PORTEbits.RE1 = 0;
-            }
-
-            valorDisplay_Uni = lectura & 0x0F;
-            valorDisplay_Dec = (lectura & 0xF0) >> 4;
-            banderaADC = 0;
-            ADCinit();
-        }
-        press_Subir();
-        press_Bajar();
-        }
-    return;
+ if(a & 128)
+  RC7 = 1;
+ else
+  RC7 = 0;
+}
+void Lcd8_Cmd(char a)
+{
+  RB6 = 0;
+  Lcd8_Port(a);
+  RB7 = 1;
+  _delay((unsigned long)((5)*(4000000/4000.0)));
+  RB7 = 0;
 }
 
-void config_PUERTOS(void){
-
-    TRISD = 255;
-    TRISC = 255;
-    TRISA = 0;
-    TRISB = 0b00000101;
-    TRISE = 0;
-    PORTE = 0;
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
-    ANSEL = 0;
-    ANSELH = 0;
-    WPUB = 0b00000101;
-    OPTION_REGbits.nRBPU = 0;
-
-
-
-    IOCB = 0b00000101;;
-    INTCONbits.RBIE = 1;
-    return;
+Lcd8_Clear()
+{
+   Lcd8_Cmd(1);
 }
 
-
-void press_Subir(void){
-
-    if (banderaBoton == 1){
-        if (banderaUP == 0){
-            if (PORTBbits.RB0 == 0){
-                _delay((unsigned long)((69)*(4000000/4000.0)));
-                PORTA = PORTA + 1;
-                banderaBoton = 0;
-                banderaUP = 1;
-                INTCONbits.RBIE = 1;
-            }
-        }
-    }
-    if (banderaUP == 1){
-        if (PORTBbits.RB0 == 1){
-        _delay((unsigned long)((69)*(4000000/4000.0)));
-        banderaUP = 0;
-        }
-    }
+void Lcd8_Set_Cursor(char a, char b)
+{
+ if(a == 1)
+   Lcd8_Cmd(0x80 + b);
+ else if(a == 2)
+  Lcd8_Cmd(0xC0 + b);
 }
 
+void Lcd8_Init()
+{
+ Lcd8_Port(0x00);
+ RB6 = 0;
+ _delay((unsigned long)((25)*(4000000/4000.0)));
 
 
-void press_Bajar(void){
-    if (banderaBoton == 1){
-        if (banderaDO == 0){
-            if (PORTBbits.RB2 == 0){
-                _delay((unsigned long)((69)*(4000000/4000.0)));
-                PORTA = PORTA - 1;
-                banderaBoton = 0;
-                banderaDO = 1;
-                INTCONbits.RBIE = 1;
-            }
-        }
+  Lcd8_Cmd(0x30);
+_delay((unsigned long)((5)*(4000000/4000.0)));
+  Lcd8_Cmd(0x30);
+ _delay((unsigned long)((15)*(4000000/4000.0)));
+  Lcd8_Cmd(0x30);
+
+
+
+  Lcd8_Cmd(0x38);
+  Lcd8_Cmd(0x0C);
+  Lcd8_Cmd(0x01);
+  Lcd8_Cmd(0x06);
+}
+
+void Lcd8_Write_Char(char a)
+{
+   RB6 = 1;
+   Lcd8_Port(a);
+   RB7 = 1;
+  _delay((unsigned long)((4)*(4000000/4000.0)));
+   RB7 = 0;
+}
+
+void Lcd8_Write_String(char *a)
+{
+ int i;
+ for(i=0;a[i]!='\0';i++)
+  Lcd8_Write_Char(a[i]);
+}
+
+void Lcd8_Shift_Right()
+{
+ Lcd8_Cmd(0x1C);
+}
+
+void Lcd8_Shift_Left()
+{
+ Lcd8_Cmd(0x18);
+}
+# 24 "Principal3.c" 2
+
+
+void main()
+{
+  int i;
+  TRISB = 0x00;
+  TRISC = 0x00;
+  Lcd8_Init();
+
+  while(1)
+  {
+    Lcd8_Set_Cursor(1,1);
+    Lcd8_Write_String("electroSome LCD Hello World");
+    for(i=0;i<15;i++)
+    {
+      _delay((unsigned long)((1000)*(4000000/4000.0)));
+      Lcd8_Shift_Left();
     }
-    if (banderaDO == 1){
-        if (PORTBbits.RB2 == 1){
-        _delay((unsigned long)((69)*(4000000/4000.0)));
-        banderaDO = 0;
-        }
+    for(i=0;i<15;i++)
+    {
+      _delay((unsigned long)((1000)*(4000000/4000.0)));
+      Lcd8_Shift_Right();
     }
+    Lcd8_Clear();
+    Lcd8_Set_Cursor(2,1);
+    Lcd8_Write_Char('e');
+    Lcd8_Write_Char('S');
+    _delay((unsigned long)((2000)*(4000000/4000.0)));
+  }
 }

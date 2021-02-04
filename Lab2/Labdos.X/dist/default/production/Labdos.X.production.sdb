@@ -17,22 +17,22 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"7 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
+"8 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
 [v _config2Display config2Display `(v  1 e 1 0 ]
-"61
+"62
 [v _cambioDisplay cambioDisplay `(v  1 e 1 0 ]
 "44 D:\2021\Digital2\Digital2\Lab2\Labdos.X\Principal2.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 "68
 [v _main main `(v  1 e 1 0 ]
-"96
+"98
 [v _config_PUERTOS config_PUERTOS `(v  1 e 1 0 ]
-"119
+"123
 [v _press_Subir press_Subir `(v  1 e 1 0 ]
-"138
+"146
 [v _press_Bajar press_Bajar `(v  1 e 1 0 ]
-"20 D:\2021\Digital2\Digital2\Lab2\Labdos.X/DISPLAY7.h
-[v _numerosDisplay numerosDisplay `[16]uc  1 e 16 0 ]
+"21 D:\2021\Digital2\Digital2\Lab2\Labdos.X/DISPLAY7.h
+[v _numerosDisplay numerosDisplay `[16]i  1 e 32 0 ]
 "60 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "167
@@ -261,30 +261,30 @@
 "68
 [v _main main `(v  1 e 1 0 ]
 {
-"78
+"79
 [v main@lectura lectura `uc  1 a 1 7 ]
-"94
+"96
 } 0
-"119
+"123
 [v _press_Subir press_Subir `(v  1 e 1 0 ]
 {
-"137
+"142
 } 0
-"138
+"146
 [v _press_Bajar press_Bajar `(v  1 e 1 0 ]
 {
-"156
+"164
 } 0
-"96
+"98
 [v _config_PUERTOS config_PUERTOS `(v  1 e 1 0 ]
 {
-"118
+"120
 } 0
-"7 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
+"8 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
 [v _config2Display config2Display `(v  1 e 1 0 ]
 {
 [v config2Display@FreqOsc FreqOsc `ui  1 p 2 0 ]
-"58
+"59
 } 0
 "89 D:\2021\Digital2\Digital2\Lab2\Labdos.X\ADC.c
 [v _AnalogRead_8 AnalogRead_8 `(uc  1 e 1 0 ]
@@ -317,7 +317,7 @@
 {
 "65
 } 0
-"61 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
+"62 D:\2021\Digital2\Digital2\Lab2\Labdos.X\DISPLAY7.c
 [v _cambioDisplay cambioDisplay `(v  1 e 1 0 ]
 {
 [v cambioDisplay@valUni valUni `uc  1 a 1 wreg ]
@@ -325,5 +325,5 @@
 [v cambioDisplay@valDec valDec `uc  1 p 1 0 ]
 [v cambioDisplay@bandera bandera `uc  1 p 1 1 ]
 [v cambioDisplay@valUni valUni `uc  1 a 1 4 ]
-"80
+"81
 } 0

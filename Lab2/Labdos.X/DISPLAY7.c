@@ -3,15 +3,16 @@
 #include "DISPLAY7.h"
 
 uint8_t valorTMR0 = 131;
+//int16 numerosDisplay[16] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};     
 
 void config2Display(uint16_t FreqOsc){
     
-    TRport = 0;
-    PUERTOdisplay = 0;
-    TRpin1 = 0;
-    TRpin2 = 0;
-    Tr1 = 0;
-    Tr2 =0;
+     TRport = 0;
+     PUERTOdisplay = 0;
+     TRpin1 = 0;
+     TRpin2 = 0;
+     Tr1 = 0;
+     Tr2 =0;
     
     //Frecuencias Oscilador 
     
@@ -61,7 +62,7 @@ void config2Display(uint16_t FreqOsc){
 void cambioDisplay(uint8_t valUni, uint8_t valDec, uint8_t bandera){
     TMR0 = valorTMR0;
     
-    //Cambio de displays dependiendo de la bandera 
+    //Cambio de displays dependiendo de la bandera 0 o 255
     
     switch (bandera){
         case 0:

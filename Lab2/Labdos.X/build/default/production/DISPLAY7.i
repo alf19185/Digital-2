@@ -2638,8 +2638,8 @@ extern __bank0 __bit __timeout;
 # 10 "./DISPLAY7.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 10 "./DISPLAY7.h" 2
-# 20 "./DISPLAY7.h"
-uint8_t numerosDisplay[16] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
+# 21 "./DISPLAY7.h"
+ int numerosDisplay[16] = { 0x88, 0xEB, 0x4C, 0x49, 0x2B, 0x19, 0x18, 0xCB, 0x8,0xB, 0x2, 0x30, 0x94, 0x60, 0x14, 0x16 };
 
 void config2Display(uint16_t FreqOsc);
 
@@ -2649,14 +2649,15 @@ void cambioDisplay(uint8_t valDec, uint8_t valUni, uint8_t bandera);
 
 uint8_t valorTMR0 = 131;
 
+
 void config2Display(uint16_t FreqOsc){
 
-    TRISD = 0;
-    PORTD = 0;
-    TRISCbits.TRISC2 = 0;
-    TRISCbits.TRISC0 = 0;
-    PORTCbits.RC2 = 0;
-    PORTCbits.RC0 =0;
+     TRISD = 0;
+     PORTD = 0;
+     TRISCbits.TRISC2 = 0;
+     TRISCbits.TRISC0 = 0;
+     PORTCbits.RC2 = 0;
+     PORTCbits.RC0 =0;
 
 
 
