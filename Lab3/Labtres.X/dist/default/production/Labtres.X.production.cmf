@@ -12,54 +12,71 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\Labtres.X.production.o
-cinit CODE 0 7FC 7FC 4 2
-text1 CODE 0 6BC 6BC 25 2
-text2 CODE 0 686 686 1A 2
-text3 CODE 0 666 666 7 2
-text4 CODE 0 65F 65F 7 2
-text5 CODE 0 6A0 6A0 1C 2
-text6 CODE 0 71F 71F 4E 2
-text7 CODE 0 658 658 7 2
-text8 CODE 0 66D 66D 19 2
-text9 CODE 0 6E1 6E1 3E 2
-maintext CODE 0 76D 76D 8F 2
-cstackCOMMON COMMON 1 70 70 C 1
-strings STRING 0 3 3 22 2
-$C:\Users\Gaby\AppData\Local\Temp\sje8.o
-end_init CODE 0 0 0 3 2
+cinit CODE 0 F F 1B 2
+text1 CODE 0 717 717 14 2
+text2 CODE 0 650 650 2E 2
+text3 CODE 0 540 540 63 2
+text4 CODE 0 3E9 3E9 87 2
+text5 CODE 0 470 470 69 2
+text6 CODE 0 2BA 2BA A4 2
+text7 CODE 0 67E 67E 25 2
+text8 CODE 0 5A3 5A3 4C 2
+text9 CODE 0 4D9 4D9 67 2
+text10 CODE 0 6A3 6A3 25 2
+text11 CODE 0 72B 72B F 2
+text12 CODE 0 5EF 5EF 32 2
+text13 CODE 0 621 621 2F 2
+text14 CODE 0 6C8 6C8 22 2
+text15 CODE 0 1DB 1DB DF 2
+text16 CODE 0 35E 35E 8B 2
+text17 CODE 0 6EA 6EA 18 2
+maintext CODE 0 2A 2A 1B1 2
+cstackCOMMON COMMON 1 70 70 A 1
+cstackBANK0 BANK0 1 45 45 1A 1
+intentry CODE 0 4 4 8 2
+bssBANK0 BANK0 1 20 20 25 1
+idataBANK0 CODE 0 742 742 2 2
+strings STRING 0 702 702 15 2
+dataBANK0 BANK0 1 5F 5F 2 1
+clrtext CODE 0 73A 73A 8 2
+bssCOMMON COMMON 1 7A 7A 2 1
+config CONFIG 4 2007 2007 2 2
+$C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 C C 3 2
+config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 20-6F 1
+RAM 61-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 20-6F 1
+BANK0 61-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 25-657 2
-CONST 800-1FFF 2
-ENTRY 25-657 2
-ENTRY 800-1FFF 2
+CONST 3-3 2
+CONST 744-1FFF 2
+ENTRY 3-3 2
+ENTRY 744-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 25-657 2
-CODE 800-1FFF 2
+CODE 3-3 2
+CODE 744-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 7C-7D 1
-CONFIG 2007-2008 2
 EEDATA 2100-21FF 2
-STRCODE 25-657 2
-STRCODE 800-1FFF 2
-STRING 25-657 2
-STRING 800-1FFF 2
+STRCODE 3-3 2
+STRCODE 744-1FFF 2
+STRING 3-3 2
+STRING 744-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -74,111 +91,396 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Labtres.X.production.o
-7FC cinit CODE >501:C:\Users\Gaby\AppData\Local\Temp\sje8.s
-7FC cinit CODE >504:C:\Users\Gaby\AppData\Local\Temp\sje8.s
-7FC cinit CODE >510:C:\Users\Gaby\AppData\Local\Temp\sje8.s
-7FC cinit CODE >512:C:\Users\Gaby\AppData\Local\Temp\sje8.s
-7FD cinit CODE >513:C:\Users\Gaby\AppData\Local\Temp\sje8.s
-6E1 text9 CODE >22:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6E2 text9 CODE >24:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6E6 text9 CODE >25:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6EA text9 CODE >26:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6EA text9 CODE >27:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6ED text9 CODE >29:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6F1 text9 CODE >30:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6F3 text9 CODE >31:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6F3 text9 CODE >32:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6F4 text9 CODE >34:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6F8 text9 CODE >35:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6FA text9 CODE >36:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6FA text9 CODE >37:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6FB text9 CODE >39:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6FF text9 CODE >40:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-701 text9 CODE >41:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-701 text9 CODE >42:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-702 text9 CODE >44:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-706 text9 CODE >45:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-708 text9 CODE >46:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-708 text9 CODE >47:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-709 text9 CODE >49:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-70D text9 CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-70F text9 CODE >51:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-70F text9 CODE >52:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-710 text9 CODE >54:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-714 text9 CODE >55:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-716 text9 CODE >56:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-716 text9 CODE >57:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-717 text9 CODE >59:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71B text9 CODE >60:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71D text9 CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71D text9 CODE >62:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71E text9 CODE >63:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-66D text8 CODE >64:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-66E text8 CODE >66:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-671 text8 CODE >67:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-677 text8 CODE >68:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-67A text8 CODE >69:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-682 text8 CODE >70:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-685 text8 CODE >71:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-658 text7 CODE >73:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-658 text7 CODE >75:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-65E text7 CODE >76:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71F text6 CODE >86:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-71F text6 CODE >88:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-725 text6 CODE >89:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-728 text6 CODE >90:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-731 text6 CODE >93:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-737 text6 CODE >94:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-73F text6 CODE >95:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-745 text6 CODE >96:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-74E text6 CODE >97:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-754 text6 CODE >101:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-75A text6 CODE >102:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-760 text6 CODE >103:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-766 text6 CODE >104:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-76C text6 CODE >105:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6A0 text5 CODE >78:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6A1 text5 CODE >80:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6A6 text5 CODE >81:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6AE text5 CODE >82:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6B4 text5 CODE >83:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6BB text5 CODE >84:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-65F text4 CODE >128:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-65F text4 CODE >130:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-665 text4 CODE >131:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-666 text3 CODE >123:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-666 text3 CODE >125:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-66C text3 CODE >126:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-686 text2 CODE >107:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-687 text2 CODE >109:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-68A text2 CODE >110:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-690 text2 CODE >111:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-693 text2 CODE >112:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-69C text2 CODE >113:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-69F text2 CODE >114:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6BC text1 CODE >116:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6BD text1 CODE >119:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6C0 text1 CODE >120:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-6E0 text1 CODE >121:D:\2021\Digital2\Digital2\Lab3\Labtres.X/lcd.h
-76D maintext CODE >26:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-76D maintext CODE >29:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-770 maintext CODE >30:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-771 maintext CODE >31:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-776 maintext CODE >35:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-77E maintext CODE >36:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-784 maintext CODE >37:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-786 maintext CODE >39:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-793 maintext CODE >40:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-798 maintext CODE >41:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7AB maintext CODE >42:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7AD maintext CODE >44:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7BA maintext CODE >45:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7BF maintext CODE >46:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7D2 maintext CODE >47:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7D7 maintext CODE >48:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7DF maintext CODE >49:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7E5 maintext CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
-7EB maintext CODE >51:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+F cinit CODE >1014:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+F cinit CODE >1017:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+F cinit CODE >1082:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+14 cinit CODE >1083:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+15 cinit CODE >1084:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1A cinit CODE >1085:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1B cinit CODE >1104:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1C cinit CODE >1105:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1D cinit CODE >1106:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1E cinit CODE >1107:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+1F cinit CODE >1108:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+24 cinit CODE >1111:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+25 cinit CODE >1112:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+26 cinit CODE >1118:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+26 cinit CODE >1120:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+27 cinit CODE >1121:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+4 intentry CODE >52:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+6EA text17 CODE >52:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+6EA text17 CODE >53:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+6F6 text17 CODE >54:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+6F7 text17 CODE >55:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+6FB text17 CODE >57:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+35E text16 CODE >113:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+35F text16 CODE >114:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+360 text16 CODE >115:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+360 text16 CODE >116:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+363 text16 CODE >117:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+366 text16 CODE >118:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+36A text16 CODE >119:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+36B text16 CODE >120:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+36B text16 CODE >121:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+36E text16 CODE >122:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+371 text16 CODE >123:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+377 text16 CODE >124:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+378 text16 CODE >125:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+378 text16 CODE >126:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+37B text16 CODE >127:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+37E text16 CODE >128:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+384 text16 CODE >129:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+385 text16 CODE >130:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+385 text16 CODE >131:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+388 text16 CODE >132:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+38B text16 CODE >133:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+391 text16 CODE >134:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+392 text16 CODE >135:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+392 text16 CODE >136:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+395 text16 CODE >137:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+398 text16 CODE >138:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+39E text16 CODE >139:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+39F text16 CODE >140:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+39F text16 CODE >141:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3A2 text16 CODE >142:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3A5 text16 CODE >143:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3AB text16 CODE >144:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3AC text16 CODE >145:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3AC text16 CODE >146:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3AF text16 CODE >147:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3B2 text16 CODE >148:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3B8 text16 CODE >149:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3B9 text16 CODE >150:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3B9 text16 CODE >151:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3BC text16 CODE >152:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3BF text16 CODE >153:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3C5 text16 CODE >154:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3C6 text16 CODE >158:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+3E8 text16 CODE >159:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1DB text15 CODE >8:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1DC text15 CODE >9:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1DD text15 CODE >11:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1E1 text15 CODE >12:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1E2 text15 CODE >14:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1E8 text15 CODE >15:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1E9 text15 CODE >17:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1EF text15 CODE >18:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1F0 text15 CODE >20:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1F4 text15 CODE >21:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1F5 text15 CODE >23:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+1FB text15 CODE >24:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+212 text15 CODE >26:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+212 text15 CODE >27:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+215 text15 CODE >28:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+216 text15 CODE >29:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+216 text15 CODE >30:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+219 text15 CODE >31:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+21A text15 CODE >32:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+21A text15 CODE >33:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+21D text15 CODE >34:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+22E text15 CODE >36:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+22E text15 CODE >37:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+22F text15 CODE >38:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+232 text15 CODE >39:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+236 text15 CODE >40:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+237 text15 CODE >41:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+237 text15 CODE >42:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+238 text15 CODE >43:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+23B text15 CODE >44:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+241 text15 CODE >45:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+242 text15 CODE >46:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+242 text15 CODE >47:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+243 text15 CODE >48:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+246 text15 CODE >49:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+24C text15 CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+24D text15 CODE >51:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+24D text15 CODE >52:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+24E text15 CODE >53:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+251 text15 CODE >54:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+257 text15 CODE >55:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+258 text15 CODE >56:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+258 text15 CODE >57:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+259 text15 CODE >58:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+25C text15 CODE >59:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+262 text15 CODE >60:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+263 text15 CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+263 text15 CODE >62:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+264 text15 CODE >63:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+267 text15 CODE >64:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+26D text15 CODE >65:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+26E text15 CODE >66:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+26E text15 CODE >67:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+26F text15 CODE >68:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+272 text15 CODE >69:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+278 text15 CODE >70:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+279 text15 CODE >71:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+279 text15 CODE >72:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+27A text15 CODE >73:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+27D text15 CODE >74:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+283 text15 CODE >75:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+284 text15 CODE >79:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2A6 text15 CODE >80:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2A8 text15 CODE >81:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2A9 text15 CODE >82:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2AC text15 CODE >83:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2AD text15 CODE >84:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2AE text15 CODE >85:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2B6 text15 CODE >86:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+2B9 text15 CODE >87:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6C8 text14 CODE >89:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6C9 text14 CODE >90:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6C9 text14 CODE >91:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6CA text14 CODE >93:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6D0 text14 CODE >94:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6D1 text14 CODE >96:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6D7 text14 CODE >97:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6D8 text14 CODE >100:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6E8 text14 CODE >101:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+6E9 text14 CODE >102:D:\2021\Digital2\Digital2\Lab3\Labtres.X\ADC.c
+621 text13 CODE >13:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+622 text13 CODE >14:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+625 text13 CODE >15:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+62D text13 CODE >16:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+630 text13 CODE >17:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+638 text13 CODE >18:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+63C text13 CODE >19:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+644 text13 CODE >20:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+647 text13 CODE >21:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+64F text13 CODE >22:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5EF text12 CODE >72:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5F0 text12 CODE >73:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5F0 text12 CODE >74:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5F1 text12 CODE >76:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5F6 text12 CODE >77:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5FC text12 CODE >78:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5FD text12 CODE >80:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+602 text12 CODE >81:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+608 text12 CODE >82:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+609 text12 CODE >84:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+60F text12 CODE >85:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+620 text12 CODE >86:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+72B text11 CODE >56:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+72C text11 CODE >57:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+72F text11 CODE >59:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+731 text11 CODE >60:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+732 text11 CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+736 text11 CODE >62:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+739 text11 CODE >63:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+6A3 text10 CODE >65:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+6A4 text10 CODE >67:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+6A7 text10 CODE >68:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+6B4 text10 CODE >69:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+6C7 text10 CODE >70:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4D9 text9 CODE >36:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4D9 text9 CODE >37:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4E2 text9 CODE >38:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4E8 text9 CODE >39:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4F0 text9 CODE >40:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4F6 text9 CODE >41:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+4FA text9 CODE >42:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+500 text9 CODE >43:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+504 text9 CODE >44:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+50A text9 CODE >45:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+50F text9 CODE >46:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+515 text9 CODE >47:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+51A text9 CODE >48:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+520 text9 CODE >49:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+529 text9 CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+52F text9 CODE >51:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+534 text9 CODE >52:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+53A text9 CODE >53:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+53F text9 CODE >54:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5A3 text8 CODE >46:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5A4 text8 CODE >48:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5A9 text8 CODE >49:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5AD text8 CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5AE text8 CODE >51:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5B3 text8 CODE >50:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5B9 text8 CODE >54:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5BD text8 CODE >55:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5BE text8 CODE >56:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5C3 text8 CODE >55:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5C9 text8 CODE >59:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5CE text8 CODE >60:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5D2 text8 CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5D3 text8 CODE >62:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5D8 text8 CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5DE text8 CODE >64:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5E2 text8 CODE >65:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5E3 text8 CODE >66:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5E8 text8 CODE >65:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+5EE text8 CODE >69:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+67E text7 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+67E text7 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+680 text7 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+684 text7 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+68A text7 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+691 text7 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+698 text7 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+69E text7 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+6A2 text7 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+2BA text6 CODE >149:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2BD text6 CODE >150:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2C6 text6 CODE >151:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2DF text6 CODE >152:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2E0 text6 CODE >153:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2E8 text6 CODE >154:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2EF text6 CODE >152:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2FC text6 CODE >156:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+30F text6 CODE >157:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+310 text6 CODE >158:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+318 text6 CODE >159:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+31F text6 CODE >157:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+32C text6 CODE >161:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+33F text6 CODE >162:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+340 text6 CODE >163:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+348 text6 CODE >164:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+34F text6 CODE >162:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+35C text6 CODE >167:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+35D text6 CODE >168:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+470 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+470 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+473 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+477 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+47C text5 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+47E text5 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+482 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+487 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+48B text5 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+48D text5 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+493 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+495 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+496 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+49D text5 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4A1 text5 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4A5 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4AC text5 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4B6 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4BC text5 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4BD text5 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4C4 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4CA text5 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4CF text5 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4D4 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+4D8 text5 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3E9 text4 CODE >147:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+3EC text4 CODE >148:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+3F5 text4 CODE >149:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+40B text4 CODE >150:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+40F text4 CODE >151:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+437 text4 CODE >152:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+43B text4 CODE >153:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+46E text4 CODE >154:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+46F text4 CODE >155:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+540 text3 CODE >108:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+541 text3 CODE >109:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+541 text3 CODE >110:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+542 text3 CODE >112:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+546 text3 CODE >113:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+547 text3 CODE >115:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+54B text3 CODE >116:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+54C text3 CODE >118:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+550 text3 CODE >119:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+551 text3 CODE >121:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+555 text3 CODE >122:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+556 text3 CODE >124:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+55A text3 CODE >125:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+55B text3 CODE >127:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+55F text3 CODE >128:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+560 text3 CODE >130:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+564 text3 CODE >131:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+565 text3 CODE >133:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+569 text3 CODE >134:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+56A text3 CODE >136:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+56E text3 CODE >137:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+56F text3 CODE >139:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+573 text3 CODE >140:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+574 text3 CODE >142:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+578 text3 CODE >143:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5A1 text3 CODE >144:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+5A2 text3 CODE >145:D:\2021\Digital2\Digital2\Lab3\Labtres.X\LCD.c
+650 text2 CODE >25:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+650 text2 CODE >27:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+656 text2 CODE >28:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+65E text2 CODE >29:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+664 text2 CODE >31:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+665 text2 CODE >33:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+669 text2 CODE >35:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+66A text2 CODE >37:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+66C text2 CODE >39:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+66D text2 CODE >42:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+67D text2 CODE >43:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+717 text1 CODE >10:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+717 text1 CODE >12:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+71A text1 CODE >13:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+71B text1 CODE >14:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+71C text1 CODE >15:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+71F text1 CODE >16:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+723 text1 CODE >17:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+724 text1 CODE >18:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+725 text1 CODE >19:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+728 text1 CODE >20:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+729 text1 CODE >21:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+72A text1 CODE >22:D:\2021\Digital2\Digital2\Lab3\Labtres.X\USART.c
+2A maintext CODE >59:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2A maintext CODE >60:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2D maintext CODE >61:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+2F maintext CODE >63:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+32 maintext CODE >64:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+33 maintext CODE >65:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+38 maintext CODE >66:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+48 maintext CODE >67:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+50 maintext CODE >68:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+56 maintext CODE >69:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+5B maintext CODE >73:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+61 maintext CODE >74:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+66 maintext CODE >75:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+71 maintext CODE >78:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+77 maintext CODE >79:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+81 maintext CODE >82:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+89 maintext CODE >85:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+94 maintext CODE >86:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+9A maintext CODE >87:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+AF maintext CODE >88:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+B6 maintext CODE >89:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+C6 maintext CODE >90:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+CC maintext CODE >91:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+DD maintext CODE >92:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+EE maintext CODE >93:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+F4 maintext CODE >97:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+F5 maintext CODE >99:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+100 maintext CODE >100:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+106 maintext CODE >101:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+11B maintext CODE >102:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+125 maintext CODE >103:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+135 maintext CODE >104:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+13B maintext CODE >105:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+14C maintext CODE >106:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+15D maintext CODE >107:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+163 maintext CODE >111:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+164 maintext CODE >114:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+165 maintext CODE >115:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+166 maintext CODE >116:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+17A maintext CODE >118:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+17D maintext CODE >119:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+17E maintext CODE >120:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+181 maintext CODE >121:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+184 maintext CODE >125:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+18F maintext CODE >126:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+199 maintext CODE >127:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+1A9 maintext CODE >128:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+1BA maintext CODE >129:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+1CB maintext CODE >130:D:\2021\Digital2\Digital2\Lab3\Labtres.X\Principal3.c
+73A clrtext CODE >1091:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73A clrtext CODE >1092:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73B clrtext CODE >1093:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73B clrtext CODE >1094:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73C clrtext CODE >1095:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73D clrtext CODE >1096:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73E clrtext CODE >1097:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+73F clrtext CODE >1098:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+740 clrtext CODE >1099:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
+741 clrtext CODE >1100:C:\Users\Gaby\AppData\Local\Temp\sg7k.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -192,70 +494,112 @@ $dist/default/production\Labtres.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_Lcd8_Cmd CDA 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
-__Hspace_0 800 0 ABS 0 - -
+___awdiv@counter 49 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+AnalogRead_8@conversion 75 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__size_of_usartRC_Read 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__Hspace_0 744 0 ABS 0 - -
 __Hspace_1 7C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__size_of_Lcd8_Write_Char 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-__end_of_Lcd8_Shift_Left CCC 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
+__Hspace_4 4010 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd8_Cmd D0C 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
-main@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sje8.o
-_main EDA 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+_main 54 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
+_num1 44 0 BANK0 1 bssBANK0 dist/default/production\Labtres.X.production.o
+_num2 43 0 BANK0 1 bssBANK0 dist/default/production\Labtres.X.production.o
+_num3 42 0 BANK0 1 bssBANK0 dist/default/production\Labtres.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Labtres.X.production.o
-start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sje8.o
+_uint_to_char A80 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
+start 18 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-__end_of_Lcd8_Write_String DC2 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
+__end_of_usartRC_Read CFC 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+_uint_to_array 7D2 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
+__size_of_LCD_Write_Character 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+?___wmul 72 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__size_of_LCD_Cmd 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+_LCD_init 9B2 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__size_of_Lcd8_Clear 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sje8.o
-__end_of_Lcd8_Shift_Right CDA 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
+__size_of_ADConfig 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__size_of_LCD_Set_Cursor 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+__end_of_LCD_init A80 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_Lcd8_Shift_Left CBE 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__size_of_Lcd8_Shift_Right 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__size_of_uint_to_char 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+___awdiv@sign 4A 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_Lcd8_Init EDA 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
-__end_of_Lcd8_Port E3E 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
-__size_of_Lcd8_Init 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-__size_of_Lcd8_Port 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+uint_to_char@numChr 75 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+uint_to_char@numero 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+LCD_Set_Cursor@linea 78 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+_LCD_Write_Character E56 0 CODE 0 text11 dist/default/production\Labtres.X.production.o
+___wmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+_ADRESH 1E 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_ADRESL 9E 0 ABS 0 - dist/default/production\Labtres.X.production.o
+___awdiv@dividend 47 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+ADConfig@justificado 73 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__end_of___wmul D46 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
+__end_of_uint_to_char B46 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_Lcd8_Init E3E 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
-_Lcd8_Port DC2 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
-_Lcd8_Write_String D78 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sje8.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sje8.o
-__end_of_Lcd8_Set_Cursor D78 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
-start_initialization FF8 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
-__size_of_Lcd8_Shift_Left 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_Lcd8_Set_Cursor D40 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sje8.o
+___awdiv@divisor 45 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+_ADConfig 3B6 0 CODE 0 text15 dist/default/production\Labtres.X.production.o
+__end_of___awdiv 9B2 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
+__size_of_uint_to_array 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+__end_of_LCD_Cmd CA0 0 CODE 0 text13 dist/default/production\Labtres.X.production.o
+__end_of_ADConfig 574 0 CODE 0 text15 dist/default/production\Labtres.X.production.o
+__end_of_enviar BDE 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
+_BAUDCTLbits 187 0 ABS 0 - dist/default/production\Labtres.X.production.o
+mapear@limSup 79 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+mapear@limReal 78 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+start_initialization 1E 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
+_TRISAbits 85 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_TRISEbits 89 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__size_of_ISR_ADC 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+ADConfig@oscFreq 76 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__end_of_mapear 6BC 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
+__end_of_uint_to_array 8E0 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
+clear_ram0 E74 0 CODE 0 clrtext dist/default/production\Labtres.X.production.o
+_SPBRGH 9A 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__pcstackBANK0 45 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+__end_of_LCD_Write_Character E74 0 CODE 0 text11 dist/default/production\Labtres.X.production.o
+LCD_Set_Cursor@corrimiento 79 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sg7k.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 1000 0 CODE 0 cinit -
+__Hcinit 54 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 10 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+__stringbase E0E 0 STRING 0 strings dist/default/production\Labtres.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit FF8 0 CODE 0 cinit -
+__Lcinit 1E 0 CODE 0 cinit -
+ADConfig@canal 72 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
 __Lstack 0 0 STACK 2 stack -
+_PORTCbits 7 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_INTCONbits B 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_usart_init E2E 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 0 0 CODE 0 init -
+__Hinit 18 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -263,82 +607,141 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 0 0 CODE 0 init -
+__Linit 18 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-Lcd8_Cmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+___wmul CFC 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
+_AnalogRead_8 D90 0 CODE 0 text14 dist/default/production\Labtres.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_RB6 36 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RB7 37 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC0 38 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC1 39 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC2 3A 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC3 3B 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC4 3C 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC5 3D 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC6 3E 0 ABS 0 - dist/default/production\Labtres.X.production.o
-_RC7 3F 0 ABS 0 - dist/default/production\Labtres.X.production.o
-__S0 800 0 ABS 0 - -
+__S0 744 0 ABS 0 - -
 __S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__Lintentry 0 0 CODE 0 intentry -
-__stringtab 6 0 STRING 0 strings dist/default/production\Labtres.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sje8.o
-__size_of_Lcd8_Set_Cursor 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-Lcd8_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-Lcd8_Set_Cursor@a 75 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-Lcd8_Set_Cursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-__pmaintext EDA 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
+saved_w 7E 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__end_of_ISR_ADC E04 0 CODE 0 text17 dist/default/production\Labtres.X.production.o
+uint_to_array@centenas 5A 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+_enviar B46 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
+_LCD_Write_String D46 0 CODE 0 text10 dist/default/production\Labtres.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+__stringtab E04 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sg7k.o
+ADC_CHselect@canal 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__size_of_AnalogRead_8 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__pdataBANK0 5F 0 BANK0 1 dataBANK0 dist/default/production\Labtres.X.production.o
+_LCD_Set_Cursor BDE 0 CODE 0 text12 dist/default/production\Labtres.X.production.o
+_ADC_CHselect 6BC 0 CODE 0 text16 dist/default/production\Labtres.X.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+_valorADC_CH0 7A 0 COMMON 1 bssCOMMON dist/default/production\Labtres.X.production.o
+_valorADC_CH5 7B 0 COMMON 1 bssCOMMON dist/default/production\Labtres.X.production.o
+enviar@valor1 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+enviar@valor2 72 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+_RCSTAbits 18 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_PIE1bits 8C 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__end_of_usart_init E56 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
+_mapear 574 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
+__ptext10 D46 0 CODE 0 text10 dist/default/production\Labtres.X.production.o
+__ptext11 E56 0 CODE 0 text11 dist/default/production\Labtres.X.production.o
+__ptext12 BDE 0 CODE 0 text12 dist/default/production\Labtres.X.production.o
+__ptext13 C42 0 CODE 0 text13 dist/default/production\Labtres.X.production.o
+__ptext14 D90 0 CODE 0 text14 dist/default/production\Labtres.X.production.o
+__ptext15 3B6 0 CODE 0 text15 dist/default/production\Labtres.X.production.o
+__ptext16 6BC 0 CODE 0 text16 dist/default/production\Labtres.X.production.o
+__ptext17 DD4 0 CODE 0 text17 dist/default/production\Labtres.X.production.o
+usartRC_Read@lectura 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+___awdiv 8E0 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
+__pmaintext 54 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
+_banderaADC 60 0 BANK0 1 dataBANK0 dist/default/production\Labtres.X.production.o
 __Lcommon 0 0 ABS 0 common -
-_Lcd8_Clear CB0 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
-__end_of__stringtab 12 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+__Lconfig 0 0 CONFIG 4 config -
+__end_of_AnalogRead_8 DD4 0 CODE 0 text14 dist/default/production\Labtres.X.production.o
+__size_of_enviar 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_LCD_Cmd C42 0 CODE 0 text13 dist/default/production\Labtres.X.production.o
+___wmul@multiplier 72 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+LCD_Set_Cursor@columna 75 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__size_of_ADC_CHselect 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+LCD_Write_String@a 76 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+LCD_Write_String@n 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+_ADCON0bits 1F 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_ADCON1bits 9F 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__end_of__stringtab E10 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+__end_of_LCD_Set_Cursor C42 0 CODE 0 text12 dist/default/production\Labtres.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__Lend_init 0 0 CODE 0 end_init -
+__Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Labtres.X.production.o
+__size_of_mapear 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - dist/default/production\Labtres.X.production.o
+__Lend_init 18 0 CODE 0 end_init -
+__end_of_LCD_Write_String D90 0 CODE 0 text10 dist/default/production\Labtres.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_Lcd8_Write_Char D40 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
-end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
-__Hintentry 0 0 CODE 0 intentry -
+uint_to_array@resultado 54 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+end_of_initialization 4C 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
+__Hintentry 18 0 CODE 0 intentry -
+__end_of_ADC_CHselect 7D2 0 CODE 0 text16 dist/default/production\Labtres.X.production.o
+__size_of_LCD_Write_String 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
 __Lstrings 0 0 ABS 0 strings -
-__Hreset_vec 0 0 CODE 0 reset_vec -
-Lcd8_Write_String@a 76 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-Lcd8_Write_String@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-__ptext1 D78 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
-__ptext2 D0C 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
-__ptext3 CCC 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
-__ptext4 CBE 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
-__ptext5 D40 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
-__ptext6 E3E 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
-__ptext7 CB0 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
-__ptext8 CDA 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
-__ptext9 DC2 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
+___awdiv@quotient 4B 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+?___awdiv 45 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+mapear@resultado 4A 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+uint_to_array@decenas 53 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+__ptext1 E2E 0 CODE 0 text1 dist/default/production\Labtres.X.production.o
+__ptext2 CA0 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
+__ptext3 A80 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
+__ptext4 7D2 0 CODE 0 text4 dist/default/production\Labtres.X.production.o
+__ptext5 8E0 0 CODE 0 text5 dist/default/production\Labtres.X.production.o
+__ptext6 574 0 CODE 0 text6 dist/default/production\Labtres.X.production.o
+__ptext7 CFC 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
+__ptext8 B46 0 CODE 0 text8 dist/default/production\Labtres.X.production.o
+__ptext9 9B2 0 CODE 0 text9 dist/default/production\Labtres.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd8_Clear CBE 0 CODE 0 text7 dist/default/production\Labtres.X.production.o
+AnalogRead_8@just 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+uint_to_array@numero 5B 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_Lcd8_Write_Char D0C 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
-__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
+LCD_Cmd@comando 74 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__end_of__initialization 4C 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__size_of_Lcd8_Write_String 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-Lcd8_Write_Char@a 73 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__pidataBANK0 E84 0 CODE 0 idataBANK0 dist/default/production\Labtres.X.production.o
+mapear@valor 49 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
+mapear@dividendo 50 0 BANK0 1 cstackBANK0 dist/default/production\Labtres.X.production.o
+_ANSELbits 188 0 ABS 0 - dist/default/production\Labtres.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
-__size_of_Lcd8_Cmd 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
-__Hend_init 6 0 CODE 0 end_init -
-__end_of_main FF8 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
-_TRISB 86 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_TXSTAbits 98 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_ISR_ADC DD4 0 CODE 0 text17 dist/default/production\Labtres.X.production.o
+__Hend_init 1E 0 CODE 0 end_init -
+LCD_Write_Character@caracter 73 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__end_of_main 3B6 0 CODE 0 maintext dist/default/production\Labtres.X.production.o
+__size_of_usart_init 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_usartRC_Read CA0 0 CODE 0 text2 dist/default/production\Labtres.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_RCREG 1A 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_SPBRG 99 0 ABS 0 - dist/default/production\Labtres.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\Labtres.X.production.o
+_TXREG 19 0 ABS 0 - dist/default/production\Labtres.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__initialization FF8 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
-_Lcd8_Shift_Right CCC 0 CODE 0 text3 dist/default/production\Labtres.X.production.o
-__pstrings 6 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+interrupt_function 8 0 CODE 0 intentry dist/default/production\Labtres.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production\Labtres.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+_contador 3E 0 BANK0 1 bssBANK0 dist/default/production\Labtres.X.production.o
+__initialization 1E 0 CODE 0 cinit dist/default/production\Labtres.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\Labtres.X.production.o
+__pstrings E04 0 STRING 0 strings dist/default/production\Labtres.X.production.o
+___wmul@product 76 0 COMMON 1 cstackCOMMON dist/default/production\Labtres.X.production.o
+__size_of_LCD_init 0 0 ABS 0 - dist/default/production\Labtres.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -364,20 +767,12 @@ __pstrings 6 0 STRING 0 strings dist/default/production\Labtres.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7FC FF8 4 2
-text1 0 6BC D78 25 2
-text2 0 686 D0C 1A 2
-text3 0 666 CCC 7 2
-text4 0 65F CBE 7 2
-text5 0 6A0 D40 1C 2
-text6 0 71F E3E 4E 2
-text7 0 658 CB0 7 2
-text8 0 66D CDA 19 2
-text9 0 6E1 DC2 3E 2
-maintext 0 76D EDA 8F 2
+text1 0 717 E2E 2D 2
 cstackCOMMON 1 70 70 C 1
+intentry 0 4 8 6FE 2
 reset_vec 0 0 0 3 2
-strings 0 3 6 22 2
+bssBANK0 1 20 20 41 1
+strings 0 702 E04 15 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

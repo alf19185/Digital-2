@@ -1,4 +1,4 @@
-# 1 "Principal3.c"
+# 1 "LCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,15 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Principal3.c" 2
-
-
-
-
-
-
-
-
+# 1 "LCD.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2637,10 +2629,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 9 "Principal3.c" 2
+# 1 "LCD.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 10 "Principal3.c" 2
+# 2 "LCD.c" 2
 
 # 1 "./LCD.h" 1
 # 14 "./LCD.h"
@@ -2657,176 +2649,148 @@ void LCD_Cursor_rechts(uint8_t espacios);
 void LCD_Cursor_links(uint8_t espacios);
 char uint_to_char(uint8_t numero);
 uint16_t * uint_to_array(uint8_t numero);
-# 11 "Principal3.c" 2
+# 3 "LCD.c" 2
+# 13 "LCD.c"
+void LCD_Cmd(uint8_t comando){
+    PORTCbits.RC0 = 0;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    PORTCbits.RC1 = 1;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    PORTD = comando;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    PORTCbits.RC1 = 0;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+}
 
-# 1 "./ADC.h" 1
-# 14 "./ADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./ADC.h" 2
+void LCD_clear(void){
+    LCD_Cmd(0x00);
+    LCD_Cmd(0x01);
+    _delay((unsigned long)((4)*(4000000/4000.0)));
+}
 
+void LCD_home(void){
+    LCD_Cmd(0x00);
+    LCD_Cmd(0x02);
+    _delay((unsigned long)((4)*(4000000/4000.0)));
+}
 
-void ADConfig(uint8_t oscFreq,uint8_t canal, unsigned char justificado);
+void LCD_init(void){
+    _delay((unsigned long)((20)*(4000000/4000.0)));
+    LCD_Cmd(0x30);
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    LCD_Cmd(0x30);
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    LCD_Cmd(0x30);
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    LCD_Cmd(0x38);
+    _delay((unsigned long)((53)*(4000000/4000000.0)));
+    LCD_Cmd(0x08);
+    _delay((unsigned long)((53)*(4000000/4000000.0)));
+    LCD_Cmd(0x01);
+    _delay((unsigned long)((3)*(4000000/4000.0)));
+    LCD_Cmd(0x06);
+    _delay((unsigned long)((53)*(4000000/4000000.0)));
+    LCD_Cmd(0x0C);
+    _delay((unsigned long)((53)*(4000000/4000000.0)));
+}
 
-uint8_t AnalogRead_8(unsigned char just);
+void LCD_Write_Character(char caracter){
+    PORTCbits.RC0 = 1;
 
-void ADCinit();
+    PORTD = caracter;
+    PORTCbits.RC1 = 1;
+    _delay((unsigned long)((40)*(4000000/4000000.0)));
+    PORTCbits.RC1 = 0;
+}
 
-void ADC_CHselect(uint8_t canal);
-# 12 "Principal3.c" 2
-
-# 1 "./USART.h" 1
-# 14 "./USART.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./USART.h" 2
-
-
-
-uint8_t usart_init(void);
-char usartRC_Read();
-
-void enviar (uint8_t valor1 ,uint8_t valor2 );
-# 13 "Principal3.c" 2
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-char linea2[12];
-
-uint8_t valorADC_CH5 = 0;
-uint8_t banderaADC = 1;
-uint8_t valorADC_CH0 = 0;
-uint16_t *num1;
-uint16_t *num2;
-uint16_t *num3;
-uint8_t pot1 = 0;
-uint8_t pot2 = 0;
-uint8_t banderaSerial = 0;
-uint8_t contador = 0;
-char valorSerial = 'E';
-
-uint16_t * mapear(uint8_t valor, uint8_t limReal, uint8_t limSup);
-
-
-void __attribute__((picinterrupt(("")))) ISR_ADC(void){
-    if (PIR1bits.ADIF && PIE1bits.ADIE){
-        PIE1bits.ADIE = 0;
-        banderaADC = 1;
+void LCD_Write_String(char *a){
+    int n;
+    for(n = 0; a[n] != '\0'; n++){
+        LCD_Write_Character(a[n]);
     }
 }
 
-void main(void) {
-    TRISD = 0;
-    TRISC = 0b10000000;
-
-    PORTD = 0;
-    PORTC = 0;
-    LCD_init();
-    ADConfig(4, 5, 'H');
-    LCD_Set_Cursor(1,1);
-    LCD_Write_String("S1    S2    S3");
-    usart_init();
-
-
-    while(1){
-        if(PIR1bits.RCIF == 1){
-            usartRC_Read();
-            _delay((unsigned long)((5)*(4000000/4000.0)));
-        }
-
-        if(PIR1bits.TXIF == 1){
-            enviar(valorADC_CH5,valorADC_CH0);
-        }
-
-        if (banderaADC == 1){
-            switch (ADCON0bits.CHS){
-                case 5:
-                    valorADC_CH5 = AnalogRead_8('H');
-                    ADC_CHselect(0);
-                    num1 = mapear(valorADC_CH5, 255, 5);
-                    LCD_Set_Cursor(2, 0);
-                    LCD_Write_Character(uint_to_char(num1[0]));
-                    LCD_Write_Character('.');
-                    LCD_Write_Character(uint_to_char(num1[1]));
-                    LCD_Write_Character(uint_to_char(num1[2]));
-                    LCD_Write_Character('V');
-
-
-
-                    break;
-                case 0:
-                    valorADC_CH0 = AnalogRead_8('H');
-                    ADC_CHselect(1);
-                    num2 = mapear(valorADC_CH0, 255, 5);
-                    LCD_Set_Cursor(2, 6);
-                    LCD_Write_Character(uint_to_char(num2[0]));
-                    LCD_Write_Character('.');
-                    LCD_Write_Character(uint_to_char(num2[1]));
-                    LCD_Write_Character(uint_to_char(num2[2]));
-                    LCD_Write_Character('V');
-
-
-
-                    break;
-
-                default:
-                    valorADC_CH0 = 0;
-                    valorADC_CH5 = 0;
-            }
-
-            banderaADC = 0;
-            PIR1bits.ADIF = 0;
-            PIE1bits.ADIE = 1;
-            ADCON0bits.GO_nDONE = 1;
-        }
-
-
-            num3 = uint_to_array(contador);
-            LCD_Set_Cursor(2,13);
-            LCD_Write_Character(uint_to_char(num3[0]));
-            LCD_Write_Character(uint_to_char(num3[1]));
-            LCD_Write_Character(uint_to_char(num3[2]));
-            enviar (valorADC_CH0,valorADC_CH5);
-# 144 "Principal3.c"
+void LCD_Set_Cursor(uint8_t linea, uint8_t columna){
+    uint8_t corrimiento = 0;
+    switch (linea){
+        case 1:
+            corrimiento = 0x80 + columna;
+            LCD_Cmd(corrimiento);
+            break;
+        case 2:
+            corrimiento = 0x80 + 0x40 + columna;
+            LCD_Cmd(corrimiento);
+            break;
+        default:
+            LCD_Cmd(0x80);
     }
-    return;
 }
 
+void LCD_Shift_links(){
+    LCD_Cmd(0x18);
+}
 
-uint16_t * mapear(uint8_t valor, uint8_t limReal, uint8_t limSup){
+void LCD_Shift_rechts(){
+    LCD_Cmd(0x1C);
+}
+
+void LCD_Cursor_rechts(uint8_t espacios){
+    for (uint8_t n = 0; n <= espacios; n++){
+        LCD_Cmd(0x14);
+    }
+}
+
+void LCD_Cursor_links(uint8_t espacios){
+    for (uint8_t n = 0; n <= espacios; n++){
+        LCD_Cmd(0x10);
+    }
+}
+
+char uint_to_char(uint8_t numero){
+    char numChr = 214;
+    switch (numero){
+        case 0:
+            numChr = 48;
+            break;
+        case 1:
+            numChr = 49;
+            break;
+        case 2:
+            numChr = 50;
+            break;
+        case 3:
+            numChr = 51;
+            break;
+        case 4:
+            numChr = 52;
+            break;
+        case 5:
+            numChr = 53;
+            break;
+        case 6:
+            numChr = 54;
+            break;
+        case 7:
+            numChr = 55;
+            break;
+        case 8:
+            numChr = 56;
+            break;
+        case 9:
+            numChr = 57;
+            break;
+        default:
+            numChr = 214;
+    }
+    return(numChr);
+}
+
+uint16_t * uint_to_array(uint8_t numero){
     uint16_t resultado[3] = {0,0,0};
-    uint16_t dividendo = valor*limSup;
-    while (limReal <= dividendo){
-        resultado[0] = resultado[0] + 1;
-        dividendo = dividendo - limReal;
-    }
-    dividendo = dividendo *10;
-    while (limReal <= dividendo){
-        resultado[1] = resultado[1] +1;
-        dividendo = dividendo - limReal;
-    }
-    dividendo = dividendo *10;
-    while (limReal <= dividendo){
-        resultado[2] = resultado[2] +1;
-        dividendo = dividendo - limReal;
-    }
-
-    return resultado;
+    resultado[0] = numero/100;
+    uint8_t centenas = resultado[0];
+    resultado[1] = (numero - (centenas *100))/10;
+    uint8_t decenas = resultado[1];
+    resultado[2] = numero -(centenas*100+decenas*10);
+    return(resultado);
 }
