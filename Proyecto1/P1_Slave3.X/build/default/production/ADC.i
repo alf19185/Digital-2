@@ -1,4 +1,4 @@
-# 1 "Principal_Slave3.c"
+# 1 "ADC.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,31 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Principal_Slave3.c" 2
-
-
-
-
-
-
-
-
-#pragma config FOSC = EXTRC_CLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
+# 1 "ADC.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\proc\\pic16f887.h" 1 3
 # 45 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\__at.h" 1 3
@@ -2442,7 +2418,7 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 24 "Principal_Slave3.c" 2
+# 1 "ADC.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
@@ -2653,13 +2629,11 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 25 "Principal_Slave3.c" 2
+# 2 "ADC.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 26 "Principal_Slave3.c" 2
+# 3 "ADC.c" 2
 
-# 1 "./SPI_Slave.h" 1
-# 27 "Principal_Slave3.c" 2
 
 # 1 "./ADC.h" 1
 
@@ -2687,81 +2661,179 @@ void ADC_CONVCLK(uint8_t CONV);
 void ADC_JUST (uint8_t JUST);
 
 void ADC_CONTINUE(void);
-# 28 "Principal_Slave3.c" 2
+# 5 "ADC.c" 2
 
 
+void ADC_C (unsigned int CH){
 
+  switch(CH){
 
+         case 0:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 0;
+            break;
 
-uint8_t TEMPERATURA = 0;
+        case 1:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 1;
+            break;
 
+        case 2:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 0;
+            break;
 
-void SETUP(void);
+        case 3:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 1;
+            break;
 
+        case 4:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 0;
+            break;
 
+        case 5:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 1;
+            break;
 
-void main(void) {
+        case 6:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 0;
+            break;
 
- SETUP();
+        case 7:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 1;
+            break;
 
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-    ADC_C(0);
-    ADC_CONVCLK(1);
+        case 8:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 0;
+            break;
 
- while(1)
- {
+        case 9:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 1;
+            break;
 
+        case 10:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 0;
+            break;
 
+        case 11:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 1;
+            ADCON0bits.CHS0 = 1;
+            break;
 
+        case 12:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 0;
+            break;
+        case 13:
+            ADCON0bits.CHS3 = 1;
+            ADCON0bits.CHS2 = 1;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 1;
+            break;
 
+        default:
+            ADCON0bits.CHS3 = 0;
+            ADCON0bits.CHS2 = 0;
+            ADCON0bits.CHS1 = 0;
+            ADCON0bits.CHS0 = 0;
+            break;
+    }
+}
 
-    TEMPERATURA = ADC_READ (0);
-    PORTD = TEMPERATURA ;
-    ADC_CONTINUE();
+void ADC_CONVCLK(uint8_t CONV){
 
-    if(TEMPERATURA < 13) {
+      switch(CONV){
 
-        PORTBbits.RB0 = 0;
-        PORTBbits.RB1 = 0;
-        PORTBbits.RB2 = 1;
-        }
-    else if (TEMPERATURA >= 13 && TEMPERATURA <=18 ){
+        case 0:
+            ADCON0bits.ADCS0 = 0;
+            ADCON0bits.ADCS0 = 0;
+            break;
 
-        PORTBbits.RB0 = 0;
-        PORTBbits.RB1 = 1;
-        PORTBbits.RB2 = 0;
-        }
+        case 1:
+            ADCON0bits.ADCS0 = 0;
+            ADCON0bits.ADCS0 = 1;
+            break;
 
-    else if (TEMPERATURA > 18){
+        case 2:
+            ADCON0bits.ADCS0 = 1;
+            ADCON0bits.ADCS0 = 0;
+            break;
 
-        PORTBbits.RB0 = 1;
-        PORTBbits.RB1 = 0;
-        PORTBbits.RB2 = 0;
-        }
+        case 3:
+            ADCON0bits.ADCS0 = 1;
+            ADCON0bits.ADCS0 = 1;
+            break;
 
+        default:
+            ADCON0bits.ADCS0 = 0;
+            ADCON0bits.ADCS0 = 0;
+            break;
     }
 
+    ADCON0bits.ADON = 1;
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
+    INTCONbits.PEIE = 1;
+    _delay((unsigned long)((30)*(8000000/4000.0)));
+    ADCON0bits.GO_nDONE = 1;
+
+}
+
+void ADC_CONTINUE(){
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
+    _delay((unsigned long)((20)*(8000000/4000.0)));
+    ADCON0bits.GO_nDONE = 1;
     return;
 }
 
+uint8_t ADC_READ (uint8_t JUSTIFICACION){
 
+    uint8_t VALOR_ADC = 0;
 
-   void SETUP(void){
-
-        PORTA = 0;
-        PORTB = 0;
-        PORTC = 0;
-        PORTD = 0;
-        PORTE = 0;
-
-        TRISA = 0b00100001;
-        TRISB = 0;
-        TRISD = 0;
-        TRISC = 0b00101000;
-        TRISE = 0;
-
-        ANSEL = 0;
-        ANSELbits.ANS0 = 1;
-        ANSELH = 0;
-
+    switch (JUSTIFICACION){
+        case 0:
+            VALOR_ADC = ADRESH;
+            break;
+        case 1:
+            VALOR_ADC = ADRESL;
+            break;
+        default:
+            VALOR_ADC = ADRESH;
     }
+    return (VALOR_ADC );
+}

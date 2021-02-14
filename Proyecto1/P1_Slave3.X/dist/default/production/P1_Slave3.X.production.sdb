@@ -3,6 +3,14 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
+"7 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+[v _ADC_C ADC_C `(v  1 e 1 0 ]
+"117
+[v _ADC_CONVCLK ADC_CONVCLK `(v  1 e 1 0 ]
+"156
+[v _ADC_CONTINUE ADC_CONTINUE `(v  1 e 1 0 ]
+"164
+[v _ADC_READ ADC_READ `(uc  1 e 1 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
@@ -11,9 +19,163 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"11 D:\2021\Digital2\Digital2\Proyeco1\P1_Slave3.X\Principal_Slave3.c
+"40 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
 [v _main main `(v  1 e 1 0 ]
+"86
+[v _SETUP SETUP `(v  1 e 1 0 ]
+"167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"229
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S52 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"246
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES61  1 e 1 @6 ]
+"291
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"353
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"415
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S212 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"483
+[s S221 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S226 . 1 `S212 1 . 1 0 `S221 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES226  1 e 1 @11 ]
+[s S174 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"554
+[u S182 . 1 `S174 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES182  1 e 1 @12 ]
+"1239
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S128 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1277
+[s S133 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S142 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S145 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S148 . 1 `S128 1 . 1 0 `S133 1 . 1 0 `S142 1 . 1 0 `S145 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES148  1 e 1 @31 ]
+"1417
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1479
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1541
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1603
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1665
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S193 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1719
+[u S201 . 1 `S193 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES201  1 e 1 @140 ]
+"2971
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"3388
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+[s S83 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+`uc 1 ANS5 1 0 :1:5 
+`uc 1 ANS6 1 0 :1:6 
+`uc 1 ANS7 1 0 :1:7 
+]
+"3405
+[u S92 . 1 `S83 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES92  1 e 1 @392 ]
+"3450
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"33 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+[v _TEMPERATURA TEMPERATURA `uc  1 e 1 0 ]
+"40
 [v _main main `(v  1 e 1 0 ]
 {
-"13
+"82
+} 0
+"86
+[v _SETUP SETUP `(v  1 e 1 0 ]
+{
+"104
+} 0
+"164 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+[v _ADC_READ ADC_READ `(uc  1 e 1 0 ]
+{
+[v ADC_READ@JUSTIFICACION JUSTIFICACION `uc  1 a 1 wreg ]
+"166
+[v ADC_READ@VALOR_ADC VALOR_ADC `uc  1 a 1 3 ]
+"164
+[v ADC_READ@JUSTIFICACION JUSTIFICACION `uc  1 a 1 wreg ]
+[v ADC_READ@JUSTIFICACION JUSTIFICACION `uc  1 a 1 2 ]
+"179
+} 0
+"117
+[v _ADC_CONVCLK ADC_CONVCLK `(v  1 e 1 0 ]
+{
+[v ADC_CONVCLK@CONV CONV `uc  1 a 1 wreg ]
+[v ADC_CONVCLK@CONV CONV `uc  1 a 1 wreg ]
+[v ADC_CONVCLK@CONV CONV `uc  1 a 1 2 ]
+"154
+} 0
+"156
+[v _ADC_CONTINUE ADC_CONTINUE `(v  1 e 1 0 ]
+{
+"162
+} 0
+"7
+[v _ADC_C ADC_C `(v  1 e 1 0 ]
+{
+[v ADC_C@CH CH `ui  1 p 2 0 ]
+"115
 } 0
