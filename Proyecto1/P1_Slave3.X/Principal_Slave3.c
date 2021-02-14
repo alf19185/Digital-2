@@ -30,11 +30,13 @@
 
 
 //******************************Variables**************************************
+
 uint8_t TEMPERATURA = 0; 
+
 //***************************Prototipo Funciones*******************************
 
 void SETUP(void);
-
+void MAP(void);
 
 //*****************************Main Loop***************************************
 void main(void) {
@@ -100,5 +102,15 @@ void main(void) {
         ANSEL = 0;
         ANSELbits.ANS0 = 1;
         ANSELH = 0;      
-        
+      
     }
+//**Mapeo de la temperatura a 255
+void MAP(void){
+
+
+
+
+
+
+
+}   

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+$C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Labuno.X.production.o
@@ -70,16 +70,16 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Labuno.X.production.o
-7F3 cinit CODE >461:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7F3 cinit CODE >464:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7F3 cinit CODE >490:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7F8 cinit CODE >491:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7F9 cinit CODE >495:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7FA cinit CODE >496:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7FB cinit CODE >497:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7FC cinit CODE >503:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7FC cinit CODE >505:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
-7FD cinit CODE >506:C:\Users\Gaby\AppData\Local\Temp\s9o8.s
+7F3 cinit CODE >461:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7F3 cinit CODE >464:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7F3 cinit CODE >490:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7F8 cinit CODE >491:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7F9 cinit CODE >495:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7FA cinit CODE >496:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7FB cinit CODE >497:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7FC cinit CODE >503:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7FC cinit CODE >505:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
+7FD cinit CODE >506:C:\Users\Gaby\AppData\Local\Temp\s5ic.s
 74F text2 CODE >129:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
 74F text2 CODE >131:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
 752 text2 CODE >132:D:\2021\Digital2\Digital2\Lab1\Labuno.X\Principal1.c
@@ -162,21 +162,21 @@ __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _Race E9E 0 CODE 0 text2 dist/default/production\Labuno.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 _main EFC 0 CODE 0 maintext dist/default/production\Labuno.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Labuno.X.production.o
-start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 __size_of_Race 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -185,12 +185,12 @@ __pidataCOMMON E76 0 CODE 0 idataCOMMON dist/default/production\Labuno.X.product
 _ANSELH 189 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9o8.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s5ic.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 __size_of_Setup 0 0 ABS 0 - dist/default/production\Labuno.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 start_initialization FE6 0 CODE 0 cinit dist/default/production\Labuno.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -230,7 +230,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s9o8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s5ic.o
 _BANDERA 78 0 COMMON 1 dataCOMMON dist/default/production\Labuno.X.production.o
 __pmaintext EFC 0 CODE 0 maintext dist/default/production\Labuno.X.production.o
 __Lcommon 0 0 ABS 0 common -
