@@ -2706,32 +2706,25 @@ void ADC_CONTINUE(void);
 
 
 
+
 uint8_t POTENCIOMETRO = 0;
 
 
 void SETUP(void);
 
 
-
 void main(void) {
 
  SETUP();
- CONFIG_SPI_SLAVE();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
     ADC_C(0);
     ADC_CONVCLK(1);
 
  while(1)
  {
-
-
-
-
-
     POTENCIOMETRO = ADC_READ (0);
     PORTD = POTENCIOMETRO ;
     ADC_CONTINUE();
-    }
+      }
 
     return;
 }
@@ -2749,7 +2742,7 @@ void main(void) {
         TRISA = 0b00100001;
         TRISB = 0;
         TRISD = 0;
-        TRISC = 0b00101000;
+        TRISC = 0b00011000;
         TRISE = 0;
 
         ANSEL = 0;

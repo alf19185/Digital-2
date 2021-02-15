@@ -29,55 +29,48 @@
 
 
 //******************************Variables**************************************
+
 uint8_t POTENCIOMETRO = 0; 
 //***************************Prototipo Funciones*******************************
 
 void SETUP(void);
 
-
 //*****************************Main Loop***************************************
 void main(void) {
      
 	SETUP();
-	CONFIG_SPI_SLAVE();
-    __delay_ms(10);
     ADC_C(0);
     ADC_CONVCLK(1);
     
 	while(1)
 	{
-	       
-	//PORTB= 0b11111111;
-    //WRITE_SPI(PORTB);
-    //__delay_ms(200);
-    
     POTENCIOMETRO = ADC_READ (0);
     PORTD = POTENCIOMETRO  ;
     ADC_CONTINUE();
-    }
-    
+      }
+  
     return;
 }
 //*******************************Subrutinas************************************    
     
 //**Configuración general   
    void SETUP(void){
-        
+       
         PORTA = 0;
         PORTB = 0;
         PORTC = 0;
         PORTD = 0;
         PORTE = 0;
         
-        TRISA = 0b00100001;
+        TRISA = 0b00100001;  //0x20 = RA5 (SS) como entrada
         TRISB = 0;
-        TRISD = 0;
-        TRISC = 0b00101000;  // RC3 es CLk que recibe, RC4 es MISO, RC5 es MOSI
+        TRISD = 0;           //<-- para que esclavo muestre lo que recibe del master
+        TRISC = 0b00011000;  // 0x18 = RC3 es CLk que recibe, RC4 es MISO, RC5 es MOSI
         TRISE = 0;           // Chip select entre slaves en 1 para no leer ninguno
         
         ANSEL = 0;
         ANSELbits.ANS0 = 1;
-        ANSELH = 0;      
+        ANSELH = 0;    
         
     }
     

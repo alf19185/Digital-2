@@ -2643,7 +2643,7 @@ void CONFIG_SPI_MASTER(void);
 
 void CONFIG_SPI_SLAVE(void);
 
-uint8_t READ_SPI (void);
+uint8_t READ_SPI (uint8_t);
 
 void WAIT_SPI (void);
 
@@ -2653,34 +2653,37 @@ uint8_t CHECK_DATA(void);
 # 5 "SPI_Master.c" 2
 
 
+
 void CONFIG_SPI_MASTER(void){
 
     SSPCONbits.SSPEN = 0;
- SSPSTAT = 0b01000000;
- SSPCON = 0b00100010;
+ SSPSTAT = 0b10000000;
+    SSPCON = 0b00010001;
     SSPCONbits.SSPEN = 1;
-
     }
 
 void CONFIG_SPI_SLAVE(void){
 
     SSPCONbits.SSPEN = 0;
  SSPSTAT = 0b01000000;
- SSPCON = 0b00100100;
+ SSPCON = 0b00010100;
  SSPCONbits.SSPEN = 1;
+
     }
 
 void WAIT_SPI(void){
 
-
+  while ( !SSPSTATbits.BF );
 
 }
 
-uint8_t READ_SPI (void){
+uint8_t READ_SPI (uint8_t data){
 
-    SSPBUF = 12;
+    uint8_t dummy = SSPBUF;
+    SSPBUF = data;
+     while ( !SSPSTATbits.BF );
 
-   _delay((unsigned long)((100)*(8000000/4000.0)));
+
 
   return(SSPBUF);
 }

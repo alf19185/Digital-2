@@ -2693,11 +2693,15 @@ void ADC_CONTINUE(void);
 
 
 
+
 uint8_t TEMPERATURA = 0;
+uint8_t TEMPORAL = 0;
+uint8_t ENVIAR = 0;
+
 
 
 void SETUP(void);
-
+void MAP(void);
 
 
 void main(void) {
@@ -2716,7 +2720,7 @@ void main(void) {
 
 
     TEMPERATURA = ADC_READ (0);
-    PORTD = TEMPERATURA ;
+    MAP();
     ADC_CONTINUE();
 
     if(TEMPERATURA < 13) {
@@ -2740,7 +2744,6 @@ void main(void) {
         }
 
     }
-
     return;
 }
 
@@ -2765,3 +2768,18 @@ void main(void) {
         ANSELH = 0;
 
     }
+
+void MAP(void){
+
+    if(TEMPERATURA < 0){
+        ENVIAR=0;
+        PORTD = ENVIAR;
+    }
+    if (TEMPERATURA >= 0 ){
+        ENVIAR = ((TEMPERATURA *500)/1024);
+        PORTD = ENVIAR;
+    }
+
+
+
+}

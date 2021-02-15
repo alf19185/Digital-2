@@ -32,6 +32,8 @@
 //******************************Variables**************************************
 
 uint8_t TEMPERATURA = 0; 
+uint8_t TEMPORAL = 0;
+uint8_t ENVIAR = 0;
 
 //***************************Prototipo Funciones*******************************
 
@@ -55,7 +57,7 @@ void main(void) {
     //__delay_ms(200);
     
     TEMPERATURA = ADC_READ (0);
-    PORTD = TEMPERATURA ;
+    MAP();
     ADC_CONTINUE();
     
     if(TEMPERATURA < 13) {  
@@ -76,10 +78,9 @@ void main(void) {
         PORTBbits.RB0 = 1;
         PORTBbits.RB1 = 0;
         PORTBbits.RB2 = 0;
-        }   
+        }
     
-    }
-         
+    }         
     return;
 }
 //*******************************Subrutinas************************************    
@@ -107,10 +108,15 @@ void main(void) {
 //**Mapeo de la temperatura a 255
 void MAP(void){
 
-
-
-
-
-
-
+    if(TEMPERATURA < 0){
+        ENVIAR=0;
+        PORTD = ENVIAR;
+    } 
+    if (TEMPERATURA >= 0 ){
+        ENVIAR = ((TEMPERATURA *500)/1024);      //Por cada 10mV hay un C° 
+        PORTD = ENVIAR;
+    }
+    
+    
+    
 }   

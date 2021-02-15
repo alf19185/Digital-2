@@ -2446,6 +2446,7 @@ extern volatile __bit nWRITE __attribute__((address(0x4A2)));
 # 25 "Principal_Master.c" 2
 
 
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2655,10 +2656,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 27 "Principal_Master.c" 2
+# 28 "Principal_Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 28 "Principal_Master.c" 2
+# 29 "Principal_Master.c" 2
 
 # 1 "./SPI_Master.h" 1
 # 12 "./SPI_Master.h"
@@ -2668,19 +2669,21 @@ void CONFIG_SPI_MASTER(void);
 
 void CONFIG_SPI_SLAVE(void);
 
-uint8_t READ_SPI (void);
+uint8_t READ_SPI (uint8_t);
 
 void WAIT_SPI (void);
 
 void WRITE_SPI( uint8_t data );
 
 uint8_t CHECK_DATA(void);
-# 29 "Principal_Master.c" 2
+# 30 "Principal_Master.c" 2
 
 
 
 uint8_t temp;
 uint8_t Esclavo1;
+uint8_t contador = 5;
+
 
 
 void SETUP(void);
@@ -2695,13 +2698,14 @@ void main(void) {
 
  while(1)
  {
-
+       contador++;
+       PORTB = contador;
        PORTEbits.RE0 =0;
-       Esclavo1 = READ_SPI ();
+       Esclavo1 = READ_SPI (contador);
        PORTD = Esclavo1 ;
        PORTEbits.RE0 =1;
-       PORTBbits.RB1 = !PORTBbits.RB1;
-        _delay((unsigned long)((100)*(8000000/4000.0)));
+
+       _delay((unsigned long)((1000)*(8000000/4000.0)));
 
         }
 
@@ -2711,7 +2715,6 @@ void main(void) {
 
 
    void SETUP(void){
-
         PORTA = 0;
         PORTB = 0;
         PORTC = 0;
@@ -2726,5 +2729,4 @@ void main(void) {
 
         ANSEL = 0;
         ANSELH = 0;
-
     }

@@ -45,7 +45,7 @@ void __interrupt()
         
     if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){  
         
-        //INTCONbits.RBIF = 0;
+        
         if (FLAG_PUSH == 0){                
             FLAG_PUSH = 1;
             INTCONbits.RBIE = 0;
@@ -68,6 +68,7 @@ void main(void) {
 
 //*****************************Subrutinas**************************************
 
+//*****Setup******* 
 void SETUP (void){
 
     TRISD = 0;
@@ -82,7 +83,7 @@ void SETUP (void){
     PORTD = 0;
     ANSEL = 0;
     ANSELH = 0; 
-    //WPUB = 0b00000101;          
+         
     OPTION_REGbits.nRBPU = 1;
     INTCONbits.GIE = 1;         //Global interrupts enabled
     INTCONbits.PEIE = 1; 
@@ -92,24 +93,24 @@ void SETUP (void){
     return;
 }
 
-//***Contador sube y tiene antirebote push
+//***Contador sube y tiene antirebote push*****
 void UP (void){
     
-    if (FLAG_PUSH == 1){
-        if (FLAG_UP == 0){
-            if (PORTBbits.RB0 == 0){
+    if (FLAG_PUSH == 1){                //Si la flag activada, revisa nuevamente 
+        if (FLAG_UP == 0){              //si el flag de up tambien lo esta 
+            if (PORTBbits.RB0 == 0){    
                 __delay_ms(10);
                 
-                PORTD = PORTD + 1;
-                FLAG_PUSH = 0;
+                PORTD = PORTD + 1;      //Incremento el contador y se limpian
+                FLAG_PUSH = 0;          //las  banderas
                 FLAG_UP = 1;
                 INTCONbits.RBIE = 1;
             }  
         }  
     }
     
-    if (FLAG_UP == 1){
-        if (PORTBbits.RB0 == 1){
+    if (FLAG_UP == 1){                  // Si flag de up esta pero el push 
+        if (PORTBbits.RB0 == 1){        // esta presionado, no incrementa (antirebote)
         __delay_ms(10);
         FLAG_UP = 0;
         }
@@ -117,10 +118,10 @@ void UP (void){
 }
 
 
-//****Contador baja y tiene antirebote
-void DOWN(void){
-    
-    if (FLAG_PUSH == 1){
+//****Contador baja y tiene antirebote*****
+void DOWN(void){                        
+                                           //Funcionamiento igual al contador hacia 
+    if (FLAG_PUSH == 1){                   //arriba pero en este se decrementa conteo
         if (FLAG_DOWN == 0){
             if (PORTBbits.RB2 == 0){
                 __delay_ms(10);

@@ -31,6 +31,8 @@
 //******************************Variables**************************************
 uint8_t temp; 
 uint8_t Esclavo1;
+uint8_t contador = 5;
+
 //***************************Prototipo Funciones*******************************
 
 void SETUP(void);
@@ -52,16 +54,15 @@ void main(void) {
        PORTEbits.RE0 =1; 
        PORTBbits.RB1 = !PORTBbits.RB1; 
         __delay_ms(100);
-		//SSPBUF = 0x14;
+	   //SSPBUF = 0x14;
         }
     
     return;
 }
-//*******************************Subrutinas************************************    
-    
-//**Configuración general   
+//*******************************Subrutinas************************************   
+
+//***Configuración general***   
    void SETUP(void){
-        
         PORTA = 0;
         PORTB = 0;
         PORTC = 0;
@@ -71,12 +72,17 @@ void main(void) {
         TRISA = 0;
         TRISD = 0;
         TRISB = 0;
-        TRISC = 0b00010000;  // RC3 es CLk sale a slaves, RC4 es MISO, RC5 es MOSI
+        TRISC = 0x10;  // 0x10 RC3 es CLk sale a slaves, RC4 es MISO, RC5 es MOSI
         TRISE = 0;           // Chip select entre slaves en 1 para no leer ninguno
         
         ANSEL = 0;
-        ANSELH = 0;      
+        ANSELH = 0; 
         
+        SSPSTAT = 0X80;
+        SSPCON= 0X11;
+        SSPCONbits.SSPEN = 1;
+        
+                
     }
     
     

@@ -15,7 +15,7 @@ void CONFIG_SPI_MASTER(void);
 
 void CONFIG_SPI_SLAVE(void);
 
-uint8_t READ_SPI (void);
+uint8_t READ_SPI (uint8_t);
 
 void WAIT_SPI (void);
 
@@ -24,4 +24,3 @@ void WRITE_SPI( uint8_t data );
 uint8_t CHECK_DATA(void);
 
 #endif	/* SPI_MASTER_H */
-
