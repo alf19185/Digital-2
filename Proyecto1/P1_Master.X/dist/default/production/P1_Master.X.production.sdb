@@ -11,13 +11,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"43 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+"74 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+[v _LEER_S3 LEER_S3 `(v  1 e 1 0 ]
+"89
 [v _main main `(v  1 e 1 0 ]
-"67
+"111
 [v _SETUP SETUP `(v  1 e 1 0 ]
-"8 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-[v _CONFIG_SPI_MASTER CONFIG_SPI_MASTER `(v  1 e 1 0 ]
-"31
+"31 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
 [v _READ_SPI READ_SPI `(uc  1 e 1 0 ]
 "167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -29,14 +29,14 @@
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "415
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S175 . 1 `uc 1 RE0 1 0 :1:0 
+[s S163 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
 ]
 "428
-[u S180 . 1 `S175 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES180  1 e 1 @9 ]
+[u S168 . 1 `S163 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES168  1 e 1 @9 ]
 "844
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "851
@@ -114,19 +114,26 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"34 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-[v _Esclavo1 Esclavo1 `uc  1 e 1 0 ]
+"33 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+[v _POTENCIOMETRO POTENCIOMETRO `uc  1 e 1 0 ]
 "35
-[v _contador contador `uc  1 e 1 0 ]
-"43
+[v _CONT CONT `uc  1 e 1 0 ]
+"36
+[v _TEMPERATURA TEMPERATURA `uc  1 e 1 0 ]
+"89
 [v _main main `(v  1 e 1 0 ]
 {
-"63
+"107
 } 0
-"67
+"111
 [v _SETUP SETUP `(v  1 e 1 0 ]
 {
-"82
+"133
+} 0
+"74
+[v _LEER_S3 LEER_S3 `(v  1 e 1 0 ]
+{
+"86
 } 0
 "31 D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
 [v _READ_SPI READ_SPI `(uc  1 e 1 0 ]
@@ -135,10 +142,5 @@
 [v READ_SPI@data data `uc  1 a 1 wreg ]
 "33
 [v READ_SPI@data data `uc  1 a 1 1 ]
-"40
-} 0
-"8
-[v _CONFIG_SPI_MASTER CONFIG_SPI_MASTER `(v  1 e 1 0 ]
-{
-"14
+"38
 } 0

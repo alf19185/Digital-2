@@ -31,9 +31,15 @@
 
 //******************************Variables**************************************
 
-uint8_t TEMPERATURA = 0; 
+uint8_t TEMPERATURA_0 = 0;
+uint8_t TEMPERATURA_1 = 0;
+uint8_t TEMPERATURA = 0;
 uint8_t TEMPORAL = 0;
 uint8_t ENVIAR = 0;
+uint8_t rxByteMaster =0;
+uint16_t TEMP = 0;
+float TEMP_R;
+
 
 //***************************Prototipo Funciones*******************************
 
@@ -44,20 +50,24 @@ void MAP(void);
 void main(void) {
      
 	SETUP();
-	//CONFIG_SPI_SLAVE();
-    __delay_ms(10);
+	__delay_ms(10);
     ADC_C(0);
     ADC_CONVCLK(1);
     
 	while(1)
 	{
-	       
-	//PORTB= 0b11111111;
-    //WRITE_SPI(PORTB);
-    //__delay_ms(200);
+	          
+    TEMPERATURA_0 = ADC_READ (0);
+    TEMPERATURA_1 = ADC_READ (1);
     
-    TEMPERATURA = ADC_READ (0);
-    MAP();
+    //TEMP = TEMPERATURA_0 *4 + TEMPERATURA_1>>6 ;
+    //TEMP_R = TEMP*140.0/286.0;
+    
+    //TEMPERATURA = (uint8_t) TEMP_R;
+    
+    TEMPERATURA = TEMPERATURA_0;
+    PORTD = TEMPERATURA;
+   // MAP();
     ADC_CONTINUE();
     
     if(TEMPERATURA < 13) {  
@@ -80,6 +90,22 @@ void main(void) {
         PORTBbits.RB2 = 0;
         }
     
+      if (SSPSTATbits.BF == 0) {
+        SSPBUF = TEMPERATURA;
+    
+    }
+    
+    if (SSPSTATbits.BF ) {
+          //llego un byte del MASTER
+          rxByteMaster = SSPBUF; //leemos byte del master
+         // PORTD = rxByteMaster;
+          //volvemos a colocar una info en SSPBUF
+          SSPBUF = TEMPERATURA;
+          
+      }
+    
+    
+    
     }         
     return;
 }
@@ -97,12 +123,18 @@ void main(void) {
         TRISA = 0b00100001;
         TRISB = 0;
         TRISD = 0;
-        TRISC = 0b00101000;  // RC3 es CLk que recibe, RC4 es MISO, RC5 es MOSI
-        TRISE = 0;           // Chip select entre slaves en 1 para no leer ninguno
+        TRISC = 0b00011000;  // RC3 es CLk que recibe, RC4 es MISO, RC5 es MOSI
+        TRISE = 0;           // Chip select entre slaves en 1 para no leer ninguno 
+    
         
         ANSEL = 0;
         ANSELbits.ANS0 = 1;
-        ANSELH = 0;      
+        ANSELH = 0;   
+        
+        SSPCONbits.SSPEN = 0;
+        SSPSTAT = 0X00;
+        SSPCON= 0X14;
+        SSPCONbits.SSPEN = 1;
       
     }
 //**Mapeo de la temperatura a 255

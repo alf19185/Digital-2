@@ -377,57 +377,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 145 ]
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 146  ]
 [e :U 147 ]
-"39
-[; ;SPI_Master.c: 39:   return(SSPBUF);
+"37
+[; ;SPI_Master.c: 37:   return(SSPBUF);
 [e ) _SSPBUF ]
 [e $UE 144  ]
-"40
-[; ;SPI_Master.c: 40: }
+"38
+[; ;SPI_Master.c: 38: }
 [e :UE 144 ]
 }
-"42
-[; ;SPI_Master.c: 42: void WRITE_SPI (uint8_t data)
+"40
+[; ;SPI_Master.c: 40: void WRITE_SPI (uint8_t data)
 [v _WRITE_SPI `(v ~T0 @X0 1 ef1`uc ]
-"43
-[; ;SPI_Master.c: 43: {
+"41
+[; ;SPI_Master.c: 41: {
 {
 [e :U _WRITE_SPI ]
-"42
-[; ;SPI_Master.c: 42: void WRITE_SPI (uint8_t data)
+"40
+[; ;SPI_Master.c: 40: void WRITE_SPI (uint8_t data)
 [v _data `uc ~T0 @X0 1 r1 ]
-"43
-[; ;SPI_Master.c: 43: {
+"41
+[; ;SPI_Master.c: 41: {
 [f ]
-"44
-[; ;SPI_Master.c: 44:   SSPBUF = data;
+"42
+[; ;SPI_Master.c: 42:   SSPBUF = data;
 [e = _SSPBUF _data ]
-"45
-[; ;SPI_Master.c: 45: }
+"43
+[; ;SPI_Master.c: 43: }
 [e :UE 148 ]
 }
-"47
-[; ;SPI_Master.c: 47: uint8_t CHECK_DATA(void){
+"45
+[; ;SPI_Master.c: 45: uint8_t CHECK_DATA(void){
 [v _CHECK_DATA `(uc ~T0 @X0 1 ef ]
 {
 [e :U _CHECK_DATA ]
 [f ]
-"49
-[; ;SPI_Master.c: 49:  if(SSPSTATbits.BF)
+"47
+[; ;SPI_Master.c: 47:  if(SSPSTATbits.BF)
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 150  ]
-"50
-[; ;SPI_Master.c: 50:     return (1);
+"48
+[; ;SPI_Master.c: 48:     return (1);
 [e ) -> -> 1 `i `uc ]
 [e $UE 149  ]
 [e $U 151  ]
-"51
-[; ;SPI_Master.c: 51:   else
+"49
+[; ;SPI_Master.c: 49:   else
 [e :U 150 ]
-"52
-[; ;SPI_Master.c: 52:     return (0);
+"50
+[; ;SPI_Master.c: 50:     return (0);
 [e ) -> -> 0 `i `uc ]
 [e $UE 149  ]
 [e :U 151 ]
-"53
-[; ;SPI_Master.c: 53: }
+"51
+[; ;SPI_Master.c: 51: }
 [e :UE 149 ]
 }

@@ -33,8 +33,6 @@ uint8_t  READ_SPI (uint8_t data){
     uint8_t dummy = SSPBUF;
     SSPBUF = data;   //dummy
      while ( !SSPSTATbits.BF ); // Wait for Data Receipt complete
-   // WAIT_SPI();      // Wait until all bits receive
-  // __delay_ms(100);
    
   return(SSPBUF); // Read the received data from the buffer
 }

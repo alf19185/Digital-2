@@ -24,3 +24,4 @@ void WRITE_SPI( uint8_t data );
 uint8_t CHECK_DATA(void);
 
 #endif	/* SPI_MASTER_H */
+

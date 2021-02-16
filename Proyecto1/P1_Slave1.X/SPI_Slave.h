@@ -25,4 +25,3 @@ uint8_t CHECK_DATA(void);
 
 
 #endif	/* SPI_SLAVE_H */
-

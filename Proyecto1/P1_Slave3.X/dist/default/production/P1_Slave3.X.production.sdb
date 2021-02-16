@@ -23,17 +23,15 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"44 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+"50 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
 [v _main main `(v  1 e 1 0 ]
-"89
+"115
 [v _SETUP SETUP `(v  1 e 1 0 ]
-"109
-[v _MAP MAP `(v  1 e 1 0 ]
 "167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "229
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S55 . 1 `uc 1 RB0 1 0 :1:0 
+[s S52 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -43,15 +41,15 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "246
-[u S64 . 1 `S55 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES64  1 e 1 @6 ]
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES61  1 e 1 @6 ]
 "291
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "415
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S219 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S351 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -61,14 +59,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "483
-[s S228 . 1 `uc 1 . 1 0 :2:0 
+[s S360 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S233 . 1 `S219 1 . 1 0 `S228 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES233  1 e 1 @11 ]
-[s S181 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S365 . 1 `S351 1 . 1 0 `S360 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES365  1 e 1 @11 ]
+[s S313 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -77,17 +75,35 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "554
-[u S189 . 1 `S181 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES189  1 e 1 @12 ]
+[u S321 . 1 `S313 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES321  1 e 1 @12 ]
+"844
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"851
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S195 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"871
+[s S201 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S206 . 1 `S195 1 . 1 0 `S201 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES206  1 e 1 @20 ]
 "1239
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S135 . 1 `uc 1 ADON 1 0 :1:0 
+[s S267 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1277
-[s S140 . 1 `uc 1 . 1 0 :1:0 
+[s S272 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -96,14 +112,14 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S149 . 1 `uc 1 . 1 0 :1:0 
+[s S281 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S152 . 1 `uc 1 . 1 0 :1:0 
+[s S284 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S155 . 1 `S135 1 . 1 0 `S140 1 . 1 0 `S149 1 . 1 0 `S152 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES155  1 e 1 @31 ]
+[u S287 . 1 `S267 1 . 1 0 `S272 1 . 1 0 `S281 1 . 1 0 `S284 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES287  1 e 1 @31 ]
 "1417
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1479
@@ -114,7 +130,7 @@
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1665
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S200 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S332 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -123,13 +139,58 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1719
-[u S208 . 1 `S200 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES208  1 e 1 @140 ]
+[u S340 . 1 `S332 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES340  1 e 1 @140 ]
+"2178
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S73 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2232
+[s S82 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S87 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S93 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S98 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S103 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S108 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S113 . 1 `S73 1 . 1 0 `S82 1 . 1 0 `S87 1 . 1 0 `S93 1 . 1 0 `S98 1 . 1 0 `S103 1 . 1 0 `S108 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES113  1 e 1 @148 ]
 "2971
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "3388
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S87 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S173 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -139,51 +200,29 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3405
-[u S96 . 1 `S87 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES96  1 e 1 @392 ]
+[u S182 . 1 `S173 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES182  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "34 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-[v _TEMPERATURA TEMPERATURA `uc  1 e 1 0 ]
+[v _TEMPERATURA_0 TEMPERATURA_0 `uc  1 e 1 0 ]
+"35
+[v _TEMPERATURA_1 TEMPERATURA_1 `uc  1 e 1 0 ]
 "36
+[v _TEMPERATURA TEMPERATURA `uc  1 e 1 0 ]
+"38
 [v _ENVIAR ENVIAR `uc  1 e 1 0 ]
-"44
+"39
+[v _rxByteMaster rxByteMaster `uc  1 e 1 0 ]
+"50
 [v _main main `(v  1 e 1 0 ]
 {
-"85
+"111
 } 0
-"89
+"115
 [v _SETUP SETUP `(v  1 e 1 0 ]
 {
-"107
-} 0
-"109
-[v _MAP MAP `(v  1 e 1 0 ]
-{
-"122
-} 0
-"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 2 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 1 ]
-[v ___awdiv@counter counter `uc  1 a 1 0 ]
-"5
-[v ___awdiv@divisor divisor `i  1 p 2 6 ]
-[v ___awdiv@dividend dividend `i  1 p 2 8 ]
-"41
+"139
 } 0
 "164 D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 [v _ADC_READ ADC_READ `(uc  1 e 1 0 ]

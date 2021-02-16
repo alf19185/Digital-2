@@ -31,6 +31,8 @@
 //******************************Variables**************************************
 
 uint8_t POTENCIOMETRO = 0; 
+uint8_t rxByteMaster = 0;
+uint8_t dummy;
 //***************************Prototipo Funciones*******************************
 
 void SETUP(void);
@@ -41,12 +43,30 @@ void main(void) {
 	SETUP();
     ADC_C(0);
     ADC_CONVCLK(1);
+    dummy=SSPBUF; //limpiar rx 
+    
     
 	while(1)
-	{
+	{ 
     POTENCIOMETRO = ADC_READ (0);
-    PORTD = POTENCIOMETRO  ;
     ADC_CONTINUE();
+    PORTB= POTENCIOMETRO;
+    
+    
+    if (SSPSTATbits.BF == 0) {
+        SSPBUF = POTENCIOMETRO;
+    
+    }
+    
+    if (SSPSTATbits.BF ) {
+          //llego un byte del MASTER
+          rxByteMaster = SSPBUF; //leemos byte del master
+          PORTD = rxByteMaster;
+          //volvemos a colocar una info en SSPBUF
+          SSPBUF = POTENCIOMETRO;
+          
+      }
+    
       }
   
     return;
@@ -71,6 +91,11 @@ void main(void) {
         ANSEL = 0;
         ANSELbits.ANS0 = 1;
         ANSELH = 0;    
+        
+        SSPCONbits.SSPEN = 0;
+        SSPSTAT = 0X00;
+        SSPCON= 0X14;
+        SSPCONbits.SSPEN = 1;
         
     }
     

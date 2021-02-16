@@ -30,58 +30,105 @@
 
 //******************************Variables**************************************
 uint8_t temp; 
-uint8_t Esclavo1;
-uint8_t contador = 5;
+uint8_t POTENCIOMETRO;
+uint8_t contador =5;
+uint8_t CONT;
+uint8_t TEMPERATURA;
+
 
 //***************************Prototipo Funciones*******************************
 
 void SETUP(void);
+void LEER_S1 (void);
+void LEER_S2 (void);
+void LEER_S3 (void);
 
+void LEER_S1 (void){
+    
+      PORTEbits.RE0 =0;   //chip select a esclavo 1
+      
+       POTENCIOMETRO = READ_SPI (contador);
+        __delay_ms(2);
+       PORTEbits.RE0 =1; 
+       
+       PORTB = POTENCIOMETRO  ;  
+     //  PORTB = contador;
+     //  PORTBbits.RB1 = !PORTBbits.RB1; 
+     
+}
+
+void LEER_S2 (void){
+    
+      PORTEbits.RE1 =0;   //chip select a esclavo 1
+      
+       CONT = READ_SPI (contador);
+        __delay_ms(2);
+       PORTEbits.RE1 =1; 
+       
+       PORTB = CONT  ;  
+     //  PORTB = contador;
+     //  PORTBbits.RB1 = !PORTBbits.RB1; 
+     
+}
+
+void LEER_S3 (void){
+    
+      PORTEbits.RE2 =0;   //chip select a esclavo 1
+      
+       TEMPERATURA = READ_SPI (contador);
+       __delay_ms(2);
+       PORTEbits.RE2 =1; 
+       
+       PORTB = TEMPERATURA  ;  
+     //  PORTB = contador;
+     //  PORTBbits.RB1 = !PORTBbits.RB1; 
+     
+}
 
 //*****************************Main Loop***************************************
 void main(void) {
      
 	SETUP();
-	CONFIG_SPI_MASTER();
+	//CONFIG_SPI_MASTER();
      __delay_ms(10);
      
 	while(1)
 	{
         
-       PORTEbits.RE0 =0;
-       Esclavo1 = READ_SPI ();
-       PORTD = Esclavo1  ;   
-       PORTEbits.RE0 =1; 
-       PORTBbits.RB1 = !PORTBbits.RB1; 
-        __delay_ms(100);
-	   //SSPBUF = 0x14;
+      // contador++;  
+     //  LEER_S1();
+     //  LEER_S2();
+     LEER_S3();   
+        __delay_ms(1000);
+	//SSPBUF = 0x14;
         }
     
     return;
 }
-//*******************************Subrutinas************************************   
-
-//***Configuración general***   
+//*******************************Subrutinas************************************    
+    
+//**Configuración general   
    void SETUP(void){
+        
         PORTA = 0;
         PORTB = 0;
         PORTC = 0;
         PORTD = 0;
-        PORTE = 0;
+        PORTE = 0x07;
         
         TRISA = 0;
         TRISD = 0;
         TRISB = 0;
-        TRISC = 0x10;  // 0x10 RC3 es CLk sale a slaves, RC4 es MISO, RC5 es MOSI
+        TRISC = 0b00010000;  // 0x10 RC3 es CLk sale a slaves, RC4 es MISO, RC5 es MOSI
         TRISE = 0;           // Chip select entre slaves en 1 para no leer ninguno
         
         ANSEL = 0;
-        ANSELH = 0; 
-        
-        SSPSTAT = 0X80;
+        ANSELH = 0;      
+         
+        SSPCONbits.SSPEN = 0;  
+        SSPSTAT = 0X00;
         SSPCON= 0X11;
-        SSPCONbits.SSPEN = 1;
-        
+        SSPCONbits.SSPEN = 1;   
                 
     }
     

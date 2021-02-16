@@ -1,19 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"39 Principal_Master.c
-[; ;Principal_Master.c: 39: void SETUP(void);
-[v _SETUP `(v ~T0 @X0 0 ef ]
-"14 ./SPI_Master.h
-[; ;./SPI_Master.h: 14: void CONFIG_SPI_MASTER(void);
-[v _CONFIG_SPI_MASTER `(v ~T0 @X0 0 ef ]
-[v F1272 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
-[v __delay `JF1272 ~T0 @X0 0 e ]
-[p i __delay ]
-"229 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 229: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"421
+"421 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 421:     struct {
 [s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S14 . RE0 RE1 RE2 RE3 ]
@@ -27,15 +13,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18 ./SPI_Master.h
 [; ;./SPI_Master.h: 18: uint8_t READ_SPI (uint8_t);
 [v _READ_SPI `(uc ~T0 @X0 0 ef1`uc ]
-"353 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"167
+[v F1272 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
+[v __delay `JF1272 ~T0 @X0 0 e ]
+[p i __delay ]
+"229 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 229: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+[p mainexit ]
+"41 Principal_Master.c
+[; ;Principal_Master.c: 41: void SETUP(void);
+[v _SETUP `(v ~T0 @X0 0 ef ]
+"167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 167: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "291
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 291: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"353
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "415
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 415: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
@@ -60,6 +57,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3450
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3450: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"857
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 857:     struct {
+[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
+"864
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 864:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"856
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 856: typedef union {
+[u S29 `S30 1 `S31 1 ]
+[n S29 . . . ]
+"871
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 871: extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
+[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"2178
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2178: extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"851
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 851: extern volatile unsigned char SSPCON __attribute__((address(0x014)));
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
 "9 Principal_Master.c
 [p x FOSC  =  EXTRC_CLKOUT ]
 "10
@@ -321,117 +339,192 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 ./SPI_Master.h
 [; ;./SPI_Master.h: 12: uint8_t data;
 [v _data `uc ~T0 @X0 1 e ]
-"33 Principal_Master.c
-[; ;Principal_Master.c: 33: uint8_t temp;
+"32 Principal_Master.c
+[; ;Principal_Master.c: 32: uint8_t temp;
 [v _temp `uc ~T0 @X0 1 e ]
+"33
+[; ;Principal_Master.c: 33: uint8_t POTENCIOMETRO;
+[v _POTENCIOMETRO `uc ~T0 @X0 1 e ]
 "34
-[; ;Principal_Master.c: 34: uint8_t Esclavo1;
-[v _Esclavo1 `uc ~T0 @X0 1 e ]
-"35
-[; ;Principal_Master.c: 35: uint8_t contador = 5;
+[; ;Principal_Master.c: 34: uint8_t contador =5;
 [v _contador `uc ~T0 @X0 1 e ]
 [i _contador
 -> -> 5 `i `uc
 ]
+"35
+[; ;Principal_Master.c: 35: uint8_t CONT;
+[v _CONT `uc ~T0 @X0 1 e ]
+"36
+[; ;Principal_Master.c: 36: uint8_t TEMPERATURA;
+[v _TEMPERATURA `uc ~T0 @X0 1 e ]
+"46
+[; ;Principal_Master.c: 46: void LEER_S1 (void){
+[v _LEER_S1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _LEER_S1 ]
+[f ]
+"48
+[; ;Principal_Master.c: 48:       PORTEbits.RE0 =0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"50
+[; ;Principal_Master.c: 50:        POTENCIOMETRO = READ_SPI (contador);
+[e = _POTENCIOMETRO ( _READ_SPI (1 _contador ]
+"51
+[; ;Principal_Master.c: 51:         _delay((unsigned long)((2)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"52
+[; ;Principal_Master.c: 52:        PORTEbits.RE0 =1;
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"54
+[; ;Principal_Master.c: 54:        PORTB = POTENCIOMETRO ;
+[e = _PORTB _POTENCIOMETRO ]
+"58
+[; ;Principal_Master.c: 58: }
+[e :UE 138 ]
+}
+"60
+[; ;Principal_Master.c: 60: void LEER_S2 (void){
+[v _LEER_S2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _LEER_S2 ]
+[f ]
+"62
+[; ;Principal_Master.c: 62:       PORTEbits.RE1 =0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"64
+[; ;Principal_Master.c: 64:        CONT = READ_SPI (contador);
+[e = _CONT ( _READ_SPI (1 _contador ]
+"65
+[; ;Principal_Master.c: 65:         _delay((unsigned long)((2)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"66
+[; ;Principal_Master.c: 66:        PORTEbits.RE1 =1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+"68
+[; ;Principal_Master.c: 68:        PORTB = CONT ;
+[e = _PORTB _CONT ]
+"72
+[; ;Principal_Master.c: 72: }
+[e :UE 139 ]
+}
+"74
+[; ;Principal_Master.c: 74: void LEER_S3 (void){
+[v _LEER_S3 `(v ~T0 @X0 1 ef ]
+{
+[e :U _LEER_S3 ]
+[f ]
+"76
+[; ;Principal_Master.c: 76:       PORTEbits.RE2 =0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+"78
+[; ;Principal_Master.c: 78:        TEMPERATURA = READ_SPI (contador);
+[e = _TEMPERATURA ( _READ_SPI (1 _contador ]
+"79
+[; ;Principal_Master.c: 79:        _delay((unsigned long)((2)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"80
+[; ;Principal_Master.c: 80:        PORTEbits.RE2 =1;
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+"82
+[; ;Principal_Master.c: 82:        PORTB = TEMPERATURA ;
+[e = _PORTB _TEMPERATURA ]
+"86
+[; ;Principal_Master.c: 86: }
+[e :UE 140 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"43
-[; ;Principal_Master.c: 43: void main(void) {
+"89
+[; ;Principal_Master.c: 89: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"45
-[; ;Principal_Master.c: 45:  SETUP();
+"91
+[; ;Principal_Master.c: 91:  SETUP();
 [e ( _SETUP ..  ]
-"46
-[; ;Principal_Master.c: 46:  CONFIG_SPI_MASTER();
-[e ( _CONFIG_SPI_MASTER ..  ]
-"47
-[; ;Principal_Master.c: 47:      _delay((unsigned long)((10)*(8000000/4000.0)));
+"93
+[; ;Principal_Master.c: 93:      _delay((unsigned long)((10)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"49
-[; ;Principal_Master.c: 49:  while(1)
-[e :U 140 ]
-"50
-[; ;Principal_Master.c: 50:  {
+"95
+[; ;Principal_Master.c: 95:  while(1)
+[e :U 143 ]
+"96
+[; ;Principal_Master.c: 96:  {
 {
-"51
-[; ;Principal_Master.c: 51:        contador++;
-[e ++ _contador -> -> 1 `i `uc ]
-"52
-[; ;Principal_Master.c: 52:        PORTB = contador;
-[e = _PORTB _contador ]
-"53
-[; ;Principal_Master.c: 53:        PORTEbits.RE0 =0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"54
-[; ;Principal_Master.c: 54:        Esclavo1 = READ_SPI (contador);
-[e = _Esclavo1 ( _READ_SPI (1 _contador ]
-"55
-[; ;Principal_Master.c: 55:        PORTD = Esclavo1 ;
-[e = _PORTD _Esclavo1 ]
-"56
-[; ;Principal_Master.c: 56:        PORTEbits.RE0 =1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"58
-[; ;Principal_Master.c: 58:        _delay((unsigned long)((1000)*(8000000/4000.0)));
+"101
+[; ;Principal_Master.c: 101:      LEER_S3();
+[e ( _LEER_S3 ..  ]
+"102
+[; ;Principal_Master.c: 102:         _delay((unsigned long)((1000)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"60
-[; ;Principal_Master.c: 60:         }
+"104
+[; ;Principal_Master.c: 104:         }
 }
-[e :U 139 ]
-[e $U 140  ]
-[e :U 141 ]
-"62
-[; ;Principal_Master.c: 62:     return;
-[e $UE 138  ]
-"63
-[; ;Principal_Master.c: 63: }
-[e :UE 138 ]
+[e :U 142 ]
+[e $U 143  ]
+[e :U 144 ]
+"106
+[; ;Principal_Master.c: 106:     return;
+[e $UE 141  ]
+"107
+[; ;Principal_Master.c: 107: }
+[e :UE 141 ]
 }
-"67
-[; ;Principal_Master.c: 67:    void SETUP(void){
+"111
+[; ;Principal_Master.c: 111:    void SETUP(void){
 [v _SETUP `(v ~T0 @X0 1 ef ]
 {
 [e :U _SETUP ]
 [f ]
-"68
-[; ;Principal_Master.c: 68:         PORTA = 0;
+"113
+[; ;Principal_Master.c: 113:         PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"69
-[; ;Principal_Master.c: 69:         PORTB = 0;
+"114
+[; ;Principal_Master.c: 114:         PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"70
-[; ;Principal_Master.c: 70:         PORTC = 0;
+"115
+[; ;Principal_Master.c: 115:         PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"71
-[; ;Principal_Master.c: 71:         PORTD = 0;
+"116
+[; ;Principal_Master.c: 116:         PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"72
-[; ;Principal_Master.c: 72:         PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
-"74
-[; ;Principal_Master.c: 74:         TRISA = 0;
+"117
+[; ;Principal_Master.c: 117:         PORTE = 0x07;
+[e = _PORTE -> -> 7 `i `uc ]
+"119
+[; ;Principal_Master.c: 119:         TRISA = 0;
 [e = _TRISA -> -> 0 `i `uc ]
-"75
-[; ;Principal_Master.c: 75:         TRISD = 0;
+"120
+[; ;Principal_Master.c: 120:         TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"76
-[; ;Principal_Master.c: 76:         TRISB = 0;
+"121
+[; ;Principal_Master.c: 121:         TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"77
-[; ;Principal_Master.c: 77:         TRISC = 0b00010000;
+"122
+[; ;Principal_Master.c: 122:         TRISC = 0b00010000;
 [e = _TRISC -> -> 16 `i `uc ]
-"78
-[; ;Principal_Master.c: 78:         TRISE = 0;
+"123
+[; ;Principal_Master.c: 123:         TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"80
-[; ;Principal_Master.c: 80:         ANSEL = 0;
+"125
+[; ;Principal_Master.c: 125:         ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"81
-[; ;Principal_Master.c: 81:         ANSELH = 0;
+"126
+[; ;Principal_Master.c: 126:         ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"82
-[; ;Principal_Master.c: 82:     }
-[e :UE 142 ]
+"128
+[; ;Principal_Master.c: 128:         SSPCONbits.SSPEN = 0;
+[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
+"129
+[; ;Principal_Master.c: 129:         SSPSTAT = 0X00;
+[e = _SSPSTAT -> -> 0 `i `uc ]
+"130
+[; ;Principal_Master.c: 130:         SSPCON= 0X11;
+[e = _SSPCON -> -> 17 `i `uc ]
+"131
+[; ;Principal_Master.c: 131:         SSPCONbits.SSPEN = 1;
+[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
+"133
+[; ;Principal_Master.c: 133:     }
+[e :UE 145 ]
 }

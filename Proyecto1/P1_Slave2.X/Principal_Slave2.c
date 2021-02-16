@@ -31,7 +31,8 @@
 uint8_t FLAG_PUSH = 0;
 uint8_t FLAG_UP = 0;
 uint8_t FLAG_DOWN = 0;
-
+uint8_t rxByteMaster =0;
+uint8_t CONT;
 //***************************Prototipo Funciones*******************************
 
 void UP(void);
@@ -56,11 +57,26 @@ void __interrupt()
 void main(void) {  
     
     SETUP();
-    
+        
     while(1){
                  
-        UP();
-        DOWN();
+       UP();
+       DOWN();
+    
+        
+    if (SSPSTATbits.BF == 0) {
+        SSPBUF = CONT;
+    
+    }
+    
+    if (SSPSTATbits.BF ) {
+          //llego un byte del MASTER
+          rxByteMaster = SSPBUF; //leemos byte del master
+         // PORTD = rxByteMaster;
+          //volvemos a colocar una info en SSPBUF
+          SSPBUF = CONT;
+          
+      }
         
         }
     return;
@@ -72,8 +88,8 @@ void main(void) {
 void SETUP (void){
 
     TRISD = 0;
-    TRISC = 0;
-    TRISA = 0;
+    TRISC = 0b00011000;
+    TRISA = 0b00100000;
     TRISB = 0b00000101;         // 2 Push
     TRISE = 0;
     PORTE = 0;
@@ -83,7 +99,13 @@ void SETUP (void){
     PORTD = 0;
     ANSEL = 0;
     ANSELH = 0; 
-         
+    
+    SSPCONbits.SSPEN = 0;
+    SSPSTAT = 0X00;
+    SSPCON= 0X14;
+    SSPCONbits.SSPEN = 1;
+        
+    
     OPTION_REGbits.nRBPU = 1;
     INTCONbits.GIE = 1;         //Global interrupts enabled
     INTCONbits.PEIE = 1; 
@@ -101,7 +123,8 @@ void UP (void){
             if (PORTBbits.RB0 == 0){    
                 __delay_ms(10);
                 
-                PORTD = PORTD + 1;      //Incremento el contador y se limpian
+                CONT++;
+                PORTD = CONT ;      //Incremento el contador y se limpian
                 FLAG_PUSH = 0;          //las  banderas
                 FLAG_UP = 1;
                 INTCONbits.RBIE = 1;
@@ -125,7 +148,8 @@ void DOWN(void){
         if (FLAG_DOWN == 0){
             if (PORTBbits.RB2 == 0){
                 __delay_ms(10);
-                PORTD = PORTD - 1;
+                CONT--;
+                PORTD = CONT ;
                 FLAG_PUSH = 0;
                 FLAG_DOWN = 1;
                 INTCONbits.RBIE = 1;

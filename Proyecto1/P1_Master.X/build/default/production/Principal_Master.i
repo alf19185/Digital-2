@@ -2446,7 +2446,6 @@ extern volatile __bit nWRITE __attribute__((address(0x4A2)));
 # 25 "Principal_Master.c" 2
 
 
-
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2656,10 +2655,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 28 "Principal_Master.c" 2
+# 27 "Principal_Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 29 "Principal_Master.c" 2
+# 28 "Principal_Master.c" 2
 
 # 1 "./SPI_Master.h" 1
 # 12 "./SPI_Master.h"
@@ -2676,36 +2675,81 @@ void WAIT_SPI (void);
 void WRITE_SPI( uint8_t data );
 
 uint8_t CHECK_DATA(void);
-# 30 "Principal_Master.c" 2
+# 29 "Principal_Master.c" 2
 
 
 
 uint8_t temp;
-uint8_t Esclavo1;
-uint8_t contador = 5;
+uint8_t POTENCIOMETRO;
+uint8_t contador =5;
+uint8_t CONT;
+uint8_t TEMPERATURA;
+
 
 
 
 void SETUP(void);
+void LEER_S1 (void);
+void LEER_S2 (void);
+void LEER_S3 (void);
 
+void LEER_S1 (void){
+
+      PORTEbits.RE0 =0;
+
+       POTENCIOMETRO = READ_SPI (contador);
+        _delay((unsigned long)((2)*(8000000/4000.0)));
+       PORTEbits.RE0 =1;
+
+       PORTB = POTENCIOMETRO ;
+
+
+
+}
+
+void LEER_S2 (void){
+
+      PORTEbits.RE1 =0;
+
+       CONT = READ_SPI (contador);
+        _delay((unsigned long)((2)*(8000000/4000.0)));
+       PORTEbits.RE1 =1;
+
+       PORTB = CONT ;
+
+
+
+}
+
+void LEER_S3 (void){
+
+      PORTEbits.RE2 =0;
+
+       TEMPERATURA = READ_SPI (contador);
+       _delay((unsigned long)((2)*(8000000/4000.0)));
+       PORTEbits.RE2 =1;
+
+       PORTB = TEMPERATURA ;
+
+
+
+}
 
 
 void main(void) {
 
  SETUP();
- CONFIG_SPI_MASTER();
+
      _delay((unsigned long)((10)*(8000000/4000.0)));
 
  while(1)
  {
-       contador++;
-       PORTB = contador;
-       PORTEbits.RE0 =0;
-       Esclavo1 = READ_SPI (contador);
-       PORTD = Esclavo1 ;
-       PORTEbits.RE0 =1;
 
-       _delay((unsigned long)((1000)*(8000000/4000.0)));
+
+
+
+     LEER_S3();
+        _delay((unsigned long)((1000)*(8000000/4000.0)));
 
         }
 
@@ -2715,11 +2759,12 @@ void main(void) {
 
 
    void SETUP(void){
+
         PORTA = 0;
         PORTB = 0;
         PORTC = 0;
         PORTD = 0;
-        PORTE = 0;
+        PORTE = 0x07;
 
         TRISA = 0;
         TRISD = 0;
@@ -2729,4 +2774,10 @@ void main(void) {
 
         ANSEL = 0;
         ANSELH = 0;
+
+        SSPCONbits.SSPEN = 0;
+        SSPSTAT = 0X00;
+        SSPCON= 0X11;
+        SSPCONbits.SSPEN = 1;
+
     }

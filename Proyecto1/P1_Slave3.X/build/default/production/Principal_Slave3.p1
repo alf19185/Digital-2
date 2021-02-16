@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"40 Principal_Slave3.c
-[; ;Principal_Slave3.c: 40: void SETUP(void);
+"46 Principal_Slave3.c
+[; ;Principal_Slave3.c: 46: void SETUP(void);
 [v _SETUP `(v ~T0 @X0 0 ef ]
 [v F1272 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
@@ -16,9 +16,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15
 [; ;./ADC.h: 15: uint8_t ADC_READ( uint8_t JUSTIFICACION );
 [v _ADC_READ `(uc ~T0 @X0 0 ef1`uc ]
-"41 Principal_Slave3.c
-[; ;Principal_Slave3.c: 41: void MAP(void);
-[v _MAP `(v ~T0 @X0 0 ef ]
+"353 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "23 ./ADC.h
 [; ;./ADC.h: 23: void ADC_CONTINUE(void);
 [v _ADC_CONTINUE `(v ~T0 @X0 0 ef ]
@@ -33,6 +33,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 "246
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 246: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+"2184
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2184:     struct {
+[s S82 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S82 . BF UA R_nW S P D_nA CKE SMP ]
+"2194
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2194:     struct {
+[s S83 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S83 . . R . D ]
+"2200
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2200:     struct {
+[s S84 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"2207
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2207:     struct {
+[s S85 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S85 . . nW . nA ]
+"2213
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2213:     struct {
+[s S86 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S86 . . nWRITE . nADDRESS ]
+"2219
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2219:     struct {
+[s S87 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S87 . . R_W . D_A ]
+"2225
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2225:     struct {
+[s S88 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S88 . . READ_WRITE . DATA_ADDRESS ]
+"2183
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2183: typedef union {
+[u S81 `S82 1 `S83 1 `S84 1 `S85 1 `S86 1 `S87 1 `S88 1 ]
+[n S81 . . . . . . . . ]
+"2232
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2232: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x094)));
+[v _SSPSTATbits `VS81 ~T0 @X0 0 e@148 ]
+"844
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 844: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
 "167
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 167: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
@@ -42,9 +80,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 291: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"353
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "415
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 415: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
@@ -80,6 +115,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3450
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3450: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"857
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 857:     struct {
+[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
+"864
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 864:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"856
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 856: typedef union {
+[u S29 `S30 1 `S31 1 ]
+[n S29 . . . ]
+"871
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 871: extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
+[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"2178
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2178: extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"851
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 851: extern volatile unsigned char SSPCON __attribute__((address(0x014)));
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
 "9 Principal_Slave3.c
 [p x FOSC  =  EXTRC_CLKOUT ]
 "10
@@ -339,209 +395,279 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3547: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "34 Principal_Slave3.c
-[; ;Principal_Slave3.c: 34: uint8_t TEMPERATURA = 0;
+[; ;Principal_Slave3.c: 34: uint8_t TEMPERATURA_0 = 0;
+[v _TEMPERATURA_0 `uc ~T0 @X0 1 e ]
+[i _TEMPERATURA_0
+-> -> 0 `i `uc
+]
+"35
+[; ;Principal_Slave3.c: 35: uint8_t TEMPERATURA_1 = 0;
+[v _TEMPERATURA_1 `uc ~T0 @X0 1 e ]
+[i _TEMPERATURA_1
+-> -> 0 `i `uc
+]
+"36
+[; ;Principal_Slave3.c: 36: uint8_t TEMPERATURA = 0;
 [v _TEMPERATURA `uc ~T0 @X0 1 e ]
 [i _TEMPERATURA
 -> -> 0 `i `uc
 ]
-"35
-[; ;Principal_Slave3.c: 35: uint8_t TEMPORAL = 0;
+"37
+[; ;Principal_Slave3.c: 37: uint8_t TEMPORAL = 0;
 [v _TEMPORAL `uc ~T0 @X0 1 e ]
 [i _TEMPORAL
 -> -> 0 `i `uc
 ]
-"36
-[; ;Principal_Slave3.c: 36: uint8_t ENVIAR = 0;
+"38
+[; ;Principal_Slave3.c: 38: uint8_t ENVIAR = 0;
 [v _ENVIAR `uc ~T0 @X0 1 e ]
 [i _ENVIAR
 -> -> 0 `i `uc
 ]
+"39
+[; ;Principal_Slave3.c: 39: uint8_t rxByteMaster =0;
+[v _rxByteMaster `uc ~T0 @X0 1 e ]
+[i _rxByteMaster
+-> -> 0 `i `uc
+]
+"40
+[; ;Principal_Slave3.c: 40: uint16_t TEMP = 0;
+[v _TEMP `ui ~T0 @X0 1 e ]
+[i _TEMP
+-> -> 0 `i `ui
+]
+"41
+[; ;Principal_Slave3.c: 41: float TEMP_R;
+[v _TEMP_R `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"44
-[; ;Principal_Slave3.c: 44: void main(void) {
+"50
+[; ;Principal_Slave3.c: 50: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"46
-[; ;Principal_Slave3.c: 46:  SETUP();
-[e ( _SETUP ..  ]
-"48
-[; ;Principal_Slave3.c: 48:     _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"49
-[; ;Principal_Slave3.c: 49:     ADC_C(0);
-[e ( _ADC_C (1 -> -> 0 `i `ui ]
-"50
-[; ;Principal_Slave3.c: 50:     ADC_CONVCLK(1);
-[e ( _ADC_CONVCLK (1 -> -> 1 `i `uc ]
 "52
-[; ;Principal_Slave3.c: 52:  while(1)
-[e :U 140 ]
+[; ;Principal_Slave3.c: 52:  SETUP();
+[e ( _SETUP ..  ]
 "53
-[; ;Principal_Slave3.c: 53:  {
+[; ;Principal_Slave3.c: 53:  _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"54
+[; ;Principal_Slave3.c: 54:     ADC_C(0);
+[e ( _ADC_C (1 -> -> 0 `i `ui ]
+"55
+[; ;Principal_Slave3.c: 55:     ADC_CONVCLK(1);
+[e ( _ADC_CONVCLK (1 -> -> 1 `i `uc ]
+"57
+[; ;Principal_Slave3.c: 57:  while(1)
+[e :U 140 ]
+"58
+[; ;Principal_Slave3.c: 58:  {
 {
-"59
-[; ;Principal_Slave3.c: 59:     TEMPERATURA = ADC_READ (0);
-[e = _TEMPERATURA ( _ADC_READ (1 -> -> 0 `i `uc ]
 "60
-[; ;Principal_Slave3.c: 60:     MAP();
-[e ( _MAP ..  ]
+[; ;Principal_Slave3.c: 60:     TEMPERATURA_0 = ADC_READ (0);
+[e = _TEMPERATURA_0 ( _ADC_READ (1 -> -> 0 `i `uc ]
 "61
-[; ;Principal_Slave3.c: 61:     ADC_CONTINUE();
+[; ;Principal_Slave3.c: 61:     TEMPERATURA_1 = ADC_READ (1);
+[e = _TEMPERATURA_1 ( _ADC_READ (1 -> -> 1 `i `uc ]
+"68
+[; ;Principal_Slave3.c: 68:     TEMPERATURA = TEMPERATURA_0;
+[e = _TEMPERATURA _TEMPERATURA_0 ]
+"69
+[; ;Principal_Slave3.c: 69:     PORTD = TEMPERATURA;
+[e = _PORTD _TEMPERATURA ]
+"71
+[; ;Principal_Slave3.c: 71:     ADC_CONTINUE();
 [e ( _ADC_CONTINUE ..  ]
-"63
-[; ;Principal_Slave3.c: 63:     if(TEMPERATURA < 13) {
+"73
+[; ;Principal_Slave3.c: 73:     if(TEMPERATURA < 13) {
 [e $ ! < -> _TEMPERATURA `i -> 13 `i 142  ]
 {
-"65
-[; ;Principal_Slave3.c: 65:         PORTBbits.RB0 = 0;
+"75
+[; ;Principal_Slave3.c: 75:         PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"66
-[; ;Principal_Slave3.c: 66:         PORTBbits.RB1 = 0;
+"76
+[; ;Principal_Slave3.c: 76:         PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"67
-[; ;Principal_Slave3.c: 67:         PORTBbits.RB2 = 1;
+"77
+[; ;Principal_Slave3.c: 77:         PORTBbits.RB2 = 1;
 [e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-"68
-[; ;Principal_Slave3.c: 68:         }
+"78
+[; ;Principal_Slave3.c: 78:         }
 }
 [e $U 143  ]
-"69
-[; ;Principal_Slave3.c: 69:     else if (TEMPERATURA >= 13 && TEMPERATURA <=18 ){
+"79
+[; ;Principal_Slave3.c: 79:     else if (TEMPERATURA >= 13 && TEMPERATURA <=18 ){
 [e :U 142 ]
 [e $ ! && >= -> _TEMPERATURA `i -> 13 `i <= -> _TEMPERATURA `i -> 18 `i 144  ]
 {
-"71
-[; ;Principal_Slave3.c: 71:         PORTBbits.RB0 = 0;
+"81
+[; ;Principal_Slave3.c: 81:         PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"72
-[; ;Principal_Slave3.c: 72:         PORTBbits.RB1 = 1;
+"82
+[; ;Principal_Slave3.c: 82:         PORTBbits.RB1 = 1;
 [e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"73
-[; ;Principal_Slave3.c: 73:         PORTBbits.RB2 = 0;
+"83
+[; ;Principal_Slave3.c: 83:         PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"74
-[; ;Principal_Slave3.c: 74:         }
+"84
+[; ;Principal_Slave3.c: 84:         }
 }
 [e $U 145  ]
-"76
-[; ;Principal_Slave3.c: 76:     else if (TEMPERATURA > 18){
+"86
+[; ;Principal_Slave3.c: 86:     else if (TEMPERATURA > 18){
 [e :U 144 ]
 [e $ ! > -> _TEMPERATURA `i -> 18 `i 146  ]
 {
-"78
-[; ;Principal_Slave3.c: 78:         PORTBbits.RB0 = 1;
+"88
+[; ;Principal_Slave3.c: 88:         PORTBbits.RB0 = 1;
 [e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"79
-[; ;Principal_Slave3.c: 79:         PORTBbits.RB1 = 0;
+"89
+[; ;Principal_Slave3.c: 89:         PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"80
-[; ;Principal_Slave3.c: 80:         PORTBbits.RB2 = 0;
+"90
+[; ;Principal_Slave3.c: 90:         PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"81
-[; ;Principal_Slave3.c: 81:         }
+"91
+[; ;Principal_Slave3.c: 91:         }
 }
 [e :U 146 ]
 [e :U 145 ]
 [e :U 143 ]
-"83
-[; ;Principal_Slave3.c: 83:     }
+"93
+[; ;Principal_Slave3.c: 93:       if (SSPSTATbits.BF == 0) {
+[e $ ! == -> . . _SSPSTATbits 0 0 `i -> 0 `i 147  ]
+{
+"94
+[; ;Principal_Slave3.c: 94:         SSPBUF = TEMPERATURA;
+[e = _SSPBUF _TEMPERATURA ]
+"96
+[; ;Principal_Slave3.c: 96:     }
+}
+[e :U 147 ]
+"98
+[; ;Principal_Slave3.c: 98:     if (SSPSTATbits.BF ) {
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 148  ]
+{
+"100
+[; ;Principal_Slave3.c: 100:           rxByteMaster = SSPBUF;
+[e = _rxByteMaster _SSPBUF ]
+"103
+[; ;Principal_Slave3.c: 103:           SSPBUF = TEMPERATURA;
+[e = _SSPBUF _TEMPERATURA ]
+"105
+[; ;Principal_Slave3.c: 105:       }
+}
+[e :U 148 ]
+"109
+[; ;Principal_Slave3.c: 109:     }
 }
 [e :U 139 ]
 [e $U 140  ]
 [e :U 141 ]
-"84
-[; ;Principal_Slave3.c: 84:     return;
+"110
+[; ;Principal_Slave3.c: 110:     return;
 [e $UE 138  ]
-"85
-[; ;Principal_Slave3.c: 85: }
+"111
+[; ;Principal_Slave3.c: 111: }
 [e :UE 138 ]
 }
-"89
-[; ;Principal_Slave3.c: 89:    void SETUP(void){
+"115
+[; ;Principal_Slave3.c: 115:    void SETUP(void){
 [v _SETUP `(v ~T0 @X0 1 ef ]
 {
 [e :U _SETUP ]
 [f ]
-"91
-[; ;Principal_Slave3.c: 91:         PORTA = 0;
+"117
+[; ;Principal_Slave3.c: 117:         PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"92
-[; ;Principal_Slave3.c: 92:         PORTB = 0;
+"118
+[; ;Principal_Slave3.c: 118:         PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"93
-[; ;Principal_Slave3.c: 93:         PORTC = 0;
+"119
+[; ;Principal_Slave3.c: 119:         PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"94
-[; ;Principal_Slave3.c: 94:         PORTD = 0;
+"120
+[; ;Principal_Slave3.c: 120:         PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"95
-[; ;Principal_Slave3.c: 95:         PORTE = 0;
+"121
+[; ;Principal_Slave3.c: 121:         PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"97
-[; ;Principal_Slave3.c: 97:         TRISA = 0b00100001;
+"123
+[; ;Principal_Slave3.c: 123:         TRISA = 0b00100001;
 [e = _TRISA -> -> 33 `i `uc ]
-"98
-[; ;Principal_Slave3.c: 98:         TRISB = 0;
+"124
+[; ;Principal_Slave3.c: 124:         TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"99
-[; ;Principal_Slave3.c: 99:         TRISD = 0;
+"125
+[; ;Principal_Slave3.c: 125:         TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"100
-[; ;Principal_Slave3.c: 100:         TRISC = 0b00101000;
-[e = _TRISC -> -> 40 `i `uc ]
-"101
-[; ;Principal_Slave3.c: 101:         TRISE = 0;
+"126
+[; ;Principal_Slave3.c: 126:         TRISC = 0b00011000;
+[e = _TRISC -> -> 24 `i `uc ]
+"127
+[; ;Principal_Slave3.c: 127:         TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"103
-[; ;Principal_Slave3.c: 103:         ANSEL = 0;
+"130
+[; ;Principal_Slave3.c: 130:         ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"104
-[; ;Principal_Slave3.c: 104:         ANSELbits.ANS0 = 1;
+"131
+[; ;Principal_Slave3.c: 131:         ANSELbits.ANS0 = 1;
 [e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
-"105
-[; ;Principal_Slave3.c: 105:         ANSELH = 0;
+"132
+[; ;Principal_Slave3.c: 132:         ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"107
-[; ;Principal_Slave3.c: 107:     }
-[e :UE 147 ]
+"134
+[; ;Principal_Slave3.c: 134:         SSPCONbits.SSPEN = 0;
+[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
+"135
+[; ;Principal_Slave3.c: 135:         SSPSTAT = 0X00;
+[e = _SSPSTAT -> -> 0 `i `uc ]
+"136
+[; ;Principal_Slave3.c: 136:         SSPCON= 0X14;
+[e = _SSPCON -> -> 20 `i `uc ]
+"137
+[; ;Principal_Slave3.c: 137:         SSPCONbits.SSPEN = 1;
+[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
+"139
+[; ;Principal_Slave3.c: 139:     }
+[e :UE 149 ]
 }
-"109
-[; ;Principal_Slave3.c: 109: void MAP(void){
+"141
+[; ;Principal_Slave3.c: 141: void MAP(void){
 [v _MAP `(v ~T0 @X0 1 ef ]
 {
 [e :U _MAP ]
 [f ]
-"111
-[; ;Principal_Slave3.c: 111:     if(TEMPERATURA < 0){
-[e $ ! < -> _TEMPERATURA `i -> 0 `i 149  ]
+"143
+[; ;Principal_Slave3.c: 143:     if(TEMPERATURA < 0){
+[e $ ! < -> _TEMPERATURA `i -> 0 `i 151  ]
 {
-"112
-[; ;Principal_Slave3.c: 112:         ENVIAR=0;
+"144
+[; ;Principal_Slave3.c: 144:         ENVIAR=0;
 [e = _ENVIAR -> -> 0 `i `uc ]
-"113
-[; ;Principal_Slave3.c: 113:         PORTD = ENVIAR;
+"145
+[; ;Principal_Slave3.c: 145:         PORTD = ENVIAR;
 [e = _PORTD _ENVIAR ]
-"114
-[; ;Principal_Slave3.c: 114:     }
+"146
+[; ;Principal_Slave3.c: 146:     }
 }
-[e :U 149 ]
-"115
-[; ;Principal_Slave3.c: 115:     if (TEMPERATURA >= 0 ){
-[e $ ! >= -> _TEMPERATURA `i -> 0 `i 150  ]
+[e :U 151 ]
+"147
+[; ;Principal_Slave3.c: 147:     if (TEMPERATURA >= 0 ){
+[e $ ! >= -> _TEMPERATURA `i -> 0 `i 152  ]
 {
-"116
-[; ;Principal_Slave3.c: 116:         ENVIAR = ((TEMPERATURA *500)/1024);
+"148
+[; ;Principal_Slave3.c: 148:         ENVIAR = ((TEMPERATURA *500)/1024);
 [e = _ENVIAR -> / * -> _TEMPERATURA `i -> 500 `i -> 1024 `i `uc ]
-"117
-[; ;Principal_Slave3.c: 117:         PORTD = ENVIAR;
+"149
+[; ;Principal_Slave3.c: 149:         PORTD = ENVIAR;
 [e = _PORTD _ENVIAR ]
-"118
-[; ;Principal_Slave3.c: 118:     }
+"150
+[; ;Principal_Slave3.c: 150:     }
 }
-[e :U 150 ]
-"122
-[; ;Principal_Slave3.c: 122: }
-[e :UE 148 ]
+[e :U 152 ]
+"154
+[; ;Principal_Slave3.c: 154: }
+[e :UE 150 ]
 }

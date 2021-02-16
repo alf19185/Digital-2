@@ -2683,8 +2683,6 @@ uint8_t READ_SPI (uint8_t data){
     SSPBUF = data;
      while ( !SSPSTATbits.BF );
 
-
-
   return(SSPBUF);
 }
 

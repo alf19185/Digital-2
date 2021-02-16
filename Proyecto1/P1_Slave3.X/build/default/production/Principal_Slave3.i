@@ -2694,9 +2694,15 @@ void ADC_CONTINUE(void);
 
 
 
+uint8_t TEMPERATURA_0 = 0;
+uint8_t TEMPERATURA_1 = 0;
 uint8_t TEMPERATURA = 0;
 uint8_t TEMPORAL = 0;
 uint8_t ENVIAR = 0;
+uint8_t rxByteMaster =0;
+uint16_t TEMP = 0;
+float TEMP_R;
+
 
 
 
@@ -2707,20 +2713,24 @@ void MAP(void);
 void main(void) {
 
  SETUP();
-
-    _delay((unsigned long)((10)*(8000000/4000.0)));
+ _delay((unsigned long)((10)*(8000000/4000.0)));
     ADC_C(0);
     ADC_CONVCLK(1);
 
  while(1)
  {
 
+    TEMPERATURA_0 = ADC_READ (0);
+    TEMPERATURA_1 = ADC_READ (1);
 
 
 
 
-    TEMPERATURA = ADC_READ (0);
-    MAP();
+
+
+    TEMPERATURA = TEMPERATURA_0;
+    PORTD = TEMPERATURA;
+
     ADC_CONTINUE();
 
     if(TEMPERATURA < 13) {
@@ -2743,6 +2753,22 @@ void main(void) {
         PORTBbits.RB2 = 0;
         }
 
+      if (SSPSTATbits.BF == 0) {
+        SSPBUF = TEMPERATURA;
+
+    }
+
+    if (SSPSTATbits.BF ) {
+
+          rxByteMaster = SSPBUF;
+
+
+          SSPBUF = TEMPERATURA;
+
+      }
+
+
+
     }
     return;
 }
@@ -2760,12 +2786,18 @@ void main(void) {
         TRISA = 0b00100001;
         TRISB = 0;
         TRISD = 0;
-        TRISC = 0b00101000;
+        TRISC = 0b00011000;
         TRISE = 0;
+
 
         ANSEL = 0;
         ANSELbits.ANS0 = 1;
         ANSELH = 0;
+
+        SSPCONbits.SSPEN = 0;
+        SSPSTAT = 0X00;
+        SSPCON= 0X14;
+        SSPCONbits.SSPEN = 1;
 
     }
 

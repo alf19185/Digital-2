@@ -2574,22 +2574,19 @@ uint8_t CHECK_DATA(void);
 # 4 "SPI_Slave.c" 2
 
 
-
-
 void CONFIG_SPI_MASTER(void){
 
     SSPCONbits.SSPEN = 0;
- SSPSTAT = 0b01000000;
- SSPCON = 0b00100010;
- SSPCONbits.SSPEN = 1;
-
+ SSPSTAT = 0b10000000;
+    SSPCON = 0b00010001;
+    SSPCONbits.SSPEN = 1;
     }
 
 void CONFIG_SPI_SLAVE(void){
 
     SSPCONbits.SSPEN = 0;
  SSPSTAT = 0b01000000;
- SSPCON = 0b00100100;
+ SSPCON = 0b00010100;
  SSPCONbits.SSPEN = 1;
 
     }
@@ -2601,8 +2598,8 @@ void WAIT_SPI(void){
 
 uint8_t READ_SPI (void){
 
-  WAIT_SPI();
 
+  while ( !SSPSTATbits.BF );
   return(SSPBUF);
 }
 

@@ -2665,7 +2665,8 @@ extern __bank0 __bit __timeout;
 uint8_t FLAG_PUSH = 0;
 uint8_t FLAG_UP = 0;
 uint8_t FLAG_DOWN = 0;
-
+uint8_t rxByteMaster =0;
+uint8_t CONT;
 
 
 void UP(void);
@@ -2693,8 +2694,23 @@ void main(void) {
 
     while(1){
 
-        UP();
-        DOWN();
+       UP();
+       DOWN();
+
+
+    if (SSPSTATbits.BF == 0) {
+        SSPBUF = CONT;
+
+    }
+
+    if (SSPSTATbits.BF ) {
+
+          rxByteMaster = SSPBUF;
+
+
+          SSPBUF = CONT;
+
+      }
 
         }
     return;
@@ -2702,11 +2718,12 @@ void main(void) {
 
 
 
+
 void SETUP (void){
 
     TRISD = 0;
-    TRISC = 0;
-    TRISA = 0;
+    TRISC = 0b00011000;
+    TRISA = 0b00100000;
     TRISB = 0b00000101;
     TRISE = 0;
     PORTE = 0;
@@ -2716,6 +2733,12 @@ void SETUP (void){
     PORTD = 0;
     ANSEL = 0;
     ANSELH = 0;
+
+    SSPCONbits.SSPEN = 0;
+    SSPSTAT = 0X00;
+    SSPCON= 0X14;
+    SSPCONbits.SSPEN = 1;
+
 
     OPTION_REGbits.nRBPU = 1;
     INTCONbits.GIE = 1;
@@ -2734,7 +2757,8 @@ void UP (void){
             if (PORTBbits.RB0 == 0){
                 _delay((unsigned long)((10)*(8000000/4000.0)));
 
-                PORTD = PORTD + 1;
+                CONT++;
+                PORTD = CONT ;
                 FLAG_PUSH = 0;
                 FLAG_UP = 1;
                 INTCONbits.RBIE = 1;
@@ -2758,7 +2782,8 @@ void DOWN(void){
         if (FLAG_DOWN == 0){
             if (PORTBbits.RB2 == 0){
                 _delay((unsigned long)((10)*(8000000/4000.0)));
-                PORTD = PORTD - 1;
+                CONT--;
+                PORTD = CONT ;
                 FLAG_PUSH = 0;
                 FLAG_DOWN = 1;
                 INTCONbits.RBIE = 1;
