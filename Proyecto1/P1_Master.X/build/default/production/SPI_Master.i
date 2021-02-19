@@ -2657,17 +2657,19 @@ uint8_t CHECK_DATA(void);
 void CONFIG_SPI_MASTER(void){
 
     SSPCONbits.SSPEN = 0;
- SSPSTAT = 0b10000000;
-    SSPCON = 0b00010001;
+    SSPSTAT = 0X00;
+    SSPCON= 0X11;
     SSPCONbits.SSPEN = 1;
+
     }
 
 void CONFIG_SPI_SLAVE(void){
 
     SSPCONbits.SSPEN = 0;
- SSPSTAT = 0b01000000;
- SSPCON = 0b00010100;
- SSPCONbits.SSPEN = 1;
+    SSPSTAT = 0X00;
+    SSPCON= 0X14;
+    SSPCONbits.SSPEN = 1;
+
 
     }
 

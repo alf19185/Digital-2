@@ -4,21 +4,23 @@
 #define _XTAL_FREQ 8000000
 #include  "SPI_Master.h"
 
-    
+//VALORES CORRECTOS MASTER Y SLAVE    
 void CONFIG_SPI_MASTER(void){
     
-    SSPCONbits.SSPEN = 0;     
-	SSPSTAT = 0b10000000;   //0xC0 Modo 1.1 SPI,   (entrada muestreado al final, dato es enviado en Flanco ascendente de SCK)
-    SSPCON = 0b00010001;   // 0x21 Master, SPI mode, CLK FOSC/16  No colision, NO OVERFLOW, habilita SPI, con SCK, SDO, SDI and SS 
-    SSPCONbits.SSPEN = 1;  //habilita SPI Module
+    SSPCONbits.SSPEN = 0;  
+    SSPSTAT = 0X00;
+    SSPCON= 0X11;
+    SSPCONbits.SSPEN = 1;   
+                
     }
 
 void CONFIG_SPI_SLAVE(void){
     
     SSPCONbits.SSPEN = 0;
-	SSPSTAT = 0b01000000;  //0x40 Modo 1.1 SPI,   (entrada muestreado a la mitad de la salida, dato es enviado en Flanco ascendente de SCK)   
-	SSPCON = 0b00010100;   //0x14 Slave, Write Collision Detect bit disabled; no overflow, habilita pines SCK, SDO, SDI, SS; SPI SLAVE MODE INCLUYE PIN SS 
-	SSPCONbits.SSPEN = 1;  
+    SSPSTAT = 0X00;
+    SSPCON= 0X14;
+    SSPCONbits.SSPEN = 1;
+        
     
     }
 

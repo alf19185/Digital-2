@@ -2677,13 +2677,43 @@ void WRITE_SPI( uint8_t data );
 uint8_t CHECK_DATA(void);
 # 29 "Principal_Master.c" 2
 
+# 1 "./LCD.h" 1
+# 11 "./LCD.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 11 "./LCD.h" 2
+
+
+
+
+
+void Lcd_Port(char a);
+void Lcd_Cmd(char a);
+void Lcd_Set_Cursor(char a, char b);
+void Lcd_Init();
+void Lcd_Write_Char(char a);
+void Lcd_Write_String(char *a);
+void Lcd_Shift_Right();
+void Lcd_Shift_Left();
+const char* CONV(uint8_t numero);
+# 30 "Principal_Master.c" 2
+
+# 1 "./USART.h" 1
+# 11 "./USART.h"
+void CONFIG_USART (void);
+
+uint8_t ASCII(uint8_t aconvertir);
+# 31 "Principal_Master.c" 2
+
 
 
 uint8_t temp;
 uint8_t POTENCIOMETRO;
-uint8_t contador =5;
+uint8_t contador =0;
 uint8_t CONT;
 uint8_t TEMPERATURA;
+const char* POT_r ;
+const char* CONT_r ;
+const char* TEMP_r ;
 
 
 
@@ -2692,47 +2722,21 @@ void SETUP(void);
 void LEER_S1 (void);
 void LEER_S2 (void);
 void LEER_S3 (void);
-
-void LEER_S1 (void){
-
-      PORTEbits.RE0 =0;
-
-       POTENCIOMETRO = READ_SPI (contador);
-        _delay((unsigned long)((2)*(8000000/4000.0)));
-       PORTEbits.RE0 =1;
-
-       PORTB = POTENCIOMETRO ;
+void LCD(void);
+uint8_t TRANSMITIR_INFO(void);
 
 
 
-}
 
-void LEER_S2 (void){
+void __attribute__((picinterrupt(("")))) isr(void) {
+ (INTCONbits.GIE = 0);
 
-      PORTEbits.RE1 =0;
+    if(PIR1bits.TXIF == 1){
+        TXREG = TRANSMITIR_INFO();
+        PIE1bits.TXIE = 0;
+    }
 
-       CONT = READ_SPI (contador);
-        _delay((unsigned long)((2)*(8000000/4000.0)));
-       PORTEbits.RE1 =1;
-
-       PORTB = CONT ;
-
-
-
-}
-
-void LEER_S3 (void){
-
-      PORTEbits.RE2 =0;
-
-       TEMPERATURA = READ_SPI (contador);
-       _delay((unsigned long)((2)*(8000000/4000.0)));
-       PORTEbits.RE2 =1;
-
-       PORTB = TEMPERATURA ;
-
-
-
+  (INTCONbits.GIE = 1);
 }
 
 
@@ -2740,16 +2744,23 @@ void main(void) {
 
  SETUP();
 
-     _delay((unsigned long)((10)*(8000000/4000.0)));
-
  while(1)
  {
 
+    LEER_S1();
+    _delay((unsigned long)((100)*(8000000/4000.0)));
+    POT_r = CONV(POTENCIOMETRO);
 
-
+    LEER_S2();
+    _delay((unsigned long)((100)*(8000000/4000.0)));
+    CONT_r = CONV(CONT);
 
      LEER_S3();
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000.0)));
+    TEMP_r = CONV(TEMPERATURA);
+
+    LCD();
+
 
         }
 
@@ -2758,26 +2769,111 @@ void main(void) {
 
 
 
-   void SETUP(void){
+void SETUP(void){
 
-        PORTA = 0;
-        PORTB = 0;
-        PORTC = 0;
-        PORTD = 0;
-        PORTE = 0x07;
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    PORTE = 0x07;
 
-        TRISA = 0;
-        TRISD = 0;
-        TRISB = 0;
-        TRISC = 0b00010000;
-        TRISE = 0;
+    TRISA = 0;
+    TRISD = 0;
+    TRISB = 0;
+    TRISC = 0b00010000;
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
+    TRISE = 0;
 
-        ANSEL = 0;
-        ANSELH = 0;
+    ANSEL = 0;
+    ANSELH = 0;
 
-        SSPCONbits.SSPEN = 0;
-        SSPSTAT = 0X00;
-        SSPCON= 0X11;
-        SSPCONbits.SSPEN = 1;
+    SPBRG = 25;
+    TXSTAbits.BRGH = 1;
+    BAUDCTLbits.BRG16 = 0;
+    SPBRGH = 0;
+
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.TXEN = 1;
+
+    PIE1bits.RCIE = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
+
+    SSPCONbits.SSPEN = 0;
+    SSPSTAT = 0X00;
+    SSPCON= 0X11;
+    SSPCONbits.SSPEN = 1;
+
+    Lcd_Init();
+
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("POT");
+
+    Lcd_Set_Cursor(1,7);
+    Lcd_Write_String("CONT");
+
+    Lcd_Set_Cursor(1,13);
+    Lcd_Write_String("TEMP");
 
     }
+
+void LCD(void){
+
+
+    Lcd_Set_Cursor(2,13);
+    Lcd_Write_String(TEMP_r);
+
+    Lcd_Set_Cursor(2,7);
+    Lcd_Write_String(CONT_r);
+
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String(POT_r);
+
+}
+
+
+void LEER_S1 (void){
+
+    PORTEbits.RE0 =0;
+
+     POTENCIOMETRO = READ_SPI (contador);
+      _delay((unsigned long)((2)*(8000000/4000.0)));
+
+     PORTEbits.RE0 =1;
+
+
+}
+
+
+void LEER_S2 (void){
+
+    PORTEbits.RE1 =0;
+
+    CONT = READ_SPI (contador);
+      _delay((unsigned long)((2)*(8000000/4000.0)));
+
+    PORTEbits.RE1 =1;
+
+}
+
+
+void LEER_S3 (void){
+
+    PORTEbits.RE2 =0;
+
+    TEMPERATURA = READ_SPI (contador);
+    _delay((unsigned long)((2)*(8000000/4000.0)));
+
+    PORTEbits.RE2 =1;
+
+}
+
+
+uint8_t TRANSMITIR_INFO(void){
+
+
+
+}

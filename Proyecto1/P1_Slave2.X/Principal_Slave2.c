@@ -33,6 +33,7 @@ uint8_t FLAG_UP = 0;
 uint8_t FLAG_DOWN = 0;
 uint8_t rxByteMaster =0;
 uint8_t CONT;
+uint8_t dummy;
 //***************************Prototipo Funciones*******************************
 
 void UP(void);
@@ -57,7 +58,8 @@ void __interrupt()
 void main(void) {  
     
     SETUP();
-        
+    dummy=SSPBUF;   
+    
     while(1){
                  
        UP();
@@ -89,7 +91,7 @@ void SETUP (void){
 
     TRISD = 0;
     TRISC = 0b00011000;
-    TRISA = 0b00100000;
+    TRISA = 0b00100000;         //SS
     TRISB = 0b00000101;         // 2 Push
     TRISE = 0;
     PORTE = 0;
@@ -104,7 +106,7 @@ void SETUP (void){
     SSPSTAT = 0X00;
     SSPCON= 0X14;
     SSPCONbits.SSPEN = 1;
-        
+
     
     OPTION_REGbits.nRBPU = 1;
     INTCONbits.GIE = 1;         //Global interrupts enabled

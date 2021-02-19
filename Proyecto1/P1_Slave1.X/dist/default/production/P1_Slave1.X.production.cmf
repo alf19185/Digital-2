@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+$C:\Users\Gaby\AppData\Local\Temp\sils.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\P1_Slave1.X.production.o
@@ -71,15 +71,15 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P1_Slave1.X.production.o
-7F8 cinit CODE >791:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7F8 cinit CODE >794:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7F8 cinit CODE >814:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7F9 cinit CODE >815:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7FA cinit CODE >816:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7FB cinit CODE >817:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7FC cinit CODE >823:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7FC cinit CODE >825:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
-7FD cinit CODE >826:C:\Users\Gaby\AppData\Local\Temp\sn0k.s
+7F8 cinit CODE >791:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7F8 cinit CODE >794:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7F8 cinit CODE >814:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7F9 cinit CODE >815:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7FA cinit CODE >816:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7FB cinit CODE >817:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7FC cinit CODE >823:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7FC cinit CODE >825:C:\Users\Gaby\AppData\Local\Temp\sils.s
+7FD cinit CODE >826:C:\Users\Gaby\AppData\Local\Temp\sils.s
 75C text5 CODE >7:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave1.X\ADC.c
 75C text5 CODE >9:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave1.X\ADC.c
 75D text5 CODE >11:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave1.X\ADC.c
@@ -273,20 +273,20 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sils.o
 _main E26 0 CODE 0 maintext dist/default/production\P1_Slave1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
-start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sils.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_ADC_READ 0 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sils.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -299,8 +299,8 @@ _SSPCONbits 14 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _ADC_READ D5C 0 CODE 0 text2 dist/default/production\P1_Slave1.X.production.o
 __end_of_ADC_READ DA0 0 CODE 0 text2 dist/default/production\P1_Slave1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sn0k.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sils.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sils.o
 __size_of_ADC_C 0 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 __size_of_SETUP 0 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 ADC_READ@JUSTIFICACION 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave1.X.production.o
@@ -308,7 +308,7 @@ start_initialization FF0 0 CODE 0 cinit dist/default/production\P1_Slave1.X.prod
 _ADC_CONTINUE CF4 0 CODE 0 text4 dist/default/production\P1_Slave1.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sils.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -352,7 +352,7 @@ _ADC_CONVCLK DA0 0 CODE 0 text3 dist/default/production\P1_Slave1.X.production.o
 __end_of_ADC_CONTINUE D1A 0 CODE 0 text4 dist/default/production\P1_Slave1.X.production.o
 ADC_C@CH 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave1.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sn0k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sils.o
 ADC_READ@VALOR_ADC 73 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave1.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\P1_Slave1.X.production.o
 __pmaintext E26 0 CODE 0 maintext dist/default/production\P1_Slave1.X.production.o

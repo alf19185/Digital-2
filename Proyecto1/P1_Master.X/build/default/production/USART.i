@@ -1,4 +1,4 @@
-# 1 "Principal_Slave2.c"
+# 1 "USART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,31 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Principal_Slave2.c" 2
-
-
-
-
-
-
-
-
-#pragma config FOSC = EXTRC_CLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
+# 1 "USART.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\proc\\pic16f887.h" 1 3
 # 45 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\__at.h" 1 3
@@ -2442,7 +2418,7 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 24 "Principal_Slave2.c" 2
+# 1 "USART.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
@@ -2653,150 +2629,85 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 25 "Principal_Slave2.c" 2
+# 2 "USART.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 26 "Principal_Slave2.c" 2
+# 3 "USART.c" 2
 
 
+# 1 "./USART.h" 1
+# 11 "./USART.h"
+void CONFIG_USART (void);
+
+uint8_t ASCII(uint8_t aconvertir);
+# 5 "USART.c" 2
 
 
+void CONFIG_USART (void){
 
-uint8_t FLAG_PUSH = 0;
-uint8_t FLAG_UP = 0;
-uint8_t FLAG_DOWN = 0;
-uint8_t rxByteMaster =0;
-uint8_t CONT;
-uint8_t dummy;
-
-
-void UP(void);
-void DOWN (void);
-void SETUP (void);
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    BAUDCTLbits.BRG16 = 0;
+    SPBRG = 25;
+    SPBRGH = 0;
+    TXSTAbits.TXEN = 1;
 
 
-void __attribute__((picinterrupt((""))))
-
-    ISR(void){
-
-    if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){
-
-
-        if (FLAG_PUSH == 0){
-            FLAG_PUSH = 1;
-            INTCONbits.RBIE = 0;
-        }
-    }
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
 }
 
-void main(void) {
-
-    SETUP();
-    dummy=SSPBUF;
-
-    while(1){
-
-       UP();
-       DOWN();
-
-
-    if (SSPSTATbits.BF == 0) {
-        SSPBUF = CONT;
-
-    }
-
-    if (SSPSTATbits.BF ) {
-
-          rxByteMaster = SSPBUF;
-
-
-          SSPBUF = CONT;
-
-      }
-
-        }
-    return;
-}
-
-
-
-
-void SETUP (void){
-
-    TRISD = 0;
-    TRISC = 0b00011000;
-    TRISA = 0b00100000;
-    TRISB = 0b00000101;
-    TRISE = 0;
-    PORTE = 0;
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
-    ANSEL = 0;
-    ANSELH = 0;
-
-    SSPCONbits.SSPEN = 0;
-    SSPSTAT = 0X00;
-    SSPCON= 0X14;
-    SSPCONbits.SSPEN = 1;
-
-
-    OPTION_REGbits.nRBPU = 1;
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.RBIE = 1;
-    INTCONbits.RBIF = 1;
-
-    return;
-}
-
-
-void UP (void){
-
-    if (FLAG_PUSH == 1){
-        if (FLAG_UP == 0){
-            if (PORTBbits.RB0 == 0){
-                _delay((unsigned long)((10)*(8000000/4000.0)));
-
-                CONT++;
-                PORTD = CONT ;
-                FLAG_PUSH = 0;
-                FLAG_UP = 1;
-                INTCONbits.RBIE = 1;
-            }
-        }
-    }
-
-    if (FLAG_UP == 1){
-        if (PORTBbits.RB0 == 1){
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-        FLAG_UP = 0;
-        }
-    }
-}
-
-
-
-void DOWN(void){
-
-    if (FLAG_PUSH == 1){
-        if (FLAG_DOWN == 0){
-            if (PORTBbits.RB2 == 0){
-                _delay((unsigned long)((10)*(8000000/4000.0)));
-                CONT--;
-                PORTD = CONT ;
-                FLAG_PUSH = 0;
-                FLAG_DOWN = 1;
-                INTCONbits.RBIE = 1;
-            }
-        }
-    }
-
-    if (FLAG_DOWN == 1){
-        if (PORTBbits.RB2 == 1){
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-        FLAG_DOWN = 0;
-        }
+uint8_t ASCII(uint8_t aconvertir){
+    switch(aconvertir){
+        case 0:
+            return 0x30;
+            break;
+        case 1:
+            return 0x31;
+            break;
+        case 2:
+            return 0x32;
+            break;
+        case 3:
+            return 0x33;
+            break;
+        case 4:
+            return 0x34;
+            break;
+        case 5:
+            return 0x35;
+            break;
+        case 6:
+            return 0x36;
+            break;
+        case 7:
+            return 0x37;
+            break;
+        case 8:
+            return 0x38;
+            break;
+        case 9:
+            return 0x39;
+            break;
+        case 10:
+            return 0x41;
+            break;
+        case 11:
+            return 0x42;
+            break;
+        case 12:
+            return 0x43;
+            break;
+        case 13:
+            return 0x44;
+            break;
+        case 14:
+            return 0x45;
+            break;
+        case 15:
+            return 0x46;
+            break;
     }
 }
