@@ -38,6 +38,8 @@ uint8_t TEMPORAL = 0;
 uint8_t ENVIAR = 0;
 uint8_t rxByteMaster =0;
 uint16_t TEMP = 0;
+uint16_t TEMPH= 0;
+uint16_t TEMPL= 0;
 float TEMP_R;
 
 
@@ -56,17 +58,23 @@ void main(void) {
     
 	while(1)
 	{
-	          
+	//  TEMPERATURA_0 =71;
+    //  TEMPERATURA_1 = 96;
     TEMPERATURA_0 = ADC_READ (0);
     TEMPERATURA_1 = ADC_READ (1);
+      TEMPH = TEMPERATURA_0;
+      TEMPH = TEMPH << 2;
+      TEMPL = TEMPERATURA_1;
+      TEMPL = TEMPL >> 6;
+              
+    TEMP = TEMPH + TEMPL;
     
-    //TEMP = TEMPERATURA_0 *4 + TEMPERATURA_1>>6 ;
-    //TEMP_R = TEMP*140.0/286.0;
+    TEMP_R = TEMP*140.0/286.0;
     
-    //TEMPERATURA = (uint8_t) TEMP_R;
-    
-    TEMPERATURA = TEMPERATURA_0;
-    PORTD = TEMPERATURA;
+   TEMPERATURA = (uint8_t) TEMP_R;
+   
+ 
+   PORTD = TEMPERATURA;
    // MAP();
     ADC_CONTINUE();
     
@@ -89,7 +97,7 @@ void main(void) {
         PORTBbits.RB1 = 0;
         PORTBbits.RB2 = 0;
         }
-    
+ 
       if (SSPSTATbits.BF == 0) {
         SSPBUF = TEMPERATURA;
     

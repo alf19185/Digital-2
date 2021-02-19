@@ -36,6 +36,16 @@ uint8_t POTENCIOMETRO;
 uint8_t contador =0;
 uint8_t CONT;
 uint8_t TEMPERATURA;
+uint8_t BANDERA_T = 0;
+uint8_t Temp_decs = 0;
+uint8_t Temp_cents = 0;
+uint8_t Temp_units = 0;
+uint8_t Pot_cents = 0;
+uint8_t Pot_units = 0;
+uint8_t Pot_decs = 0;
+uint8_t cont_units = 0;
+uint8_t cont_decs = 0;
+uint8_t cont_cents = 0;
 const char* POT_r ;
 const char* CONT_r ;
 const char* TEMP_r ;
@@ -47,6 +57,10 @@ void SETUP(void);
 void LEER_S1 (void);
 void LEER_S2 (void);
 void LEER_S3 (void);
+uint8_t TX (void);
+void POT_TO_CHARS (void);
+void TEMP_TO_CHARS (void);
+void CONT_TO_CHARS (void);
 void LCD(void);
 uint8_t TRANSMITIR_INFO(void);
 
@@ -57,8 +71,9 @@ void __interrupt() isr(void) {
  di(); 
  
     if(PIR1bits.TXIF == 1){                      //Interrupción para transmitir
-        TXREG = TRANSMITIR_INFO();
-        PIE1bits.TXIE = 0;
+        PIR1bits.TXIF = 0;
+        TXREG = TX();
+       
     }
  
   ei();
@@ -132,6 +147,12 @@ void SETUP(void){
     SSPCON= 0X11;
     SSPCONbits.SSPEN = 1;   
     
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.TXIE = 1; 
+    
+    CONFIG_USART();
+        
     Lcd_Init();
     
     Lcd_Set_Cursor(1,1);
@@ -196,14 +217,97 @@ void LEER_S3 (void){
  //   PORTB = TEMPERATURA  ;     
 }
 
-//Envio de los datos 
-uint8_t  TRANSMITIR_INFO(void){
+void POT_TO_CHARS (void){
+
+    uint8_t valor = POTENCIOMETRO ;
+    Pot_units = valor %10 ;
+    valor = valor/10;
+    Pot_decs = valor %10 ;
+    Pot_cents = valor /10 ;
+ //    Pot_cents =8;
+    }
+
+void CONT_TO_CHARS (void){
+
+    uint8_t valor;
+   
+    valor= CONT;
+    cont_units = valor %10 ;
+    valor = valor/10;
+    cont_decs = valor %10 ;
+    cont_cents = valor /10 ;
+     
+    }
+
+void TEMP_TO_CHARS (void){
+
     
-
-
-}
-
+    uint8_t valor = TEMPERATURA;
+    Temp_units = valor %10 ;
+    valor = valor/10;
+    Temp_decs = valor %10 ;
+    Temp_cents = valor /10 ;
+     
+    }
+uint8_t TX(void){
     
+   //  return Pot_de + 48;
+             
+    switch(BANDERA_T){
+  
+        case 0:
+            POT_TO_CHARS(); 
+            BANDERA_T++;
+            return Pot_cents + 48;
+            break;
+        case 1:
+            BANDERA_T++;
+            return Pot_decs + 48;
+            break;  
+        case 2:
+            BANDERA_T++;
+            return Pot_units + 48;
+            break;    
+        case 3:
+            BANDERA_T++;
+            return ',';
+            break;
+        case 4:
+            CONT_TO_CHARS();
+            BANDERA_T++;
+            return cont_cents + 48;
+            break;
+        case 5:
+            BANDERA_T++;
+            return cont_decs + 48;
+            break;  
+        case 6:
+            BANDERA_T++;
+            return cont_units + 48;
+            break;
+         case 7:
+            BANDERA_T++;
+            return ',';
+            break;
+        case 8:
+            TEMP_TO_CHARS();
+            BANDERA_T++;
+            return Temp_cents + 48;
+            break;  
+        case 9:
+            BANDERA_T++;
+            return Temp_decs + 48;
+            break;
+        case 10:
+            BANDERA_T++;
+            return Temp_units + 48;
+            break;  
+        case 11:
+            BANDERA_T = 0;
+            return '\r';
+            break;    
+    }
+}    
     
     
 

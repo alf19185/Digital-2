@@ -11,36 +11,43 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Gaby\AppData\Local\Temp\s9us.o
+$C:\Users\Gaby\AppData\Local\Temp\s9h0.o
 reset_vec CODE 0 0 0 3 2
-end_init CODE 0 C C 3 2
+end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\P1_Master.X.production.o
-cinit CODE 0 F F 12 2
-text1 CODE 0 731 731 78 2
-text2 CODE 0 DD7 DD7 19 2
-text3 CODE 0 E0A E0A 1B 2
-text4 CODE 0 DBE DBE 19 2
-text5 CODE 0 DA5 DA5 19 2
-text6 CODE 0 7EF 7EF 10 2
-text7 CODE 0 E49 E49 42 2
-text8 CODE 0 7A9 7A9 46 2
-text9 CODE 0 D76 D76 17 2
-text10 CODE 0 E25 E25 24 2
-text11 CODE 0 D8D D8D 18 2
-text12 CODE 0 D70 D70 6 2
-text13 CODE 0 EFB EFB 105 2
-text14 CODE 0 DF0 DF0 1A 2
-text15 CODE 0 7FF 7FF 1 2
-maintext CODE 0 E8B E8B 70 2
-cstackCOMMON COMMON 1 70 70 A 1
-cstackBANK0 BANK0 1 2A 2A 6 1
-intentry CODE 0 4 4 8 2
-bssBANK0 BANK0 1 20 20 A 1
+cinit CODE 0 13 13 E 2
+text1 CODE 0 E6F E6F 8A 2
+text2 CODE 0 7E6 7E6 19 2
+text3 CODE 0 16DA 16DA 16 2
+text4 CODE 0 C07 C07 1D 2
+text5 CODE 0 1759 1759 1D 2
+text6 CODE 0 173C 173C 1D 2
+text7 CODE 0 16CA 16CA 10 2
+text8 CODE 0 1776 1776 44 2
+text9 CODE 0 17BA 17BA 46 2
+text10 CODE 0 1708 1708 19 2
+text11 CODE 0 7C0 7C0 26 2
+text12 CODE 0 1721 1721 1B 2
+text13 CODE 0 16BC 16BC 6 2
+text14 CODE 0 EF9 EF9 107 2
+text15 CODE 0 16F0 16F0 18 2
+text16 CODE 0 731 731 8F 2
+text17 CODE 0 D37 D37 5D 2
+text18 CODE 0 CDA CDA 5D 2
+text19 CODE 0 C7D C7D 5D 2
+text20 CODE 0 C24 C24 59 2
+text21 CODE 0 D94 D94 67 2
+maintext CODE 0 DFB DFB 74 2
+text14_split_1 CODE 0 21 21 710 2
+cstackCOMMON COMMON 1 70 70 D 1
+cstackBANK0 BANK0 1 35 35 13 1
+intentry CODE 0 4 4 C 2
+bssBANK0 BANK0 1 20 20 15 1
 stringtext STRCODE 0 800 800 402 2
-strings STRING 0 C02 C02 12 2
-text13_split_1 CODE 0 21 21 710 2
-bssCOMMON COMMON 1 7A 7A 2 1
+strings STRING 0 1000 1000 12 2
+clrtext CODE 0 16C2 16C2 8 2
+bssCOMMON COMMON 1 7D 7D 1 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -48,37 +55,46 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 30-6F 1
+RAM 48-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 30-6F 1
+BANK0 48-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST C14-D6F 2
-CONST 1000-1FFF 2
+CONST 7FF-7FF 2
+CONST C02-C06 2
+CONST 1012-16BB 2
+CONST 1800-1FFF 2
 ENTRY 3-3 2
-ENTRY C14-D6F 2
-ENTRY 1000-1FFF 2
+ENTRY 7FF-7FF 2
+ENTRY C02-C06 2
+ENTRY 1012-16BB 2
+ENTRY 1800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE C14-D6F 2
-CODE 1000-1FFF 2
+CODE 7FF-7FF 2
+CODE C02-C06 2
+CODE 1012-16BB 2
+CODE 1800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7C-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE C14-D6F 2
-STRCODE 1000-1FFF 2
+STRCODE 7FF-7FF 2
+STRCODE C02-C06 2
+STRCODE 1012-16BB 2
+STRCODE 1800-1FFF 2
 STRING 3-3 2
-STRING C14-D6F 2
-STRING 1000-1FFF 2
+STRING 7FF-7FF 2
+STRING C02-C06 2
+STRING 1012-16BB 2
+STRING 1800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -93,413 +109,527 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P1_Master.X.production.o
-F cinit CODE >2808:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-F cinit CODE >2811:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-F cinit CODE >2849:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-10 cinit CODE >2850:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-11 cinit CODE >2853:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-12 cinit CODE >2854:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-13 cinit CODE >2855:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-14 cinit CODE >2856:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-15 cinit CODE >2857:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-16 cinit CODE >2858:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-17 cinit CODE >2859:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-18 cinit CODE >2860:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-19 cinit CODE >2861:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1A cinit CODE >2862:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1B cinit CODE >2863:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1C cinit CODE >2864:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1D cinit CODE >2870:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1D cinit CODE >2872:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-1E cinit CODE >2873:C:\Users\Gaby\AppData\Local\Temp\s9us.s
-4 intentry CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-21 text13_split_1 CODE >232:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-26 text13_split_1 CODE >235:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2B text13_split_1 CODE >238:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-30 text13_split_1 CODE >241:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-35 text13_split_1 CODE >244:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3A text13_split_1 CODE >247:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3F text13_split_1 CODE >250:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-44 text13_split_1 CODE >253:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-49 text13_split_1 CODE >256:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-4E text13_split_1 CODE >259:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-53 text13_split_1 CODE >262:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-58 text13_split_1 CODE >265:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-5D text13_split_1 CODE >268:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-62 text13_split_1 CODE >271:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-67 text13_split_1 CODE >274:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-6C text13_split_1 CODE >277:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-71 text13_split_1 CODE >280:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-76 text13_split_1 CODE >283:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7B text13_split_1 CODE >286:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-80 text13_split_1 CODE >289:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-85 text13_split_1 CODE >292:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-8A text13_split_1 CODE >295:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-8F text13_split_1 CODE >298:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-94 text13_split_1 CODE >301:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-99 text13_split_1 CODE >304:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-9E text13_split_1 CODE >307:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-A3 text13_split_1 CODE >310:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-A8 text13_split_1 CODE >313:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-AD text13_split_1 CODE >316:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-B2 text13_split_1 CODE >319:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-B7 text13_split_1 CODE >322:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-BC text13_split_1 CODE >325:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-C1 text13_split_1 CODE >328:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-C6 text13_split_1 CODE >331:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-CB text13_split_1 CODE >334:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D0 text13_split_1 CODE >337:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D5 text13_split_1 CODE >340:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DA text13_split_1 CODE >343:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DF text13_split_1 CODE >346:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E4 text13_split_1 CODE >349:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E9 text13_split_1 CODE >352:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-EE text13_split_1 CODE >355:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F3 text13_split_1 CODE >358:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F8 text13_split_1 CODE >361:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FD text13_split_1 CODE >364:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-102 text13_split_1 CODE >367:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-107 text13_split_1 CODE >370:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-10C text13_split_1 CODE >373:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-111 text13_split_1 CODE >376:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-116 text13_split_1 CODE >379:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-11B text13_split_1 CODE >382:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-120 text13_split_1 CODE >385:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-125 text13_split_1 CODE >388:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-12A text13_split_1 CODE >391:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-12F text13_split_1 CODE >394:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-134 text13_split_1 CODE >397:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-139 text13_split_1 CODE >400:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-13E text13_split_1 CODE >403:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-143 text13_split_1 CODE >406:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-148 text13_split_1 CODE >409:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-14D text13_split_1 CODE >412:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-152 text13_split_1 CODE >415:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-157 text13_split_1 CODE >418:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-15C text13_split_1 CODE >421:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-161 text13_split_1 CODE >424:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-166 text13_split_1 CODE >427:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-16B text13_split_1 CODE >430:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-170 text13_split_1 CODE >433:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-175 text13_split_1 CODE >436:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-17A text13_split_1 CODE >439:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-17F text13_split_1 CODE >442:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-184 text13_split_1 CODE >445:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-189 text13_split_1 CODE >448:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-18E text13_split_1 CODE >451:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-193 text13_split_1 CODE >454:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-198 text13_split_1 CODE >457:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-19D text13_split_1 CODE >460:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1A2 text13_split_1 CODE >463:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1A7 text13_split_1 CODE >466:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1AC text13_split_1 CODE >469:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1B1 text13_split_1 CODE >472:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1B6 text13_split_1 CODE >475:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1BB text13_split_1 CODE >478:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1C0 text13_split_1 CODE >481:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1C5 text13_split_1 CODE >484:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1CA text13_split_1 CODE >487:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1CF text13_split_1 CODE >490:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1D4 text13_split_1 CODE >493:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1D9 text13_split_1 CODE >496:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1DE text13_split_1 CODE >499:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1E3 text13_split_1 CODE >502:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1E8 text13_split_1 CODE >505:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1ED text13_split_1 CODE >508:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1F2 text13_split_1 CODE >511:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1F7 text13_split_1 CODE >514:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-1FC text13_split_1 CODE >517:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-201 text13_split_1 CODE >520:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-206 text13_split_1 CODE >523:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-20B text13_split_1 CODE >526:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-210 text13_split_1 CODE >529:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-215 text13_split_1 CODE >532:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-21A text13_split_1 CODE >535:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-21F text13_split_1 CODE >538:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-224 text13_split_1 CODE >541:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-229 text13_split_1 CODE >544:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-22E text13_split_1 CODE >547:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-233 text13_split_1 CODE >550:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-238 text13_split_1 CODE >553:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-23D text13_split_1 CODE >556:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-242 text13_split_1 CODE >559:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-247 text13_split_1 CODE >562:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-24C text13_split_1 CODE >565:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-251 text13_split_1 CODE >568:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-256 text13_split_1 CODE >571:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-25B text13_split_1 CODE >574:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-260 text13_split_1 CODE >577:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-265 text13_split_1 CODE >580:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-26A text13_split_1 CODE >583:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-26F text13_split_1 CODE >586:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-274 text13_split_1 CODE >589:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-279 text13_split_1 CODE >592:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-27E text13_split_1 CODE >595:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-283 text13_split_1 CODE >598:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-288 text13_split_1 CODE >601:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-28D text13_split_1 CODE >604:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-292 text13_split_1 CODE >607:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-297 text13_split_1 CODE >610:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-29C text13_split_1 CODE >613:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2A1 text13_split_1 CODE >616:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2A6 text13_split_1 CODE >619:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2AB text13_split_1 CODE >622:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2B0 text13_split_1 CODE >625:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2B5 text13_split_1 CODE >628:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2BA text13_split_1 CODE >631:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2BF text13_split_1 CODE >634:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2C4 text13_split_1 CODE >637:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2C9 text13_split_1 CODE >640:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2CE text13_split_1 CODE >643:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2D3 text13_split_1 CODE >646:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2D8 text13_split_1 CODE >649:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2DD text13_split_1 CODE >652:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2E2 text13_split_1 CODE >655:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2E7 text13_split_1 CODE >658:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2EC text13_split_1 CODE >661:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2F1 text13_split_1 CODE >664:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2F6 text13_split_1 CODE >667:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-2FB text13_split_1 CODE >670:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-300 text13_split_1 CODE >673:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-305 text13_split_1 CODE >676:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-30A text13_split_1 CODE >679:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-30F text13_split_1 CODE >682:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-314 text13_split_1 CODE >685:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-319 text13_split_1 CODE >688:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-31E text13_split_1 CODE >691:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-323 text13_split_1 CODE >694:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-328 text13_split_1 CODE >697:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-32D text13_split_1 CODE >700:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-332 text13_split_1 CODE >703:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-337 text13_split_1 CODE >706:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-33C text13_split_1 CODE >709:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-341 text13_split_1 CODE >712:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-346 text13_split_1 CODE >715:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-34B text13_split_1 CODE >718:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-350 text13_split_1 CODE >721:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-355 text13_split_1 CODE >724:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-35A text13_split_1 CODE >727:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-35F text13_split_1 CODE >730:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-364 text13_split_1 CODE >733:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-369 text13_split_1 CODE >736:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-36E text13_split_1 CODE >739:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-373 text13_split_1 CODE >742:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-378 text13_split_1 CODE >745:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-37D text13_split_1 CODE >748:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-382 text13_split_1 CODE >751:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-387 text13_split_1 CODE >754:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-38C text13_split_1 CODE >757:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-391 text13_split_1 CODE >760:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-396 text13_split_1 CODE >763:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-39B text13_split_1 CODE >766:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3A0 text13_split_1 CODE >769:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3A5 text13_split_1 CODE >772:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3AA text13_split_1 CODE >775:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3AF text13_split_1 CODE >778:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3B4 text13_split_1 CODE >781:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3B9 text13_split_1 CODE >784:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3BE text13_split_1 CODE >787:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3C3 text13_split_1 CODE >790:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3C8 text13_split_1 CODE >793:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3CD text13_split_1 CODE >796:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3D2 text13_split_1 CODE >799:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3D7 text13_split_1 CODE >802:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3DC text13_split_1 CODE >805:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3E1 text13_split_1 CODE >808:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3E6 text13_split_1 CODE >811:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3EB text13_split_1 CODE >814:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3F0 text13_split_1 CODE >817:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3F5 text13_split_1 CODE >820:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3FA text13_split_1 CODE >823:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-3FF text13_split_1 CODE >826:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-404 text13_split_1 CODE >829:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-409 text13_split_1 CODE >832:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-40E text13_split_1 CODE >835:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-413 text13_split_1 CODE >838:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-418 text13_split_1 CODE >841:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-41D text13_split_1 CODE >844:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-422 text13_split_1 CODE >848:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-72D text13_split_1 CODE >849:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7FF text15 CODE >200:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-7FF text15 CODE >204:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DF0 text14 CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DF0 text14 CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DF1 text14 CODE >59:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DF7 text14 CODE >60:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DFF text14 CODE >61:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E02 text14 CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E03 text14 CODE >65:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EFB text13 CODE >76:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-EFC text13 CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-EFF text13 CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F06 text13 CODE >82:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F0B text13 CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F10 text13 CODE >88:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F15 text13 CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F1A text13 CODE >94:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F1F text13 CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F24 text13 CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F29 text13 CODE >103:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F2E text13 CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F33 text13 CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F38 text13 CODE >112:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F3D text13 CODE >115:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F42 text13 CODE >118:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F47 text13 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F4C text13 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F51 text13 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F56 text13 CODE >130:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F5B text13 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F60 text13 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F65 text13 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F6A text13 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F6F text13 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F74 text13 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F79 text13 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F7E text13 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F83 text13 CODE >157:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F88 text13 CODE >160:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F8D text13 CODE >163:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F92 text13 CODE >166:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F97 text13 CODE >169:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-F9C text13 CODE >172:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FA1 text13 CODE >175:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FA6 text13 CODE >178:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FAB text13 CODE >181:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FB0 text13 CODE >184:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FB5 text13 CODE >187:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FBA text13 CODE >190:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FBF text13 CODE >193:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FC4 text13 CODE >196:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FC9 text13 CODE >199:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FCE text13 CODE >202:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FD3 text13 CODE >205:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FD8 text13 CODE >208:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FDD text13 CODE >211:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FE2 text13 CODE >214:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FE7 text13 CODE >217:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FEC text13 CODE >220:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FF1 text13 CODE >223:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FF6 text13 CODE >226:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-FFB text13 CODE >229:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D70 text12 CODE >12:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D71 text12 CODE >13:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D75 text12 CODE >14:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D8D text11 CODE >16:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D8E text11 CODE >17:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D94 text11 CODE >18:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D97 text11 CODE >20:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D98 text11 CODE >21:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DA1 text11 CODE >22:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DA4 text11 CODE >23:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E25 text10 CODE >30:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E26 text10 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E2B text10 CODE >34:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E30 text10 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E36 text10 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E3D text10 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E42 text10 CODE >38:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E48 text10 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D76 text9 CODE >50:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D77 text9 CODE >52:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D7A text9 CODE >53:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D80 text9 CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D83 text9 CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D88 text9 CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D8B text9 CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-D8C text9 CODE >58:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7A9 text8 CODE >60:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7A9 text8 CODE >62:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7AE text8 CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-7EE text8 CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-E49 text7 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E49 text7 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E55 text7 CODE >152:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E60 text7 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E6C text7 CODE >155:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E77 text7 CODE >157:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E7F text7 CODE >158:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E8A text7 CODE >160:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-7EF text6 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-7F0 text6 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-7F3 text6 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-7F5 text6 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-7FB text6 CODE >39:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-7FE text6 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
-DA5 text5 CODE >163:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DA5 text5 CODE >165:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DA8 text5 CODE >167:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DB1 text5 CODE >168:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DBA text5 CODE >170:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DBD text5 CODE >173:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DBE text4 CODE >176:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DBE text4 CODE >178:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DC1 text4 CODE >180:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DCA text4 CODE >181:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DD3 text4 CODE >183:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DD6 text4 CODE >185:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E0A text3 CODE >188:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E0A text3 CODE >190:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E0D text3 CODE >192:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E18 text3 CODE >193:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E21 text3 CODE >195:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E24 text3 CODE >197:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-DD7 text2 CODE >42:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DD7 text2 CODE >44:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DDD text2 CODE >45:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DE3 text2 CODE >46:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DE9 text2 CODE >47:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-DEF text2 CODE >48:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
-731 text1 CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-731 text1 CODE >99:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-734 text1 CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-735 text1 CODE >101:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-736 text1 CODE >102:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-737 text1 CODE >103:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-739 text1 CODE >105:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-73C text1 CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-73D text1 CODE >107:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-73E text1 CODE >108:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-740 text1 CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-741 text1 CODE >110:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-742 text1 CODE >111:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-743 text1 CODE >113:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-746 text1 CODE >114:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-747 text1 CODE >116:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-74B text1 CODE >117:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-74C text1 CODE >118:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-74F text1 CODE >119:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-752 text1 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-753 text1 CODE >122:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-756 text1 CODE >123:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-759 text1 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-75A text1 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-75B text1 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-75E text1 CODE >128:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-75F text1 CODE >130:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-760 text1 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-763 text1 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-767 text1 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-768 text1 CODE >135:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-76D text1 CODE >137:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-775 text1 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-77E text1 CODE >140:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-78A text1 CODE >141:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-793 text1 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-79F text1 CODE >144:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-7A8 text1 CODE >146:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E8B maintext CODE >68:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E8B maintext CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E90 maintext CODE >75:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-E95 maintext CODE >76:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EA4 maintext CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EB0 maintext CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EB5 maintext CODE >80:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EC4 maintext CODE >81:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-ED0 maintext CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-ED5 maintext CODE >84:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EE4 maintext CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
-EF2 maintext CODE >87:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+13 cinit CODE >2828:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+13 cinit CODE >2831:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+13 cinit CODE >2914:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+14 cinit CODE >2917:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+15 cinit CODE >2918:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16 cinit CODE >2919:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+17 cinit CODE >2920:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+18 cinit CODE >2921:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+1D cinit CODE >2927:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+1D cinit CODE >2929:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+1E cinit CODE >2930:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+4 intentry CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+21 text14_split_1 CODE >232:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+26 text14_split_1 CODE >235:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2B text14_split_1 CODE >238:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+30 text14_split_1 CODE >241:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+35 text14_split_1 CODE >244:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3A text14_split_1 CODE >247:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3F text14_split_1 CODE >250:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+44 text14_split_1 CODE >253:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+49 text14_split_1 CODE >256:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+4E text14_split_1 CODE >259:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+53 text14_split_1 CODE >262:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+58 text14_split_1 CODE >265:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+5D text14_split_1 CODE >268:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+62 text14_split_1 CODE >271:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+67 text14_split_1 CODE >274:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+6C text14_split_1 CODE >277:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+71 text14_split_1 CODE >280:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+76 text14_split_1 CODE >283:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7B text14_split_1 CODE >286:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+80 text14_split_1 CODE >289:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+85 text14_split_1 CODE >292:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+8A text14_split_1 CODE >295:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+8F text14_split_1 CODE >298:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+94 text14_split_1 CODE >301:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+99 text14_split_1 CODE >304:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+9E text14_split_1 CODE >307:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+A3 text14_split_1 CODE >310:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+A8 text14_split_1 CODE >313:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+AD text14_split_1 CODE >316:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+B2 text14_split_1 CODE >319:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+B7 text14_split_1 CODE >322:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+BC text14_split_1 CODE >325:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+C1 text14_split_1 CODE >328:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+C6 text14_split_1 CODE >331:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+CB text14_split_1 CODE >334:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+D0 text14_split_1 CODE >337:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+D5 text14_split_1 CODE >340:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+DA text14_split_1 CODE >343:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+DF text14_split_1 CODE >346:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+E4 text14_split_1 CODE >349:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+E9 text14_split_1 CODE >352:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+EE text14_split_1 CODE >355:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F3 text14_split_1 CODE >358:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F8 text14_split_1 CODE >361:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FD text14_split_1 CODE >364:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+102 text14_split_1 CODE >367:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+107 text14_split_1 CODE >370:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+10C text14_split_1 CODE >373:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+111 text14_split_1 CODE >376:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+116 text14_split_1 CODE >379:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+11B text14_split_1 CODE >382:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+120 text14_split_1 CODE >385:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+125 text14_split_1 CODE >388:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+12A text14_split_1 CODE >391:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+12F text14_split_1 CODE >394:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+134 text14_split_1 CODE >397:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+139 text14_split_1 CODE >400:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+13E text14_split_1 CODE >403:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+143 text14_split_1 CODE >406:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+148 text14_split_1 CODE >409:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+14D text14_split_1 CODE >412:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+152 text14_split_1 CODE >415:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+157 text14_split_1 CODE >418:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+15C text14_split_1 CODE >421:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+161 text14_split_1 CODE >424:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+166 text14_split_1 CODE >427:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+16B text14_split_1 CODE >430:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+170 text14_split_1 CODE >433:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+175 text14_split_1 CODE >436:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17A text14_split_1 CODE >439:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17F text14_split_1 CODE >442:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+184 text14_split_1 CODE >445:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+189 text14_split_1 CODE >448:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+18E text14_split_1 CODE >451:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+193 text14_split_1 CODE >454:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+198 text14_split_1 CODE >457:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+19D text14_split_1 CODE >460:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1A2 text14_split_1 CODE >463:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1A7 text14_split_1 CODE >466:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1AC text14_split_1 CODE >469:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1B1 text14_split_1 CODE >472:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1B6 text14_split_1 CODE >475:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1BB text14_split_1 CODE >478:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1C0 text14_split_1 CODE >481:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1C5 text14_split_1 CODE >484:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1CA text14_split_1 CODE >487:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1CF text14_split_1 CODE >490:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1D4 text14_split_1 CODE >493:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1D9 text14_split_1 CODE >496:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1DE text14_split_1 CODE >499:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1E3 text14_split_1 CODE >502:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1E8 text14_split_1 CODE >505:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1ED text14_split_1 CODE >508:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1F2 text14_split_1 CODE >511:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1F7 text14_split_1 CODE >514:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1FC text14_split_1 CODE >517:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+201 text14_split_1 CODE >520:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+206 text14_split_1 CODE >523:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+20B text14_split_1 CODE >526:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+210 text14_split_1 CODE >529:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+215 text14_split_1 CODE >532:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+21A text14_split_1 CODE >535:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+21F text14_split_1 CODE >538:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+224 text14_split_1 CODE >541:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+229 text14_split_1 CODE >544:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+22E text14_split_1 CODE >547:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+233 text14_split_1 CODE >550:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+238 text14_split_1 CODE >553:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+23D text14_split_1 CODE >556:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+242 text14_split_1 CODE >559:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+247 text14_split_1 CODE >562:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+24C text14_split_1 CODE >565:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+251 text14_split_1 CODE >568:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+256 text14_split_1 CODE >571:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+25B text14_split_1 CODE >574:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+260 text14_split_1 CODE >577:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+265 text14_split_1 CODE >580:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+26A text14_split_1 CODE >583:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+26F text14_split_1 CODE >586:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+274 text14_split_1 CODE >589:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+279 text14_split_1 CODE >592:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+27E text14_split_1 CODE >595:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+283 text14_split_1 CODE >598:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+288 text14_split_1 CODE >601:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+28D text14_split_1 CODE >604:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+292 text14_split_1 CODE >607:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+297 text14_split_1 CODE >610:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+29C text14_split_1 CODE >613:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2A1 text14_split_1 CODE >616:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2A6 text14_split_1 CODE >619:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2AB text14_split_1 CODE >622:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2B0 text14_split_1 CODE >625:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2B5 text14_split_1 CODE >628:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2BA text14_split_1 CODE >631:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2BF text14_split_1 CODE >634:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2C4 text14_split_1 CODE >637:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2C9 text14_split_1 CODE >640:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2CE text14_split_1 CODE >643:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2D3 text14_split_1 CODE >646:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2D8 text14_split_1 CODE >649:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2DD text14_split_1 CODE >652:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2E2 text14_split_1 CODE >655:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2E7 text14_split_1 CODE >658:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2EC text14_split_1 CODE >661:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2F1 text14_split_1 CODE >664:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2F6 text14_split_1 CODE >667:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+2FB text14_split_1 CODE >670:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+300 text14_split_1 CODE >673:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+305 text14_split_1 CODE >676:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+30A text14_split_1 CODE >679:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+30F text14_split_1 CODE >682:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+314 text14_split_1 CODE >685:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+319 text14_split_1 CODE >688:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+31E text14_split_1 CODE >691:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+323 text14_split_1 CODE >694:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+328 text14_split_1 CODE >697:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+32D text14_split_1 CODE >700:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+332 text14_split_1 CODE >703:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+337 text14_split_1 CODE >706:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+33C text14_split_1 CODE >709:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+341 text14_split_1 CODE >712:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+346 text14_split_1 CODE >715:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+34B text14_split_1 CODE >718:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+350 text14_split_1 CODE >721:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+355 text14_split_1 CODE >724:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+35A text14_split_1 CODE >727:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+35F text14_split_1 CODE >730:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+364 text14_split_1 CODE >733:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+369 text14_split_1 CODE >736:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+36E text14_split_1 CODE >739:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+373 text14_split_1 CODE >742:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+378 text14_split_1 CODE >745:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+37D text14_split_1 CODE >748:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+382 text14_split_1 CODE >751:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+387 text14_split_1 CODE >754:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+38C text14_split_1 CODE >757:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+391 text14_split_1 CODE >760:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+396 text14_split_1 CODE >763:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+39B text14_split_1 CODE >766:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3A0 text14_split_1 CODE >769:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3A5 text14_split_1 CODE >772:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3AA text14_split_1 CODE >775:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3AF text14_split_1 CODE >778:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3B4 text14_split_1 CODE >781:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3B9 text14_split_1 CODE >784:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3BE text14_split_1 CODE >787:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3C3 text14_split_1 CODE >790:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3C8 text14_split_1 CODE >793:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3CD text14_split_1 CODE >796:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3D2 text14_split_1 CODE >799:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3D7 text14_split_1 CODE >802:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3DC text14_split_1 CODE >805:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3E1 text14_split_1 CODE >808:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3E6 text14_split_1 CODE >811:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3EB text14_split_1 CODE >814:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3F0 text14_split_1 CODE >817:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3F5 text14_split_1 CODE >820:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3FA text14_split_1 CODE >823:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+3FF text14_split_1 CODE >826:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+404 text14_split_1 CODE >829:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+409 text14_split_1 CODE >832:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+40E text14_split_1 CODE >835:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+413 text14_split_1 CODE >838:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+418 text14_split_1 CODE >841:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+41D text14_split_1 CODE >844:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+422 text14_split_1 CODE >848:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+72D text14_split_1 CODE >849:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+D94 text21 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D94 text21 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D95 text21 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D99 text21 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D9E text21 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DA0 text21 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DA4 text21 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DA9 text21 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DAD text21 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DAF text21 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DB5 text21 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DB7 text21 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DB8 text21 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DBF text21 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DC3 text21 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DC7 text21 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DCE text21 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DD8 text21 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DDE text21 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DDF text21 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DE6 text21 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DEC text21 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DF1 text21 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DF6 text21 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DFA text21 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C24 text20 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C24 text20 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C25 text20 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C29 text20 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C2E text20 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C30 text20 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C34 text20 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C39 text20 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C3F text20 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C41 text20 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C42 text20 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C49 text20 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C4D text20 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C51 text20 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C5B text20 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C61 text20 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C68 text20 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C6E text20 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C73 text20 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C78 text20 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C7C text20 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+C7D text19 CODE >230:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C7D text19 CODE >234:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C83 text19 CODE >235:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C99 text19 CODE >236:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CAD text19 CODE >237:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CC3 text19 CODE >238:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CD9 text19 CODE >240:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CDA text18 CODE >220:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CDA text18 CODE >222:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CE0 text18 CODE >223:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+CF6 text18 CODE >224:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D0A text18 CODE >225:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D20 text18 CODE >226:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D36 text18 CODE >228:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D37 text17 CODE >242:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D37 text17 CODE >245:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D3D text17 CODE >246:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D53 text17 CODE >247:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D67 text17 CODE >248:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D7D text17 CODE >249:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+D93 text17 CODE >251:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+731 text16 CODE >252:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+731 text16 CODE >256:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+732 text16 CODE >259:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+737 text16 CODE >260:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+73D text16 CODE >261:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+740 text16 CODE >264:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+744 text16 CODE >265:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+747 text16 CODE >268:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+74B text16 CODE >269:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+74E text16 CODE >272:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+752 text16 CODE >273:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+754 text16 CODE >276:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+759 text16 CODE >277:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+75F text16 CODE >278:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+762 text16 CODE >281:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+766 text16 CODE >282:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+769 text16 CODE >285:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+76D text16 CODE >286:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+770 text16 CODE >293:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+775 text16 CODE >294:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+77B text16 CODE >295:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+77E text16 CODE >298:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+782 text16 CODE >299:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+785 text16 CODE >302:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+789 text16 CODE >303:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+78C text16 CODE >306:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+78D text16 CODE >307:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+78F text16 CODE >309:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+7BF text16 CODE >310:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16F0 text15 CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16F0 text15 CODE >71:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16F1 text15 CODE >73:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16F5 text15 CODE >74:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16F6 text15 CODE >75:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16FE text15 CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16FF text15 CODE >80:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EF9 text14 CODE >76:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+EFC text14 CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+EFF text14 CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F06 text14 CODE >82:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F0B text14 CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F10 text14 CODE >88:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F15 text14 CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F1A text14 CODE >94:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F1F text14 CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F24 text14 CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F29 text14 CODE >103:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F2E text14 CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F33 text14 CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F38 text14 CODE >112:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F3D text14 CODE >115:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F42 text14 CODE >118:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F47 text14 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F4C text14 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F51 text14 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F56 text14 CODE >130:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F5B text14 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F60 text14 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F65 text14 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F6A text14 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F6F text14 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F74 text14 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F79 text14 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F7E text14 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F83 text14 CODE >157:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F88 text14 CODE >160:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F8D text14 CODE >163:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F92 text14 CODE >166:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F97 text14 CODE >169:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+F9C text14 CODE >172:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FA1 text14 CODE >175:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FA6 text14 CODE >178:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FAB text14 CODE >181:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FB0 text14 CODE >184:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FB5 text14 CODE >187:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FBA text14 CODE >190:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FBF text14 CODE >193:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FC4 text14 CODE >196:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FC9 text14 CODE >199:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FCE text14 CODE >202:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FD3 text14 CODE >205:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FD8 text14 CODE >208:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FDD text14 CODE >211:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FE2 text14 CODE >214:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FE7 text14 CODE >217:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FEC text14 CODE >220:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FF1 text14 CODE >223:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FF6 text14 CODE >226:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+FFB text14 CODE >229:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+16BC text13 CODE >12:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+16BF text13 CODE >13:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+16C1 text13 CODE >14:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1721 text12 CODE >16:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1724 text12 CODE >17:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+172A text12 CODE >18:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+172D text12 CODE >20:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+172E text12 CODE >21:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1738 text12 CODE >22:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+173B text12 CODE >23:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7C0 text11 CODE >30:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7C3 text11 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7C8 text11 CODE >34:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7CD text11 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7D3 text11 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7DA text11 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7DF text11 CODE >38:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7E5 text11 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1708 text10 CODE >50:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+170B text10 CODE >52:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+170C text10 CODE >53:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1712 text10 CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1715 text10 CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+171C text10 CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+171F text10 CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1720 text10 CODE >58:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17BA text9 CODE >60:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17BA text9 CODE >62:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17BF text9 CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+17FF text9 CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+1776 text8 CODE >169:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1776 text8 CODE >172:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1782 text8 CODE >173:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+178D text8 CODE >175:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1799 text8 CODE >176:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+17A4 text8 CODE >178:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+17AE text8 CODE >179:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+17B9 text8 CODE >181:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16CA text7 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+16CD text7 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+16CE text7 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+16D0 text7 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+16D6 text7 CODE >39:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+16D9 text7 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\SPI_Master.c
+173C text6 CODE >184:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+173C text6 CODE >186:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+173F text6 CODE >188:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+174A text6 CODE >189:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1755 text6 CODE >191:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1758 text6 CODE >194:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1759 text5 CODE >197:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1759 text5 CODE >199:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+175C text5 CODE >201:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1767 text5 CODE >202:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1772 text5 CODE >204:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+1775 text5 CODE >206:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C07 text4 CODE >209:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C07 text4 CODE >211:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C0A text4 CODE >213:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C15 text4 CODE >214:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C20 text4 CODE >216:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+C23 text4 CODE >218:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16DA text3 CODE >7:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16DA text3 CODE >8:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16DD text3 CODE >9:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16DE text3 CODE >11:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16DF text3 CODE >12:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16E0 text3 CODE >13:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16E1 text3 CODE >14:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16E4 text3 CODE >15:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16E8 text3 CODE >17:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16E9 text3 CODE >18:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16EA text3 CODE >19:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16ED text3 CODE >20:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16EE text3 CODE >21:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+16EF text3 CODE >22:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\USART.c
+7E6 text2 CODE >42:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7E6 text2 CODE >44:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7EC text2 CODE >45:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7F2 text2 CODE >46:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7F8 text2 CODE >47:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+7FE text2 CODE >48:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\LCD.c
+E6F text1 CODE >112:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E6F text1 CODE >114:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E72 text1 CODE >115:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E73 text1 CODE >116:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E74 text1 CODE >117:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E75 text1 CODE >118:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E77 text1 CODE >120:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E7A text1 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E7B text1 CODE >122:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E7C text1 CODE >123:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E7E text1 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E7F text1 CODE >125:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E80 text1 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E81 text1 CODE >128:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E84 text1 CODE >129:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E85 text1 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E89 text1 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E8A text1 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E8D text1 CODE >134:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E90 text1 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E91 text1 CODE >137:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E94 text1 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E97 text1 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E98 text1 CODE >141:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E99 text1 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E9C text1 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E9D text1 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E9E text1 CODE >146:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EA1 text1 CODE >147:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EA5 text1 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EA6 text1 CODE >150:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EA7 text1 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EA8 text1 CODE >152:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EAB text1 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EB0 text1 CODE >156:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EB5 text1 CODE >158:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EBF text1 CODE >159:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+ECA text1 CODE >161:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+ED6 text1 CODE >162:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EE1 text1 CODE >164:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EED text1 CODE >165:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+EF8 text1 CODE >167:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+DFB maintext CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+DFB maintext CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E00 maintext CODE >90:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E05 maintext CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E14 maintext CODE >92:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E22 maintext CODE >94:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E27 maintext CODE >95:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E36 maintext CODE >96:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E44 maintext CODE >98:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E49 maintext CODE >99:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E58 maintext CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+E66 maintext CODE >102:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_Master.c
+16C2 clrtext CODE >2901:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C2 clrtext CODE >2902:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C3 clrtext CODE >2903:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C3 clrtext CODE >2904:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C4 clrtext CODE >2905:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C5 clrtext CODE >2906:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C6 clrtext CODE >2907:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C7 clrtext CODE >2908:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C8 clrtext CODE >2909:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
+16C9 clrtext CODE >2910:C:\Users\Gaby\AppData\Local\Temp\s9h0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -513,93 +643,120 @@ EF2 maintext CODE >87:D:\2021\Digital2\Digital2\Proyecto1\P1_Master.X\Principal_
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__Hspace_0 1000 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+__Hspace_0 1800 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
-_Lcd_Init 1BAE 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
-_Lcd_Port 1AE0 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
+_Lcd_Init FCC 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
+_Lcd_Port 2D78 0 CODE 0 text13 dist/default/production\P1_Master.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd_Init 1BE0 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
-__end_of_Lcd_Port 1AEC 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
+_TEMP_TO_CHARS 1A6E 0 CODE 0 text17 dist/default/production\P1_Master.X.production.o
+_TX E62 0 CODE 0 text16 dist/default/production\P1_Master.X.production.o
+_POT_TO_CHARS 19B4 0 CODE 0 text18 dist/default/production\P1_Master.X.production.o
+__end_of_Lcd_Init FFE 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
+__end_of_Lcd_Port 2D84 0 CODE 0 text13 dist/default/production\P1_Master.X.production.o
 __Lstringtext 0 0 ABS 0 stringtext -
 __Hstrings 0 0 ABS 0 strings -
-_CONT 7A 0 COMMON 1 bssCOMMON dist/default/production\P1_Master.X.production.o
-_CONV 1DF6 0 CODE 0 text13 dist/default/production\P1_Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9us.o
-_main 1D16 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
+_CONT 30 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+_CONV 1DF2 0 CODE 0 text14 dist/default/production\P1_Master.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+_main 1BF6 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-_Lcd_Write_Char 1AEC 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
-start 18 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s9us.o
+_Lcd_Write_Char 2E10 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
+start 20 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+__size_of___awmod 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_CONV 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-Lcd_Port@a 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+Lcd_Port@a 3A 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_READ_SPI 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_LEER_S1 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_LEER_S2 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_LEER_S3 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9us.o
+___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s9h0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__size_of_POT_TO_CHARS 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __size_of_Lcd_Set_Cursor 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_Lcd_Write_Char 1B1A 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
+__end_of_Lcd_Write_Char 2E42 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-_READ_SPI FDE 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
-CONV@numero 75 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+__end_of_POT_TO_CHARS 1A6E 0 CODE 0 text18 dist/default/production\P1_Master.X.production.o
+_READ_SPI 2D94 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
+CONV@numero 3D 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 _CONT_r 22 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
-__end_of_READ_SPI FFE 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
+__size_of_TEMP_TO_CHARS 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+__end_of_READ_SPI 2DB4 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9us.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9us.o
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+__end_of___awdiv 1BF6 0 CODE 0 text21 dist/default/production\P1_Master.X.production.o
+__end_of___awmod 18FA 0 CODE 0 text20 dist/default/production\P1_Master.X.production.o
+_CONT_TO_CHARS 18FA 0 CODE 0 text19 dist/default/production\P1_Master.X.production.o
+CONT_TO_CHARS@valor 7C 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s9h0.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_SETUP 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__end_of_LEER_S1 1B7C 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
-__end_of_LEER_S2 1BAE 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
-__end_of_LEER_S3 1C4A 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
-Lcd_Set_Cursor@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
-start_initialization 1E 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
+__end_of_LEER_S1 2EB2 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
+__end_of_LEER_S2 2EEC 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
+__end_of_LEER_S3 1848 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
+Lcd_Set_Cursor@temp 41 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+__end_of_TEMP_TO_CHARS 1B28 0 CODE 0 text17 dist/default/production\P1_Master.X.production.o
+start_initialization 26 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
+_Pot_cents 2B 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+_Pot_units 2A 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-_Lcd_Write_String F52 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
+__end_of_TX F80 0 CODE 0 text16 dist/default/production\P1_Master.X.production.o
+_cont_decs 27 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+_Lcd_Write_String 2F74 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
+clear_ram0 2D84 0 CODE 0 clrtext dist/default/production\P1_Master.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__pcstackBANK0 2A 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+__pcstackBANK0 35 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _TEMP_r 20 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9us.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s9h0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 42 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 1828 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
+__stringbase 2024 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
+pnum$text14_split_1 22 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit 1E 0 CODE 0 cinit -
+__Lcinit 26 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
+__size_of_TX 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTEbits 9 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+__size_of_CONT_TO_CHARS 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+_Pot_decs 29 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 18 0 CODE 0 init -
+__Hinit 20 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -607,101 +764,123 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 18 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-psplit$0 16001B 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+psplit$0 180022 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_LCD 1C92 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
-__S0 1000 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+_LCD 2EEC 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
+__S0 1800 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 1BE0 0 CODE 0 text14 dist/default/production\P1_Master.X.production.o
+_isr 2DE0 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__end_of_Lcd_Write_String FDE 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
-__end_of_LCD 1D16 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
-__end_of_isr 1C14 0 CODE 0 text14 dist/default/production\P1_Master.X.production.o
-READ_SPI@data 73 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+__end_of_Lcd_Write_String 3000 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
+_CONFIG_USART 2DB4 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
+__end_of_CONT_TO_CHARS 19B4 0 CODE 0 text19 dist/default/production\P1_Master.X.production.o
+__end_of_LCD 2F74 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
+__end_of_isr 2E10 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
+READ_SPI@data 3B 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__stringtab 1804 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
-Lcd_Write_String@a 75 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
-Lcd_Write_String@i 2A 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s9us.o
-__end_of_Lcd_Cmd 1B4A 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
+__stringtab 2000 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
+Lcd_Write_String@a 3D 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+Lcd_Write_String@i 42 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s9h0.o
+__end_of_Lcd_Cmd 2E78 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
+___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__ptext10 1C4A 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
-__ptext11 1B1A 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
-__ptext12 1AE0 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
-__ptext13 1DF6 0 CODE 0 text13 dist/default/production\P1_Master.X.production.o
-__ptext14 1BE0 0 CODE 0 text14 dist/default/production\P1_Master.X.production.o
-__ptext15 FFE 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
+__ptext10 2E10 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
+__ptext11 F80 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
+__ptext12 2E42 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
+__ptext13 2D78 0 CODE 0 text13 dist/default/production\P1_Master.X.production.o
+__ptext14 1DF2 0 CODE 0 text14 dist/default/production\P1_Master.X.production.o
+__ptext15 2DE0 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
+__ptext16 E62 0 CODE 0 text16 dist/default/production\P1_Master.X.production.o
+__ptext17 1A6E 0 CODE 0 text17 dist/default/production\P1_Master.X.production.o
+__ptext18 19B4 0 CODE 0 text18 dist/default/production\P1_Master.X.production.o
+__ptext19 18FA 0 CODE 0 text19 dist/default/production\P1_Master.X.production.o
+__ptext20 1848 0 CODE 0 text20 dist/default/production\P1_Master.X.production.o
+__ptext21 1B28 0 CODE 0 text21 dist/default/production\P1_Master.X.production.o
 __size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-_Lcd_Set_Cursor 1C4A 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
-__pmaintext 1D16 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
-?_CONV 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+___awdiv 1B28 0 CODE 0 text21 dist/default/production\P1_Master.X.production.o
+___awmod 1848 0 CODE 0 text20 dist/default/production\P1_Master.X.production.o
+_Lcd_Set_Cursor F80 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
+__pmaintext 1BF6 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
+?_CONV 3A 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_LEER_S1 1B4A 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
-_LEER_S2 1B7C 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
-_LEER_S3 1C14 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
-__end_of__stringtab 1828 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
-__end_of_TRANSMITIR_INFO 1000 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
+__size_of_CONFIG_USART 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+POT_TO_CHARS@valor 7C 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+_LEER_S1 2E78 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
+_LEER_S2 2EB2 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
+_LEER_S3 180E 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
+__end_of__stringtab 2024 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
+__end_of_CONFIG_USART 2DE0 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\P1_Master.X.production.o
+__pbssCOMMON 7D 0 COMMON 1 bssCOMMON dist/default/production\P1_Master.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__Lend_init 18 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization 3A 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
-__end_of_Lcd_Set_Cursor 1C92 0 CODE 0 text10 dist/default/production\P1_Master.X.production.o
-__Hintentry 18 0 CODE 0 intentry -
-Lcd_Set_Cursor@a 78 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
-Lcd_Set_Cursor@b 76 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
-_TEMPERATURA 26 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
-pnum$text13 16 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+__end_of_Lcd_Set_Cursor FCC 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
+__Hintentry 20 0 CODE 0 intentry -
+Lcd_Set_Cursor@a 40 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+Lcd_Set_Cursor@b 3E 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+_TEMPERATURA 2F 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+pnum$text14 18 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 E62 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
-__ptext2 1BAE 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
-__ptext3 1C14 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
-__ptext4 1B7C 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
-__ptext5 1B4A 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
-__ptext6 FDE 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
-__ptext7 1C92 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
-__ptext8 F52 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
-__ptext9 1AEC 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+_cont_cents 26 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+_cont_units 28 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+__ptext1 1CDE 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
+__ptext2 FCC 0 CODE 0 text2 dist/default/production\P1_Master.X.production.o
+__ptext3 2DB4 0 CODE 0 text3 dist/default/production\P1_Master.X.production.o
+__ptext4 180E 0 CODE 0 text4 dist/default/production\P1_Master.X.production.o
+__ptext5 2EB2 0 CODE 0 text5 dist/default/production\P1_Master.X.production.o
+__ptext6 2E78 0 CODE 0 text6 dist/default/production\P1_Master.X.production.o
+__ptext7 2D94 0 CODE 0 text7 dist/default/production\P1_Master.X.production.o
+__ptext8 2EEC 0 CODE 0 text8 dist/default/production\P1_Master.X.production.o
+__ptext9 2F74 0 CODE 0 text9 dist/default/production\P1_Master.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __pstringtext 1000 0 STRCODE 0 stringtext dist/default/production\P1_Master.X.production.o
-_TRANSMITIR_INFO FFE 0 CODE 0 text15 dist/default/production\P1_Master.X.production.o
-_POTENCIOMETRO 7B 0 COMMON 1 bssCOMMON dist/default/production\P1_Master.X.production.o
+_POTENCIOMETRO 32 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
+_BANDERA_T 7D 0 COMMON 1 bssCOMMON dist/default/production\P1_Master.X.production.o
 __end_of__initialization 3A 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-Lcd_Cmd@a 75 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+Lcd_Cmd@a 3D 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
+_Temp_cents 2D 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
+_Temp_units 2C 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_Lcd_Port 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__Hend_init 1E 0 CODE 0 end_init -
-__end_of_CONV E5C 0 CODE 0 text13_split_1 dist/default/production\P1_Master.X.production.o
-__end_of_main 1DF6 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
-__end_of_SETUP F52 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
+__Hend_init 26 0 CODE 0 end_init -
+__end_of_CONV E5C 0 CODE 0 text14_split_1 dist/default/production\P1_Master.X.production.o
+__end_of_main 1CDE 0 CODE 0 maintext dist/default/production\P1_Master.X.production.o
+__end_of_SETUP 1DF2 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\P1_Master.X.production.o
@@ -709,7 +888,7 @@ _PORTC 7 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _PORTE 9 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _POT_r 24 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
-_SETUP E62 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
+_SETUP 1CDE 0 CODE 0 text1 dist/default/production\P1_Master.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\P1_Master.X.production.o
@@ -722,16 +901,16 @@ __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\P1_Master.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\P1_Master.X.production.o
-_Lcd_Cmd 1B1A 0 CODE 0 text11 dist/default/production\P1_Master.X.production.o
+_Lcd_Cmd 2E42 0 CODE 0 text12 dist/default/production\P1_Master.X.production.o
 __size_of_LCD 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-__initialization 1E 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
+TEMP_TO_CHARS@valor 7C 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
+__initialization 26 0 CODE 0 cinit dist/default/production\P1_Master.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
 __Hstringtext 0 0 ABS 0 stringtext -
-__pstrings 1804 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
-pnum$text13_split_1 1B 0 ABS 0 - dist/default/production\P1_Master.X.production.o
-Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\P1_Master.X.production.o
-__size_of_TRANSMITIR_INFO 0 0 ABS 0 - dist/default/production\P1_Master.X.production.o
+_Temp_decs 2E 0 BANK0 1 bssBANK0 dist/default/production\P1_Master.X.production.o
+__pstrings 2000 0 STRING 0 strings dist/default/production\P1_Master.X.production.o
+Lcd_Write_Char@a 3C 0 BANK0 1 cstackBANK0 dist/default/production\P1_Master.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -740,7 +919,7 @@ __size_of_TRANSMITIR_INFO 0 0 ABS 0 - dist/default/production\P1_Master.X.produc
 # split form the top of the parent psect. All splits from a given parent
 # are listed in the order in which they occurred.
 %SPLITSTAB
-text13 text13_split_1
+text14 text14_split_1
 # %DABS Section
 # This section contains a table of all usuage of the assember
 # directive DABS in the program. Each line has the following format:
@@ -758,24 +937,32 @@ text13 text13_split_1
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text2 0 DD7 1BAE 19 2
-text3 0 E0A 1C14 1B 2
-text4 0 DBE 1B7C 19 2
-text5 0 DA5 1B4A 19 2
-text7 0 E49 1C92 42 2
-text9 0 D76 1AEC 17 2
-text10 0 E25 1C4A 24 2
-text11 0 D8D 1B1A 18 2
-text12 0 D70 1AE0 6 2
-text13 0 EFB 1DF6 105 2
-text14 0 DF0 1BE0 1A 2
-maintext 0 E8B 1D16 70 2
-cstackCOMMON 1 70 70 C 1
-intentry 0 4 8 7FC 2
+text1 0 E6F 1CDE 8A 2
+text3 0 16DA 2DB4 16 2
+text4 0 C07 180E 1D 2
+text5 0 1759 2EB2 1D 2
+text6 0 173C 2E78 1D 2
+text7 0 16CA 2D94 10 2
+text8 0 1776 2EEC 44 2
+text9 0 17BA 2F74 46 2
+text10 0 1708 2E10 19 2
+text12 0 1721 2E42 1B 2
+text13 0 16BC 2D78 6 2
+text14 0 EF9 1DF2 107 2
+text15 0 16F0 2DE0 18 2
+text17 0 D37 1A6E 5D 2
+text18 0 CDA 19B4 5D 2
+text19 0 C7D 18FA 5D 2
+text20 0 C24 1848 59 2
+text21 0 D94 1B28 67 2
+maintext 0 DFB 1BF6 74 2
+cstackCOMMON 1 70 70 E 1
+intentry 0 4 8 7FB 2
 reset_vec 0 0 0 3 2
-bssBANK0 1 20 20 10 1
+bssBANK0 1 20 20 28 1
 stringtext 0 800 1000 402 2
-strings 0 C02 1804 12 2
+strings 0 1000 2000 12 2
+clrtext 0 16C2 2D84 8 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
