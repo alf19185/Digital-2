@@ -58,14 +58,12 @@ void main(void) {
     
 	while(1)
 	{
-	//  TEMPERATURA_0 =71;
-    //  TEMPERATURA_1 = 96;
     TEMPERATURA_0 = ADC_READ (0);
     TEMPERATURA_1 = ADC_READ (1);
-      TEMPH = TEMPERATURA_0;
-      TEMPH = TEMPH << 2;
-      TEMPL = TEMPERATURA_1;
-      TEMPL = TEMPL >> 6;
+    TEMPH = TEMPERATURA_0;
+    TEMPH = TEMPH << 2;
+    TEMPL = TEMPERATURA_1;
+    TEMPL = TEMPL >> 6;
               
     TEMP = TEMPH + TEMPL;
     
@@ -74,24 +72,24 @@ void main(void) {
    TEMPERATURA = (uint8_t) TEMP_R;
    
  
-   PORTD = TEMPERATURA;
+   //PORTD = TEMPERATURA;
    // MAP();
     ADC_CONTINUE();
     
-    if(TEMPERATURA < 13) {  
+    if(TEMPERATURA < 25) {  
      //Menor a 25, VERDE
         PORTBbits.RB0 = 0;
         PORTBbits.RB1 = 0;
         PORTBbits.RB2 = 1;       
         }
-    else if (TEMPERATURA >= 13 && TEMPERATURA <=18 ){    
+    else if (TEMPERATURA >= 25 && TEMPERATURA <=36 ){    
     //ENTRE 25 Y 36, AMARILLO
         PORTBbits.RB0 = 0;
         PORTBbits.RB1 = 1;
         PORTBbits.RB2 = 0;
         }
     
-    else if (TEMPERATURA > 18){
+    else if (TEMPERATURA > 36){
     //MAYOR 36, ROJO    
         PORTBbits.RB0 = 1;
         PORTBbits.RB1 = 0;

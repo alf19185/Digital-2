@@ -11,22 +11,22 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+$C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\P1_Slave3.X.production.o
 cinit CODE 0 7F3 7F3 D 2
-text1 CODE 0 F5 F5 BA 2
+text1 CODE 0 F7 F7 BA 2
 text2 CODE 0 F86 F86 7A 2
 text3 CODE 0 492 492 361 2
 text4 CODE 0 F5F F5F 27 2
 text5 CODE 0 2B5 2B5 1DD 2
 text6 CODE 0 F1C F1C 21 2
 text7 CODE 0 F3D F3D 22 2
-text8 CODE 0 16 16 43 2
-text9 CODE 0 3 3 13 2
-text10 CODE 0 59 59 9C 2
-maintext CODE 0 1AF 1AF 106 2
+text8 CODE 0 18 18 43 2
+text9 CODE 0 5 5 13 2
+text10 CODE 0 5B 5B 9C 2
+maintext CODE 0 1B1 1B1 104 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 36 1
 bssBANK0 BANK0 1 56 56 10 1
@@ -46,12 +46,15 @@ BANK0 66-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
+CONST 3-4 2
 CONST 800-F13 2
 CONST 1000-1FFF 2
+ENTRY 3-4 2
 ENTRY 800-F13 2
 ENTRY 1000-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
+CODE 3-4 2
 CODE 800-F13 2
 CODE 1000-1FFF 2
 SFR0 0-1F 1
@@ -59,8 +62,10 @@ SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
+STRCODE 3-4 2
 STRCODE 800-F13 2
 STRCODE 1000-1FFF 2
+STRING 3-4 2
 STRING 800-F13 2
 STRING 1000-1FFF 2
 # %LINETAB Section
@@ -77,146 +82,146 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P1_Slave3.X.production.o
-7F3 cinit CODE >648:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F3 cinit CODE >651:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F3 cinit CODE >704:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F4 cinit CODE >705:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F5 cinit CODE >706:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F6 cinit CODE >707:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7F7 cinit CODE >708:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7FC cinit CODE >714:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7FC cinit CODE >716:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-7FD cinit CODE >717:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-59 text10 CODE >7:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-59 text10 CODE >9:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-5A text10 CODE >11:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-5A text10 CODE >12:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-5D text10 CODE >13:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-5E text10 CODE >14:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-5F text10 CODE >15:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-60 text10 CODE >16:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-61 text10 CODE >18:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-61 text10 CODE >19:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-64 text10 CODE >20:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-65 text10 CODE >21:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-66 text10 CODE >22:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-67 text10 CODE >23:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-68 text10 CODE >25:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-68 text10 CODE >26:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6B text10 CODE >27:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6C text10 CODE >28:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6D text10 CODE >29:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6E text10 CODE >30:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6F text10 CODE >32:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6F text10 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-72 text10 CODE >34:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-73 text10 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-74 text10 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-75 text10 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-76 text10 CODE >39:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-76 text10 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-79 text10 CODE >41:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-7A text10 CODE >42:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-7B text10 CODE >43:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-7C text10 CODE >44:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-7D text10 CODE >46:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-7D text10 CODE >47:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-80 text10 CODE >48:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-81 text10 CODE >49:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-82 text10 CODE >50:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-83 text10 CODE >51:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-84 text10 CODE >53:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-84 text10 CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-87 text10 CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-88 text10 CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-89 text10 CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-8A text10 CODE >58:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-8B text10 CODE >60:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-8B text10 CODE >61:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-8E text10 CODE >62:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-8F text10 CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-90 text10 CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-91 text10 CODE >65:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-92 text10 CODE >67:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-92 text10 CODE >68:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-95 text10 CODE >69:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-96 text10 CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-97 text10 CODE >71:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-98 text10 CODE >72:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-99 text10 CODE >74:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-99 text10 CODE >75:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-9C text10 CODE >76:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-9D text10 CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-9E text10 CODE >78:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-9F text10 CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A0 text10 CODE >81:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A0 text10 CODE >82:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A3 text10 CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A4 text10 CODE >84:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A5 text10 CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A6 text10 CODE >86:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A7 text10 CODE >88:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-A7 text10 CODE >89:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AA text10 CODE >90:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AB text10 CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AC text10 CODE >92:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AD text10 CODE >93:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AE text10 CODE >95:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-AE text10 CODE >96:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B1 text10 CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B2 text10 CODE >98:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B3 text10 CODE >99:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B4 text10 CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B5 text10 CODE >101:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B5 text10 CODE >102:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B8 text10 CODE >103:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-B9 text10 CODE >104:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-BA text10 CODE >105:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-BB text10 CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-BC text10 CODE >108:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-BC text10 CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-BF text10 CODE >110:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-C0 text10 CODE >111:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-C1 text10 CODE >112:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-C2 text10 CODE >113:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-C3 text10 CODE >114:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-F4 text10 CODE >115:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-3 text9 CODE >156:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-3 text9 CODE >157:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-6 text9 CODE >158:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-9 text9 CODE >159:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-12 text9 CODE >160:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-15 text9 CODE >162:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-16 text8 CODE >117:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-17 text8 CODE >119:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-18 text8 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-18 text8 CODE >122:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-1B text8 CODE >123:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-1C text8 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-1D text8 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-1D text8 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-20 text8 CODE >128:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-21 text8 CODE >129:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-22 text8 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-22 text8 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-25 text8 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-26 text8 CODE >134:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-27 text8 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-27 text8 CODE >137:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-2A text8 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-2B text8 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-2C text8 CODE >141:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-2C text8 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-2F text8 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-30 text8 CODE >144:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-31 text8 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-47 text8 CODE >147:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-48 text8 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-49 text8 CODE >149:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-4C text8 CODE >150:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-4D text8 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-55 text8 CODE >152:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
-58 text8 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7F3 cinit CODE >648:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F3 cinit CODE >651:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F3 cinit CODE >704:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F4 cinit CODE >705:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F5 cinit CODE >706:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F6 cinit CODE >707:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7F7 cinit CODE >708:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7FC cinit CODE >714:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7FC cinit CODE >716:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+7FD cinit CODE >717:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+5B text10 CODE >7:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5B text10 CODE >9:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5C text10 CODE >11:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5C text10 CODE >12:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5F text10 CODE >13:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+60 text10 CODE >14:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+61 text10 CODE >15:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+62 text10 CODE >16:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+63 text10 CODE >18:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+63 text10 CODE >19:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+66 text10 CODE >20:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+67 text10 CODE >21:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+68 text10 CODE >22:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+69 text10 CODE >23:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+6A text10 CODE >25:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+6A text10 CODE >26:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+6D text10 CODE >27:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+6E text10 CODE >28:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+6F text10 CODE >29:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+70 text10 CODE >30:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+71 text10 CODE >32:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+71 text10 CODE >33:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+74 text10 CODE >34:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+75 text10 CODE >35:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+76 text10 CODE >36:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+77 text10 CODE >37:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+78 text10 CODE >39:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+78 text10 CODE >40:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7B text10 CODE >41:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7C text10 CODE >42:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7D text10 CODE >43:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7E text10 CODE >44:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7F text10 CODE >46:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+7F text10 CODE >47:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+82 text10 CODE >48:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+83 text10 CODE >49:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+84 text10 CODE >50:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+85 text10 CODE >51:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+86 text10 CODE >53:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+86 text10 CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+89 text10 CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8A text10 CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8B text10 CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8C text10 CODE >58:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8D text10 CODE >60:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8D text10 CODE >61:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+90 text10 CODE >62:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+91 text10 CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+92 text10 CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+93 text10 CODE >65:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+94 text10 CODE >67:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+94 text10 CODE >68:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+97 text10 CODE >69:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+98 text10 CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+99 text10 CODE >71:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+9A text10 CODE >72:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+9B text10 CODE >74:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+9B text10 CODE >75:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+9E text10 CODE >76:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+9F text10 CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A0 text10 CODE >78:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A1 text10 CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A2 text10 CODE >81:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A2 text10 CODE >82:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A5 text10 CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A6 text10 CODE >84:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A7 text10 CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A8 text10 CODE >86:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A9 text10 CODE >88:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+A9 text10 CODE >89:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+AC text10 CODE >90:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+AD text10 CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+AE text10 CODE >92:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+AF text10 CODE >93:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B0 text10 CODE >95:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B0 text10 CODE >96:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B3 text10 CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B4 text10 CODE >98:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B5 text10 CODE >99:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B6 text10 CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B7 text10 CODE >101:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B7 text10 CODE >102:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BA text10 CODE >103:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BB text10 CODE >104:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BC text10 CODE >105:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BD text10 CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BE text10 CODE >108:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+BE text10 CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+C1 text10 CODE >110:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+C2 text10 CODE >111:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+C3 text10 CODE >112:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+C4 text10 CODE >113:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+C5 text10 CODE >114:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+F6 text10 CODE >115:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5 text9 CODE >156:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5 text9 CODE >157:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+8 text9 CODE >158:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+B text9 CODE >159:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+14 text9 CODE >160:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+17 text9 CODE >162:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+18 text8 CODE >117:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+19 text8 CODE >119:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1A text8 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1A text8 CODE >122:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1D text8 CODE >123:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1E text8 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1F text8 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+1F text8 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+22 text8 CODE >128:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+23 text8 CODE >129:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+24 text8 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+24 text8 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+27 text8 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+28 text8 CODE >134:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+29 text8 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+29 text8 CODE >137:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+2C text8 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+2D text8 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+2E text8 CODE >141:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+2E text8 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+31 text8 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+32 text8 CODE >144:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+33 text8 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+49 text8 CODE >147:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+4A text8 CODE >148:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+4B text8 CODE >149:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+4E text8 CODE >150:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+4F text8 CODE >151:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+57 text8 CODE >152:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+5A text8 CODE >154:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F3D text7 CODE >164:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F3E text7 CODE >166:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F3E text7 CODE >168:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
@@ -227,25 +232,25 @@ F4C text7 CODE >174:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F4D text7 CODE >177:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F5D text7 CODE >178:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
 F5E text7 CODE >179:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\ADC.c
+F1C text6 CODE >121:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
 F1C text6 CODE >123:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F1C text6 CODE >125:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F1F text6 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F20 text6 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F21 text6 CODE >128:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F22 text6 CODE >129:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F23 text6 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F27 text6 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F28 text6 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F29 text6 CODE >134:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F2B text6 CODE >135:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F2C text6 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F2F text6 CODE >139:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F30 text6 CODE >140:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F31 text6 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F34 text6 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F37 text6 CODE >144:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F3B text6 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F3C text6 CODE >147:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F1F text6 CODE >124:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F20 text6 CODE >125:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F21 text6 CODE >126:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F22 text6 CODE >127:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F23 text6 CODE >129:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F27 text6 CODE >130:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F28 text6 CODE >131:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F29 text6 CODE >132:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F2B text6 CODE >133:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F2C text6 CODE >136:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F2F text6 CODE >137:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F30 text6 CODE >138:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F31 text6 CODE >140:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F34 text6 CODE >141:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F37 text6 CODE >142:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F3B text6 CODE >143:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F3C text6 CODE >145:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
 2B5 text5 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
 2B5 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
 2BC text5 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
@@ -446,81 +451,80 @@ FEA text2 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\f
 FEF text2 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 FF4 text2 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 FFF text2 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-F5 text1 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-F6 text1 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-FF text1 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-10E text1 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-10F text1 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-117 text1 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-117 text1 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-11F text1 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-128 text1 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-12C text1 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-12D text1 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-131 text1 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-13A text1 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-141 text1 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-145 text1 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-153 text1 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-15C text1 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-15C text1 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-163 text1 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-165 text1 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-16E text1 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-178 text1 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-17C text1 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-184 text1 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-186 text1 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-19C text1 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-1A5 text1 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-1A6 text1 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-1AE text1 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-1AF maintext CODE >52:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1AF maintext CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1B4 maintext CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1BF maintext CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1C7 maintext CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1CD maintext CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1D8 maintext CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1E3 maintext CODE >65:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1EA maintext CODE >66:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1F8 maintext CODE >67:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-1FF maintext CODE >68:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-20E maintext CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-216 maintext CODE >72:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-25A maintext CODE >74:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-26D maintext CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-26F maintext CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-274 maintext CODE >81:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-27C maintext CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-27D maintext CODE >84:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-27E maintext CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-27F maintext CODE >86:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-280 maintext CODE >87:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-28C maintext CODE >89:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-28D maintext CODE >90:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-28E maintext CODE >91:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-28F maintext CODE >92:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-290 maintext CODE >94:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-296 maintext CODE >96:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-297 maintext CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-298 maintext CODE >98:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F7 text1 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+F8 text1 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+101 text1 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+110 text1 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+111 text1 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+119 text1 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+119 text1 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+121 text1 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+12A text1 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+12E text1 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+12F text1 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+133 text1 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+13C text1 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+143 text1 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+147 text1 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+155 text1 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+15E text1 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+15E text1 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+165 text1 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+167 text1 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+170 text1 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+17A text1 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+17E text1 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+186 text1 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+188 text1 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+19E text1 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+1A7 text1 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+1A8 text1 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+1B0 text1 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+1B1 maintext CODE >52:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1B1 maintext CODE >54:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1B6 maintext CODE >55:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1C1 maintext CODE >56:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1C9 maintext CODE >57:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1CF maintext CODE >61:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1DA maintext CODE >62:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1E5 maintext CODE >63:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1EC maintext CODE >64:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+1FA maintext CODE >65:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+201 maintext CODE >66:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+210 maintext CODE >68:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+218 maintext CODE >70:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+25C maintext CODE >72:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+26F maintext CODE >77:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+274 maintext CODE >79:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+27C maintext CODE >81:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+27D maintext CODE >82:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+27E maintext CODE >83:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+27F maintext CODE >84:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+280 maintext CODE >85:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+28C maintext CODE >87:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+28D maintext CODE >88:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+28E maintext CODE >89:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+28F maintext CODE >90:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+290 maintext CODE >92:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+296 maintext CODE >94:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+297 maintext CODE >95:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+298 maintext CODE >96:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+299 maintext CODE >97:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
 299 maintext CODE >99:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-299 maintext CODE >101:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-29F maintext CODE >102:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-2A3 maintext CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-2A9 maintext CODE >108:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-2AF maintext CODE >111:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
-F14 clrtext CODE >691:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F14 clrtext CODE >692:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F15 clrtext CODE >693:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F15 clrtext CODE >694:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F16 clrtext CODE >695:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F17 clrtext CODE >696:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F18 clrtext CODE >697:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F19 clrtext CODE >698:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F1A clrtext CODE >699:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
-F1B clrtext CODE >700:C:\Users\Gaby\AppData\Local\Temp\s1rk.s
+29F maintext CODE >100:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+2A3 maintext CODE >104:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+2A9 maintext CODE >106:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+2AF maintext CODE >109:D:\2021\Digital2\Digital2\Proyecto1\P1_Slave3.X\Principal_Slave3.c
+F14 clrtext CODE >691:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F14 clrtext CODE >692:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F15 clrtext CODE >693:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F15 clrtext CODE >694:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F16 clrtext CODE >695:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F17 clrtext CODE >696:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F18 clrtext CODE >697:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F19 clrtext CODE >698:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F1A clrtext CODE >699:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
+F1B clrtext CODE >700:C:\Users\Gaby\AppData\Local\Temp\sfc4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -544,10 +548,10 @@ __Hstrings 0 0 ABS 0 strings -
 _TEMPERATURA_0 65 0 BANK0 1 bssBANK0 dist/default/production\P1_Slave3.X.production.o
 _TEMPERATURA_1 64 0 BANK0 1 bssBANK0 dist/default/production\P1_Slave3.X.production.o
 _TEMP 5E 0 BANK0 1 bssBANK0 dist/default/production\P1_Slave3.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-_main 35E 0 CODE 0 maintext dist/default/production\P1_Slave3.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+_main 362 0 CODE 0 maintext dist/default/production\P1_Slave3.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
-start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+start 0 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 ___flmul@aexp 32 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
 ___flmul@bexp 33 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
 ___flmul@prod 34 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
@@ -559,12 +563,12 @@ __size_of___fltol 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_ADC_READ 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __size_of_ADC_CONVCLK 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
@@ -587,8 +591,8 @@ __end_of___flmul FE6 0 CODE 0 text3 dist/default/production\P1_Slave3.X.producti
 __end_of___fltol 2000 0 CODE 0 text2 dist/default/production\P1_Slave3.X.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 __end_of_ADC_READ 1EBE 0 CODE 0 text7 dist/default/production\P1_Slave3.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s1rk.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sfc4.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 __size_of_ADC_C 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 __size_of_SETUP 0 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 ___fldiv@a 3A 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
@@ -597,13 +601,13 @@ ___flmul@a 24 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.producti
 ___flmul@b 20 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
 ADC_READ@JUSTIFICACION 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 start_initialization FE6 0 CODE 0 cinit dist/default/production\P1_Slave3.X.production.o
-_ADC_CONTINUE 6 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
+_ADC_CONTINUE A 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
 clear_ram0 1E28 0 CODE 0 clrtext dist/default/production\P1_Slave3.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\P1_Slave3.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 _TEMP_R 56 0 BANK0 1 bssBANK0 dist/default/production\P1_Slave3.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -650,21 +654,21 @@ __S0 1000 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_ADC_CONVCLK 2C 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
-__end_of_ADC_CONTINUE 2C 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
-___xxtofl 1EA 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
+_ADC_CONVCLK 30 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
+__end_of_ADC_CONTINUE 30 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
+___xxtofl 1EE 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
 ADC_C@CH 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s1rk.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sfc4.o
 ADC_READ@VALOR_ADC 73 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
-__end_of___xxtofl 35E 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
+__end_of___xxtofl 362 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
-__ptext10 B2 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
+__ptext10 B6 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
 ___fldiv 56A 0 CODE 0 text5 dist/default/production\P1_Slave3.X.production.o
 ___flmul 924 0 CODE 0 text3 dist/default/production\P1_Slave3.X.production.o
 ___fltol 1F0C 0 CODE 0 text2 dist/default/production\P1_Slave3.X.production.o
-__pmaintext 35E 0 CODE 0 maintext dist/default/production\P1_Slave3.X.production.o
+__pmaintext 362 0 CODE 0 maintext dist/default/production\P1_Slave3.X.production.o
 __Umul8_16@multiplier 78 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -692,15 +696,15 @@ __Lstrings 0 0 ABS 0 strings -
 ?___fltol 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 1EA 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
+__ptext1 1EE 0 CODE 0 text1 dist/default/production\P1_Slave3.X.production.o
 __ptext2 1F0C 0 CODE 0 text2 dist/default/production\P1_Slave3.X.production.o
 __ptext3 924 0 CODE 0 text3 dist/default/production\P1_Slave3.X.production.o
 __ptext4 1EBE 0 CODE 0 text4 dist/default/production\P1_Slave3.X.production.o
 __ptext5 56A 0 CODE 0 text5 dist/default/production\P1_Slave3.X.production.o
 __ptext6 1E38 0 CODE 0 text6 dist/default/production\P1_Slave3.X.production.o
 __ptext7 1E7A 0 CODE 0 text7 dist/default/production\P1_Slave3.X.production.o
-__ptext8 2C 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
-__ptext9 6 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
+__ptext8 30 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
+__ptext9 A 0 CODE 0 text9 dist/default/production\P1_Slave3.X.production.o
 ?__Umul8_16 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 ?___xxtofl 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
@@ -716,12 +720,12 @@ _ANSELbits 188 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 ADC_CONVCLK@CONV 72 0 COMMON 1 cstackCOMMON dist/default/production\P1_Slave3.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
-__end_of_ADC_CONVCLK B2 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
+__end_of_ADC_CONVCLK B6 0 CODE 0 text8 dist/default/production\P1_Slave3.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main 56A 0 CODE 0 maintext dist/default/production\P1_Slave3.X.production.o
-__end_of_ADC_C 1EA 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
+__end_of_ADC_C 1EE 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
 __end_of_SETUP 1E7A 0 CODE 0 text6 dist/default/production\P1_Slave3.X.production.o
-_ADC_C B2 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
+_ADC_C B6 0 CODE 0 text10 dist/default/production\P1_Slave3.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\P1_Slave3.X.production.o
@@ -768,19 +772,20 @@ __pbssBANK0 56 0 BANK0 1 bssBANK0 dist/default/production\P1_Slave3.X.production
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F3 FE6 D 2
-text1 0 F5 1EA BA 2
+text1 0 F7 1EE BA 2
 text2 0 F86 1F0C 7A 2
 text3 0 492 924 361 2
 text4 0 F5F 1EBE 27 2
 text5 0 2B5 56A 1DD 2
 text6 0 F1C 1E38 21 2
 text7 0 F3D 1E7A 22 2
-text8 0 16 2C 43 2
-text10 0 59 B2 9C 2
-maintext 0 1AF 35E 106 2
+text8 0 18 30 43 2
+text9 0 5 A 13 2
+text10 0 5B B6 9C 2
+maintext 0 1B1 362 104 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 46 1
-reset_vec 0 0 0 16 2
+reset_vec 0 0 0 3 2
 clrtext 0 F14 1E28 8 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

@@ -16,10 +16,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15
 [; ;./ADC.h: 15: uint8_t ADC_READ( uint8_t JUSTIFICACION );
 [v _ADC_READ `(uc ~T0 @X0 0 ef1`uc ]
-"353 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"23 ./ADC.h
+"23
 [; ;./ADC.h: 23: void ADC_CONTINUE(void);
 [v _ADC_CONTINUE `(v ~T0 @X0 0 ef ]
 "235 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
@@ -80,6 +77,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 291: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"353
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "415
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 415: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
@@ -476,228 +476,225 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [; ;Principal_Slave3.c: 60:  {
 {
-"63
-[; ;Principal_Slave3.c: 63:     TEMPERATURA_0 = ADC_READ (0);
+"61
+[; ;Principal_Slave3.c: 61:     TEMPERATURA_0 = ADC_READ (0);
 [e = _TEMPERATURA_0 ( _ADC_READ (1 -> -> 0 `i `uc ]
-"64
-[; ;Principal_Slave3.c: 64:     TEMPERATURA_1 = ADC_READ (1);
+"62
+[; ;Principal_Slave3.c: 62:     TEMPERATURA_1 = ADC_READ (1);
 [e = _TEMPERATURA_1 ( _ADC_READ (1 -> -> 1 `i `uc ]
-"65
-[; ;Principal_Slave3.c: 65:       TEMPH = TEMPERATURA_0;
+"63
+[; ;Principal_Slave3.c: 63:     TEMPH = TEMPERATURA_0;
 [e = _TEMPH -> _TEMPERATURA_0 `ui ]
-"66
-[; ;Principal_Slave3.c: 66:       TEMPH = TEMPH << 2;
+"64
+[; ;Principal_Slave3.c: 64:     TEMPH = TEMPH << 2;
 [e = _TEMPH << _TEMPH -> 2 `i ]
-"67
-[; ;Principal_Slave3.c: 67:       TEMPL = TEMPERATURA_1;
+"65
+[; ;Principal_Slave3.c: 65:     TEMPL = TEMPERATURA_1;
 [e = _TEMPL -> _TEMPERATURA_1 `ui ]
-"68
-[; ;Principal_Slave3.c: 68:       TEMPL = TEMPL >> 6;
+"66
+[; ;Principal_Slave3.c: 66:     TEMPL = TEMPL >> 6;
 [e = _TEMPL >> _TEMPL -> 6 `i ]
-"70
-[; ;Principal_Slave3.c: 70:     TEMP = TEMPH + TEMPL;
+"68
+[; ;Principal_Slave3.c: 68:     TEMP = TEMPH + TEMPL;
 [e = _TEMP + _TEMPH _TEMPL ]
-"72
-[; ;Principal_Slave3.c: 72:     TEMP_R = TEMP*140.0/286.0;
+"70
+[; ;Principal_Slave3.c: 70:     TEMP_R = TEMP*140.0/286.0;
 [e = _TEMP_R -> / * -> _TEMP `d .140.0 .286.0 `f ]
-"74
-[; ;Principal_Slave3.c: 74:    TEMPERATURA = (uint8_t) TEMP_R;
+"72
+[; ;Principal_Slave3.c: 72:    TEMPERATURA = (uint8_t) TEMP_R;
 [e = _TEMPERATURA -> _TEMP_R `uc ]
 "77
-[; ;Principal_Slave3.c: 77:    PORTD = TEMPERATURA;
-[e = _PORTD _TEMPERATURA ]
-"79
-[; ;Principal_Slave3.c: 79:     ADC_CONTINUE();
+[; ;Principal_Slave3.c: 77:     ADC_CONTINUE();
 [e ( _ADC_CONTINUE ..  ]
-"81
-[; ;Principal_Slave3.c: 81:     if(TEMPERATURA < 13) {
-[e $ ! < -> _TEMPERATURA `i -> 13 `i 142  ]
+"79
+[; ;Principal_Slave3.c: 79:     if(TEMPERATURA < 25) {
+[e $ ! < -> _TEMPERATURA `i -> 25 `i 142  ]
 {
-"83
-[; ;Principal_Slave3.c: 83:         PORTBbits.RB0 = 0;
+"81
+[; ;Principal_Slave3.c: 81:         PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"84
-[; ;Principal_Slave3.c: 84:         PORTBbits.RB1 = 0;
+"82
+[; ;Principal_Slave3.c: 82:         PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"85
-[; ;Principal_Slave3.c: 85:         PORTBbits.RB2 = 1;
+"83
+[; ;Principal_Slave3.c: 83:         PORTBbits.RB2 = 1;
 [e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-"86
-[; ;Principal_Slave3.c: 86:         }
+"84
+[; ;Principal_Slave3.c: 84:         }
 }
 [e $U 143  ]
-"87
-[; ;Principal_Slave3.c: 87:     else if (TEMPERATURA >= 13 && TEMPERATURA <=18 ){
+"85
+[; ;Principal_Slave3.c: 85:     else if (TEMPERATURA >= 25 && TEMPERATURA <=36 ){
 [e :U 142 ]
-[e $ ! && >= -> _TEMPERATURA `i -> 13 `i <= -> _TEMPERATURA `i -> 18 `i 144  ]
+[e $ ! && >= -> _TEMPERATURA `i -> 25 `i <= -> _TEMPERATURA `i -> 36 `i 144  ]
 {
-"89
-[; ;Principal_Slave3.c: 89:         PORTBbits.RB0 = 0;
+"87
+[; ;Principal_Slave3.c: 87:         PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"90
-[; ;Principal_Slave3.c: 90:         PORTBbits.RB1 = 1;
+"88
+[; ;Principal_Slave3.c: 88:         PORTBbits.RB1 = 1;
 [e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"91
-[; ;Principal_Slave3.c: 91:         PORTBbits.RB2 = 0;
+"89
+[; ;Principal_Slave3.c: 89:         PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"92
-[; ;Principal_Slave3.c: 92:         }
+"90
+[; ;Principal_Slave3.c: 90:         }
 }
 [e $U 145  ]
-"94
-[; ;Principal_Slave3.c: 94:     else if (TEMPERATURA > 18){
+"92
+[; ;Principal_Slave3.c: 92:     else if (TEMPERATURA > 36){
 [e :U 144 ]
-[e $ ! > -> _TEMPERATURA `i -> 18 `i 146  ]
+[e $ ! > -> _TEMPERATURA `i -> 36 `i 146  ]
 {
-"96
-[; ;Principal_Slave3.c: 96:         PORTBbits.RB0 = 1;
+"94
+[; ;Principal_Slave3.c: 94:         PORTBbits.RB0 = 1;
 [e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"97
-[; ;Principal_Slave3.c: 97:         PORTBbits.RB1 = 0;
+"95
+[; ;Principal_Slave3.c: 95:         PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"98
-[; ;Principal_Slave3.c: 98:         PORTBbits.RB2 = 0;
+"96
+[; ;Principal_Slave3.c: 96:         PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"99
-[; ;Principal_Slave3.c: 99:         }
+"97
+[; ;Principal_Slave3.c: 97:         }
 }
 [e :U 146 ]
 [e :U 145 ]
 [e :U 143 ]
-"101
-[; ;Principal_Slave3.c: 101:       if (SSPSTATbits.BF == 0) {
+"99
+[; ;Principal_Slave3.c: 99:       if (SSPSTATbits.BF == 0) {
 [e $ ! == -> . . _SSPSTATbits 0 0 `i -> 0 `i 147  ]
 {
-"102
-[; ;Principal_Slave3.c: 102:         SSPBUF = TEMPERATURA;
+"100
+[; ;Principal_Slave3.c: 100:         SSPBUF = TEMPERATURA;
 [e = _SSPBUF _TEMPERATURA ]
-"104
-[; ;Principal_Slave3.c: 104:     }
+"102
+[; ;Principal_Slave3.c: 102:     }
 }
 [e :U 147 ]
-"106
-[; ;Principal_Slave3.c: 106:     if (SSPSTATbits.BF ) {
+"104
+[; ;Principal_Slave3.c: 104:     if (SSPSTATbits.BF ) {
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 148  ]
 {
-"108
-[; ;Principal_Slave3.c: 108:           rxByteMaster = SSPBUF;
+"106
+[; ;Principal_Slave3.c: 106:           rxByteMaster = SSPBUF;
 [e = _rxByteMaster _SSPBUF ]
-"111
-[; ;Principal_Slave3.c: 111:           SSPBUF = TEMPERATURA;
+"109
+[; ;Principal_Slave3.c: 109:           SSPBUF = TEMPERATURA;
 [e = _SSPBUF _TEMPERATURA ]
-"113
-[; ;Principal_Slave3.c: 113:       }
+"111
+[; ;Principal_Slave3.c: 111:       }
 }
 [e :U 148 ]
-"117
-[; ;Principal_Slave3.c: 117:     }
+"115
+[; ;Principal_Slave3.c: 115:     }
 }
 [e :U 139 ]
 [e $U 140  ]
 [e :U 141 ]
-"118
-[; ;Principal_Slave3.c: 118:     return;
+"116
+[; ;Principal_Slave3.c: 116:     return;
 [e $UE 138  ]
-"119
-[; ;Principal_Slave3.c: 119: }
+"117
+[; ;Principal_Slave3.c: 117: }
 [e :UE 138 ]
 }
-"123
-[; ;Principal_Slave3.c: 123:    void SETUP(void){
+"121
+[; ;Principal_Slave3.c: 121:    void SETUP(void){
 [v _SETUP `(v ~T0 @X0 1 ef ]
 {
 [e :U _SETUP ]
 [f ]
-"125
-[; ;Principal_Slave3.c: 125:         PORTA = 0;
+"123
+[; ;Principal_Slave3.c: 123:         PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"126
-[; ;Principal_Slave3.c: 126:         PORTB = 0;
+"124
+[; ;Principal_Slave3.c: 124:         PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"127
-[; ;Principal_Slave3.c: 127:         PORTC = 0;
+"125
+[; ;Principal_Slave3.c: 125:         PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"128
-[; ;Principal_Slave3.c: 128:         PORTD = 0;
+"126
+[; ;Principal_Slave3.c: 126:         PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"129
-[; ;Principal_Slave3.c: 129:         PORTE = 0;
+"127
+[; ;Principal_Slave3.c: 127:         PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"131
-[; ;Principal_Slave3.c: 131:         TRISA = 0b00100001;
+"129
+[; ;Principal_Slave3.c: 129:         TRISA = 0b00100001;
 [e = _TRISA -> -> 33 `i `uc ]
-"132
-[; ;Principal_Slave3.c: 132:         TRISB = 0;
+"130
+[; ;Principal_Slave3.c: 130:         TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"133
-[; ;Principal_Slave3.c: 133:         TRISD = 0;
+"131
+[; ;Principal_Slave3.c: 131:         TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"134
-[; ;Principal_Slave3.c: 134:         TRISC = 0b00011000;
+"132
+[; ;Principal_Slave3.c: 132:         TRISC = 0b00011000;
 [e = _TRISC -> -> 24 `i `uc ]
-"135
-[; ;Principal_Slave3.c: 135:         TRISE = 0;
+"133
+[; ;Principal_Slave3.c: 133:         TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"138
-[; ;Principal_Slave3.c: 138:         ANSEL = 0;
+"136
+[; ;Principal_Slave3.c: 136:         ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"139
-[; ;Principal_Slave3.c: 139:         ANSELbits.ANS0 = 1;
+"137
+[; ;Principal_Slave3.c: 137:         ANSELbits.ANS0 = 1;
 [e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
-"140
-[; ;Principal_Slave3.c: 140:         ANSELH = 0;
+"138
+[; ;Principal_Slave3.c: 138:         ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"142
-[; ;Principal_Slave3.c: 142:         SSPCONbits.SSPEN = 0;
+"140
+[; ;Principal_Slave3.c: 140:         SSPCONbits.SSPEN = 0;
 [e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
-"143
-[; ;Principal_Slave3.c: 143:         SSPSTAT = 0X00;
+"141
+[; ;Principal_Slave3.c: 141:         SSPSTAT = 0X00;
 [e = _SSPSTAT -> -> 0 `i `uc ]
-"144
-[; ;Principal_Slave3.c: 144:         SSPCON= 0X14;
+"142
+[; ;Principal_Slave3.c: 142:         SSPCON= 0X14;
 [e = _SSPCON -> -> 20 `i `uc ]
-"145
-[; ;Principal_Slave3.c: 145:         SSPCONbits.SSPEN = 1;
+"143
+[; ;Principal_Slave3.c: 143:         SSPCONbits.SSPEN = 1;
 [e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
-"147
-[; ;Principal_Slave3.c: 147:     }
+"145
+[; ;Principal_Slave3.c: 145:     }
 [e :UE 149 ]
 }
-"149
-[; ;Principal_Slave3.c: 149: void MAP(void){
+"147
+[; ;Principal_Slave3.c: 147: void MAP(void){
 [v _MAP `(v ~T0 @X0 1 ef ]
 {
 [e :U _MAP ]
 [f ]
-"151
-[; ;Principal_Slave3.c: 151:     if(TEMPERATURA < 0){
+"149
+[; ;Principal_Slave3.c: 149:     if(TEMPERATURA < 0){
 [e $ ! < -> _TEMPERATURA `i -> 0 `i 151  ]
 {
-"152
-[; ;Principal_Slave3.c: 152:         ENVIAR=0;
+"150
+[; ;Principal_Slave3.c: 150:         ENVIAR=0;
 [e = _ENVIAR -> -> 0 `i `uc ]
-"153
-[; ;Principal_Slave3.c: 153:         PORTD = ENVIAR;
+"151
+[; ;Principal_Slave3.c: 151:         PORTD = ENVIAR;
 [e = _PORTD _ENVIAR ]
-"154
-[; ;Principal_Slave3.c: 154:     }
+"152
+[; ;Principal_Slave3.c: 152:     }
 }
 [e :U 151 ]
-"155
-[; ;Principal_Slave3.c: 155:     if (TEMPERATURA >= 0 ){
+"153
+[; ;Principal_Slave3.c: 153:     if (TEMPERATURA >= 0 ){
 [e $ ! >= -> _TEMPERATURA `i -> 0 `i 152  ]
 {
-"156
-[; ;Principal_Slave3.c: 156:         ENVIAR = ((TEMPERATURA *500)/1024);
+"154
+[; ;Principal_Slave3.c: 154:         ENVIAR = ((TEMPERATURA *500)/1024);
 [e = _ENVIAR -> / * -> _TEMPERATURA `i -> 500 `i -> 1024 `i `uc ]
-"157
-[; ;Principal_Slave3.c: 157:         PORTD = ENVIAR;
+"155
+[; ;Principal_Slave3.c: 155:         PORTD = ENVIAR;
 [e = _PORTD _ENVIAR ]
-"158
-[; ;Principal_Slave3.c: 158:     }
+"156
+[; ;Principal_Slave3.c: 156:     }
 }
 [e :U 152 ]
-"162
-[; ;Principal_Slave3.c: 162: }
+"160
+[; ;Principal_Slave3.c: 160: }
 [e :UE 150 ]
 }
