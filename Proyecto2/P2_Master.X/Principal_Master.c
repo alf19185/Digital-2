@@ -32,17 +32,37 @@
 #include "USART.h"
 
 //**************************VARIABLES**************************************
+
 uint8_t LECTURA = 0;
-uint8_t WRITE = 0xA6;       
-uint8_t READ = 0xA7;
+uint8_t BANDERA_T = 0;
+uint8_t WRITE = 0xA6;      //Para escribir en sensor
+uint8_t READ = 0xA7;        //Para leer en sensor
 uint8_t P_CTL = 0X2D;       //Power-saving features control 
-uint8_t D_FRMT = 0X31; //Data format control 
-uint8_t DX0 = 0X32;         //X-Axis Data 0
-uint8_t DX1 = 0X33;         //X-Axis Data 1
-uint8_t DY0= 0X34;          //Y-Axis Data 0
-uint8_t DY1 = 0X35;         //Y-Axis Data 1
-uint8_t DZ0 = 0X36;         //Z-Axis Data 0
-uint8_t DZ1 = 0X37;         //Z-Axis Data 1
+uint8_t D_FRMT = 0X31;      //Data format control 
+uint8_t DX0 = 0X32;         //Direccion X-Axis Data 0 
+uint8_t DX1 = 0X33;         //Direccion X-Axis Data 1
+uint8_t DY0= 0X34;          //Direccion Y-Axis Data 0
+uint8_t DY1 = 0X35;         //Direccion Y-Axis Data 1
+uint8_t DZ0 = 0X36;         //Direccion Z-Axis Data 0
+uint8_t DZ1 = 0X37;         //Direccion Z-Axis Data 1
+uint8_t XL = 0; 
+uint8_t XH = 0; 
+uint8_t YL = 0; 
+uint8_t YH = 0; 
+uint8_t ZL = 0; 
+uint8_t ZH = 0; 
+uint8_t X = 0; 
+uint8_t Z = 0; 
+uint8_t Y = 0; 
+uint8_t X_units = 0;
+uint8_t X_decs = 0;
+uint8_t X_cents = 0;
+uint8_t Y_units = 0;
+uint8_t Y_decs = 0;
+uint8_t Y_cents = 0;
+uint8_t Z_units = 0;
+uint8_t Z_decs = 0;
+uint8_t Z_cents = 0;
 
 //************************PROTOTIPO FUNCIONES*******************************
 
@@ -54,16 +74,39 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data);
 
 unsigned short ACELEROMETRO_R(uint8_t num);
 
-//**************************************************************************
+void LEER_VALORES (void);
+
+uint8_t TX (void);
+
+void EJEX_TO_CHARS(void);
+
+void EJEY_TO_CHARS(void);
+
+void EJEZ_TO_CHARS(void);
+//****************************INTERRUPCIONES*********************************
+void __interrupt() isr(void) { 
+ di(); 
+ 
+    if(PIR1bits.TXIF == 1){                      //Interrupción para transmitir
+        PIR1bits.TXIF = 0;
+        TXREG = TX();  
+    }
+ 
+  ei();
+}
+//****************************MAIN*******************************************
+
 void main(void) {
     SETUP();
     CONFIG_USART();
     I2C_Master_Init(100000);
+    ACELEROMETRO_CONFIG();
     PORTA = 255;
 
 //***LOOP****    
     while(1){
-          
+        
+       LEER_VALORES();               
   }    
     
     return;
@@ -78,7 +121,7 @@ void SETUP (void){
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
     
-    PORTA = 0;
+    PORTA = 0;                  //LEDS
     PORTB = 0;
     PORTC = 0;
     PORTD = 0;
@@ -95,8 +138,11 @@ void SETUP (void){
     
     ANSEL = 0;
     ANSELH = 0;
+    
+    INTCONbits.GIE = 1;     //Interrupcion TX 
+    INTCONbits.PEIE = 1;
+    PIE1bits.TXIE = 1; 
 }
-
 
 void ACELEROMETRO_CONFIG(void){
     
@@ -120,6 +166,7 @@ unsigned short ACELEROMETRO_R(uint8_t num){
     
     return LECTURA;
 }
+
 void ACELEROMETRO_W(uint8_t num, uint8_t data){
     
     I2C_Master_Start();
@@ -129,4 +176,105 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data){
     I2C_Master_Stop();
 }
 
+uint8_t TX(void){
+               
+    switch(BANDERA_T){
+  
+        case 0:
+            EJEX_TO_CHARS(); 
+            BANDERA_T++;
+            return X_cents + 48;
+            break;
+        case 1:
+            BANDERA_T++;
+            return X_decs + 48;
+            break;  
+        case 2:
+            BANDERA_T++;
+            return X_units + 48;
+            break;    
+        case 3:
+            BANDERA_T++;
+            return ',';
+            break;
+        case 4:
+            EJEY_TO_CHARS();
+            BANDERA_T++;
+            return Y_cents + 48;
+            break;
+        case 5:
+            BANDERA_T++;
+            return Y_decs + 48;
+            break;  
+        case 6:
+            BANDERA_T++;
+            return Y_units + 48;
+            break;
+         case 7:
+            BANDERA_T++;
+            return ',';
+            break;
+        case 8:
+            EJEZ_TO_CHARS();
+            BANDERA_T++;
+            return Z_cents + 48;
+            break;  
+        case 9:
+            BANDERA_T++;
+            return Z_decs + 48;
+            break;
+        case 10:
+            BANDERA_T++;
+            return Z_units + 48;
+            break;  
+        case 11:
+            BANDERA_T = 0;
+            return '\r';
+            break;     
+    }
+}
 
+void LEER_VALORES (void){
+   
+    XL =  ACELEROMETRO_R(DX0);
+    XH =  ACELEROMETRO_R(DX1);
+    X = ((XH<<8) | XL) ;
+    
+    YL =  ACELEROMETRO_R(DY0);
+    YH =  ACELEROMETRO_R(DY1);
+    Y = ((YH<<8) | YL) ;
+    
+    ZL =  ACELEROMETRO_R(DZ0);
+    ZH =  ACELEROMETRO_R(DZ1);
+    Z = ((ZH<<8) | ZL) ;
+}
+
+void EJEX_TO_CHARS (void){
+    
+    uint8_t valor = X;
+    X_units = valor %10 ;
+    valor = valor/10;
+    X_decs = valor %10 ;
+    X_cents = valor /10 ; 
+    
+    }
+
+void EJEY_TO_CHARS (void){
+    
+    uint8_t valor = X;
+    Y_units = valor %10 ;
+    valor = valor/10;
+    Y_decs = valor %10 ;
+    Y_cents = valor /10 ; 
+    
+    }
+
+void EJEZ_TO_CHARS (void){
+    
+    uint8_t valor = X;
+    Z_units = valor %10 ;
+    valor = valor/10;
+    Z_decs = valor %10 ;
+    Z_cents = valor /10 ; 
+    
+    }

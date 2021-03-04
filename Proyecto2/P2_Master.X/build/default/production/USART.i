@@ -2652,8 +2652,8 @@ void CONFIG_USART (void){
     TXSTAbits.SYNC = 0;
     TXSTAbits.BRGH = 0;
     BAUDCTLbits.BRG16 = 0;
-    SPBRG = 51;
 
+    SPBRG = 12;
     SPBRGH = 0;
     TXSTAbits.TXEN = 1;
     RCSTAbits.SPEN = 1;
