@@ -32,44 +32,52 @@
 #include "USART.h"
 
 //**************************VARIABLES**************************************
-
-void SETUP (void);
+uint8_t LECTURA = 0;
+uint8_t WRITE = 0xA6;       
+uint8_t READ = 0xA7;
+uint8_t P_CTL = 0X2D;       //Power-saving features control 
+uint8_t D_FRMT = 0X31; //Data format control 
+uint8_t DX0 = 0X32;         //X-Axis Data 0
+uint8_t DX1 = 0X33;         //X-Axis Data 1
+uint8_t DY0= 0X34;          //Y-Axis Data 0
+uint8_t DY1 = 0X35;         //Y-Axis Data 1
+uint8_t DZ0 = 0X36;         //Z-Axis Data 0
+uint8_t DZ1 = 0X37;         //Z-Axis Data 1
 
 //************************PROTOTIPO FUNCIONES*******************************
 
+void SETUP (void);
+
+void ACELEROMETRO_CONFIG(void);
+
+void ACELEROMETRO_W(uint8_t num, uint8_t data);
+
+unsigned short ACELEROMETRO_R(uint8_t num);
+
+//**************************************************************************
 void main(void) {
     SETUP();
-   // CONFIG_USART();
-   // I2C_Master_Init(100000);
+    CONFIG_USART();
+    I2C_Master_Init(100000);
     PORTA = 255;
 
 //***LOOP****    
     while(1){
-        
-   
-   /*     
-        I2C_Master_Start();
-        I2C_Master_Write(0x50);
-        I2C_Master_Write(PORTB);
-        I2C_Master_Stop();
-        __delay_ms(200);
-       
-        I2C_Master_Start();
-       I2C_Master_Write(0x51);
-        PORTD = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(200);
-        PORTB++;   
+          
   }    
-    */
+    
     return;
-}
 }
 
 //******************************SUBRUTINAS***********************************
 
+//Configuraciones Generales
 void SETUP (void){
 
+    OSCCONbits.IRCF2 = 1;       //8MHZ
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF0 = 1;
+    
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
@@ -87,9 +95,38 @@ void SETUP (void){
     
     ANSEL = 0;
     ANSELH = 0;
-    
-    OSCCONbits.IRCF2 = 1;       //8MHZ
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 1;
 }
+
+
+void ACELEROMETRO_CONFIG(void){
+    
+    ACELEROMETRO_W(D_FRMT, 0x0B);
+    __delay_ms(5);
+    
+    ACELEROMETRO_W(P_CTL, 0x08);
+    __delay_ms(5);
+}
+
+unsigned short ACELEROMETRO_R(uint8_t num){
+    unsigned short LECTURA;
+    
+    I2C_Master_Start();
+    I2C_Master_Write(WRITE);
+    I2C_Master_Write(num);
+    I2C_Master_Start();
+    I2C_Master_Write(READ);
+    LECTURA = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    
+    return LECTURA;
+}
+void ACELEROMETRO_W(uint8_t num, uint8_t data){
+    
+    I2C_Master_Start();
+    I2C_Master_Write(WRITE);
+    I2C_Master_Write(num);
+    I2C_Master_Write(data);
+    I2C_Master_Stop();
+}
+
 
