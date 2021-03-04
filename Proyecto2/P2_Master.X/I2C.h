@@ -15,5 +15,6 @@ void I2C_Master_Start();
 void I2C_Master_Wait();
 void I2C_Master_Init(const unsigned long c);
 void I2C_Master_Stop(void);
+
 #endif	/* I2C_H */
 

@@ -13,8 +13,8 @@ void CONFIG_USART (void){
     TXSTAbits.SYNC = 0;     //Formula FOSC/[64 (n+1)]
     TXSTAbits.BRGH = 0;
     BAUDCTLbits.BRG16 = 0;
-    SPBRG = 51;             //2400
-    //SPBRG = 12;             //9600  
+    //SPBRG = 51;             //2400
+    SPBRG = 12;             //9600  
     SPBRGH = 0;             
     TXSTAbits.TXEN = 1;
     RCSTAbits.SPEN = 1;
