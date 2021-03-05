@@ -44,7 +44,7 @@ dataBANK0 BANK0 1 4E 4E A 1
 clrtext CODE 0 525 525 8 2
 bssCOMMON COMMON 1 7D 7D 1 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+$C:\Users\Gaby\AppData\Local\Temp\sb94.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
@@ -93,26 +93,26 @@ STRING 52D-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P2_Master.X.production.o
-13 cinit CODE >906:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-13 cinit CODE >909:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-13 cinit CODE >1070:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-14 cinit CODE >1071:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-15 cinit CODE >1072:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-16 cinit CODE >1073:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-17 cinit CODE >1074:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-18 cinit CODE >1075:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-19 cinit CODE >1076:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-1A cinit CODE >1077:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-1B cinit CODE >1078:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-1C cinit CODE >1079:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-21 cinit CODE >1098:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-22 cinit CODE >1099:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-23 cinit CODE >1100:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-24 cinit CODE >1101:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-29 cinit CODE >1104:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-2A cinit CODE >1110:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-2A cinit CODE >1112:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-2B cinit CODE >1113:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
+13 cinit CODE >906:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+13 cinit CODE >909:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+13 cinit CODE >1070:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+14 cinit CODE >1071:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+15 cinit CODE >1072:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+16 cinit CODE >1073:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+17 cinit CODE >1074:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+18 cinit CODE >1075:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+19 cinit CODE >1076:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+1A cinit CODE >1077:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+1B cinit CODE >1078:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+1C cinit CODE >1079:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+21 cinit CODE >1098:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+22 cinit CODE >1099:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+23 cinit CODE >1100:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+24 cinit CODE >1101:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+29 cinit CODE >1104:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+2A cinit CODE >1110:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+2A cinit CODE >1112:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+2B cinit CODE >1113:C:\Users\Gaby\AppData\Local\Temp\sb94.s
 4 intentry CODE >87:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
 125 text20 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
 125 text20 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
@@ -348,33 +348,33 @@ FE text6 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__
 47F maintext CODE >103:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
 484 maintext CODE >104:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
 488 maintext CODE >109:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-525 clrtext CODE >1085:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-525 clrtext CODE >1086:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-526 clrtext CODE >1087:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-526 clrtext CODE >1088:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-527 clrtext CODE >1089:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-528 clrtext CODE >1090:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-529 clrtext CODE >1091:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-52A clrtext CODE >1092:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-52B clrtext CODE >1093:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-52C clrtext CODE >1094:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4DF inittext CODE >1044:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4DF inittext CODE >1045:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E0 inittext CODE >1046:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E1 inittext CODE >1047:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E2 inittext CODE >1048:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E3 inittext CODE >1055:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E3 inittext CODE >1056:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E8 inittext CODE >1057:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4E9 inittext CODE >1058:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4EA inittext CODE >1059:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4EB inittext CODE >1060:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4EC inittext CODE >1061:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4ED inittext CODE >1062:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4EE inittext CODE >1063:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4EF inittext CODE >1064:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4F0 inittext CODE >1065:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
-4F1 inittext CODE >1066:C:\Users\Gaby\AppData\Local\Temp\sjh4.s
+525 clrtext CODE >1085:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+525 clrtext CODE >1086:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+526 clrtext CODE >1087:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+526 clrtext CODE >1088:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+527 clrtext CODE >1089:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+528 clrtext CODE >1090:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+529 clrtext CODE >1091:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+52A clrtext CODE >1092:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+52B clrtext CODE >1093:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+52C clrtext CODE >1094:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4DF inittext CODE >1044:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4DF inittext CODE >1045:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E0 inittext CODE >1046:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E1 inittext CODE >1047:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E2 inittext CODE >1048:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E3 inittext CODE >1055:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E3 inittext CODE >1056:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E8 inittext CODE >1057:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4E9 inittext CODE >1058:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4EA inittext CODE >1059:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4EB inittext CODE >1060:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4EC inittext CODE >1061:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4ED inittext CODE >1062:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4EE inittext CODE >1063:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4EF inittext CODE >1064:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4F0 inittext CODE >1065:C:\Users\Gaby\AppData\Local\Temp\sb94.s
+4F1 inittext CODE >1066:C:\Users\Gaby\AppData\Local\Temp\sb94.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -416,10 +416,10 @@ __Hstrings 0 0 ABS 0 strings -
 ?_ACELEROMETRO_R 2B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _RSEN 489 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sb94.o
 _main 8CC 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-start 20 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+start 20 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sb94.o
 __end_of_LEER_VALORES 696 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
@@ -434,12 +434,12 @@ ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.pro
 I2C_Master_Read@a 25 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _Z_units 3D 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
 EJEZ_TO_CHARS@valor 7C 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sb94.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
@@ -456,8 +456,8 @@ __end_of___awmod 5EC 0 CODE 0 text19 dist/default/production\P2_Master.X.product
 __end_of___lldiv 24A 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
 ACELEROMETRO_R@num 31 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 ACELEROMETRO_W@num 2A 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sjh4.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sb94.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sb94.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_SETUP 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _EJEX_TO_CHARS 484 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
@@ -476,7 +476,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sb94.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -540,7 +540,7 @@ _CONFIG_USART 992 0 CODE 0 text7 dist/default/production\P2_Master.X.production.
 __end_of_isr 992 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 25 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sjh4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sb94.o
 __pdataBANK0 4E 0 BANK0 1 dataBANK0 dist/default/production\P2_Master.X.production.o
 __end_of_EJEX_TO_CHARS 53A 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
