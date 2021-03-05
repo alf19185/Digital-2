@@ -83,6 +83,8 @@ void EJEX_TO_CHARS(void);
 void EJEY_TO_CHARS(void);
 
 void EJEZ_TO_CHARS(void);
+
+float ACELEROMETRO_AX(void);
 //****************************INTERRUPCIONES*********************************
 void __interrupt() isr(void) { 
  di(); 
@@ -99,6 +101,7 @@ void __interrupt() isr(void) {
 void main(void) {
     SETUP();
     CONFIG_USART();
+    
     I2C_Master_Init(100000);
     ACELEROMETRO_CONFIG();
     PORTA = 255;
@@ -154,6 +157,7 @@ void ACELEROMETRO_CONFIG(void){
 }
 
 unsigned short ACELEROMETRO_R(uint8_t num){
+    
     unsigned short LECTURA;
     
     I2C_Master_Start();
@@ -181,15 +185,17 @@ uint8_t TX(void){
     switch(BANDERA_T){
   
         case 0:
-            EJEX_TO_CHARS(); 
+        //    EJEX_TO_CHARS(); 
             BANDERA_T++;
-            return X_cents + 48;
+            return "1";
+         //   return X_cents + 48;
             break;
         case 1:
             BANDERA_T++;
-            return X_decs + 48;
+        //    return X_decs + 48;
+         return ",";    
             break;  
-        case 2:
+    /*    case 2:
             BANDERA_T++;
             return X_units + 48;
             break;    
@@ -230,7 +236,7 @@ uint8_t TX(void){
         case 11:
             BANDERA_T = 0;
             return '\r';
-            break;     
+            break; */    
     }
 }
 
@@ -238,7 +244,7 @@ void LEER_VALORES (void){
    
     XL =  ACELEROMETRO_R(DX0);
     XH =  ACELEROMETRO_R(DX1);
-    X = ((XH<<8) | XL) ;
+    X = ((YH<<8) | YL) ;
     
     YL =  ACELEROMETRO_R(DY0);
     YH =  ACELEROMETRO_R(DY1);
@@ -278,3 +284,4 @@ void EJEZ_TO_CHARS (void){
     Z_cents = valor /10 ; 
     
     }
+

@@ -2734,6 +2734,8 @@ void EJEY_TO_CHARS(void);
 
 void EJEZ_TO_CHARS(void);
 
+float ACELEROMETRO_AX(void);
+
 void __attribute__((picinterrupt(("")))) isr(void) {
  (INTCONbits.GIE = 0);
 
@@ -2749,6 +2751,7 @@ void __attribute__((picinterrupt(("")))) isr(void) {
 void main(void) {
     SETUP();
     CONFIG_USART();
+
     I2C_Master_Init(100000);
     ACELEROMETRO_CONFIG();
     PORTA = 255;
@@ -2804,6 +2807,7 @@ void ACELEROMETRO_CONFIG(void){
 }
 
 unsigned short ACELEROMETRO_R(uint8_t num){
+
     unsigned short LECTURA;
 
     I2C_Master_Start();
@@ -2831,56 +2835,17 @@ uint8_t TX(void){
     switch(BANDERA_T){
 
         case 0:
-            EJEX_TO_CHARS();
+
             BANDERA_T++;
-            return X_cents + 48;
+            return "1";
+
             break;
         case 1:
             BANDERA_T++;
-            return X_decs + 48;
+
+         return ",";
             break;
-        case 2:
-            BANDERA_T++;
-            return X_units + 48;
-            break;
-        case 3:
-            BANDERA_T++;
-            return ',';
-            break;
-        case 4:
-            EJEY_TO_CHARS();
-            BANDERA_T++;
-            return Y_cents + 48;
-            break;
-        case 5:
-            BANDERA_T++;
-            return Y_decs + 48;
-            break;
-        case 6:
-            BANDERA_T++;
-            return Y_units + 48;
-            break;
-         case 7:
-            BANDERA_T++;
-            return ',';
-            break;
-        case 8:
-            EJEZ_TO_CHARS();
-            BANDERA_T++;
-            return Z_cents + 48;
-            break;
-        case 9:
-            BANDERA_T++;
-            return Z_decs + 48;
-            break;
-        case 10:
-            BANDERA_T++;
-            return Z_units + 48;
-            break;
-        case 11:
-            BANDERA_T = 0;
-            return '\r';
-            break;
+# 240 "Principal_Master.c"
     }
 }
 
@@ -2888,7 +2853,7 @@ void LEER_VALORES (void){
 
     XL = ACELEROMETRO_R(DX0);
     XH = ACELEROMETRO_R(DX1);
-    X = ((XH<<8) | XL) ;
+    X = ((YH<<8) | YL) ;
 
     YL = ACELEROMETRO_R(DY0);
     YH = ACELEROMETRO_R(DY1);
