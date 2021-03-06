@@ -12,44 +12,38 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\P2_Master.X.production.o
-cinit CODE 0 F F 22 2
-text1 CODE 0 31 31 16F 2
-text2 CODE 0 608 608 A 2
-text3 CODE 0 480 480 3C 2
-text4 CODE 0 3F7 3F7 46 2
-text5 CODE 0 586 586 27 2
-text6 CODE 0 5D4 5D4 14 2
-text7 CODE 0 1A0 1A0 9A 2
-text8 CODE 0 3B0 3B0 47 2
-text9 CODE 0 625 625 9 2
-text10 CODE 0 527 527 30 2
-text11 CODE 0 4BC 4BC 3A 2
-text12 CODE 0 23A 23A 68 2
-text13 CODE 0 43D 43D 43 2
-text14 CODE 0 309 309 5D 2
-text15 CODE 0 557 557 2F 2
-text16 CODE 0 4F6 4F6 31 2
-text17 CODE 0 612 612 A 2
-text18 CODE 0 62E 62E 9 2
-text19 CODE 0 637 637 9 2
-text20 CODE 0 5FB 5FB D 2
-text21 CODE 0 5AD 5AD 27 2
-idataCOMMON CODE 0 648 648 1 2
-maintext CODE 0 2A2 2A2 67 2
+cinit CODE 0 F F 23 2
+text1 CODE 0 32 32 DD 2
+text2 CODE 0 48F 48F A 2
+text3 CODE 0 2E2 2E2 3C 2
+text4 CODE 0 258 258 46 2
+text5 CODE 0 40F 40F 25 2
+text6 CODE 0 451 451 14 2
+text7 CODE 0 10F 10F 9A 2
+text8 CODE 0 211 211 47 2
+text9 CODE 0 4A3 4A3 9 2
+text10 CODE 0 389 389 30 2
+text11 CODE 0 31E 31E 3A 2
+text12 CODE 0 1A9 1A9 68 2
+text13 CODE 0 3B9 3B9 2F 2
+text14 CODE 0 358 358 31 2
+text15 CODE 0 499 499 A 2
+text16 CODE 0 4AC 4AC 9 2
+text17 CODE 0 4B5 4B5 9 2
+text18 CODE 0 478 478 D 2
+text19 CODE 0 3E8 3E8 27 2
+maintext CODE 0 29E 29E 44 2
 cstackCOMMON COMMON 1 70 70 8 1
-cstackBANK0 BANK0 1 4B 4B 1A 1
-cstackBANK1 BANK1 1 A0 A0 3 1
-inittext CODE 0 5E8 5E8 13 2
+cstackBANK0 BANK0 1 20 20 1C 1
+inittext CODE 0 465 465 13 2
 intentry CODE 0 4 4 8 2
-bssBANK0 BANK0 1 20 20 2B 1
-idataBANK0 CODE 0 61C 61C 9 2
-strings STRING 0 366 366 4A 2
-dataBANK0 BANK0 1 65 65 9 1
-dataCOMMON COMMON 1 7A 7A 1 1
-clrtext CODE 0 640 640 8 2
-bssCOMMON COMMON 1 78 78 2 1
+bssBANK0 BANK0 1 3C 3C E 1
+idataBANK0 CODE 0 485 485 A 2
+strings STRING 0 434 434 1D 2
+dataBANK0 BANK0 1 4A 4A A 1
+bssCOMMON COMMON 1 78 78 3 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\Gaby\AppData\Local\Temp\s87k.o
+$C:\Users\Gaby\AppData\Local\Temp\sa3c.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -59,22 +53,22 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 6E-6F 1
-RAM A3-EF 1
+RAM 54-6F 1
+RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 6E-6F 1
-BANK1 A3-EF 1
+BANK0 54-6F 1
+BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 649-1FFF 2
+CONST 4BE-1FFF 2
 ENTRY 3-3 2
-ENTRY 649-1FFF 2
+ENTRY 4BE-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 649-1FFF 2
+CODE 4BE-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -82,9 +76,9 @@ SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 649-1FFF 2
+STRCODE 4BE-1FFF 2
 STRING 3-3 2
-STRING 649-1FFF 2
+STRING 4BE-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -99,322 +93,274 @@ STRING 649-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P2_Master.X.production.o
-F cinit CODE >1037:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-F cinit CODE >1040:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-F cinit CODE >1266:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-10 cinit CODE >1267:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-11 cinit CODE >1268:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-12 cinit CODE >1269:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-13 cinit CODE >1270:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-14 cinit CODE >1271:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-15 cinit CODE >1272:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-16 cinit CODE >1273:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-17 cinit CODE >1274:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-18 cinit CODE >1275:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-1D cinit CODE >1279:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-22 cinit CODE >1280:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-23 cinit CODE >1299:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-24 cinit CODE >1300:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-25 cinit CODE >1301:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-26 cinit CODE >1302:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-2B cinit CODE >1305:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-2C cinit CODE >1306:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-2D cinit CODE >1312:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-2D cinit CODE >1314:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-2E cinit CODE >1315:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-4 intentry CODE >134:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AD text21 CODE >134:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AD text21 CODE >135:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AE text21 CODE >138:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5B4 text21 CODE >140:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5B8 text21 CODE >142:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5BE text21 CODE >144:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C2 text21 CODE >145:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C3 text21 CODE >146:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C4 text21 CODE >147:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C4 text21 CODE >148:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C5 text21 CODE >149:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C5 text21 CODE >151:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5C9 text21 CODE >152:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CA text21 CODE >153:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CB text21 CODE >154:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CB text21 CODE >155:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CC text21 CODE >161:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CC text21 CODE >206:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5CD text21 CODE >207:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5FB text20 CODE >17:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-5FB text20 CODE >19:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-607 text20 CODE >20:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-637 text19 CODE >22:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-637 text19 CODE >24:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-63C text19 CODE >25:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-63F text19 CODE >26:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-62E text18 CODE >34:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-62E text18 CODE >36:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-633 text18 CODE >37:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-636 text18 CODE >38:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-612 text17 CODE >40:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-612 text17 CODE >42:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-617 text17 CODE >43:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-61B text17 CODE >44:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4F6 text16 CODE >322:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-4F9 text16 CODE >324:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-4FE text16 CODE >325:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-507 text16 CODE >326:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-515 text16 CODE >327:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-521 text16 CODE >328:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-526 text16 CODE >330:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-557 text15 CODE >298:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-557 text15 CODE >300:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-563 text15 CODE >301:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-56E text15 CODE >303:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-57A text15 CODE >304:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-585 text15 CODE >305:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-309 text14 CODE >39:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-30A text14 CODE >40:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-30B text14 CODE >42:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-30D text14 CODE >45:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-30F text14 CODE >48:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-311 text14 CODE >51:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-313 text14 CODE >54:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-315 text14 CODE >57:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-317 text14 CODE >60:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-319 text14 CODE >63:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-31B text14 CODE >66:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-31D text14 CODE >69:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-31F text14 CODE >72:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-321 text14 CODE >75:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-323 text14 CODE >78:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-325 text14 CODE >81:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-327 text14 CODE >84:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-329 text14 CODE >87:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-32B text14 CODE >89:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-365 text14 CODE >90:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-43D text13 CODE >448:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-43D text13 CODE >450:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-44B text13 CODE >451:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-45F text13 CODE >452:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-46B text13 CODE >453:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-47F text13 CODE >455:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-23A text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-23A text12 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-244 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-24C text12 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-24E text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-24F text12 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-258 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-25C text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-260 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-269 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-27B text12 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-289 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-28A text12 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-293 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-299 text12 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-2A1 text12 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-4BC text11 CODE >7:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4BC text11 CODE >9:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4C0 text11 CODE >10:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4C3 text11 CODE >11:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4F2 text11 CODE >12:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4F3 text11 CODE >13:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4F4 text11 CODE >14:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-4F5 text11 CODE >15:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-527 text10 CODE >46:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-527 text10 CODE >49:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-52C text10 CODE >50:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-52F text10 CODE >51:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-534 text10 CODE >52:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-53D text10 CODE >53:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-542 text10 CODE >55:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-548 text10 CODE >56:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-54B text10 CODE >57:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-54C text10 CODE >58:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-54C text10 CODE >59:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-54F text10 CODE >60:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-54F text10 CODE >62:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-550 text10 CODE >63:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-556 text10 CODE >64:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-625 text9 CODE >28:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-625 text9 CODE >30:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-62A text9 CODE >31:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-62D text9 CODE >32:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
-3B0 text8 CODE >307:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3B3 text8 CODE >311:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3B8 text8 CODE >312:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3C1 text8 CODE >313:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3CF text8 CODE >314:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3D4 text8 CODE >315:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3DD text8 CODE >316:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3EB text8 CODE >317:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3F0 text8 CODE >319:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3F6 text8 CODE >320:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1A0 text7 CODE >403:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1A0 text7 CODE >404:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1A0 text7 CODE >405:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1A4 text7 CODE >406:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1A6 text7 CODE >408:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1B2 text7 CODE >411:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1BE text7 CODE >414:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1C5 text7 CODE >417:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1D0 text7 CODE >420:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1D7 text7 CODE >425:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1E3 text7 CODE >426:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1EF text7 CODE >428:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-1F6 text7 CODE >431:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-201 text7 CODE >434:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-208 text7 CODE >436:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-214 text7 CODE >437:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-220 text7 CODE >439:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-227 text7 CODE >442:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-232 text7 CODE >445:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-239 text7 CODE >446:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5D4 text6 CODE >7:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5D4 text6 CODE >24:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5D7 text6 CODE >25:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5D8 text6 CODE >26:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5D9 text6 CODE >27:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5DC text6 CODE >28:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E0 text6 CODE >29:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E1 text6 CODE >30:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E2 text6 CODE >31:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E5 text6 CODE >32:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E6 text6 CODE >33:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-5E7 text6 CODE >37:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
-586 text5 CODE >252:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-586 text5 CODE >255:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-58A text5 CODE >261:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-58B text5 CODE >262:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-58C text5 CODE >263:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-58D text5 CODE >265:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-590 text5 CODE >266:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-591 text5 CODE >267:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-592 text5 CODE >268:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-593 text5 CODE >269:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-594 text5 CODE >271:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-597 text5 CODE >272:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-598 text5 CODE >273:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-599 text5 CODE >274:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-59A text5 CODE >275:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-59B text5 CODE >279:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-59E text5 CODE >280:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-59F text5 CODE >282:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5A4 text5 CODE >287:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5A7 text5 CODE >288:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AA text5 CODE >289:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AB text5 CODE >290:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-5AC text5 CODE >296:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-3F7 text4 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-3F7 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-3FB text4 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-401 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-403 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-404 text4 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-40B text4 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-40F text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-413 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-41A text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-424 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-42A text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-42B text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-432 text4 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-438 text4 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-43C text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-480 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-480 text3 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-488 text3 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-48A text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-48B text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-492 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-496 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-49A text3 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-4A4 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-4AA text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-4B1 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-4B7 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-4BB text3 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-608 text2 CODE >123:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-609 text2 CODE >126:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-60F text2 CODE >127:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-611 text2 CODE >130:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-31 text1 CODE >477:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-34 text1 CODE >550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-38 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-39 text1 CODE >555:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-3F text1 CODE >558:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-45 text1 CODE >559:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-46 text1 CODE >565:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-47 text1 CODE >661:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-48 text1 CODE >744:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-48 text1 CODE >747:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-49 text1 CODE >749:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-4A text1 CODE >848:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-6A text1 CODE >1277:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-6E text1 CODE >1285:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-7A text1 CODE >1287:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-7E text1 CODE >1288:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-82 text1 CODE >1289:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-88 text1 CODE >1312:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-95 text1 CODE >1325:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-95 text1 CODE >1331:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-97 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-B3 text1 CODE >1333:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-BE text1 CODE >1340:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-BE text1 CODE >1342:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-C0 text1 CODE >1343:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-DC text1 CODE >1344:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-E7 text1 CODE >1362:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-F8 text1 CODE >1464:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-FE text1 CODE >1465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-104 text1 CODE >1498:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-10A text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-10B text1 CODE >1515:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-13B text1 CODE >1517:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-13C text1 CODE >1526:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-15D text1 CODE >1532:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-168 text1 CODE >1536:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-169 text1 CODE >1549:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-17A text1 CODE >1550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-180 text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-18B text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-19F text1 CODE >1567:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-2A2 maintext CODE >210:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2A2 maintext CODE >211:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2A7 maintext CODE >212:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2AD maintext CODE >213:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2BC maintext CODE >215:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2C1 maintext CODE >219:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2C6 maintext CODE >220:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2CE maintext CODE >222:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2E0 maintext CODE >225:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-2EE maintext CODE >227:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
-640 clrtext CODE >1286:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-640 clrtext CODE >1287:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-641 clrtext CODE >1288:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-641 clrtext CODE >1289:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-642 clrtext CODE >1290:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-643 clrtext CODE >1291:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-644 clrtext CODE >1292:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-645 clrtext CODE >1293:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-646 clrtext CODE >1294:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-647 clrtext CODE >1295:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5E8 inittext CODE >1240:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5E8 inittext CODE >1241:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5E9 inittext CODE >1242:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5EA inittext CODE >1243:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5EB inittext CODE >1244:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5EC inittext CODE >1251:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5EC inittext CODE >1252:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F1 inittext CODE >1253:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F2 inittext CODE >1254:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F3 inittext CODE >1255:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F4 inittext CODE >1256:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F5 inittext CODE >1257:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F6 inittext CODE >1258:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F7 inittext CODE >1259:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F8 inittext CODE >1260:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5F9 inittext CODE >1261:C:\Users\Gaby\AppData\Local\Temp\s87k.s
-5FA inittext CODE >1262:C:\Users\Gaby\AppData\Local\Temp\s87k.s
+F cinit CODE >956:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+F cinit CODE >959:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+F cinit CODE >1102:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+10 cinit CODE >1103:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+11 cinit CODE >1104:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+12 cinit CODE >1105:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+13 cinit CODE >1106:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+14 cinit CODE >1107:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+15 cinit CODE >1108:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+16 cinit CODE >1109:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+17 cinit CODE >1110:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+18 cinit CODE >1111:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+1D cinit CODE >1115:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+1E cinit CODE >1116:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+1F cinit CODE >1117:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+20 cinit CODE >1118:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+21 cinit CODE >1119:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+22 cinit CODE >1120:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+23 cinit CODE >1121:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+24 cinit CODE >1122:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+25 cinit CODE >1123:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+26 cinit CODE >1124:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+27 cinit CODE >1125:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+28 cinit CODE >1126:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+29 cinit CODE >1127:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2A cinit CODE >1128:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2B cinit CODE >1131:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2C cinit CODE >1132:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2D cinit CODE >1133:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2E cinit CODE >1139:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2E cinit CODE >1141:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+2F cinit CODE >1142:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+4 intentry CODE >92:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3E8 text19 CODE >92:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3E8 text19 CODE >93:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3E9 text19 CODE >96:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3EF text19 CODE >98:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3F3 text19 CODE >100:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3F9 text19 CODE >102:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3FD text19 CODE >103:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3FE text19 CODE >104:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3FF text19 CODE >105:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3FF text19 CODE >106:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+400 text19 CODE >107:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+400 text19 CODE >109:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+404 text19 CODE >110:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+405 text19 CODE >111:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+406 text19 CODE >112:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+406 text19 CODE >113:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+407 text19 CODE >119:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+407 text19 CODE >121:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+408 text19 CODE >122:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+478 text18 CODE >17:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+478 text18 CODE >19:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+484 text18 CODE >20:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4B5 text17 CODE >22:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4B5 text17 CODE >24:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4BA text17 CODE >25:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4BD text17 CODE >26:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4AC text16 CODE >34:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4AC text16 CODE >36:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4B1 text16 CODE >37:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4B4 text16 CODE >38:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+499 text15 CODE >40:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+499 text15 CODE >42:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+49E text15 CODE >43:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4A2 text15 CODE >44:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+358 text14 CODE >199:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+35B text14 CODE >201:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+360 text14 CODE >202:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+369 text14 CODE >203:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+377 text14 CODE >204:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+383 text14 CODE >205:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+388 text14 CODE >207:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3B9 text13 CODE >175:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3B9 text13 CODE >177:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3C5 text13 CODE >178:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3D0 text13 CODE >180:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3DC text13 CODE >181:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+3E7 text13 CODE >182:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+1A9 text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1A9 text12 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1B3 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1BB text12 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1BD text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1BE text12 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1C7 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1CB text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1CF text12 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1D8 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1EA text12 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1F8 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+1F9 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+202 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+208 text12 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+210 text12 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+31E text11 CODE >7:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+31E text11 CODE >9:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+322 text11 CODE >10:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+325 text11 CODE >11:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+354 text11 CODE >12:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+355 text11 CODE >13:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+356 text11 CODE >14:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+357 text11 CODE >15:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+389 text10 CODE >46:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+389 text10 CODE >49:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+38E text10 CODE >50:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+391 text10 CODE >51:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+396 text10 CODE >52:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+39F text10 CODE >53:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3A4 text10 CODE >55:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3AA text10 CODE >56:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3AD text10 CODE >57:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3AE text10 CODE >58:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3AE text10 CODE >59:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3B1 text10 CODE >60:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3B1 text10 CODE >62:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3B2 text10 CODE >63:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+3B8 text10 CODE >64:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4A3 text9 CODE >28:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4A3 text9 CODE >30:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4A8 text9 CODE >31:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+4AB text9 CODE >32:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\I2C.c
+211 text8 CODE >184:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+214 text8 CODE >188:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+219 text8 CODE >189:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+222 text8 CODE >190:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+230 text8 CODE >191:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+235 text8 CODE >192:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+23E text8 CODE >193:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+24C text8 CODE >194:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+251 text8 CODE >196:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+257 text8 CODE >197:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+10F text7 CODE >209:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+10F text7 CODE >211:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+10F text7 CODE >212:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+113 text7 CODE >213:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+115 text7 CODE >215:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+121 text7 CODE >216:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+12D text7 CODE >217:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+134 text7 CODE >218:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+13F text7 CODE >219:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+146 text7 CODE >221:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+152 text7 CODE >222:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+15E text7 CODE >223:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+165 text7 CODE >224:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+170 text7 CODE >225:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+177 text7 CODE >227:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+183 text7 CODE >228:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+18F text7 CODE >229:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+196 text7 CODE >230:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+1A1 text7 CODE >231:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+1A8 text7 CODE >232:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+451 text6 CODE >7:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+451 text6 CODE >24:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+454 text6 CODE >25:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+455 text6 CODE >26:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+456 text6 CODE >27:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+459 text6 CODE >28:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+45D text6 CODE >29:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+45E text6 CODE >30:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+45F text6 CODE >31:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+462 text6 CODE >32:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+463 text6 CODE >33:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+464 text6 CODE >37:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\USART.c
+40F text5 CODE >145:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+40F text5 CODE >147:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+412 text5 CODE >148:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+413 text5 CODE >149:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+414 text5 CODE >151:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+417 text5 CODE >152:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+418 text5 CODE >153:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+419 text5 CODE >154:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+41A text5 CODE >155:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+41B text5 CODE >157:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+41E text5 CODE >158:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+41F text5 CODE >159:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+420 text5 CODE >160:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+421 text5 CODE >161:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+422 text5 CODE >163:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+425 text5 CODE >164:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+426 text5 CODE >166:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+42B text5 CODE >168:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+42E text5 CODE >169:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+431 text5 CODE >170:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+432 text5 CODE >171:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+433 text5 CODE >173:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+258 text4 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+258 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+25C text4 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+262 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+264 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+265 text4 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+26C text4 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+270 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+274 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+27B text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+285 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+28B text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+28C text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+293 text4 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+299 text4 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+29D text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+2E2 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2E2 text3 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2EA text3 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2EC text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2ED text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2F4 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2F8 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+2FC text3 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+306 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+30C text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+313 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+319 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+31D text3 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+48F text2 CODE >83:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+490 text2 CODE >85:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+496 text2 CODE >86:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+498 text2 CODE >88:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+32 text1 CODE >477:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+35 text1 CODE >550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+39 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+3A text1 CODE >555:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+40 text1 CODE >558:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+46 text1 CODE >559:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+47 text1 CODE >565:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+48 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+65 text1 CODE >1285:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+71 text1 CODE >1287:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+75 text1 CODE >1288:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+79 text1 CODE >1289:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+7E text1 CODE >1331:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+80 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+9C text1 CODE >1333:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+A6 text1 CODE >1464:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+AC text1 CODE >1465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+B2 text1 CODE >1498:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+B8 text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+B9 text1 CODE >1515:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+E9 text1 CODE >1550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+EF text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+FA text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+10E text1 CODE >1567:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+29E maintext CODE >125:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+29E maintext CODE >126:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+2A3 maintext CODE >127:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+2B2 maintext CODE >128:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+2B7 maintext CODE >133:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+2BC maintext CODE >134:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+2D0 maintext CODE >135:D:\2021\Digital2\Digital2\Proyecto2\P2_Master.X\Principal_Master.c
+465 inittext CODE >1076:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+465 inittext CODE >1077:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+466 inittext CODE >1078:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+467 inittext CODE >1079:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+468 inittext CODE >1080:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+469 inittext CODE >1087:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+469 inittext CODE >1088:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+46E inittext CODE >1089:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+46F inittext CODE >1090:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+470 inittext CODE >1091:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+471 inittext CODE >1092:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+472 inittext CODE >1093:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+473 inittext CODE >1094:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+474 inittext CODE >1095:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+475 inittext CODE >1096:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+476 inittext CODE >1097:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
+477 inittext CODE >1098:C:\Users\Gaby\AppData\Local\Temp\sa3c.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -427,47 +373,41 @@ FE text1 CODE >1465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_a 2E 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_b 2D 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_c 2C 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_c 78 0 COMMON 1 bssCOMMON dist/default/production\P2_Master.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_LEER_VALORES 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 putch@data 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-___lwmod@counter 53 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___lwmod@counter 28 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
-__Hspace_0 649 0 ABS 0 - -
-__Hspace_1 A3 0 ABS 0 - -
+__Hspace_0 4BE 0 ABS 0 - -
+__Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
-__end_of_ACELEROMETRO_R 7EE 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
-__end_of_ACELEROMETRO_W A4E 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
-I2C_Master_Init@c 58 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+__end_of_ACELEROMETRO_R 4B0 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
+__end_of_ACELEROMETRO_W 712 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
+I2C_Master_Init@c 2D 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_X0 44 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_X1 43 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_X2 42 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_X3 41 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_XH 49 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_XL 4A 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_YH 47 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_YL 48 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_ZH 45 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_ZL 46 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_XH 48 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_XL 49 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_YH 46 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_YL 47 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_ZH 44 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_ZL 45 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-?_ACELEROMETRO_R 4D 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-_EJEX 26 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_EJEY 24 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-_EJEZ 22 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+?_ACELEROMETRO_R 22 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+_EJEX 40 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_EJEY 3E 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+_EJEZ 3C 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _RSEN 489 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s87k.o
-_main 544 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+_main 53C 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-start 18 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\s87k.o
-__end_of_LEER_VALORES 474 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
+start 18 0 CODE 0 init C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+__end_of_LEER_VALORES 352 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
@@ -475,76 +415,64 @@ __size_of___lwmod 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
-printf@c 64 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-printf@f 5E 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+printf@c 38 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+printf@f 34 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 I2C_Master_Read@a 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-__HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\s87k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gaby\AppData\Local\Temp\sa3c.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-I2C_Master_Read@temp 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+I2C_Master_Read@temp 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__pidataCOMMON C90 0 CODE 0 idataCOMMON dist/default/production\P2_Master.X.production.o
-printf@flag 61 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-printf@prec 60 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+printf@flag 33 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+printf@prec 35 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
-?_printf 54 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-___lwmod@divisor 4E 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-__end_of___lldiv 544 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
-__end_of___lwdiv 87A 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
-__end_of___lwmod 978 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
-ACELEROMETRO_R@num 51 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-ACELEROMETRO_W@num 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-_OPTION_REG 81 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s87k.o
-___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\s87k.o
-_dpowers 6D8 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
-__size_of_ASCII 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
+?_printf 29 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___lwmod@divisor 23 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+__end_of___lldiv 422 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
+__end_of___lwdiv 53C 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
+__end_of___lwmod 63C 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
+ACELEROMETRO_R@num 26 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+ACELEROMETRO_W@num 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+___stacklo 0 0 ABS 0 - C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+_dpowers 874 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_SETUP 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___lwdiv@quotient 4C 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+___lwdiv@quotient 21 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-_EJEX_TO_CHARS 87A 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
-___lwmod@dividend 50 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-___lldiv@counter 57 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___lwmod@dividend 25 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___lldiv@counter 2C 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
-__end_of_hexpowers 6FC 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___lldiv@dividend 4F 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-clear_ram0 C80 0 CODE 0 clrtext dist/default/production\P2_Master.X.production.o
+___lldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__pcstackBANK0 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\P2_Master.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-_hexpowers 6EC 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
-__end_of_printf 340 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\s87k.o
+__end_of_printf 21E 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gaby\AppData\Local\Temp\sa3c.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 62 0 CODE 0 cinit -
+__Hcinit 64 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 6D6 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
-___lwdiv@counter 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+__stringbase 872 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
+___lwdiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 I2C_Master_Write@d 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-ASCII@aconvertir 75 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-_I2C_Master_RepeatedStart C4A 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
+_I2C_Master_RepeatedStart 946 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -575,144 +503,133 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
-ACELEROMETRO_R@LECTURA 52 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+ACELEROMETRO_R@LECTURA 27 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PEN 48A 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SEN 488 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__S0 649 0 ABS 0 - -
-__S1 A3 0 ABS 0 - -
+__S0 4BE 0 ABS 0 - -
+__S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr B5A 0 CODE 0 text21 dist/default/production\P2_Master.X.production.o
-__size_of_EJEX_TO_CHARS 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
+_isr 7D0 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-_I2C_Master_Start C6E 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
-__HidataCOMMON 0 0 ABS 0 idataCOMMON -
-_I2C_Master_Write C24 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
-_CONFIG_USART BA8 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
-__end_of_isr BA8 0 CODE 0 text21 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Start 96A 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Write 932 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
+_CONFIG_USART 8A2 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
+__end_of_isr 81E 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-___lldiv@divisor 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-__stringtab 6CC 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\s87k.o
-__pdataBANK0 65 0 BANK0 1 dataBANK0 dist/default/production\P2_Master.X.production.o
-__end_of_EJEX_TO_CHARS 900 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
+___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+__stringtab 868 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gaby\AppData\Local\Temp\sa3c.o
+__pdataBANK0 4A 0 BANK0 1 dataBANK0 dist/default/production\P2_Master.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__ptext10 A4E 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
-__ptext11 978 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
-__ptext12 474 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
-__ptext13 87A 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
-__ptext14 612 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
-__ptext15 AAE 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
-__ptext16 9EC 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
-__ptext17 C24 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
-__ptext18 C5C 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
-__ptext19 C6E 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
-__ptext20 BF6 0 CODE 0 text20 dist/default/production\P2_Master.X.production.o
-__ptext21 B5A 0 CODE 0 text21 dist/default/production\P2_Master.X.production.o
+__ptext10 712 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
+__ptext11 63C 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
+__ptext12 352 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
+__ptext13 772 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
+__ptext14 6B0 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
+__ptext15 932 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
+__ptext16 958 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
+__ptext17 96A 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
+__ptext18 8F0 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
+__ptext19 7D0 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
 __size_of_ACELEROMETRO_CONFIG 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-___lldiv 474 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
-___lwdiv 7EE 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
-___lwmod 900 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
-__pmaintext 544 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
+___lldiv 352 0 CODE 0 text12 dist/default/production\P2_Master.X.production.o
+___lwdiv 4B0 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
+___lwmod 5C4 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
+__pmaintext 53C 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 62 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
+_printf 64 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
 __size_of_CONFIG_USART 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __Hinittext 0 0 ABS 0 inittext -
 ___lwdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_RepeatedStart 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 ?_I2C_Master_Read 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_Init 9EC 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_Read AAE 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_Stop C6E 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_Wait C10 0 CODE 0 text20 dist/default/production\P2_Master.X.production.o
-__end_of__stringtab 6D8 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Init 6B0 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Read 772 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Stop 96A 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Wait 90A 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
+__end_of__stringtab 874 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
 ACELEROMETRO_W@data 75 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-__end_of_CONFIG_USART BD0 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_Start C80 0 CODE 0 text19 dist/default/production\P2_Master.X.production.o
+__end_of_CONFIG_USART 8CA 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Start 97C 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write C38 0 CODE 0 text17 dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_Write 946 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
 __pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\P2_Master.X.production.o
-LEER_VALORES@tempx 56 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-LEER_VALORES@tempy 58 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-LEER_VALORES@tempz 5A 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-init_fetch0 BD0 0 CODE 0 inittext dist/default/production\P2_Master.X.production.o
+LEER_VALORES@tempx 2B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+LEER_VALORES@tempy 2D 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+LEER_VALORES@tempz 2F 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+init_fetch0 8CA 0 CODE 0 inittext dist/default/production\P2_Master.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 _PIR1bits C 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ACELEROMETRO_CONFIG AAE 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
-printf@ap 5F 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+_ACELEROMETRO_CONFIG 772 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
+printf@ap 32 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-end_of_initialization 5A 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
+end_of_initialization 5C 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 __size_of_printf 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 ___lwdiv@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-?___lldiv 4B 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+?___lldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 ?___lwdiv 73 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
-?___lwmod 4E 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+?___lwmod 23 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__ptext1 62 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
-__ptext2 C10 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
-__ptext3 900 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
-__ptext4 7EE 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
-__ptext5 B0C 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
-__ptext6 BA8 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
-__ptext7 340 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
-__ptext8 760 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
-__ptext9 C4A 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
+__ptext1 64 0 CODE 0 text1 dist/default/production\P2_Master.X.production.o
+__ptext2 91E 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
+__ptext3 5C4 0 CODE 0 text3 dist/default/production\P2_Master.X.production.o
+__ptext4 4B0 0 CODE 0 text4 dist/default/production\P2_Master.X.production.o
+__ptext5 81E 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
+__ptext6 8A2 0 CODE 0 text6 dist/default/production\P2_Master.X.production.o
+__ptext7 21E 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
+__ptext8 422 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
+__ptext9 946 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 978 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
-_I2C_Master_Read A4E 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
-_I2C_Master_Stop C5C 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
-_I2C_Master_Wait BF6 0 CODE 0 text20 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Init 63C 0 CODE 0 text11 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Read 712 0 CODE 0 text10 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Stop 958 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
+_I2C_Master_Wait 8F0 0 CODE 0 text18 dist/default/production\P2_Master.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_BANDERA_T 78 0 COMMON 1 bssCOMMON dist/default/production\P2_Master.X.production.o
-__end_of_I2C_Master_RepeatedStart C5C 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
-__end_of__initialization 5A 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
+__end_of_I2C_Master_RepeatedStart 958 0 CODE 0 text9 dist/default/production\P2_Master.X.production.o
+__end_of__initialization 5C 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 C38 0 CODE 0 idataBANK0 dist/default/production\P2_Master.X.production.o
+__pidataBANK0 90A 0 CODE 0 idataBANK0 dist/default/production\P2_Master.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-___lldiv@quotient 53 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+___lldiv@quotient 28 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\P2_Master.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-init_ram0 BD8 0 CODE 0 inittext dist/default/production\P2_Master.X.production.o
-_LEER_VALORES 340 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
-__end_of_main 612 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
-__end_of_ASCII 6CC 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
-_ACELEROMETRO_R 760 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
-_ACELEROMETRO_W 9EC 0 CODE 0 text16 dist/default/production\P2_Master.X.production.o
-__end_of_SETUP B5A 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
-printf@idx 5D 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
-printf@val 62 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
+init_ram0 8D2 0 CODE 0 inittext dist/default/production\P2_Master.X.production.o
+_LEER_VALORES 21E 0 CODE 0 text7 dist/default/production\P2_Master.X.production.o
+__end_of_main 5C4 0 CODE 0 maintext dist/default/production\P2_Master.X.production.o
+_ACELEROMETRO_R 422 0 CODE 0 text8 dist/default/production\P2_Master.X.production.o
+_ACELEROMETRO_W 6B0 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
+__end_of_SETUP 868 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
+printf@val 36 0 BANK0 1 cstackBANK0 dist/default/production\P2_Master.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-_ASCII 612 0 CODE 0 text14 dist/default/production\P2_Master.X.production.o
-__end_of_dpowers 6EC 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
+__end_of_dpowers 888 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _PORTE 9 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _RCREG 1A 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-_SETUP B0C 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
+_SETUP 81E 0 CODE 0 text5 dist/default/production\P2_Master.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\P2_Master.X.production.o
@@ -722,20 +639,18 @@ _TRISC 87 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\P2_Master.X.production.o
-__end_of_putch C24 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
-__end_of_ACELEROMETRO_CONFIG B0C 0 CODE 0 text15 dist/default/production\P2_Master.X.production.o
+__end_of_putch 932 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
+__end_of_ACELEROMETRO_CONFIG 7D0 0 CODE 0 text13 dist/default/production\P2_Master.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\P2_Master.X.production.o
-_putch C10 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
+_putch 91E 0 CODE 0 text2 dist/default/production\P2_Master.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\P2_Master.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
-_contador 20 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\P2_Master.X.production.o
-__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
-__pdataCOMMON 7A 0 COMMON 1 dataCOMMON dist/default/production\P2_Master.X.production.o
-__pstrings 6CC 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
+__pbssBANK0 3C 0 BANK0 1 bssBANK0 dist/default/production\P2_Master.X.production.o
+__pstrings 868 0 STRING 0 strings dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_Read 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
 __size_of_I2C_Master_Stop 0 0 ABS 0 - dist/default/production\P2_Master.X.production.o
@@ -765,13 +680,12 @@ __size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\P2_Master.X.produc
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text8 0 3B0 760 299 2
+text6 0 451 8A2 6D 2
 cstackCOMMON 1 70 70 B 1
-cstackBANK1 1 A0 A0 3 1
-intentry 0 4 8 362 2
+cstackBANK0 1 20 20 34 1
+intentry 0 4 8 430 2
 reset_vec 0 0 0 3 2
-bssBANK0 1 20 20 4E 1
-strings 0 366 6CC 4A 2
+strings 0 434 868 1D 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

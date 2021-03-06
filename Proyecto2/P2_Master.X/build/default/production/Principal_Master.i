@@ -2782,6 +2782,7 @@ uint8_t ASCII(uint8_t aconvertir);
 
 
 
+
 uint8_t LECTURA = 0;
 uint8_t BANDERA_T = 0;
 uint8_t WRITE = 0xA6;
@@ -2795,50 +2796,22 @@ uint8_t DY1 = 0X35;
 uint8_t DZ0 = 0X36;
 uint8_t DZ1 = 0X37;
 
+
+
 int EJEX = 0;
 int EJEY = 0;
 int EJEZ = 0;
-
 uint8_t XL = 0;
 uint8_t XH = 0;
-
 uint8_t YL = 0;
 uint8_t YH = 0;
 uint8_t ZL = 0;
 uint8_t ZH = 0;
-
-uint8_t X0 = 0;
-uint8_t X1 = 0;
-uint8_t X2 = 0;
-uint8_t X3 = 0;
-uint8_t Y0 = 0;
-uint8_t Y1 = 0;
-uint8_t Y2 = 0;
-uint8_t Y3 = 0;
-uint8_t Z0 = 0;
-
-uint8_t Z1 = 0;
-uint8_t Z2 = 0;
-uint8_t Z3 = 0;
-uint8_t X_1 = 0;
-uint8_t Z_1 = 0;
-uint8_t Y_1 = 0;
-uint8_t X_U = 0;
-uint8_t X_D = 0;
-uint8_t Y_U = 0;
-uint8_t Y_D = 0;
-uint8_t Z_U = 0;
-uint8_t Z_D = 0;
-uint8_t variable = 0;
-
-uint8_t a = 0;
-uint8_t b = 0;
 uint8_t c = 0;
-uint16_t contador=0;
 uint8_t LED1=0;
 uint8_t LED2=0;
-uint8_t ENTER=0;
-uint8_t FLAG_RC;
+
+
 
 
 
@@ -2852,28 +2825,13 @@ unsigned short ACELEROMETRO_R(uint8_t num);
 
 void LEER_VALORES(void);
 
-uint8_t TX(void);
-
-void LUCES (void);
-
-
-void EJEX_TO_CHARS(void);
-
-void EJEY_TO_CHARS(void);
-
-void EJEZ_TO_CHARS(void);
-
-void EJEs_TO_CHARS(void);
-
 float ACELEROMETRO_AX(void);
 
 
 void putch(char data){
 
-
     while (TXIF == 0) {}
     TXREG = data;
-
 
 }
 
@@ -2907,61 +2865,32 @@ void __attribute__((picinterrupt(("")))) isr(void) {
 
 
     }
-# 206 "Principal_Master.c"
+
     (INTCONbits.GIE = 1);
 }
 
 
 void main(void) {
     SETUP();
-    printf("Buenos dias \r");
     I2C_Master_Init(100000);
-
     ACELEROMETRO_CONFIG();
+
 
     while (1){
 
     LEER_VALORES();
-    contador++;
-
-   printf("%d, %d, %d\r\n", EJEX, EJEY, EJEZ);
-
-
+    printf("%d, %d, %d\r\n", EJEX, EJEY, EJEZ);
     _delay((unsigned long)((2000)*(4000000/4000.0)));
 
-    printf("c=%x ",c);
-
     }
-
-
-
-    while (1) {
-
-        if (a > 10) {
-            a = 0;
-            PIE1bits.TXIE = 1;
-        }
-
-
-        LEER_VALORES();
-        EJEX_TO_CHARS();
-
-    }
-
 }
 
 
 
 
 
+
 void SETUP(void) {
-
-
-    OPTION_REG = 0b11010111;
-
-
-
-
 
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
@@ -2979,24 +2908,15 @@ void SETUP(void) {
     TRISD = 0;
     TRISE = 0;
 
-
-
     ANSEL = 0;
     ANSELH = 0;
 
     CONFIG_USART();
 
-
-
-
     PIE1bits.RCIE = 1;
     PIR1bits.RCIF =0;
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
-
-
-
-
 
 }
 
@@ -3034,91 +2954,27 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data) {
 
 }
 
-uint8_t TX(void) {
-
-    switch (BANDERA_T) {
-
-        case 0:
-            BANDERA_T++;
-            return X0;
-            break;
-        case 1:
-
-            BANDERA_T++;
-            return X1;
-
-            break;
-        case 2:
-
-            BANDERA_T++;
-            return X2;
-
-            break;
-        case 3:
-
-            BANDERA_T++;
-            return X3;
-            break;
-# 394 "Principal_Master.c"
-        case 4:
-            PORTAbits.RA0 = 0;
-            BANDERA_T = 0;
-            b++;
-            return 10;
-            break;
-    }
-}
-
 void LEER_VALORES(void) {
+
     int tempx =0;
     int tempy =0;
     int tempz =0;
 
     XL = ACELEROMETRO_R(DX0);
-
-
     XH = ACELEROMETRO_R(DX1);
-
-
     tempx= XH;
-
-
     tempx = tempx<<8;
-
-
     EJEX = tempx + XL;
-
-
-
 
     YL = ACELEROMETRO_R(DY0);
     YH = ACELEROMETRO_R(DY1);
-
     tempy= YH;
-
-
     tempy = tempy<<8;
-
-
     EJEY = tempy + YL;
 
     ZL = ACELEROMETRO_R(DZ0);
     ZH = ACELEROMETRO_R(DZ1);
-
     tempz= ZH;
-
-
     tempz = tempz<<8;
-
-
     EJEZ = tempz + ZL;
-}
-
-void EJEX_TO_CHARS(void) {
-
-    X0 = ASCII(XH & 0b00001111);
-    X1 = ASCII((XH & 0b11110000) >> 4);
-    X2 = ASCII(XL & 0b00001111);
-    X3 = ASCII((XL & 0b11110000) >> 4);
-
 }

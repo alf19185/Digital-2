@@ -309,13 +309,6 @@ const static unsigned int dpowers[] = {1, 10, 100, 1000, 10000,
 
 
         };
-
-
-const static unsigned int hexpowers[] = {1, 0x10, 0x100, 0x1000,
-
-
-
-       };
 # 463 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
 int
 # 477 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
@@ -366,22 +359,13 @@ printf(const char * f, ...)
   case 'd':
   case 'i':
    break;
-# 744 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
-  case 'x':
-
-
-   flag |= 0x80;
-
-   break;
 # 828 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
   default:
 # 839 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
    continue;
 # 848 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
   }
-# 1277 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
-  if((flag & 0x80) == 0x00)
-
+# 1279 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
   {
 
 
@@ -396,51 +380,10 @@ printf(const char * f, ...)
    }
 
   }
-
-  else
-
-
-
-
-  {
-# 1312 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
-    val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
-  }
-
-
-
-
-
-
-  switch((unsigned char)(flag & 0x80)) {
-
-
-
-
-  case 0x00:
-
-
-
-
-
+# 1331 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
    for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
     if(val < dpowers[c])
      break;
-
-   break;
-
-
-
-
-  case 0x80:
-
-   for(c = 1 ; c != sizeof hexpowers/sizeof hexpowers[0] ; c++)
-    if(val < hexpowers[c])
-     break;
-
-   break;
-# 1362 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
-  }
 # 1448 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
   {
 # 1464 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
@@ -454,41 +397,11 @@ printf(const char * f, ...)
 
   while(prec--) {
 
-   switch((unsigned char)(flag & 0x80))
+
 
    {
-
-
-
-
-  case 0x00:
-
-
-
-
-
+# 1515 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
     c = (val / dpowers[(unsigned char)prec]) % 10 + '0';
-
-    break;
-
-
-
-
-
-   case 0x80:
-
-   {
-    unsigned char idx = (val / hexpowers[(unsigned char)prec]) & 0xF;
-
-
-
-
-
-    c = "0123456789abcdef"[idx];
-
-   }
-
-    break;
 # 1549 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
    }
    (putch(c) );
