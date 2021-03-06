@@ -40,6 +40,7 @@ int LEDP2 ;
 int LEDP1 ;
 String acelerometro = "15,40,90";
 String Rx_PIC;
+uint8_t LEDS_PIC;
 
 // set up the 'counter' feed
 AdafruitIO_Feed *Ejes = io.feed("Ejes");
@@ -51,6 +52,7 @@ void setup() {
   // start the serial connection
   Serial.begin(9600);
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
+  
   // connect to io.adafruit.com
   
   io.connect();
@@ -83,10 +85,14 @@ void loop() {
   // io.adafruit.com, and processes any incoming data.
   io.run();
   
-  Serial2.write(LEDP1 + 48);
+ /* Serial2.write(LEDP1 + 48);
   Serial2.write(',');
   Serial2.write(LEDP2 + 48);
-  Serial2.write(10);  
+  Serial2.write(10);  */
+
+  LEDS_PIC = (LEDP2 * 2) + LEDP1;
+  Serial2.write(LEDS_PIC + 48 );
+
   
   if (Serial2.available()>0){
   Serial.print("*");  

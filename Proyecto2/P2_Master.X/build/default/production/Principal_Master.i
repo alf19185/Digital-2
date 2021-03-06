@@ -16,7 +16,7 @@
 
 
 #pragma config FOSC = INTRC_CLKOUT
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
@@ -2662,6 +2662,105 @@ extern __bank0 __bit __timeout;
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 30 "Principal_Master.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\__size_t.h" 1 3
+
+
+
+typedef unsigned size_t;
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\__null.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdarg.h" 1 3
+
+
+
+
+
+
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+# 43 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
+struct __prbuf
+{
+ char * ptr;
+ void (* func)(char);
+};
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 1 3
+# 29 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 3
+extern int errno;
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 2 3
+
+
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+# 180 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+# 31 "Principal_Master.c" 2
+
 # 1 "./I2C.h" 1
 # 11 "./I2C.h"
 unsigned short I2C_Master_Read(unsigned short a);
@@ -2671,14 +2770,14 @@ void I2C_Master_Start();
 void I2C_Master_Wait();
 void I2C_Master_Init(const unsigned long c);
 void I2C_Master_Stop(void);
-# 31 "Principal_Master.c" 2
+# 32 "Principal_Master.c" 2
 
 # 1 "./USART.h" 1
 # 11 "./USART.h"
 void CONFIG_USART (void);
 
 uint8_t ASCII(uint8_t aconvertir);
-# 32 "Principal_Master.c" 2
+# 33 "Principal_Master.c" 2
 
 
 
@@ -2696,12 +2795,17 @@ uint8_t DY1 = 0X35;
 uint8_t DZ0 = 0X36;
 uint8_t DZ1 = 0X37;
 
-signed char XL = 0;
-signed char XH = 0;
-signed char YL = 0;
-signed char YH = 0;
-signed char ZL = 0;
-signed char ZH = 0;
+int EJEX = 0;
+int EJEY = 0;
+int EJEZ = 0;
+
+uint8_t XL = 0;
+uint8_t XH = 0;
+
+uint8_t YL = 0;
+uint8_t YH = 0;
+uint8_t ZL = 0;
+uint8_t ZH = 0;
 
 uint8_t X0 = 0;
 uint8_t X1 = 0;
@@ -2729,7 +2833,8 @@ uint8_t variable = 0;
 
 uint8_t a = 0;
 uint8_t b = 0;
-
+uint8_t c = 0;
+uint16_t contador=0;
 uint8_t LED1=0;
 uint8_t LED2=0;
 uint8_t ENTER=0;
@@ -2750,6 +2855,8 @@ void LEER_VALORES(void);
 uint8_t TX(void);
 
 void LUCES (void);
+
+
 void EJEX_TO_CHARS(void);
 
 void EJEY_TO_CHARS(void);
@@ -2761,34 +2868,70 @@ void EJEs_TO_CHARS(void);
 float ACELEROMETRO_AX(void);
 
 
+void putch(char data){
+
+
+    while (TXIF == 0) {}
+    TXREG = data;
+
+
+}
+
+
+
 void __attribute__((picinterrupt(("")))) isr(void) {
     (INTCONbits.GIE = 0);
 
-    if (PIR1bits.TXIF == 1) {
-
-        TXREG = TX();
-        PIE1bits.TXIE = 0;
-    }
-
-    if (INTCONbits.T0IF == 1) {
-        TMR0 = 236;
-        a++;
-        INTCONbits.T0IF = 0;
-    }
 
     if (PIR1bits.RCIF == 1) {
 
-       PORTA=RCREG;
-# 176 "Principal_Master.c"
+        c =RCREG;
+
+        if (c & 0x30) {
+
+            if (c & 0x01) {
+                PORTAbits.RA0= 1;
+            }
+            else {
+            PORTAbits.RA0= 0;
+            }
+
+            if (c & 0x02) {
+                PORTAbits.RA1= 1;
+            }
+            else {
+            PORTAbits.RA1= 0;
+            }
+
         }
+
+
+    }
+# 206 "Principal_Master.c"
     (INTCONbits.GIE = 1);
 }
 
 
 void main(void) {
     SETUP();
+    printf("Buenos dias \r");
     I2C_Master_Init(100000);
+
     ACELEROMETRO_CONFIG();
+
+    while (1){
+
+    LEER_VALORES();
+    contador++;
+
+   printf("%d, %d, %d\r\n", EJEX, EJEY, EJEZ);
+
+
+    _delay((unsigned long)((2000)*(4000000/4000.0)));
+
+    printf("c=%x ",c);
+
+    }
 
 
 
@@ -2810,29 +2953,6 @@ void main(void) {
 
 
 
-
-void LUCES (void){
-
-    if (LED1 == 1){
-
-        PORTAbits.RA0 = 1;
-    }
-    else {
-        PORTAbits.RA0 =0;
-    }
-
-     if (LED2 == 1){
-
-        PORTAbits.RA1 = 1;
-    }
-    else {
-        PORTAbits.RA1 =0;
-    }
-
-
-
-
-}
 
 void SETUP(void) {
 
@@ -2866,14 +2986,16 @@ void SETUP(void) {
 
     CONFIG_USART();
 
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.TXIE = 1;
+
+
+
     PIE1bits.RCIE = 1;
     PIR1bits.RCIF =0;
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
 
-    INTCONbits.TMR0IE = 1;
-    INTCONbits.T0IF = 0;
+
+
 
 
 }
@@ -2909,6 +3031,7 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data) {
     I2C_Master_Write(num);
     I2C_Master_Write(data);
     I2C_Master_Stop();
+
 }
 
 uint8_t TX(void) {
@@ -2936,7 +3059,7 @@ uint8_t TX(void) {
             BANDERA_T++;
             return X3;
             break;
-# 369 "Principal_Master.c"
+# 394 "Principal_Master.c"
         case 4:
             PORTAbits.RA0 = 0;
             BANDERA_T = 0;
@@ -2947,39 +3070,48 @@ uint8_t TX(void) {
 }
 
 void LEER_VALORES(void) {
+    int tempx =0;
+    int tempy =0;
+    int tempz =0;
 
     XL = ACELEROMETRO_R(DX0);
+
+
     XH = ACELEROMETRO_R(DX1);
 
-    if (XL < 0) {
-        XL = XL*-1;
-    }
 
-    if (XH < 0) {
-        XH = XH*-1;
-    }
+    tempx= XH;
+
+
+    tempx = tempx<<8;
+
+
+    EJEX = tempx + XL;
+
+
+
 
     YL = ACELEROMETRO_R(DY0);
     YH = ACELEROMETRO_R(DY1);
 
-    if (YL < 0) {
-        YL = YL*-1;
-    }
+    tempy= YH;
 
-    if (YH < 0) {
-        YH = YH*-1;
-    }
+
+    tempy = tempy<<8;
+
+
+    EJEY = tempy + YL;
 
     ZL = ACELEROMETRO_R(DZ0);
     ZH = ACELEROMETRO_R(DZ1);
 
-    if (ZL < 0) {
-        ZL = ZL*-1;
-    }
+    tempz= ZH;
 
-    if (ZH < 0) {
-        ZH = ZH*-1;
-    }
+
+    tempz = tempz<<8;
+
+
+    EJEZ = tempz + ZL;
 }
 
 void EJEX_TO_CHARS(void) {

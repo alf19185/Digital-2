@@ -7,7 +7,7 @@
 
 // CONFIG1
 #pragma config FOSC = INTRC_CLKOUT// Oscillator Selection bits (INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
-#pragma config WDTE = ON        // Watchdog Timer Enable bit (WDT enabled)
+#pragma config WDTE = OFF        // Watchdog Timer Enable bit (WDT enabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = ON       // RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
 #pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
@@ -28,6 +28,7 @@
 #define _XTAL_FREQ 4000000
 #include <xc.h>
 #include <stdint.h>
+#include <stdio.h>
 #include "I2C.h"
 #include "USART.h"
 
@@ -46,12 +47,17 @@ uint8_t DY1 = 0X35; //Direccion Y-Axis Data 1
 uint8_t DZ0 = 0X36; //Direccion Z-Axis Data 0
 uint8_t DZ1 = 0X37; //Direccion Z-Axis Data 1
 
-signed char XL = 0;
-signed char XH = 0;
-signed char YL = 0;
-signed char YH = 0;
-signed char ZL = 0;
-signed char ZH = 0;
+int EJEX = 0;
+int EJEY = 0;
+int EJEZ = 0;
+
+uint8_t XL = 0;
+uint8_t XH = 0;
+
+uint8_t YL = 0;
+uint8_t YH = 0;
+uint8_t ZL = 0;
+uint8_t ZH = 0;
 
 uint8_t X0 = 0;
 uint8_t X1 = 0;
@@ -79,7 +85,8 @@ uint8_t variable = 0;
 
 uint8_t a = 0;
 uint8_t b = 0;
-
+uint8_t c = 0;
+uint16_t contador=0;
 uint8_t LED1=0;
 uint8_t LED2=0;
 uint8_t ENTER=0;
@@ -100,6 +107,8 @@ void LEER_VALORES(void);
 uint8_t TX(void);
 
 void LUCES (void);
+
+
 void EJEX_TO_CHARS(void);
 
 void EJEY_TO_CHARS(void);
@@ -109,27 +118,47 @@ void EJEZ_TO_CHARS(void);
 void EJEs_TO_CHARS(void);
 
 float ACELEROMETRO_AX(void);
+
+//Definiendo puerto serial para terminal debug
+void putch(char data){
+
+    
+    while (TXIF == 0) {}
+    TXREG = data;
+   
+    
+}
+
 //****************************INTERRUPCIONES*********************************
 
 void __interrupt() isr(void) {
     di();
 
-    if (PIR1bits.TXIF == 1) { //Interrupción para transmitir
-
-        TXREG = TX();
-        PIE1bits.TXIE = 0;
-    }
-
-    if (INTCONbits.T0IF == 1) { //Interrupción para transmitir
-        TMR0 = 236; //5mS
-        a++;
-        INTCONbits.T0IF = 0;
-    }
     
     if (PIR1bits.RCIF == 1) { 
         
-       PORTA=RCREG;
+        c =RCREG;
+        
+        if (c & 0x30)  {
+            
+            if (c & 0x01) {
+                PORTAbits.RA0= 1;  
+            }
+            else {
+            PORTAbits.RA0= 0; 
+            }
+            
+            if (c & 0x02) {
+                PORTAbits.RA1= 1;  
+            }
+            else {
+            PORTAbits.RA1= 0; 
+            }     
+            
+        }
+          
          
+    }
          
        /*   switch (FLAG_RC){
             case 0:
@@ -173,17 +202,33 @@ void __interrupt() isr(void) {
             LED2 = 0;
             ENTER = 0;
         } */ 
-        }
+        
     ei();
 }
 //****************************MAIN*******************************************
 
 void main(void) {
     SETUP();
+    printf("Buenos dias \r");
     I2C_Master_Init(100000);
+    
     ACELEROMETRO_CONFIG();
-  
+     
+    while (1){
+        
+    LEER_VALORES();    
+    contador++;
+    
+   printf("%d, %d, %d\r\n", EJEX, EJEY, EJEZ);
 
+   
+    __delay_ms (2000);
+    
+    printf("c=%x ",c);
+    
+    }
+    
+  
     //***LOOP****    
     while (1) {
 
@@ -203,29 +248,6 @@ void main(void) {
 //******************************SUBRUTINAS***********************************
 
 //Configuraciones Generales
-
-void LUCES (void){
-    
-    if (LED1 == 1){
-        
-        PORTAbits.RA0 = 1;
-    }
-    else {
-        PORTAbits.RA0 =0;
-    }
-    
-     if (LED2 == 1){
-        
-        PORTAbits.RA1 = 1;
-    }
-    else {
-        PORTAbits.RA1 =0;
-    }
-    
-    
-
-
-}
 
 void SETUP(void) {
 
@@ -259,14 +281,16 @@ void SETUP(void) {
     
     CONFIG_USART();
 
-    INTCONbits.GIE = 1; //Interrupcion TX 
-    INTCONbits.PEIE = 1;
-    PIE1bits.TXIE = 1;
+     
+    
+  //  PIE1bits.TXIE = 1;
     PIE1bits.RCIE = 1;
     PIR1bits.RCIF =0; 
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1; //Interrupcion TX
     
-    INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
-    INTCONbits.T0IF = 0; //limpiar bandera del timer0
+//    INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
+//    INTCONbits.T0IF = 0; //limpiar bandera del timer0
 
 
 }
@@ -302,6 +326,7 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data) {
     I2C_Master_Write(num);
     I2C_Master_Write(data);
     I2C_Master_Stop();
+    
 }
 
 uint8_t TX(void) {
@@ -376,39 +401,48 @@ uint8_t TX(void) {
 }
 
 void LEER_VALORES(void) {
-
+    int tempx =0;
+    int tempy =0;
+    int tempz =0;
+    
     XL = ACELEROMETRO_R(DX0);
+   // printf("XL = %x ", XL);
+    
     XH = ACELEROMETRO_R(DX1);
-
-    if (XL < 0) {
-        XL = XL*-1;
-    }
-
-    if (XH < 0) {
-        XH = XH*-1;
-    }
+  //  printf("XH = %x ", XH);
+    
+    tempx= XH;
+   // printf("tempx = %d ", tempx);
+    
+    tempx = tempx<<8;
+   // printf("tempx Shift = %d ", tempx);
+    
+    EJEX = tempx + XL;
+   // printf("EJEX = %d ", EJEX);
+    
+   
 
     YL = ACELEROMETRO_R(DY0);
     YH = ACELEROMETRO_R(DY1);
-
-    if (YL < 0) {
-        YL = YL*-1;
-    }
-
-    if (YH < 0) {
-        YH = YH*-1;
-    }
+    
+    tempy= YH;
+   // printf("tempx = %d ", tempx);
+    
+    tempy = tempy<<8;
+   // printf("tempx Shift = %d ", tempx);
+    
+    EJEY = tempy + YL;
 
     ZL = ACELEROMETRO_R(DZ0);
     ZH = ACELEROMETRO_R(DZ1);
-
-    if (ZL < 0) {
-        ZL = ZL*-1;
-    }
-
-    if (ZH < 0) {
-        ZH = ZH*-1;
-    }
+    
+    tempz= ZH;
+   // printf("tempx = %d ", tempx);
+    
+    tempz = tempz<<8;
+   // printf("tempx Shift = %d ", tempx);
+    
+    EJEZ = tempz + ZL;
 }
 
 void EJEX_TO_CHARS(void) {
