@@ -100,9 +100,7 @@ void loop() {
   Serial.print("RX PIC: ");
   Serial.print(Rx_PIC);
   acelerometro = Rx_PIC;
-  //    Serial2.write(0X48);
-  //  Serial2.write(0X48);
-  //  Serial2.write(10);
+ 
     }
 
 
@@ -125,6 +123,7 @@ void loop() {
 // this function is called whenever a 'counter' message
 // is received from Adafruit IO. it was attached to
 // the counter feed in the setup() function above.
+
 void handleMessage_1(AdafruitIO_Data *data) {
   String LED1 = data->toString();
   Serial.println("LED1");
