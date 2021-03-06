@@ -2691,32 +2691,53 @@ uint8_t P_CTL = 0X2D;
 uint8_t D_FRMT = 0X31;
 uint8_t DX0 = 0X32;
 uint8_t DX1 = 0X33;
-uint8_t DY0= 0X34;
+uint8_t DY0 = 0X34;
 uint8_t DY1 = 0X35;
 uint8_t DZ0 = 0X36;
 uint8_t DZ1 = 0X37;
-uint8_t XL = 0;
-uint8_t XH = 0;
-uint8_t YL = 0;
-uint8_t YH = 0;
-uint8_t ZL = 0;
-uint8_t ZH = 0;
-uint8_t X = 0;
-uint8_t Z = 0;
-uint8_t Y = 0;
-uint8_t X_units = 0;
-uint8_t X_decs = 0;
-uint8_t X_cents = 0;
-uint8_t Y_units = 0;
-uint8_t Y_decs = 0;
-uint8_t Y_cents = 0;
-uint8_t Z_units = 0;
-uint8_t Z_decs = 0;
-uint8_t Z_cents = 0;
+
+signed char XL = 0;
+signed char XH = 0;
+signed char YL = 0;
+signed char YH = 0;
+signed char ZL = 0;
+signed char ZH = 0;
+
+uint8_t X0 = 0;
+uint8_t X1 = 0;
+uint8_t X2 = 0;
+uint8_t X3 = 0;
+uint8_t Y0 = 0;
+uint8_t Y1 = 0;
+uint8_t Y2 = 0;
+uint8_t Y3 = 0;
+uint8_t Z0 = 0;
+
+uint8_t Z1 = 0;
+uint8_t Z2 = 0;
+uint8_t Z3 = 0;
+uint8_t X_1 = 0;
+uint8_t Z_1 = 0;
+uint8_t Y_1 = 0;
+uint8_t X_U = 0;
+uint8_t X_D = 0;
+uint8_t Y_U = 0;
+uint8_t Y_D = 0;
+uint8_t Z_U = 0;
+uint8_t Z_D = 0;
+uint8_t variable = 0;
+
+uint8_t a = 0;
+uint8_t b = 0;
+
+uint8_t LED1=0;
+uint8_t LED2=0;
+uint8_t ENTER=0;
+uint8_t FLAG_RC;
 
 
 
-void SETUP (void);
+void SETUP(void);
 
 void ACELEROMETRO_CONFIG(void);
 
@@ -2724,55 +2745,107 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data);
 
 unsigned short ACELEROMETRO_R(uint8_t num);
 
-void LEER_VALORES (void);
+void LEER_VALORES(void);
 
-uint8_t TX (void);
+uint8_t TX(void);
 
+void LUCES (void);
 void EJEX_TO_CHARS(void);
 
 void EJEY_TO_CHARS(void);
 
 void EJEZ_TO_CHARS(void);
 
+void EJEs_TO_CHARS(void);
+
 float ACELEROMETRO_AX(void);
 
-void __attribute__((picinterrupt(("")))) isr(void) {
- (INTCONbits.GIE = 0);
 
-    if(PIR1bits.TXIF == 1){
-        PIR1bits.TXIF = 0;
+void __attribute__((picinterrupt(("")))) isr(void) {
+    (INTCONbits.GIE = 0);
+
+    if (PIR1bits.TXIF == 1) {
+
         TXREG = TX();
+        PIE1bits.TXIE = 0;
     }
 
-  (INTCONbits.GIE = 1);
+    if (INTCONbits.T0IF == 1) {
+        TMR0 = 236;
+        a++;
+        INTCONbits.T0IF = 0;
+    }
+
+    if (PIR1bits.RCIF == 1) {
+
+       PORTA=RCREG;
+# 176 "Principal_Master.c"
+        }
+    (INTCONbits.GIE = 1);
 }
 
 
 void main(void) {
     SETUP();
-    CONFIG_USART();
-
     I2C_Master_Init(100000);
     ACELEROMETRO_CONFIG();
-    PORTA = 255;
 
 
-    while(1){
 
-       LEER_VALORES();
-  }
+    while (1) {
 
-    return;
+        if (a > 10) {
+            a = 0;
+            PIE1bits.TXIE = 1;
+        }
+
+
+        LEER_VALORES();
+        EJEX_TO_CHARS();
+
+    }
+
 }
 
 
 
 
-void SETUP (void){
+
+void LUCES (void){
+
+    if (LED1 == 1){
+
+        PORTAbits.RA0 = 1;
+    }
+    else {
+        PORTAbits.RA0 =0;
+    }
+
+     if (LED2 == 1){
+
+        PORTAbits.RA1 = 1;
+    }
+    else {
+        PORTAbits.RA1 =0;
+    }
+
+
+
+
+}
+
+void SETUP(void) {
+
+
+    OPTION_REG = 0b11010111;
+
+
+
+
 
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 1;
+    OSCCONbits.IRCF0 = 0;
 
     PORTA = 0;
     PORTB = 0;
@@ -2782,38 +2855,46 @@ void SETUP (void){
 
     TRISA = 0;
     TRISB = 0;
-    TRISC = 0b00010000;
+    TRISC = 0;
     TRISD = 0;
     TRISE = 0;
 
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
+
 
     ANSEL = 0;
     ANSELH = 0;
 
+    CONFIG_USART();
+
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.TXIE = 1;
+    PIE1bits.RCIE = 1;
+    PIR1bits.RCIF =0;
+
+    INTCONbits.TMR0IE = 1;
+    INTCONbits.T0IF = 0;
+
+
 }
 
-void ACELEROMETRO_CONFIG(void){
+void ACELEROMETRO_CONFIG(void) {
 
     ACELEROMETRO_W(D_FRMT, 0x0B);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
+    _delay((unsigned long)((5)*(4000000/4000.0)));
 
     ACELEROMETRO_W(P_CTL, 0x08);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
+    _delay((unsigned long)((5)*(4000000/4000.0)));
 }
 
-unsigned short ACELEROMETRO_R(uint8_t num){
+unsigned short ACELEROMETRO_R(uint8_t num) {
 
     unsigned short LECTURA;
 
     I2C_Master_Start();
     I2C_Master_Write(WRITE);
     I2C_Master_Write(num);
-    I2C_Master_Start();
+    I2C_Master_RepeatedStart();
     I2C_Master_Write(READ);
     LECTURA = I2C_Master_Read(0);
     I2C_Master_Stop();
@@ -2821,7 +2902,7 @@ unsigned short ACELEROMETRO_R(uint8_t num){
     return LECTURA;
 }
 
-void ACELEROMETRO_W(uint8_t num, uint8_t data){
+void ACELEROMETRO_W(uint8_t num, uint8_t data) {
 
     I2C_Master_Start();
     I2C_Master_Write(WRITE);
@@ -2830,66 +2911,82 @@ void ACELEROMETRO_W(uint8_t num, uint8_t data){
     I2C_Master_Stop();
 }
 
-uint8_t TX(void){
+uint8_t TX(void) {
 
-    switch(BANDERA_T){
+    switch (BANDERA_T) {
 
         case 0:
-
             BANDERA_T++;
-            return "1";
-
+            return X0;
             break;
         case 1:
-            BANDERA_T++;
 
-         return ",";
+            BANDERA_T++;
+            return X1;
+
             break;
-# 240 "Principal_Master.c"
+        case 2:
+
+            BANDERA_T++;
+            return X2;
+
+            break;
+        case 3:
+
+            BANDERA_T++;
+            return X3;
+            break;
+# 369 "Principal_Master.c"
+        case 4:
+            PORTAbits.RA0 = 0;
+            BANDERA_T = 0;
+            b++;
+            return 10;
+            break;
     }
 }
 
-void LEER_VALORES (void){
+void LEER_VALORES(void) {
 
     XL = ACELEROMETRO_R(DX0);
     XH = ACELEROMETRO_R(DX1);
-    X = ((YH<<8) | YL) ;
+
+    if (XL < 0) {
+        XL = XL*-1;
+    }
+
+    if (XH < 0) {
+        XH = XH*-1;
+    }
 
     YL = ACELEROMETRO_R(DY0);
     YH = ACELEROMETRO_R(DY1);
-    Y = ((YH<<8) | YL) ;
+
+    if (YL < 0) {
+        YL = YL*-1;
+    }
+
+    if (YH < 0) {
+        YH = YH*-1;
+    }
 
     ZL = ACELEROMETRO_R(DZ0);
     ZH = ACELEROMETRO_R(DZ1);
-    Z = ((ZH<<8) | ZL) ;
+
+    if (ZL < 0) {
+        ZL = ZL*-1;
+    }
+
+    if (ZH < 0) {
+        ZH = ZH*-1;
+    }
 }
 
-void EJEX_TO_CHARS (void){
+void EJEX_TO_CHARS(void) {
 
-    uint8_t valor = X;
-    X_units = valor %10 ;
-    valor = valor/10;
-    X_decs = valor %10 ;
-    X_cents = valor /10 ;
+    X0 = ASCII(XH & 0b00001111);
+    X1 = ASCII((XH & 0b11110000) >> 4);
+    X2 = ASCII(XL & 0b00001111);
+    X3 = ASCII((XL & 0b11110000) >> 4);
 
-    }
-
-void EJEY_TO_CHARS (void){
-
-    uint8_t valor = X;
-    Y_units = valor %10 ;
-    valor = valor/10;
-    Y_decs = valor %10 ;
-    Y_cents = valor /10 ;
-
-    }
-
-void EJEZ_TO_CHARS (void){
-
-    uint8_t valor = X;
-    Z_units = valor %10 ;
-    valor = valor/10;
-    Z_decs = valor %10 ;
-    Z_cents = valor /10 ;
-
-    }
+}

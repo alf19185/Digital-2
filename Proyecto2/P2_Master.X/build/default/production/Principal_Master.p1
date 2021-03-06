@@ -30,29 +30,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1134
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1134: extern volatile unsigned char TXREG __attribute__((address(0x019)));
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"79 Principal_Master.c
-[; ;Principal_Master.c: 79: uint8_t TX (void);
+"100 Principal_Master.c
+[; ;Principal_Master.c: 100: uint8_t TX(void);
 [v _TX `(uc ~T0 @X0 0 ef ]
+"1709 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1709:     struct {
+[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1708
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1708: typedef union {
+[u S62 `S63 1 ]
+[n S62 . . ]
+"1719
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1719: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
+"60
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 60: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"167
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 167: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"1141
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1141: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 [p mainexit ]
-"69
-[; ;Principal_Master.c: 69: void SETUP (void);
+"90 Principal_Master.c
+[; ;Principal_Master.c: 90: void SETUP(void);
 [v _SETUP `(v ~T0 @X0 0 ef ]
-"11 ./USART.h
-[; ;./USART.h: 11: void CONFIG_USART (void);
-[v _CONFIG_USART `(v ~T0 @X0 0 ef ]
 "16 ./I2C.h
 [; ;./I2C.h: 16: void I2C_Master_Init(const unsigned long c);
 [v _I2C_Master_Init `(v ~T0 @X0 0 ef1`Cul ]
-"71 Principal_Master.c
-[; ;Principal_Master.c: 71: void ACELEROMETRO_CONFIG(void);
+"92 Principal_Master.c
+[; ;Principal_Master.c: 92: void ACELEROMETRO_CONFIG(void);
 [v _ACELEROMETRO_CONFIG `(v ~T0 @X0 0 ef ]
-"167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 167: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"77 Principal_Master.c
-[; ;Principal_Master.c: 77: void LEER_VALORES (void);
+"98
+[; ;Principal_Master.c: 98: void LEER_VALORES(void);
 [v _LEER_VALORES `(v ~T0 @X0 0 ef ]
-"1869 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+"103
+[; ;Principal_Master.c: 103: void EJEX_TO_CHARS(void);
+[v _EJEX_TO_CHARS `(v ~T0 @X0 0 ef ]
+"173 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 173:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"172
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 172: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"184
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 184: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
+"1347
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1347: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"1869
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1869:     struct {
 [s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S70 . SCS LTS HTS OSTS IRCF ]
@@ -94,36 +125,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1665
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1665: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"1547
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1547:     struct {
-[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"1546
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1546: typedef union {
-[u S56 `S57 1 ]
-[n S56 . . ]
-"1558
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1558: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
-[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "3388
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3388: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3450
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3450: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"1709
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1709:     struct {
-[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
-"1708
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1708: typedef union {
-[u S62 `S63 1 ]
-[n S62 . . ]
-"1719
-[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1719: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
-[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-"73 Principal_Master.c
-[; ;Principal_Master.c: 73: void ACELEROMETRO_W(uint8_t num, uint8_t data);
+"11 ./USART.h
+[; ;./USART.h: 11: void CONFIG_USART (void);
+[v _CONFIG_USART `(v ~T0 @X0 0 ef ]
+"94 Principal_Master.c
+[; ;Principal_Master.c: 94: void ACELEROMETRO_W(uint8_t num, uint8_t data);
 [v _ACELEROMETRO_W `(v ~T0 @X0 0 ef2`uc`uc ]
 [v F1272 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
@@ -135,12 +147,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;./I2C.h: 12: void I2C_Master_Write(unsigned d);
 [v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
+"13
+[; ;./I2C.h: 13: void I2C_Master_RepeatedStart();
+[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 e? ]
 "11
 [; ;./I2C.h: 11: unsigned short I2C_Master_Read(unsigned short a);
 [v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]
 "17
 [; ;./I2C.h: 17: void I2C_Master_Stop(void);
 [v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
+"13 ./USART.h
+[; ;./USART.h: 13: uint8_t ASCII(uint8_t aconvertir);
+[v _ASCII `(uc ~T0 @X0 0 ef1`uc ]
 "9 Principal_Master.c
 [p x FOSC  =  INTRC_CLKOUT ]
 "10
@@ -448,7 +466,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 51 `i `uc
 ]
 "44
-[; ;Principal_Master.c: 44: uint8_t DY0= 0X34;
+[; ;Principal_Master.c: 44: uint8_t DY0 = 0X34;
 [v _DY0 `uc ~T0 @X0 1 e ]
 [i _DY0
 -> -> 52 `i `uc
@@ -471,508 +489,750 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _DZ1
 -> -> 55 `i `uc
 ]
-"48
-[; ;Principal_Master.c: 48: uint8_t XL = 0;
-[v _XL `uc ~T0 @X0 1 e ]
-[i _XL
--> -> 0 `i `uc
-]
 "49
-[; ;Principal_Master.c: 49: uint8_t XH = 0;
-[v _XH `uc ~T0 @X0 1 e ]
-[i _XH
--> -> 0 `i `uc
+[; ;Principal_Master.c: 49: signed char XL = 0;
+[v _XL `c ~T0 @X0 1 e ]
+[i _XL
+-> -> 0 `i `c
 ]
 "50
-[; ;Principal_Master.c: 50: uint8_t YL = 0;
-[v _YL `uc ~T0 @X0 1 e ]
-[i _YL
--> -> 0 `i `uc
+[; ;Principal_Master.c: 50: signed char XH = 0;
+[v _XH `c ~T0 @X0 1 e ]
+[i _XH
+-> -> 0 `i `c
 ]
 "51
-[; ;Principal_Master.c: 51: uint8_t YH = 0;
-[v _YH `uc ~T0 @X0 1 e ]
-[i _YH
--> -> 0 `i `uc
+[; ;Principal_Master.c: 51: signed char YL = 0;
+[v _YL `c ~T0 @X0 1 e ]
+[i _YL
+-> -> 0 `i `c
 ]
 "52
-[; ;Principal_Master.c: 52: uint8_t ZL = 0;
-[v _ZL `uc ~T0 @X0 1 e ]
-[i _ZL
--> -> 0 `i `uc
+[; ;Principal_Master.c: 52: signed char YH = 0;
+[v _YH `c ~T0 @X0 1 e ]
+[i _YH
+-> -> 0 `i `c
 ]
 "53
-[; ;Principal_Master.c: 53: uint8_t ZH = 0;
-[v _ZH `uc ~T0 @X0 1 e ]
-[i _ZH
--> -> 0 `i `uc
+[; ;Principal_Master.c: 53: signed char ZL = 0;
+[v _ZL `c ~T0 @X0 1 e ]
+[i _ZL
+-> -> 0 `i `c
 ]
 "54
-[; ;Principal_Master.c: 54: uint8_t X = 0;
-[v _X `uc ~T0 @X0 1 e ]
-[i _X
--> -> 0 `i `uc
-]
-"55
-[; ;Principal_Master.c: 55: uint8_t Z = 0;
-[v _Z `uc ~T0 @X0 1 e ]
-[i _Z
--> -> 0 `i `uc
+[; ;Principal_Master.c: 54: signed char ZH = 0;
+[v _ZH `c ~T0 @X0 1 e ]
+[i _ZH
+-> -> 0 `i `c
 ]
 "56
-[; ;Principal_Master.c: 56: uint8_t Y = 0;
-[v _Y `uc ~T0 @X0 1 e ]
-[i _Y
+[; ;Principal_Master.c: 56: uint8_t X0 = 0;
+[v _X0 `uc ~T0 @X0 1 e ]
+[i _X0
 -> -> 0 `i `uc
 ]
 "57
-[; ;Principal_Master.c: 57: uint8_t X_units = 0;
-[v _X_units `uc ~T0 @X0 1 e ]
-[i _X_units
+[; ;Principal_Master.c: 57: uint8_t X1 = 0;
+[v _X1 `uc ~T0 @X0 1 e ]
+[i _X1
 -> -> 0 `i `uc
 ]
 "58
-[; ;Principal_Master.c: 58: uint8_t X_decs = 0;
-[v _X_decs `uc ~T0 @X0 1 e ]
-[i _X_decs
+[; ;Principal_Master.c: 58: uint8_t X2 = 0;
+[v _X2 `uc ~T0 @X0 1 e ]
+[i _X2
 -> -> 0 `i `uc
 ]
 "59
-[; ;Principal_Master.c: 59: uint8_t X_cents = 0;
-[v _X_cents `uc ~T0 @X0 1 e ]
-[i _X_cents
+[; ;Principal_Master.c: 59: uint8_t X3 = 0;
+[v _X3 `uc ~T0 @X0 1 e ]
+[i _X3
 -> -> 0 `i `uc
 ]
 "60
-[; ;Principal_Master.c: 60: uint8_t Y_units = 0;
-[v _Y_units `uc ~T0 @X0 1 e ]
-[i _Y_units
+[; ;Principal_Master.c: 60: uint8_t Y0 = 0;
+[v _Y0 `uc ~T0 @X0 1 e ]
+[i _Y0
 -> -> 0 `i `uc
 ]
 "61
-[; ;Principal_Master.c: 61: uint8_t Y_decs = 0;
-[v _Y_decs `uc ~T0 @X0 1 e ]
-[i _Y_decs
+[; ;Principal_Master.c: 61: uint8_t Y1 = 0;
+[v _Y1 `uc ~T0 @X0 1 e ]
+[i _Y1
 -> -> 0 `i `uc
 ]
 "62
-[; ;Principal_Master.c: 62: uint8_t Y_cents = 0;
-[v _Y_cents `uc ~T0 @X0 1 e ]
-[i _Y_cents
+[; ;Principal_Master.c: 62: uint8_t Y2 = 0;
+[v _Y2 `uc ~T0 @X0 1 e ]
+[i _Y2
 -> -> 0 `i `uc
 ]
 "63
-[; ;Principal_Master.c: 63: uint8_t Z_units = 0;
-[v _Z_units `uc ~T0 @X0 1 e ]
-[i _Z_units
+[; ;Principal_Master.c: 63: uint8_t Y3 = 0;
+[v _Y3 `uc ~T0 @X0 1 e ]
+[i _Y3
 -> -> 0 `i `uc
 ]
 "64
-[; ;Principal_Master.c: 64: uint8_t Z_decs = 0;
-[v _Z_decs `uc ~T0 @X0 1 e ]
-[i _Z_decs
+[; ;Principal_Master.c: 64: uint8_t Z0 = 0;
+[v _Z0 `uc ~T0 @X0 1 e ]
+[i _Z0
 -> -> 0 `i `uc
 ]
-"65
-[; ;Principal_Master.c: 65: uint8_t Z_cents = 0;
-[v _Z_cents `uc ~T0 @X0 1 e ]
-[i _Z_cents
+"66
+[; ;Principal_Master.c: 66: uint8_t Z1 = 0;
+[v _Z1 `uc ~T0 @X0 1 e ]
+[i _Z1
 -> -> 0 `i `uc
 ]
+"67
+[; ;Principal_Master.c: 67: uint8_t Z2 = 0;
+[v _Z2 `uc ~T0 @X0 1 e ]
+[i _Z2
+-> -> 0 `i `uc
+]
+"68
+[; ;Principal_Master.c: 68: uint8_t Z3 = 0;
+[v _Z3 `uc ~T0 @X0 1 e ]
+[i _Z3
+-> -> 0 `i `uc
+]
+"69
+[; ;Principal_Master.c: 69: uint8_t X_1 = 0;
+[v _X_1 `uc ~T0 @X0 1 e ]
+[i _X_1
+-> -> 0 `i `uc
+]
+"70
+[; ;Principal_Master.c: 70: uint8_t Z_1 = 0;
+[v _Z_1 `uc ~T0 @X0 1 e ]
+[i _Z_1
+-> -> 0 `i `uc
+]
+"71
+[; ;Principal_Master.c: 71: uint8_t Y_1 = 0;
+[v _Y_1 `uc ~T0 @X0 1 e ]
+[i _Y_1
+-> -> 0 `i `uc
+]
+"72
+[; ;Principal_Master.c: 72: uint8_t X_U = 0;
+[v _X_U `uc ~T0 @X0 1 e ]
+[i _X_U
+-> -> 0 `i `uc
+]
+"73
+[; ;Principal_Master.c: 73: uint8_t X_D = 0;
+[v _X_D `uc ~T0 @X0 1 e ]
+[i _X_D
+-> -> 0 `i `uc
+]
+"74
+[; ;Principal_Master.c: 74: uint8_t Y_U = 0;
+[v _Y_U `uc ~T0 @X0 1 e ]
+[i _Y_U
+-> -> 0 `i `uc
+]
+"75
+[; ;Principal_Master.c: 75: uint8_t Y_D = 0;
+[v _Y_D `uc ~T0 @X0 1 e ]
+[i _Y_D
+-> -> 0 `i `uc
+]
+"76
+[; ;Principal_Master.c: 76: uint8_t Z_U = 0;
+[v _Z_U `uc ~T0 @X0 1 e ]
+[i _Z_U
+-> -> 0 `i `uc
+]
+"77
+[; ;Principal_Master.c: 77: uint8_t Z_D = 0;
+[v _Z_D `uc ~T0 @X0 1 e ]
+[i _Z_D
+-> -> 0 `i `uc
+]
+"78
+[; ;Principal_Master.c: 78: uint8_t variable = 0;
+[v _variable `uc ~T0 @X0 1 e ]
+[i _variable
+-> -> 0 `i `uc
+]
+"80
+[; ;Principal_Master.c: 80: uint8_t a = 0;
+[v _a `uc ~T0 @X0 1 e ]
+[i _a
+-> -> 0 `i `uc
+]
+"81
+[; ;Principal_Master.c: 81: uint8_t b = 0;
+[v _b `uc ~T0 @X0 1 e ]
+[i _b
+-> -> 0 `i `uc
+]
+"83
+[; ;Principal_Master.c: 83: uint8_t LED1=0;
+[v _LED1 `uc ~T0 @X0 1 e ]
+[i _LED1
+-> -> 0 `i `uc
+]
+"84
+[; ;Principal_Master.c: 84: uint8_t LED2=0;
+[v _LED2 `uc ~T0 @X0 1 e ]
+[i _LED2
+-> -> 0 `i `uc
+]
+"85
+[; ;Principal_Master.c: 85: uint8_t ENTER=0;
+[v _ENTER `uc ~T0 @X0 1 e ]
+[i _ENTER
+-> -> 0 `i `uc
+]
+"86
+[; ;Principal_Master.c: 86: uint8_t FLAG_RC;
+[v _FLAG_RC `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"89
-[; ;Principal_Master.c: 89: void __attribute__((picinterrupt(("")))) isr(void) {
+"114
+[; ;Principal_Master.c: 114: void __attribute__((picinterrupt(("")))) isr(void) {
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"90
-[; ;Principal_Master.c: 90:  (INTCONbits.GIE = 0);
+"115
+[; ;Principal_Master.c: 115:     (INTCONbits.GIE = 0);
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"92
-[; ;Principal_Master.c: 92:     if(PIR1bits.TXIF == 1){
+"117
+[; ;Principal_Master.c: 117:     if (PIR1bits.TXIF == 1) {
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 139  ]
 {
-"93
-[; ;Principal_Master.c: 93:         PIR1bits.TXIF = 0;
-[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
-"94
-[; ;Principal_Master.c: 94:         TXREG = TX();
+"119
+[; ;Principal_Master.c: 119:         TXREG = TX();
 [e = _TXREG ( _TX ..  ]
-"95
-[; ;Principal_Master.c: 95:     }
+"120
+[; ;Principal_Master.c: 120:         PIE1bits.TXIE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"121
+[; ;Principal_Master.c: 121:     }
 }
 [e :U 139 ]
-"97
-[; ;Principal_Master.c: 97:   (INTCONbits.GIE = 1);
+"123
+[; ;Principal_Master.c: 123:     if (INTCONbits.T0IF == 1) {
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 140  ]
+{
+"124
+[; ;Principal_Master.c: 124:         TMR0 = 236;
+[e = _TMR0 -> -> 236 `i `uc ]
+"125
+[; ;Principal_Master.c: 125:         a++;
+[e ++ _a -> -> 1 `i `uc ]
+"126
+[; ;Principal_Master.c: 126:         INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"127
+[; ;Principal_Master.c: 127:     }
+}
+[e :U 140 ]
+"129
+[; ;Principal_Master.c: 129:     if (PIR1bits.RCIF == 1) {
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 141  ]
+{
+"131
+[; ;Principal_Master.c: 131:        PORTA=RCREG;
+[e = _PORTA _RCREG ]
+"176
+[; ;Principal_Master.c: 176:         }
+}
+[e :U 141 ]
+"177
+[; ;Principal_Master.c: 177:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"98
-[; ;Principal_Master.c: 98: }
+"178
+[; ;Principal_Master.c: 178: }
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"101
-[; ;Principal_Master.c: 101: void main(void) {
+"181
+[; ;Principal_Master.c: 181: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"102
-[; ;Principal_Master.c: 102:     SETUP();
+"182
+[; ;Principal_Master.c: 182:     SETUP();
 [e ( _SETUP ..  ]
-"103
-[; ;Principal_Master.c: 103:     CONFIG_USART();
-[e ( _CONFIG_USART ..  ]
-"105
-[; ;Principal_Master.c: 105:     I2C_Master_Init(100000);
+"183
+[; ;Principal_Master.c: 183:     I2C_Master_Init(100000);
 [e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"106
-[; ;Principal_Master.c: 106:     ACELEROMETRO_CONFIG();
+"184
+[; ;Principal_Master.c: 184:     ACELEROMETRO_CONFIG();
 [e ( _ACELEROMETRO_CONFIG ..  ]
-"107
-[; ;Principal_Master.c: 107:     PORTA = 255;
-[e = _PORTA -> -> 255 `i `uc ]
-"110
-[; ;Principal_Master.c: 110:     while(1){
-[e :U 142 ]
+"188
+[; ;Principal_Master.c: 188:     while (1) {
+[e :U 144 ]
 {
-"112
-[; ;Principal_Master.c: 112:        LEER_VALORES();
+"190
+[; ;Principal_Master.c: 190:         if (a > 10) {
+[e $ ! > -> _a `i -> 10 `i 146  ]
+{
+"191
+[; ;Principal_Master.c: 191:             a = 0;
+[e = _a -> -> 0 `i `uc ]
+"192
+[; ;Principal_Master.c: 192:             PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"193
+[; ;Principal_Master.c: 193:         }
+}
+[e :U 146 ]
+"196
+[; ;Principal_Master.c: 196:         LEER_VALORES();
 [e ( _LEER_VALORES ..  ]
-"113
-[; ;Principal_Master.c: 113:   }
+"197
+[; ;Principal_Master.c: 197:         EJEX_TO_CHARS();
+[e ( _EJEX_TO_CHARS ..  ]
+"199
+[; ;Principal_Master.c: 199:     }
 }
-[e :U 141 ]
-[e $U 142  ]
 [e :U 143 ]
-"115
-[; ;Principal_Master.c: 115:     return;
-[e $UE 140  ]
-"116
-[; ;Principal_Master.c: 116: }
-[e :UE 140 ]
+[e $U 144  ]
+[e :U 145 ]
+"201
+[; ;Principal_Master.c: 201: }
+[e :UE 142 ]
 }
-"121
-[; ;Principal_Master.c: 121: void SETUP (void){
+"207
+[; ;Principal_Master.c: 207: void LUCES (void){
+[v _LUCES `(v ~T0 @X0 1 ef ]
+{
+[e :U _LUCES ]
+[f ]
+"209
+[; ;Principal_Master.c: 209:     if (LED1 == 1){
+[e $ ! == -> _LED1 `i -> 1 `i 148  ]
+{
+"211
+[; ;Principal_Master.c: 211:         PORTAbits.RA0 = 1;
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+"212
+[; ;Principal_Master.c: 212:     }
+}
+[e $U 149  ]
+"213
+[; ;Principal_Master.c: 213:     else {
+[e :U 148 ]
+{
+"214
+[; ;Principal_Master.c: 214:         PORTAbits.RA0 =0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"215
+[; ;Principal_Master.c: 215:     }
+}
+[e :U 149 ]
+"217
+[; ;Principal_Master.c: 217:      if (LED2 == 1){
+[e $ ! == -> _LED2 `i -> 1 `i 150  ]
+{
+"219
+[; ;Principal_Master.c: 219:         PORTAbits.RA1 = 1;
+[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+"220
+[; ;Principal_Master.c: 220:     }
+}
+[e $U 151  ]
+"221
+[; ;Principal_Master.c: 221:     else {
+[e :U 150 ]
+{
+"222
+[; ;Principal_Master.c: 222:         PORTAbits.RA1 =0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
+"223
+[; ;Principal_Master.c: 223:     }
+}
+[e :U 151 ]
+"228
+[; ;Principal_Master.c: 228: }
+[e :UE 147 ]
+}
+"230
+[; ;Principal_Master.c: 230: void SETUP(void) {
 [v _SETUP `(v ~T0 @X0 1 ef ]
 {
 [e :U _SETUP ]
 [f ]
-"123
-[; ;Principal_Master.c: 123:     OSCCONbits.IRCF2 = 1;
+"233
+[; ;Principal_Master.c: 233:     OPTION_REG = 0b11010111;
+[e = _OPTION_REG -> -> 215 `i `uc ]
+"239
+[; ;Principal_Master.c: 239:     OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"124
-[; ;Principal_Master.c: 124:     OSCCONbits.IRCF1 = 1;
+"240
+[; ;Principal_Master.c: 240:     OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"125
-[; ;Principal_Master.c: 125:     OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"127
-[; ;Principal_Master.c: 127:     PORTA = 0;
+"241
+[; ;Principal_Master.c: 241:     OSCCONbits.IRCF0 = 0;
+[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
+"243
+[; ;Principal_Master.c: 243:     PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"128
-[; ;Principal_Master.c: 128:     PORTB = 0;
+"244
+[; ;Principal_Master.c: 244:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"129
-[; ;Principal_Master.c: 129:     PORTC = 0;
+"245
+[; ;Principal_Master.c: 245:     PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"130
-[; ;Principal_Master.c: 130:     PORTD = 0;
+"246
+[; ;Principal_Master.c: 246:     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"131
-[; ;Principal_Master.c: 131:     PORTE = 0;
+"247
+[; ;Principal_Master.c: 247:     PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"133
-[; ;Principal_Master.c: 133:     TRISA = 0;
+"249
+[; ;Principal_Master.c: 249:     TRISA = 0;
 [e = _TRISA -> -> 0 `i `uc ]
-"134
-[; ;Principal_Master.c: 134:     TRISB = 0;
+"250
+[; ;Principal_Master.c: 250:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"135
-[; ;Principal_Master.c: 135:     TRISC = 0b00010000;
-[e = _TRISC -> -> 16 `i `uc ]
-"136
-[; ;Principal_Master.c: 136:     TRISD = 0;
+"251
+[; ;Principal_Master.c: 251:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"252
+[; ;Principal_Master.c: 252:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"137
-[; ;Principal_Master.c: 137:     TRISE = 0;
+"253
+[; ;Principal_Master.c: 253:     TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"139
-[; ;Principal_Master.c: 139:     TRISCbits.TRISC6 = 0;
-[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"140
-[; ;Principal_Master.c: 140:     TRISCbits.TRISC7 = 1;
-[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"142
-[; ;Principal_Master.c: 142:     ANSEL = 0;
+"257
+[; ;Principal_Master.c: 257:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"143
-[; ;Principal_Master.c: 143:     ANSELH = 0;
+"258
+[; ;Principal_Master.c: 258:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"145
-[; ;Principal_Master.c: 145:     INTCONbits.GIE = 1;
+"260
+[; ;Principal_Master.c: 260:     CONFIG_USART();
+[e ( _CONFIG_USART ..  ]
+"262
+[; ;Principal_Master.c: 262:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"146
-[; ;Principal_Master.c: 146:     INTCONbits.PEIE = 1;
+"263
+[; ;Principal_Master.c: 263:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"147
-[; ;Principal_Master.c: 147:     PIE1bits.TXIE = 1;
+"264
+[; ;Principal_Master.c: 264:     PIE1bits.TXIE = 1;
 [e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-"148
-[; ;Principal_Master.c: 148: }
-[e :UE 144 ]
+"265
+[; ;Principal_Master.c: 265:     PIE1bits.RCIE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"266
+[; ;Principal_Master.c: 266:     PIR1bits.RCIF =0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"268
+[; ;Principal_Master.c: 268:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+"269
+[; ;Principal_Master.c: 269:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"272
+[; ;Principal_Master.c: 272: }
+[e :UE 152 ]
 }
-"150
-[; ;Principal_Master.c: 150: void ACELEROMETRO_CONFIG(void){
+"274
+[; ;Principal_Master.c: 274: void ACELEROMETRO_CONFIG(void) {
 [v _ACELEROMETRO_CONFIG `(v ~T0 @X0 1 ef ]
 {
 [e :U _ACELEROMETRO_CONFIG ]
 [f ]
-"152
-[; ;Principal_Master.c: 152:     ACELEROMETRO_W(D_FRMT, 0x0B);
+"276
+[; ;Principal_Master.c: 276:     ACELEROMETRO_W(D_FRMT, 0x0B);
 [e ( _ACELEROMETRO_W (2 , _D_FRMT -> -> 11 `i `uc ]
-"153
-[; ;Principal_Master.c: 153:     _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"155
-[; ;Principal_Master.c: 155:     ACELEROMETRO_W(P_CTL, 0x08);
+"277
+[; ;Principal_Master.c: 277:     _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"279
+[; ;Principal_Master.c: 279:     ACELEROMETRO_W(P_CTL, 0x08);
 [e ( _ACELEROMETRO_W (2 , _P_CTL -> -> 8 `i `uc ]
-"156
-[; ;Principal_Master.c: 156:     _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"157
-[; ;Principal_Master.c: 157: }
-[e :UE 145 ]
+"280
+[; ;Principal_Master.c: 280:     _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"281
+[; ;Principal_Master.c: 281: }
+[e :UE 153 ]
 }
-"159
-[; ;Principal_Master.c: 159: unsigned short ACELEROMETRO_R(uint8_t num){
+"283
+[; ;Principal_Master.c: 283: unsigned short ACELEROMETRO_R(uint8_t num) {
 [v _ACELEROMETRO_R `(us ~T0 @X0 1 ef1`uc ]
 {
 [e :U _ACELEROMETRO_R ]
 [v _num `uc ~T0 @X0 1 r1 ]
 [f ]
-"161
-[; ;Principal_Master.c: 161:     unsigned short LECTURA;
+"285
+[; ;Principal_Master.c: 285:     unsigned short LECTURA;
 [v _LECTURA `us ~T0 @X0 1 a ]
-"163
-[; ;Principal_Master.c: 163:     I2C_Master_Start();
+"287
+[; ;Principal_Master.c: 287:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"164
-[; ;Principal_Master.c: 164:     I2C_Master_Write(WRITE);
+"288
+[; ;Principal_Master.c: 288:     I2C_Master_Write(WRITE);
 [e ( _I2C_Master_Write (1 -> _WRITE `ui ]
-"165
-[; ;Principal_Master.c: 165:     I2C_Master_Write(num);
+"289
+[; ;Principal_Master.c: 289:     I2C_Master_Write(num);
 [e ( _I2C_Master_Write (1 -> _num `ui ]
-"166
-[; ;Principal_Master.c: 166:     I2C_Master_Start();
-[e ( _I2C_Master_Start ..  ]
-"167
-[; ;Principal_Master.c: 167:     I2C_Master_Write(READ);
+"290
+[; ;Principal_Master.c: 290:     I2C_Master_RepeatedStart();
+[e ( _I2C_Master_RepeatedStart ..  ]
+"291
+[; ;Principal_Master.c: 291:     I2C_Master_Write(READ);
 [e ( _I2C_Master_Write (1 -> _READ `ui ]
-"168
-[; ;Principal_Master.c: 168:     LECTURA = I2C_Master_Read(0);
+"292
+[; ;Principal_Master.c: 292:     LECTURA = I2C_Master_Read(0);
 [e = _LECTURA ( _I2C_Master_Read (1 -> -> 0 `i `us ]
-"169
-[; ;Principal_Master.c: 169:     I2C_Master_Stop();
+"293
+[; ;Principal_Master.c: 293:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"171
-[; ;Principal_Master.c: 171:     return LECTURA;
+"295
+[; ;Principal_Master.c: 295:     return LECTURA;
 [e ) _LECTURA ]
-[e $UE 146  ]
-"172
-[; ;Principal_Master.c: 172: }
-[e :UE 146 ]
+[e $UE 154  ]
+"296
+[; ;Principal_Master.c: 296: }
+[e :UE 154 ]
 }
-"174
-[; ;Principal_Master.c: 174: void ACELEROMETRO_W(uint8_t num, uint8_t data){
+"298
+[; ;Principal_Master.c: 298: void ACELEROMETRO_W(uint8_t num, uint8_t data) {
 [v _ACELEROMETRO_W `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _ACELEROMETRO_W ]
 [v _num `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"176
-[; ;Principal_Master.c: 176:     I2C_Master_Start();
+"300
+[; ;Principal_Master.c: 300:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"177
-[; ;Principal_Master.c: 177:     I2C_Master_Write(WRITE);
+"301
+[; ;Principal_Master.c: 301:     I2C_Master_Write(WRITE);
 [e ( _I2C_Master_Write (1 -> _WRITE `ui ]
-"178
-[; ;Principal_Master.c: 178:     I2C_Master_Write(num);
+"302
+[; ;Principal_Master.c: 302:     I2C_Master_Write(num);
 [e ( _I2C_Master_Write (1 -> _num `ui ]
-"179
-[; ;Principal_Master.c: 179:     I2C_Master_Write(data);
+"303
+[; ;Principal_Master.c: 303:     I2C_Master_Write(data);
 [e ( _I2C_Master_Write (1 -> _data `ui ]
-"180
-[; ;Principal_Master.c: 180:     I2C_Master_Stop();
+"304
+[; ;Principal_Master.c: 304:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"181
-[; ;Principal_Master.c: 181: }
-[e :UE 147 ]
+"305
+[; ;Principal_Master.c: 305: }
+[e :UE 155 ]
 }
-"183
-[; ;Principal_Master.c: 183: uint8_t TX(void){
+"307
+[; ;Principal_Master.c: 307: uint8_t TX(void) {
 [v _TX `(uc ~T0 @X0 1 ef ]
 {
 [e :U _TX ]
 [f ]
-"185
-[; ;Principal_Master.c: 185:     switch(BANDERA_T){
-[e $U 150  ]
+"309
+[; ;Principal_Master.c: 309:     switch (BANDERA_T) {
+[e $U 158  ]
 {
-"187
-[; ;Principal_Master.c: 187:         case 0:
-[e :U 151 ]
-"189
-[; ;Principal_Master.c: 189:             BANDERA_T++;
+"311
+[; ;Principal_Master.c: 311:         case 0:
+[e :U 159 ]
+"312
+[; ;Principal_Master.c: 312:             BANDERA_T++;
 [e ++ _BANDERA_T -> -> 1 `i `uc ]
-"190
-[; ;Principal_Master.c: 190:             return "1";
-[e ) -> :s 1C `uc ]
-[e $UE 148  ]
-"192
-[; ;Principal_Master.c: 192:             break;
-[e $U 149  ]
-"193
-[; ;Principal_Master.c: 193:         case 1:
-[e :U 152 ]
-"194
-[; ;Principal_Master.c: 194:             BANDERA_T++;
+"313
+[; ;Principal_Master.c: 313:             return X0;
+[e ) _X0 ]
+[e $UE 156  ]
+"314
+[; ;Principal_Master.c: 314:             break;
+[e $U 157  ]
+"315
+[; ;Principal_Master.c: 315:         case 1:
+[e :U 160 ]
+"317
+[; ;Principal_Master.c: 317:             BANDERA_T++;
 [e ++ _BANDERA_T -> -> 1 `i `uc ]
-"196
-[; ;Principal_Master.c: 196:          return ",";
-[e ) -> :s 2C `uc ]
-[e $UE 148  ]
-"197
-[; ;Principal_Master.c: 197:             break;
-[e $U 149  ]
-"240
-[; ;Principal_Master.c: 240:     }
+"318
+[; ;Principal_Master.c: 318:             return X1;
+[e ) _X1 ]
+[e $UE 156  ]
+"320
+[; ;Principal_Master.c: 320:             break;
+[e $U 157  ]
+"321
+[; ;Principal_Master.c: 321:         case 2:
+[e :U 161 ]
+"323
+[; ;Principal_Master.c: 323:             BANDERA_T++;
+[e ++ _BANDERA_T -> -> 1 `i `uc ]
+"324
+[; ;Principal_Master.c: 324:             return X2;
+[e ) _X2 ]
+[e $UE 156  ]
+"326
+[; ;Principal_Master.c: 326:             break;
+[e $U 157  ]
+"327
+[; ;Principal_Master.c: 327:         case 3:
+[e :U 162 ]
+"329
+[; ;Principal_Master.c: 329:             BANDERA_T++;
+[e ++ _BANDERA_T -> -> 1 `i `uc ]
+"330
+[; ;Principal_Master.c: 330:             return X3;
+[e ) _X3 ]
+[e $UE 156  ]
+"331
+[; ;Principal_Master.c: 331:             break;
+[e $U 157  ]
+"369
+[; ;Principal_Master.c: 369:         case 4:
+[e :U 163 ]
+"370
+[; ;Principal_Master.c: 370:             PORTAbits.RA0 = 0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"371
+[; ;Principal_Master.c: 371:             BANDERA_T = 0;
+[e = _BANDERA_T -> -> 0 `i `uc ]
+"372
+[; ;Principal_Master.c: 372:             b++;
+[e ++ _b -> -> 1 `i `uc ]
+"373
+[; ;Principal_Master.c: 373:             return 10;
+[e ) -> -> 10 `i `uc ]
+[e $UE 156  ]
+"374
+[; ;Principal_Master.c: 374:             break;
+[e $U 157  ]
+"375
+[; ;Principal_Master.c: 375:     }
 }
-[e $U 149  ]
-[e :U 150 ]
-[e [\ -> _BANDERA_T `i , $ -> 0 `i 151
- , $ -> 1 `i 152
- 149 ]
-[e :U 149 ]
-"241
-[; ;Principal_Master.c: 241: }
-[e :UE 148 ]
+[e $U 157  ]
+[e :U 158 ]
+[e [\ -> _BANDERA_T `i , $ -> 0 `i 159
+ , $ -> 1 `i 160
+ , $ -> 2 `i 161
+ , $ -> 3 `i 162
+ , $ -> 4 `i 163
+ 157 ]
+[e :U 157 ]
+"376
+[; ;Principal_Master.c: 376: }
+[e :UE 156 ]
 }
-"243
-[; ;Principal_Master.c: 243: void LEER_VALORES (void){
+"378
+[; ;Principal_Master.c: 378: void LEER_VALORES(void) {
 [v _LEER_VALORES `(v ~T0 @X0 1 ef ]
 {
 [e :U _LEER_VALORES ]
 [f ]
-"245
-[; ;Principal_Master.c: 245:     XL = ACELEROMETRO_R(DX0);
-[e = _XL -> ( _ACELEROMETRO_R (1 _DX0 `uc ]
-"246
-[; ;Principal_Master.c: 246:     XH = ACELEROMETRO_R(DX1);
-[e = _XH -> ( _ACELEROMETRO_R (1 _DX1 `uc ]
-"247
-[; ;Principal_Master.c: 247:     X = ((YH<<8) | YL) ;
-[e = _X -> | << -> _YH `i -> 8 `i -> _YL `i `uc ]
-"249
-[; ;Principal_Master.c: 249:     YL = ACELEROMETRO_R(DY0);
-[e = _YL -> ( _ACELEROMETRO_R (1 _DY0 `uc ]
-"250
-[; ;Principal_Master.c: 250:     YH = ACELEROMETRO_R(DY1);
-[e = _YH -> ( _ACELEROMETRO_R (1 _DY1 `uc ]
-"251
-[; ;Principal_Master.c: 251:     Y = ((YH<<8) | YL) ;
-[e = _Y -> | << -> _YH `i -> 8 `i -> _YL `i `uc ]
-"253
-[; ;Principal_Master.c: 253:     ZL = ACELEROMETRO_R(DZ0);
-[e = _ZL -> ( _ACELEROMETRO_R (1 _DZ0 `uc ]
-"254
-[; ;Principal_Master.c: 254:     ZH = ACELEROMETRO_R(DZ1);
-[e = _ZH -> ( _ACELEROMETRO_R (1 _DZ1 `uc ]
-"255
-[; ;Principal_Master.c: 255:     Z = ((ZH<<8) | ZL) ;
-[e = _Z -> | << -> _ZH `i -> 8 `i -> _ZL `i `uc ]
-"256
-[; ;Principal_Master.c: 256: }
-[e :UE 153 ]
+"380
+[; ;Principal_Master.c: 380:     XL = ACELEROMETRO_R(DX0);
+[e = _XL -> ( _ACELEROMETRO_R (1 _DX0 `c ]
+"381
+[; ;Principal_Master.c: 381:     XH = ACELEROMETRO_R(DX1);
+[e = _XH -> ( _ACELEROMETRO_R (1 _DX1 `c ]
+"383
+[; ;Principal_Master.c: 383:     if (XL < 0) {
+[e $ ! < -> _XL `i -> 0 `i 165  ]
+{
+"384
+[; ;Principal_Master.c: 384:         XL = XL*-1;
+[e = _XL -> * -> _XL `i -U -> 1 `i `c ]
+"385
+[; ;Principal_Master.c: 385:     }
 }
-"258
-[; ;Principal_Master.c: 258: void EJEX_TO_CHARS (void){
+[e :U 165 ]
+"387
+[; ;Principal_Master.c: 387:     if (XH < 0) {
+[e $ ! < -> _XH `i -> 0 `i 166  ]
+{
+"388
+[; ;Principal_Master.c: 388:         XH = XH*-1;
+[e = _XH -> * -> _XH `i -U -> 1 `i `c ]
+"389
+[; ;Principal_Master.c: 389:     }
+}
+[e :U 166 ]
+"391
+[; ;Principal_Master.c: 391:     YL = ACELEROMETRO_R(DY0);
+[e = _YL -> ( _ACELEROMETRO_R (1 _DY0 `c ]
+"392
+[; ;Principal_Master.c: 392:     YH = ACELEROMETRO_R(DY1);
+[e = _YH -> ( _ACELEROMETRO_R (1 _DY1 `c ]
+"394
+[; ;Principal_Master.c: 394:     if (YL < 0) {
+[e $ ! < -> _YL `i -> 0 `i 167  ]
+{
+"395
+[; ;Principal_Master.c: 395:         YL = YL*-1;
+[e = _YL -> * -> _YL `i -U -> 1 `i `c ]
+"396
+[; ;Principal_Master.c: 396:     }
+}
+[e :U 167 ]
+"398
+[; ;Principal_Master.c: 398:     if (YH < 0) {
+[e $ ! < -> _YH `i -> 0 `i 168  ]
+{
+"399
+[; ;Principal_Master.c: 399:         YH = YH*-1;
+[e = _YH -> * -> _YH `i -U -> 1 `i `c ]
+"400
+[; ;Principal_Master.c: 400:     }
+}
+[e :U 168 ]
+"402
+[; ;Principal_Master.c: 402:     ZL = ACELEROMETRO_R(DZ0);
+[e = _ZL -> ( _ACELEROMETRO_R (1 _DZ0 `c ]
+"403
+[; ;Principal_Master.c: 403:     ZH = ACELEROMETRO_R(DZ1);
+[e = _ZH -> ( _ACELEROMETRO_R (1 _DZ1 `c ]
+"405
+[; ;Principal_Master.c: 405:     if (ZL < 0) {
+[e $ ! < -> _ZL `i -> 0 `i 169  ]
+{
+"406
+[; ;Principal_Master.c: 406:         ZL = ZL*-1;
+[e = _ZL -> * -> _ZL `i -U -> 1 `i `c ]
+"407
+[; ;Principal_Master.c: 407:     }
+}
+[e :U 169 ]
+"409
+[; ;Principal_Master.c: 409:     if (ZH < 0) {
+[e $ ! < -> _ZH `i -> 0 `i 170  ]
+{
+"410
+[; ;Principal_Master.c: 410:         ZH = ZH*-1;
+[e = _ZH -> * -> _ZH `i -U -> 1 `i `c ]
+"411
+[; ;Principal_Master.c: 411:     }
+}
+[e :U 170 ]
+"412
+[; ;Principal_Master.c: 412: }
+[e :UE 164 ]
+}
+"414
+[; ;Principal_Master.c: 414: void EJEX_TO_CHARS(void) {
 [v _EJEX_TO_CHARS `(v ~T0 @X0 1 ef ]
 {
 [e :U _EJEX_TO_CHARS ]
 [f ]
-"260
-[; ;Principal_Master.c: 260:     uint8_t valor = X;
-[v _valor `uc ~T0 @X0 1 a ]
-[e = _valor _X ]
-"261
-[; ;Principal_Master.c: 261:     X_units = valor %10 ;
-[e = _X_units -> % -> _valor `i -> 10 `i `uc ]
-"262
-[; ;Principal_Master.c: 262:     valor = valor/10;
-[e = _valor -> / -> _valor `i -> 10 `i `uc ]
-"263
-[; ;Principal_Master.c: 263:     X_decs = valor %10 ;
-[e = _X_decs -> % -> _valor `i -> 10 `i `uc ]
-"264
-[; ;Principal_Master.c: 264:     X_cents = valor /10 ;
-[e = _X_cents -> / -> _valor `i -> 10 `i `uc ]
-"266
-[; ;Principal_Master.c: 266:     }
-[e :UE 154 ]
+"416
+[; ;Principal_Master.c: 416:     X0 = ASCII(XH & 0b00001111);
+[e = _X0 ( _ASCII (1 -> & -> _XH `i -> 15 `i `uc ]
+"417
+[; ;Principal_Master.c: 417:     X1 = ASCII((XH & 0b11110000) >> 4);
+[e = _X1 ( _ASCII (1 -> >> & -> _XH `i -> 240 `i -> 4 `i `uc ]
+"418
+[; ;Principal_Master.c: 418:     X2 = ASCII(XL & 0b00001111);
+[e = _X2 ( _ASCII (1 -> & -> _XL `i -> 15 `i `uc ]
+"419
+[; ;Principal_Master.c: 419:     X3 = ASCII((XL & 0b11110000) >> 4);
+[e = _X3 ( _ASCII (1 -> >> & -> _XL `i -> 240 `i -> 4 `i `uc ]
+"421
+[; ;Principal_Master.c: 421: }
+[e :UE 171 ]
 }
-"268
-[; ;Principal_Master.c: 268: void EJEY_TO_CHARS (void){
-[v _EJEY_TO_CHARS `(v ~T0 @X0 1 ef ]
-{
-[e :U _EJEY_TO_CHARS ]
-[f ]
-"270
-[; ;Principal_Master.c: 270:     uint8_t valor = X;
-[v _valor `uc ~T0 @X0 1 a ]
-[e = _valor _X ]
-"271
-[; ;Principal_Master.c: 271:     Y_units = valor %10 ;
-[e = _Y_units -> % -> _valor `i -> 10 `i `uc ]
-"272
-[; ;Principal_Master.c: 272:     valor = valor/10;
-[e = _valor -> / -> _valor `i -> 10 `i `uc ]
-"273
-[; ;Principal_Master.c: 273:     Y_decs = valor %10 ;
-[e = _Y_decs -> % -> _valor `i -> 10 `i `uc ]
-"274
-[; ;Principal_Master.c: 274:     Y_cents = valor /10 ;
-[e = _Y_cents -> / -> _valor `i -> 10 `i `uc ]
-"276
-[; ;Principal_Master.c: 276:     }
-[e :UE 155 ]
-}
-"278
-[; ;Principal_Master.c: 278: void EJEZ_TO_CHARS (void){
-[v _EJEZ_TO_CHARS `(v ~T0 @X0 1 ef ]
-{
-[e :U _EJEZ_TO_CHARS ]
-[f ]
-"280
-[; ;Principal_Master.c: 280:     uint8_t valor = X;
-[v _valor `uc ~T0 @X0 1 a ]
-[e = _valor _X ]
-"281
-[; ;Principal_Master.c: 281:     Z_units = valor %10 ;
-[e = _Z_units -> % -> _valor `i -> 10 `i `uc ]
-"282
-[; ;Principal_Master.c: 282:     valor = valor/10;
-[e = _valor -> / -> _valor `i -> 10 `i `uc ]
-"283
-[; ;Principal_Master.c: 283:     Z_decs = valor %10 ;
-[e = _Z_decs -> % -> _valor `i -> 10 `i `uc ]
-"284
-[; ;Principal_Master.c: 284:     Z_cents = valor /10 ;
-[e = _Z_cents -> / -> _valor `i -> 10 `i `uc ]
-"286
-[; ;Principal_Master.c: 286:     }
-[e :UE 156 ]
-}
-[a 1C 49 0 ]
-[a 2C 44 0 ]

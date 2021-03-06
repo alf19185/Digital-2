@@ -1,5 +1,5 @@
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 #include <pic16f887.h>
 #include <stdint.h>
 

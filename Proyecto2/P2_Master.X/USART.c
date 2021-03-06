@@ -1,25 +1,39 @@
 #include <pic16f887.h>
 #include <xc.h>
 #include <stdint.h>
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 #include "USART.h"
 
 void CONFIG_USART (void){
     
-    TRISCbits.TRISC6 = 0;
+   /* TRISCbits.TRISC6 = 0;
     TRISCbits.TRISC7 = 1;
     
     TXSTAbits.TX9 = 0;      
     TXSTAbits.SYNC = 0;     //Formula FOSC/[64 (n+1)]
     TXSTAbits.BRGH = 0;
     BAUDCTLbits.BRG16 = 0;
-    //SPBRG = 51;             //2400
-    SPBRG = 12;             //9600  
+    //SPBRG = 51;             //2400 8MHZ
+    SPBRG = 12;             //9600   8MHZ
     SPBRGH = 0;             
     TXSTAbits.TXEN = 1;
     RCSTAbits.SPEN = 1;
     RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;  */
+    
+    TXSTAbits.TX9 = 0; //9600  4MHZ
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    BAUDCTLbits.BRG16 = 0;
+    SPBRG = 25;
+    SPBRGH = 0;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
     RCSTAbits.CREN = 1;
+
+    
+    
 }
 
 uint8_t ASCII(uint8_t aconvertir){
