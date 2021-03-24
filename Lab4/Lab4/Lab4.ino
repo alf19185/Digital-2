@@ -97,9 +97,14 @@ void loop() {
     digitalWrite(LEDB, LOW);
   }
 
-//****Carrera**********
+  if (Flag_Carrera == 1){
+
   carrera(); 
   Fin(); 
+  
+    }
+//****Carrera**********
+  
 }
 
 void semaforo (void){
