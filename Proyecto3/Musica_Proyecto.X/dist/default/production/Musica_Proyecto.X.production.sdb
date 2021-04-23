@@ -1,0 +1,149 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"3 D:\2021\Digital2\Digital2\Proyecto3\Musica_Proyecto.X\Osc.c
+[v _initOsc initOsc `(v  1 e 1 0 ]
+"76 D:\2021\Digital2\Digital2\Proyecto3\Musica_Proyecto.X\Principal_Musica.c
+[v _main main `(v  1 e 1 0 ]
+"365
+[v _Setup Setup `(v  1 e 1 0 ]
+"291 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S26 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"308
+[u S35 . 1 `S26 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES35  1 e 1 @7 ]
+"353
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S87 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1434
+[u S96 . 1 `S87 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES96  1 e 1 @133 ]
+[s S66 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1496
+[u S75 . 1 `S66 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES75  1 e 1 @134 ]
+"1541
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1603
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S169 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1883
+[s S175 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S180 . 1 `S169 1 . 1 0 `S175 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES180  1 e 1 @143 ]
+"3388
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3450
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"4122
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"4125
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"76 D:\2021\Digital2\Digital2\Proyecto3\Musica_Proyecto.X\Principal_Musica.c
+[v _main main `(v  1 e 1 0 ]
+{
+"349
+[v main@x_151 x `i  1 a 2 44 ]
+"338
+[v main@x_150 x `i  1 a 2 42 ]
+"327
+[v main@x_149 x `i  1 a 2 40 ]
+"316
+[v main@x_148 x `i  1 a 2 38 ]
+"305
+[v main@x_147 x `i  1 a 2 36 ]
+"294
+[v main@x_146 x `i  1 a 2 34 ]
+"272
+[v main@x_145 x `i  1 a 2 32 ]
+"261
+[v main@x_144 x `i  1 a 2 30 ]
+"250
+[v main@x_143 x `i  1 a 2 28 ]
+"239
+[v main@x_142 x `i  1 a 2 26 ]
+"227
+[v main@x_141 x `i  1 a 2 24 ]
+"216
+[v main@x_140 x `i  1 a 2 22 ]
+"205
+[v main@x_139 x `i  1 a 2 20 ]
+"194
+[v main@x_138 x `i  1 a 2 18 ]
+"183
+[v main@x_137 x `i  1 a 2 16 ]
+"171
+[v main@x_136 x `i  1 a 2 14 ]
+"159
+[v main@x_135 x `i  1 a 2 12 ]
+"148
+[v main@x_134 x `i  1 a 2 10 ]
+"137
+[v main@x_133 x `i  1 a 2 8 ]
+"126
+[v main@x_132 x `i  1 a 2 6 ]
+"114
+[v main@x_131 x `i  1 a 2 4 ]
+"103
+[v main@x_130 x `i  1 a 2 2 ]
+"92
+[v main@x x `i  1 a 2 0 ]
+"360
+} 0
+"365
+[v _Setup Setup `(v  1 e 1 0 ]
+{
+"386
+} 0
+"3 D:\2021\Digital2\Digital2\Proyecto3\Musica_Proyecto.X\Osc.c
+[v _initOsc initOsc `(v  1 e 1 0 ]
+{
+[v initOsc@IRCF IRCF `uc  1 a 1 wreg ]
+[v initOsc@IRCF IRCF `uc  1 a 1 wreg ]
+[v initOsc@IRCF IRCF `uc  1 a 1 2 ]
+"37
+} 0

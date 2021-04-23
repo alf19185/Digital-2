@@ -1,0 +1,1564 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"74 Principal_Musica.c
+[; ;Principal_Musica.c: 74: void Setup (void);
+[v _Setup `(v ~T0 @X0 0 ef ]
+"297 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 297:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"296
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 296: typedef union {
+[u S9 `S10 1 ]
+[n S9 . . ]
+"308
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 308: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+"4125 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 4125: extern volatile __bit RB7 __attribute__((address(0x37)));
+[v _RB7 `Vb ~T0 @X0 0 e@55 ]
+"4122
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 4122: extern volatile __bit RB6 __attribute__((address(0x36)));
+[v _RB6 `Vb ~T0 @X0 0 e@54 ]
+"14 ./Osc.h
+[; ;./Osc.h: 14: void initOsc(uint8_t IRCF);
+[v _initOsc `(v ~T0 @X0 0 ef1`uc ]
+"1541 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1541: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"291
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 291: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"1603
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1603: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"353
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 353: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"3388
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3388: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3450
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3450: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1485
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1485:     struct {
+[s S55 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S55 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1484
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1484: typedef union {
+[u S54 `S55 1 ]
+[n S54 . . ]
+"1496
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1496: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
+[v _TRISBbits `VS54 ~T0 @X0 0 e@134 ]
+"1423
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1423:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"1422
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1422: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"1434
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1434: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
+[v _TRISAbits `VS52 ~T0 @X0 0 e@133 ]
+"55 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"231
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 231: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"293
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 293: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"355
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 355: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"417
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 417: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"455
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 455: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"462
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 462: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"540
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 540: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"653
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 653: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"660
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 660: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"667
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 667: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"674
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 674: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"768
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 768: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"775
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 775: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"846
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 846: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"853
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 853: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"923
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 923: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"930
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 930: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"937
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 937: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"944
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 944: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"1041
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1041: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1136
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1136: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1143
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1143: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1150
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1150: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1157
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1157: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1164
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1164: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1171
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1171: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1241
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1241: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1248
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1248: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1349
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1349: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1419
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1419: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1481
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1481: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1543
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1543: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1605
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1605: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1667
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1667: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1705
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1705: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1761
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1761: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1818
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1818: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1865
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1865: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1930
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1930: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1982
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 1982: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"2044
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2044: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"2051
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2051: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"2058
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2058: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"2063
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2063: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2180
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2180: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2349
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2349: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2419
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2419: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2489
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2489: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2559
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2559: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2645
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2645: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2707
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2707: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2777
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2777: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2847
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2847: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2929
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2929: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2973
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2973: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2980
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 2980: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"3014
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3014: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"3067
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3067: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"3132
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3132: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3197
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3197: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3248
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3248: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3253
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3253: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3260
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3260: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3267
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3267: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3274
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3274: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3281
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3281: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3338
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3338: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3390
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3390: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3452
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3452: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3502
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3502: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3547
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h: 3547: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 Principal_Musica.c
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"15
+[p x WDTE  =  OFF        ]
+"16
+[p x PWRTE  =  OFF       ]
+"17
+[p x MCLRE  =  OFF       ]
+"18
+[p x CP  =  OFF          ]
+"19
+[p x CPD  =  OFF         ]
+"20
+[p x BOREN  =  OFF       ]
+"21
+[p x IESO  =  OFF        ]
+"22
+[p x FCMEN  =  OFF       ]
+"23
+[p x LVP  =  OFF         ]
+"26
+[p x BOR4V  =  BOR40V    ]
+"27
+[p x WRT  =  OFF         ]
+"61
+[; ;Principal_Musica.c: 61: long C4 = 382;
+[v _C4 `l ~T0 @X0 1 e ]
+[i _C4
+-> -> 382 `i `l
+]
+"62
+[; ;Principal_Musica.c: 62: long D4 = 340;
+[v _D4 `l ~T0 @X0 1 e ]
+[i _D4
+-> -> 340 `i `l
+]
+"63
+[; ;Principal_Musica.c: 63: long E4 = 303;
+[v _E4 `l ~T0 @X0 1 e ]
+[i _E4
+-> -> 303 `i `l
+]
+"64
+[; ;Principal_Musica.c: 64: long F4 = 287;
+[v _F4 `l ~T0 @X0 1 e ]
+[i _F4
+-> -> 287 `i `l
+]
+"65
+[; ;Principal_Musica.c: 65: long G4 = 255;
+[v _G4 `l ~T0 @X0 1 e ]
+[i _G4
+-> -> 255 `i `l
+]
+"66
+[; ;Principal_Musica.c: 66: long A4 = 227;
+[v _A4 `l ~T0 @X0 1 e ]
+[i _A4
+-> -> 227 `i `l
+]
+"67
+[; ;Principal_Musica.c: 67: long B4 = 215;
+[v _B4 `l ~T0 @X0 1 e ]
+[i _B4
+-> -> 215 `i `l
+]
+"68
+[; ;Principal_Musica.c: 68: long C5 = 202;
+[v _C5 `l ~T0 @X0 1 e ]
+[i _C5
+-> -> 202 `i `l
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"76
+[; ;Principal_Musica.c: 76: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"77
+[; ;Principal_Musica.c: 77:     Setup();
+[e ( _Setup ..  ]
+"79
+[; ;Principal_Musica.c: 79:     while(RB7 == 1 && RB6 == 1){
+[e $U 139  ]
+[e :U 140 ]
+{
+"80
+[; ;Principal_Musica.c: 80:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"81
+[; ;Principal_Musica.c: 81:                 _delay((unsigned long)((400)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"82
+[; ;Principal_Musica.c: 82:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"83
+[; ;Principal_Musica.c: 83:                 _delay((unsigned long)((400)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"85
+[; ;Principal_Musica.c: 85:     }
+}
+[e :U 139 ]
+"79
+[; ;Principal_Musica.c: 79:     while(RB7 == 1 && RB6 == 1){
+[e $ && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 1 `i 140  ]
+[e :U 141 ]
+"86
+[; ;Principal_Musica.c: 86:     if (RB7 == 0 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 0 `i 142  ]
+{
+"87
+[; ;Principal_Musica.c: 87:         PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"88
+[; ;Principal_Musica.c: 88:     }
+}
+[e :U 142 ]
+"91
+[; ;Principal_Musica.c: 91:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 143  ]
+{
+"92
+[; ;Principal_Musica.c: 92:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 144  ]
+[e $U 145  ]
+[e :U 144 ]
+{
+"93
+[; ;Principal_Musica.c: 93:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"94
+[; ;Principal_Musica.c: 94:                 _delay((unsigned long)((955)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 955 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"95
+[; ;Principal_Musica.c: 95:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"96
+[; ;Principal_Musica.c: 96:                 _delay((unsigned long)((955)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 955 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"97
+[; ;Principal_Musica.c: 97:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 144  ]
+[e :U 145 ]
+}
+"98
+[; ;Principal_Musica.c: 98:         }
+}
+[e :U 143 ]
+"99
+[; ;Principal_Musica.c: 99:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 147  ]
+{
+"100
+[; ;Principal_Musica.c: 100:             _delay((unsigned long)((350)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"101
+[; ;Principal_Musica.c: 101:         }
+}
+[e :U 147 ]
+"102
+[; ;Principal_Musica.c: 102:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 148  ]
+{
+"103
+[; ;Principal_Musica.c: 103:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 149  ]
+[e $U 150  ]
+[e :U 149 ]
+{
+"104
+[; ;Principal_Musica.c: 104:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"105
+[; ;Principal_Musica.c: 105:                 _delay((unsigned long)((1275)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1275 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"106
+[; ;Principal_Musica.c: 106:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"107
+[; ;Principal_Musica.c: 107:                 _delay((unsigned long)((1275)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1275 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"108
+[; ;Principal_Musica.c: 108:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 149  ]
+[e :U 150 ]
+}
+"109
+[; ;Principal_Musica.c: 109:         }
+}
+[e :U 148 ]
+"110
+[; ;Principal_Musica.c: 110:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 152  ]
+{
+"111
+[; ;Principal_Musica.c: 111:             _delay((unsigned long)((350)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"112
+[; ;Principal_Musica.c: 112:         }
+}
+[e :U 152 ]
+"113
+[; ;Principal_Musica.c: 113:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 153  ]
+{
+"114
+[; ;Principal_Musica.c: 114:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 154  ]
+[e $U 155  ]
+[e :U 154 ]
+{
+"115
+[; ;Principal_Musica.c: 115:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"116
+[; ;Principal_Musica.c: 116:                 _delay((unsigned long)((1515)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1515 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"117
+[; ;Principal_Musica.c: 117:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"118
+[; ;Principal_Musica.c: 118:                 _delay((unsigned long)((1515)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1515 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"119
+[; ;Principal_Musica.c: 119:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 154  ]
+[e :U 155 ]
+}
+"120
+[; ;Principal_Musica.c: 120:         }
+}
+[e :U 153 ]
+"121
+[; ;Principal_Musica.c: 121:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 157  ]
+{
+"122
+[; ;Principal_Musica.c: 122:             _delay((unsigned long)((350)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"123
+[; ;Principal_Musica.c: 123:         }
+}
+[e :U 157 ]
+"125
+[; ;Principal_Musica.c: 125:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 158  ]
+{
+"126
+[; ;Principal_Musica.c: 126:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 159  ]
+[e $U 160  ]
+[e :U 159 ]
+{
+"127
+[; ;Principal_Musica.c: 127:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"128
+[; ;Principal_Musica.c: 128:                 _delay((unsigned long)((1135)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1135 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"129
+[; ;Principal_Musica.c: 129:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"130
+[; ;Principal_Musica.c: 130:                 _delay((unsigned long)((1135)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1135 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"131
+[; ;Principal_Musica.c: 131:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 159  ]
+[e :U 160 ]
+}
+"132
+[; ;Principal_Musica.c: 132:         }
+}
+[e :U 158 ]
+"133
+[; ;Principal_Musica.c: 133:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 162  ]
+{
+"134
+[; ;Principal_Musica.c: 134:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"135
+[; ;Principal_Musica.c: 135:         }
+}
+[e :U 162 ]
+"136
+[; ;Principal_Musica.c: 136:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 163  ]
+{
+"137
+[; ;Principal_Musica.c: 137:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 164  ]
+[e $U 165  ]
+[e :U 164 ]
+{
+"138
+[; ;Principal_Musica.c: 138:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"139
+[; ;Principal_Musica.c: 139:                 _delay((unsigned long)((1015)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1015 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"140
+[; ;Principal_Musica.c: 140:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"141
+[; ;Principal_Musica.c: 141:                 _delay((unsigned long)((1015)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1015 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"142
+[; ;Principal_Musica.c: 142:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 164  ]
+[e :U 165 ]
+}
+"143
+[; ;Principal_Musica.c: 143:         }
+}
+[e :U 163 ]
+"144
+[; ;Principal_Musica.c: 144:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 167  ]
+{
+"145
+[; ;Principal_Musica.c: 145:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"146
+[; ;Principal_Musica.c: 146:         }
+}
+[e :U 167 ]
+"147
+[; ;Principal_Musica.c: 147:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 168  ]
+{
+"148
+[; ;Principal_Musica.c: 148:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 169  ]
+[e $U 170  ]
+[e :U 169 ]
+{
+"149
+[; ;Principal_Musica.c: 149:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"150
+[; ;Principal_Musica.c: 150:                 _delay((unsigned long)((1075)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1075 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"151
+[; ;Principal_Musica.c: 151:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"152
+[; ;Principal_Musica.c: 152:                 _delay((unsigned long)((1075)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1075 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"153
+[; ;Principal_Musica.c: 153:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 169  ]
+[e :U 170 ]
+}
+"154
+[; ;Principal_Musica.c: 154:         }
+}
+[e :U 168 ]
+"155
+[; ;Principal_Musica.c: 155:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 172  ]
+{
+"156
+[; ;Principal_Musica.c: 156:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"157
+[; ;Principal_Musica.c: 157:         }
+}
+[e :U 172 ]
+"158
+[; ;Principal_Musica.c: 158:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 173  ]
+{
+"159
+[; ;Principal_Musica.c: 159:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 174  ]
+[e $U 175  ]
+[e :U 174 ]
+{
+"160
+[; ;Principal_Musica.c: 160:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"161
+[; ;Principal_Musica.c: 161:                 _delay((unsigned long)((1135)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1135 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"162
+[; ;Principal_Musica.c: 162:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"163
+[; ;Principal_Musica.c: 163:                 _delay((unsigned long)((1135)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1135 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"164
+[; ;Principal_Musica.c: 164:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 174  ]
+[e :U 175 ]
+}
+"165
+[; ;Principal_Musica.c: 165:         }
+}
+[e :U 173 ]
+"166
+[; ;Principal_Musica.c: 166:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 177  ]
+{
+"167
+[; ;Principal_Musica.c: 167:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"168
+[; ;Principal_Musica.c: 168:         }
+}
+[e :U 177 ]
+"170
+[; ;Principal_Musica.c: 170:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 178  ]
+{
+"171
+[; ;Principal_Musica.c: 171:             for (int x = 0; x < 67; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 67 `i 179  ]
+[e $U 180  ]
+[e :U 179 ]
+{
+"172
+[; ;Principal_Musica.c: 172:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"173
+[; ;Principal_Musica.c: 173:                 _delay((unsigned long)((1275)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1275 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"174
+[; ;Principal_Musica.c: 174:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"175
+[; ;Principal_Musica.c: 175:                 _delay((unsigned long)((1275)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1275 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"176
+[; ;Principal_Musica.c: 176:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 67 `i 179  ]
+[e :U 180 ]
+}
+"177
+[; ;Principal_Musica.c: 177:         }
+}
+[e :U 178 ]
+"178
+[; ;Principal_Musica.c: 178:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 182  ]
+{
+"179
+[; ;Principal_Musica.c: 179:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"180
+[; ;Principal_Musica.c: 180:         }
+}
+[e :U 182 ]
+"182
+[; ;Principal_Musica.c: 182:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 183  ]
+{
+"183
+[; ;Principal_Musica.c: 183:             for (int x = 0; x < 67; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 67 `i 184  ]
+[e $U 185  ]
+[e :U 184 ]
+{
+"184
+[; ;Principal_Musica.c: 184:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"185
+[; ;Principal_Musica.c: 185:                 _delay((unsigned long)((758)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 758 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"186
+[; ;Principal_Musica.c: 186:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"187
+[; ;Principal_Musica.c: 187:                 _delay((unsigned long)((758)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 758 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"188
+[; ;Principal_Musica.c: 188:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 67 `i 184  ]
+[e :U 185 ]
+}
+"189
+[; ;Principal_Musica.c: 189:         }
+}
+[e :U 183 ]
+"190
+[; ;Principal_Musica.c: 190:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 187  ]
+{
+"191
+[; ;Principal_Musica.c: 191:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"192
+[; ;Principal_Musica.c: 192:         }
+}
+[e :U 187 ]
+"193
+[; ;Principal_Musica.c: 193:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 188  ]
+{
+"194
+[; ;Principal_Musica.c: 194:             for (int x = 0; x < 67; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 67 `i 189  ]
+[e $U 190  ]
+[e :U 189 ]
+{
+"195
+[; ;Principal_Musica.c: 195:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"196
+[; ;Principal_Musica.c: 196:                 _delay((unsigned long)((638)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 638 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"197
+[; ;Principal_Musica.c: 197:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"198
+[; ;Principal_Musica.c: 198:                 _delay((unsigned long)((638)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 638 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"199
+[; ;Principal_Musica.c: 199:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 67 `i 189  ]
+[e :U 190 ]
+}
+"200
+[; ;Principal_Musica.c: 200:         }
+}
+[e :U 188 ]
+"201
+[; ;Principal_Musica.c: 201:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 192  ]
+{
+"202
+[; ;Principal_Musica.c: 202:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"203
+[; ;Principal_Musica.c: 203:         }
+}
+[e :U 192 ]
+"204
+[; ;Principal_Musica.c: 204:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 193  ]
+{
+"205
+[; ;Principal_Musica.c: 205:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 194  ]
+[e $U 195  ]
+[e :U 194 ]
+{
+"206
+[; ;Principal_Musica.c: 206:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"207
+[; ;Principal_Musica.c: 207:                 _delay((unsigned long)((568)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 568 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"208
+[; ;Principal_Musica.c: 208:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"209
+[; ;Principal_Musica.c: 209:                 _delay((unsigned long)((568)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 568 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"210
+[; ;Principal_Musica.c: 210:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 194  ]
+[e :U 195 ]
+}
+"211
+[; ;Principal_Musica.c: 211:         }
+}
+[e :U 193 ]
+"212
+[; ;Principal_Musica.c: 212:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 197  ]
+{
+"213
+[; ;Principal_Musica.c: 213:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"214
+[; ;Principal_Musica.c: 214:         }
+}
+[e :U 197 ]
+"215
+[; ;Principal_Musica.c: 215:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 198  ]
+{
+"216
+[; ;Principal_Musica.c: 216:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 199  ]
+[e $U 200  ]
+[e :U 199 ]
+{
+"217
+[; ;Principal_Musica.c: 217:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"218
+[; ;Principal_Musica.c: 218:                 _delay((unsigned long)((716)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 716 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"219
+[; ;Principal_Musica.c: 219:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"220
+[; ;Principal_Musica.c: 220:                 _delay((unsigned long)((716)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 716 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"221
+[; ;Principal_Musica.c: 221:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 199  ]
+[e :U 200 ]
+}
+"222
+[; ;Principal_Musica.c: 222:         }
+}
+[e :U 198 ]
+"223
+[; ;Principal_Musica.c: 223:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 202  ]
+{
+"224
+[; ;Principal_Musica.c: 224:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"225
+[; ;Principal_Musica.c: 225:         }
+}
+[e :U 202 ]
+"226
+[; ;Principal_Musica.c: 226:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 203  ]
+{
+"227
+[; ;Principal_Musica.c: 227:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 204  ]
+[e $U 205  ]
+[e :U 204 ]
+{
+"228
+[; ;Principal_Musica.c: 228:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"229
+[; ;Principal_Musica.c: 229:                 _delay((unsigned long)((638)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 638 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"230
+[; ;Principal_Musica.c: 230:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"231
+[; ;Principal_Musica.c: 231:                 _delay((unsigned long)((638)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 638 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"232
+[; ;Principal_Musica.c: 232:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 204  ]
+[e :U 205 ]
+}
+"233
+[; ;Principal_Musica.c: 233:         }
+}
+[e :U 203 ]
+"234
+[; ;Principal_Musica.c: 234:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 207  ]
+{
+"235
+[; ;Principal_Musica.c: 235:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"236
+[; ;Principal_Musica.c: 236:         }
+}
+[e :U 207 ]
+"238
+[; ;Principal_Musica.c: 238:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 208  ]
+{
+"239
+[; ;Principal_Musica.c: 239:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 209  ]
+[e $U 210  ]
+[e :U 209 ]
+{
+"240
+[; ;Principal_Musica.c: 240:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"241
+[; ;Principal_Musica.c: 241:                 _delay((unsigned long)((758)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 758 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"242
+[; ;Principal_Musica.c: 242:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"243
+[; ;Principal_Musica.c: 243:                 _delay((unsigned long)((758)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 758 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"244
+[; ;Principal_Musica.c: 244:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 209  ]
+[e :U 210 ]
+}
+"245
+[; ;Principal_Musica.c: 245:         }
+}
+[e :U 208 ]
+"246
+[; ;Principal_Musica.c: 246:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 212  ]
+{
+"247
+[; ;Principal_Musica.c: 247:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"248
+[; ;Principal_Musica.c: 248:         }
+}
+[e :U 212 ]
+"249
+[; ;Principal_Musica.c: 249:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 213  ]
+{
+"250
+[; ;Principal_Musica.c: 250:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 214  ]
+[e $U 215  ]
+[e :U 214 ]
+{
+"251
+[; ;Principal_Musica.c: 251:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"252
+[; ;Principal_Musica.c: 252:                 _delay((unsigned long)((956)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 956 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"253
+[; ;Principal_Musica.c: 253:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"254
+[; ;Principal_Musica.c: 254:                 _delay((unsigned long)((956)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 956 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"255
+[; ;Principal_Musica.c: 255:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 214  ]
+[e :U 215 ]
+}
+"256
+[; ;Principal_Musica.c: 256:         }
+}
+[e :U 213 ]
+"257
+[; ;Principal_Musica.c: 257:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 217  ]
+{
+"258
+[; ;Principal_Musica.c: 258:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"259
+[; ;Principal_Musica.c: 259:         }
+}
+[e :U 217 ]
+"260
+[; ;Principal_Musica.c: 260:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 218  ]
+{
+"261
+[; ;Principal_Musica.c: 261:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 219  ]
+[e $U 220  ]
+[e :U 219 ]
+{
+"262
+[; ;Principal_Musica.c: 262:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"263
+[; ;Principal_Musica.c: 263:                 _delay((unsigned long)((851)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 851 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"264
+[; ;Principal_Musica.c: 264:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"265
+[; ;Principal_Musica.c: 265:                 _delay((unsigned long)((851)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 851 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"266
+[; ;Principal_Musica.c: 266:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 219  ]
+[e :U 220 ]
+}
+"267
+[; ;Principal_Musica.c: 267:         }
+}
+[e :U 218 ]
+"268
+[; ;Principal_Musica.c: 268:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 222  ]
+{
+"269
+[; ;Principal_Musica.c: 269:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"270
+[; ;Principal_Musica.c: 270:         }
+}
+[e :U 222 ]
+"271
+[; ;Principal_Musica.c: 271:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 223  ]
+{
+"272
+[; ;Principal_Musica.c: 272:             for (int x = 0; x < 100; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 100 `i 224  ]
+[e $U 225  ]
+[e :U 224 ]
+{
+"273
+[; ;Principal_Musica.c: 273:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"274
+[; ;Principal_Musica.c: 274:                 _delay((unsigned long)((1012)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1012 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"275
+[; ;Principal_Musica.c: 275:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"276
+[; ;Principal_Musica.c: 276:                 _delay((unsigned long)((1012)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1012 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"277
+[; ;Principal_Musica.c: 277:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 100 `i 224  ]
+[e :U 225 ]
+}
+"278
+[; ;Principal_Musica.c: 278:         }
+}
+[e :U 223 ]
+"279
+[; ;Principal_Musica.c: 279:     if (RB7 == 0 && RB6 == 1){
+[e $ ! && == -> _RB7 `i -> 0 `i == -> _RB6 `i -> 1 `i 227  ]
+{
+"280
+[; ;Principal_Musica.c: 280:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"281
+[; ;Principal_Musica.c: 281:         }
+}
+[e :U 227 ]
+"293
+[; ;Principal_Musica.c: 293:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 228  ]
+{
+"294
+[; ;Principal_Musica.c: 294:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 229  ]
+[e $U 230  ]
+[e :U 229 ]
+{
+"295
+[; ;Principal_Musica.c: 295:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"296
+[; ;Principal_Musica.c: 296:                 _delay((unsigned long)((382)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 382 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"297
+[; ;Principal_Musica.c: 297:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"298
+[; ;Principal_Musica.c: 298:                 _delay((unsigned long)((382)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 382 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"299
+[; ;Principal_Musica.c: 299:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 229  ]
+[e :U 230 ]
+}
+"300
+[; ;Principal_Musica.c: 300:         }
+}
+[e :U 228 ]
+"301
+[; ;Principal_Musica.c: 301:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 232  ]
+{
+"302
+[; ;Principal_Musica.c: 302:             _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"303
+[; ;Principal_Musica.c: 303:         }
+}
+[e :U 232 ]
+"304
+[; ;Principal_Musica.c: 304:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 233  ]
+{
+"305
+[; ;Principal_Musica.c: 305:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 234  ]
+[e $U 235  ]
+[e :U 234 ]
+{
+"306
+[; ;Principal_Musica.c: 306:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"307
+[; ;Principal_Musica.c: 307:                 _delay((unsigned long)((191)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 191 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"308
+[; ;Principal_Musica.c: 308:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"309
+[; ;Principal_Musica.c: 309:                 _delay((unsigned long)((191)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 191 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"310
+[; ;Principal_Musica.c: 310:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 234  ]
+[e :U 235 ]
+}
+"311
+[; ;Principal_Musica.c: 311:         }
+}
+[e :U 233 ]
+"312
+[; ;Principal_Musica.c: 312:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 237  ]
+{
+"313
+[; ;Principal_Musica.c: 313:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"314
+[; ;Principal_Musica.c: 314:         }
+}
+[e :U 237 ]
+"315
+[; ;Principal_Musica.c: 315:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 238  ]
+{
+"316
+[; ;Principal_Musica.c: 316:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 239  ]
+[e $U 240  ]
+[e :U 239 ]
+{
+"317
+[; ;Principal_Musica.c: 317:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"318
+[; ;Principal_Musica.c: 318:                 _delay((unsigned long)((454)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 454 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"319
+[; ;Principal_Musica.c: 319:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"320
+[; ;Principal_Musica.c: 320:                 _delay((unsigned long)((454)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 454 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"321
+[; ;Principal_Musica.c: 321:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 239  ]
+[e :U 240 ]
+}
+"322
+[; ;Principal_Musica.c: 322:         }
+}
+[e :U 238 ]
+"323
+[; ;Principal_Musica.c: 323:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 242  ]
+{
+"324
+[; ;Principal_Musica.c: 324:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"325
+[; ;Principal_Musica.c: 325:         }
+}
+[e :U 242 ]
+"326
+[; ;Principal_Musica.c: 326:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 243  ]
+{
+"327
+[; ;Principal_Musica.c: 327:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 244  ]
+[e $U 245  ]
+[e :U 244 ]
+{
+"328
+[; ;Principal_Musica.c: 328:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"329
+[; ;Principal_Musica.c: 329:                 _delay((unsigned long)((227)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 227 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"330
+[; ;Principal_Musica.c: 330:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"331
+[; ;Principal_Musica.c: 331:                 _delay((unsigned long)((227)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 227 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"332
+[; ;Principal_Musica.c: 332:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 244  ]
+[e :U 245 ]
+}
+"333
+[; ;Principal_Musica.c: 333:         }
+}
+[e :U 243 ]
+"334
+[; ;Principal_Musica.c: 334:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 247  ]
+{
+"335
+[; ;Principal_Musica.c: 335:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"336
+[; ;Principal_Musica.c: 336:         }
+}
+[e :U 247 ]
+"337
+[; ;Principal_Musica.c: 337:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 248  ]
+{
+"338
+[; ;Principal_Musica.c: 338:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 249  ]
+[e $U 250  ]
+[e :U 249 ]
+{
+"339
+[; ;Principal_Musica.c: 339:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"340
+[; ;Principal_Musica.c: 340:                 _delay((unsigned long)((405)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 405 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"341
+[; ;Principal_Musica.c: 341:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"342
+[; ;Principal_Musica.c: 342:                 _delay((unsigned long)((405)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 405 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"343
+[; ;Principal_Musica.c: 343:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 249  ]
+[e :U 250 ]
+}
+"344
+[; ;Principal_Musica.c: 344:         }
+}
+[e :U 248 ]
+"345
+[; ;Principal_Musica.c: 345:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 252  ]
+{
+"346
+[; ;Principal_Musica.c: 346:             _delay((unsigned long)((250)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"347
+[; ;Principal_Musica.c: 347:         }
+}
+[e :U 252 ]
+"348
+[; ;Principal_Musica.c: 348:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 253  ]
+{
+"349
+[; ;Principal_Musica.c: 349:             for (int x = 0; x < 50; x++){
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 50 `i 254  ]
+[e $U 255  ]
+[e :U 254 ]
+{
+"350
+[; ;Principal_Musica.c: 350:                 PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"351
+[; ;Principal_Musica.c: 351:                 _delay((unsigned long)((202)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 202 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"352
+[; ;Principal_Musica.c: 352:                 PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"353
+[; ;Principal_Musica.c: 353:                 _delay((unsigned long)((202)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 202 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"354
+[; ;Principal_Musica.c: 354:             }
+}
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 50 `i 254  ]
+[e :U 255 ]
+}
+"355
+[; ;Principal_Musica.c: 355:         }
+}
+[e :U 253 ]
+"356
+[; ;Principal_Musica.c: 356:     if (RB7 == 1 && RB6 == 0){
+[e $ ! && == -> _RB7 `i -> 1 `i == -> _RB6 `i -> 0 `i 257  ]
+{
+"357
+[; ;Principal_Musica.c: 357:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"358
+[; ;Principal_Musica.c: 358:         }
+}
+[e :U 257 ]
+"360
+[; ;Principal_Musica.c: 360: }
+[e :UE 138 ]
+}
+"365
+[; ;Principal_Musica.c: 365: void Setup(void){
+[v _Setup `(v ~T0 @X0 1 ef ]
+{
+[e :U _Setup ]
+[f ]
+"366
+[; ;Principal_Musica.c: 366:     initOsc(7);
+[e ( _initOsc (1 -> -> 7 `i `uc ]
+"367
+[; ;Principal_Musica.c: 367:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"368
+[; ;Principal_Musica.c: 368:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"369
+[; ;Principal_Musica.c: 369:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"370
+[; ;Principal_Musica.c: 370:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"371
+[; ;Principal_Musica.c: 371:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
+"372
+[; ;Principal_Musica.c: 372:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"373
+[; ;Principal_Musica.c: 373:     TRISBbits.TRISB7 = 1;
+[e = . . _TRISBbits 0 7 -> -> 1 `i `uc ]
+"374
+[; ;Principal_Musica.c: 374:     TRISBbits.TRISB6 = 1;
+[e = . . _TRISBbits 0 6 -> -> 1 `i `uc ]
+"375
+[; ;Principal_Musica.c: 375:     TRISBbits.TRISB5 = 1;
+[e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
+"376
+[; ;Principal_Musica.c: 376:     TRISBbits.TRISB4 = 1;
+[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
+"377
+[; ;Principal_Musica.c: 377:     TRISBbits.TRISB3 = 1;
+[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+"378
+[; ;Principal_Musica.c: 378:     TRISBbits.TRISB2 = 1;
+[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+"379
+[; ;Principal_Musica.c: 379:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"381
+[; ;Principal_Musica.c: 381:     TRISAbits.TRISA7 = 0;
+[e = . . _TRISAbits 0 7 -> -> 0 `i `uc ]
+"382
+[; ;Principal_Musica.c: 382:     TRISAbits.TRISA6 = 0;
+[e = . . _TRISAbits 0 6 -> -> 0 `i `uc ]
+"386
+[; ;Principal_Musica.c: 386: }
+[e :UE 258 ]
+}
